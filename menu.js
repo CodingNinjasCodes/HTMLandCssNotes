@@ -22,3 +22,8 @@ function openPage(evt, PageName) {
         evt.currentTarget.className += " visited";
     }
 }
+
+window.onload = function() {
+    var viewPortHeight = document.documentElement.clientHeight;
+    document.getElementsByClassName("tab")[0].style.height = (document.documentElement.clientHeight-20)+"px";
+}

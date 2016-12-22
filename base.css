@@ -11,7 +11,7 @@ ul.tab {
 	flex-direction: column;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow: scroll;
     border: 1px solid #ccc;
     background-color: white;
 }
