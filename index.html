@@ -1,0 +1,413 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Notes</title>
+  <link rel="stylesheet" href="base.css">
+  <script src="https://use.fontawesome.com/ef12385584.js"></script>
+  <script src="menu.js" type="text/javascript"></script>
+</head>
+<body>
+	<div id="wrapper">
+		<ul class="tab">
+		  <li onclick="openPage(event, 'introduction')"><a href="javascript:void(0)" class="tablinks">Introduction</a></li>
+		  <li onclick="openPage(event, 'tags')"><a href="javascript:void(0)" class="tablinks">Tags, Attributes and Elements</a></li>
+		  <li onclick="openPage(event, 'page-title')"><a href="javascript:void(0)" class="tablinks">Page Title</a></li>
+		  <li onclick="openPage(event, 'paragraphs')"><a href="javascript:void(0)" class="tablinks">Paragraphs</a></li>
+		  <li onclick="openPage(event, 'headings')"><a href="javascript:void(0)" class="tablinks">Headings</a></li>
+		  <li onclick="openPage(event, 'lists')"><a href="javascript:void(0)" class="tablinks">Lists</a></li>
+		  <li onclick="openPage(event, 'links')"><a href="javascript:void(0)" class="tablinks">Links</a></li>
+		  <li onclick="openPage(event, 'images')"><a href="javascript:void(0)" class="tablinks">Images</a></li>
+		  <li onclick="openPage(event, 'tables')"><a href="javascript:void(0)" class="tablinks">Tables</a></li>
+		  <li onclick="openPage(event, 'rowspan')"><a href="javascript:void(0)" class="tablinks">Table: rowspan</a></li>
+		  <li onclick="openPage(event, 'colspan')"><a href="javascript:void(0)" class="tablinks">Table: colspan</a></li>
+		  <li onclick="openPage(event, 'forms')"><a href="javascript:void(0)" class="tablinks">Forms</a></li>
+		  <li onclick="openPage(event, 'htmlvscss')"><a href="javascript:void(0)" class="tablinks">HTML vs CSS</a></li>
+		  <li onclick="openPage(event, 'css-getting-started')"><a href="javascript:void(0)" class="tablinks">CSS: Getting Started</a></li>
+		  <li onclick="openPage(event, 'css-inline')"><a href="javascript:void(0)" class="tablinks">CSS: Inline</a></li>
+		  <li onclick="openPage(event, 'css-external')"><a href="javascript:void(0)" class="tablinks">CSS: External</a></li>
+		  <li onclick="openPage(event, 'css-in-page')"><a href="javascript:void(0)" class="tablinks">CSS: In Page</a></li>
+		  <li onclick="openPage(event, 'selectors')"><a href="javascript:void(0)" class="tablinks">Selectors, Properties, and Values</a></li>
+		  <li onclick="openPage(event, 'colors')"><a href="javascript:void(0)" class="tablinks">Colors</a></li>
+		  <li onclick="openPage(event, 'text')"><a href="javascript:void(0)" class="tablinks">Text</a></li>
+		  <li onclick="openPage(event, 'margin')"><a href="javascript:void(0)" class="tablinks">Margin</a></li>
+		  <li onclick="openPage(event, 'padding')"><a href="javascript:void(0)" class="tablinks">Padding</a></li>
+		  <li onclick="openPage(event, 'border')"><a href="javascript:void(0)" class="tablinks">Border</a></li>
+		  <li onclick="openPage(event, 'border-radius')"><a href="javascript:void(0)" class="tablinks">Border Radius</a></li>
+		  <li onclick="openPage(event, 'span-and-div')"><a href="javascript:void(0)" class="tablinks">Span and Div</a></li>
+		  <li onclick="openPage(event, 'text-abbr')"><a href="javascript:void(0)" class="tablinks">Text Abbreviations Quotations and Code</a></li>
+		  <li onclick="openPage(event, 'meta-tags')"><a href="javascript:void(0)" class="tablinks">Meta Tags</a></li>
+		  <li onclick="openPage(event, 'description-lists')"><a href="javascript:void(0)" class="tablinks">Description Lists</a></li>
+		  <li onclick="openPage(event, 'sections')"><a href="javascript:void(0)" class="tablinks">Sections</a></li>
+		  <li onclick="openPage(event, 'class-and-id-selectors')"><a href="javascript:void(0)" class="tablinks">Class and ID Selectors</a></li>
+		  <li onclick="openPage(event, 'grouping-and-nesting')"><a href="javascript:void(0)" class="tablinks">Grouping and Nesting</a></li>
+		  <li onclick="openPage(event, 'pseudo-classes')"><a href="javascript:void(0)" class="tablinks">Pseudo Classes</a></li>
+		  <li onclick="openPage(event, 'pseudo-elements')"><a href="javascript:void(0)" class="tablinks">Pseudo Elements</a></li>
+		  <li onclick="openPage(event, 'shorthand-properties')"><a href="javascript:void(0)" class="tablinks">Shorthand Properties</a></li>
+		  <li onclick="openPage(event, 'background-images')"><a href="javascript:void(0)" class="tablinks">Background Images</a></li>
+		  <li onclick="openPage(event, 'specificity')"><a href="javascript:void(0)" class="tablinks">Specificity</a></li>
+		  <li onclick="openPage(event, 'display-properties')"><a href="javascript:void(0)" class="tablinks">Display Properties</a></li>
+		  <li onclick="openPage(event, 'page-layouts')"><a href="javascript:void(0)" class="tablinks">Page Layouts</a></li>
+		  <li onclick="openPage(event, 'media-tags')"><a href="javascript:void(0)" class="tablinks">Media Tags</a></li>
+		  <li onclick="openPage(event, 'forms')"><a href="javascript:void(0)" class="tablinks">HTML Forms</a></li>
+		  <li onclick="openPage(event, 'shadows')"><a href="javascript:void(0)" class="tablinks">Shadows</a></li>
+		  <li onclick="openPage(event, 'more-selectors')"><a href="javascript:void(0)" class="tablinks">More Selectors</a></li>
+		  <li onclick="openPage(event, 'colors')"><a href="javascript:void(0)" class="tablinks">Colors</a></li>
+		  <li onclick="openPage(event, 'attribute-selectors')"><a href="javascript:void(0)" class="tablinks">Attribute Selectors</a></li>
+		  <li onclick="openPage(event, 'background')"><a href="javascript:void(0)" class="tablinks">Background</a></li>
+		  <li onclick="openPage(event, 'transformations')"><a href="javascript:void(0)" class="tablinks">Transformations</a></li>
+		  <li onclick="openPage(event, 'gradients')"><a href="javascript:void(0)" class="tablinks">Gradients</a></li>
+		  <li onclick="openPage(event, 'media-queries')"><a href="javascript:void(0)" class="tablinks">Media Queries</a></li>
+		</ul>
+
+		<div id="default" class="default-page">
+		  <h3>Getting Started With</h3>
+		  <h3 id="hidden-heading">HTML and CSS</h3>
+		  <img src="images/html.jpg">
+		  <p>powered by</p>
+		  <img src="images/logo.png"><br><br>
+		  <a id="jump-to-intro" onclick="openPage(event, 'introduction')">start</a>
+		</div>
+
+		<div id="introduction" class="tabcontent">
+		  <h3 class="heading">Introduction</h3>
+		  <div class="content">
+		  	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur fringilla tempus vehicula. Maecenas vel sodales tortor, vel vestibulum ipsum. In euismod fermentum enim, sit amet tempor tortor interdum id. Sed convallis commodo enim eget blandit. Nulla condimentum suscipit tellus, ac mollis purus feugiat at. Cras eleifend sapien eget leo ultrices, vel tristique ipsum semper. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin pulvinar maximus cursus. Pellentesque sit amet accumsan elit. Sed fermentum laoreet ex eget facilisis. Nam condimentum lectus eu elit posuere tristique.
+
+			Vivamus sollicitudin ornare consequat. Cras a orci eget nunc faucibus egestas. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus fermentum dictum accumsan. Phasellus quis elit et risus ullamcorper hendrerit et rutrum sem. Aliquam erat volutpat. Quisque vehicula magna eu suscipit faucibus. Nulla egestas nunc eget sapien feugiat, in finibus mi faucibus. Pellentesque scelerisque elit et volutpat suscipit.
+		  	<!-- Start writing from here -->
+		  </div>
+		</div>
+
+		<div id="tags" class="tabcontent">
+		  <h3 class="heading">Tags, Attributes and Elements</h3>
+		  <div class="content">
+		  	<!-- Start writing from here -->
+		  </div>
+		</div>
+
+		<div id="page-title" class="tabcontent">
+		  <h3 class="heading">Page Title</h3>
+		  <div class="content">
+		  	<!-- Start writing from here -->
+		  </div>
+		</div>
+
+		<div id="paragraphs" class="tabcontent">
+		  <h3 class="heading">Paragraphs</h3>
+		  <div class="content">
+		  	<!-- Start writing from here -->
+		  </div>
+		</div>
+
+		<div id="headings" class="tabcontent">
+		  <h3 class="heading">Headings</h3>
+		  <div class="content">
+		  	<!-- Start writing from here -->
+		  </div>
+		</div>
+
+		<div id="lists" class="tabcontent">
+		  <h3 class="heading">Lists</h3>
+		  <div class="content">
+		  	<!-- Start writing from here -->
+		  </div>
+		</div>
+
+		<div id="links" class="tabcontent">
+		  <h3 class="heading">Links</h3>
+		  <div class="content">
+		  	<!-- Start writing from here -->
+		  </div>
+		</div>
+
+		<div id="images" class="tabcontent">
+		  <h3 class="heading">Images</h3>
+		  <div class="content">
+		  	<!-- Start writing from here -->
+		  </div>
+		</div>
+
+		<div id="tables" class="tabcontent">
+		  <h3 class="heading">Tables</h3>
+		  <div class="content">
+		  	<!-- Start writing from here -->
+		  </div>
+		</div>
+
+		<div id="rowspan" class="tabcontent">
+		  <h3 class="heading">Table: Rowspan</h3>
+		  <div class="content">
+		  	<!-- Start writing from here -->
+		  </div>
+		</div>
+
+		<div id="colspan" class="tabcontent">
+		  <h3 class="heading">Table: Colspan</h3>
+		  <div class="content">
+		  	<!-- Start writing from here -->
+		  </div>
+		</div>
+
+		<div id="forms" class="tabcontent">
+		  <h3 class="heading">Forms</h3>
+		  <div class="content">
+		  	<!-- Start writing from here -->
+		  </div>
+		</div>
+
+		<div id="htmlvscss" class="tabcontent">
+		  <h3 class="heading">HTML vs CSS</h3>
+		  <div class="content">
+		  	<!-- Start writing from here -->
+		  </div>
+		</div>
+
+		<div id="css-getting-started" class="tabcontent">
+		  <h3 class="heading">CSS: Getting Started</h3>
+		  <div class="content">
+		  	<!-- Start writing from here -->
+		  </div>
+		</div>
+
+		<div id="css-inline" class="tabcontent">
+		  <h3 class="heading">CSS: Inline</h3>
+		  <div class="content">
+		  	<!-- Start writing from here -->
+		  </div>
+		</div>
+
+		<div id="css-external" class="tabcontent">
+		  <h3 class="heading">CSS: External</h3>
+		  <div class="content">
+		  	<!-- Start writing from here -->
+		  </div>
+		</div>
+
+		<div id="css-in-page" class="tabcontent">
+		  <h3 class="heading">CSS: In Page</h3>
+		  <div class="content">
+		  	<!-- Start writing from here -->
+		  </div>
+		</div>
+
+		<div id="selectors" class="tabcontent">
+		  <h3 class="heading">Selectors, Properties, and Values</h3>
+		  <div class="content">
+		  	<!-- Start writing from here -->
+		  </div>
+		</div>
+
+		<div id="colors" class="tabcontent">
+		  <h3 class="heading">Colors</h3>
+		  <div class="content">
+		  	<!-- Start writing from here -->
+		  </div>
+		</div>
+
+		<div id="text" class="tabcontent">
+		  <h3 class="heading">Text</h3>
+		  <div class="content">
+		  	<!-- Start writing from here -->
+		  </div>
+		</div>
+
+		<div id="margin" class="tabcontent">
+		  <h3 class="heading">Margin</h3>
+		  <div class="content">
+		  	<!-- Start writing from here -->
+		  </div>
+		</div>
+
+		<div id="padding" class="tabcontent">
+		  <h3 class="heading">Padding</h3>
+		  <div class="content">
+		  	<!-- Start writing from here -->
+		  </div>
+		</div>
+
+		<div id="border" class="tabcontent">
+		  <h3 class="heading">Border</h3>
+		  <div class="content">
+		  	<!-- Start writing from here -->
+		  </div>
+		</div>
+
+		<div id="border-radius" class="tabcontent">
+		  <h3 class="heading">Border Radius</h3>
+		  <div class="content">
+		  	<!-- Start writing from here -->
+		  </div>
+		</div>
+
+		<div id="span-and-div" class="tabcontent">
+		  <h3 class="heading">Span and Div</h3>
+		  <div class="content">
+		  	<!-- Start writing from here -->
+		  </div>
+		</div>
+
+		<div id="text-abbr" class="tabcontent">
+		  <h3 class="heading">Text Abbreviations Quotations and Code</h3>
+		  <div class="content">
+		  	<!-- Start writing from here -->
+		  </div>
+		</div>
+
+		<div id="meta-tags" class="tabcontent">
+		  <h3 class="heading">Meta Tags</h3>
+		  <div class="content">
+		  	<!-- Start writing from here -->
+		  </div>
+		</div>
+
+		<div id="description-lists" class="tabcontent">
+		  <h3 class="heading">Description Lists</h3>
+		  <div class="content">
+		  	<!-- Start writing from here -->
+		  </div>
+		</div>
+
+		<div id="sections" class="tabcontent">
+		  <h3 class="heading">Sections</h3>
+		  <div class="content">
+		  	<!-- Start writing from here -->
+		  </div>
+		</div>
+
+		<div id="class-and-id-selectors" class="tabcontent">
+		  <h3 class="heading">Sections</h3>
+		  <div class="content">
+		  	<!-- Start writing from here -->
+		  </div>
+		</div>
+
+		<div id="grouping-and-nesting" class="tabcontent">
+		  <h3 class="heading">Grouping and Nesting</h3>
+		  <div class="content">
+		  	<!-- Start writing from here -->
+		  </div>
+		</div>
+
+		<div id="pseudo-classes" class="tabcontent">
+		  <h3 class="heading">Pseudo Classes</h3>
+		  <div class="content">
+		  	<!-- Start writing from here -->
+		  </div>
+		</div>
+
+		<div id="pseudo-elements" class="tabcontent">
+		  <h3 class="heading">Pseudo Elements</h3>
+		  <div class="content">
+		  	<!-- Start writing from here -->
+		  </div>
+		</div>
+
+		<div id="shorthand-properties" class="tabcontent">
+		  <h3 class="heading">Shorthand Properties</h3>
+		  <div class="content">
+		  	<!-- Start writing from here -->
+		  </div>
+		</div>
+
+		<div id="background-images" class="tabcontent">
+		  <h3 class="heading">Background Images</h3>
+		  <div class="content">
+		  	<!-- Start writing from here -->
+		  </div>
+		</div>
+
+		<div id="specificity" class="tabcontent">
+		  <h3 class="heading">Specificity</h3>
+		  <div class="content">
+		  	<!-- Start writing from here -->
+		  </div>
+		</div>
+
+		<div id="display-properties" class="tabcontent">
+		  <h3 class="heading">Display Properties</h3>
+		  <div class="content">
+		  	<!-- Start writing from here -->
+		  </div>
+		</div>
+
+		<div id="page-layouts" class="tabcontent">
+		  <h3 class="heading">Page Layouts</h3>
+		  <div class="content">
+		  	<!-- Start writing from here -->
+		  </div>
+		</div>
+
+		<div id="media-tags" class="tabcontent">
+		  <h3 class="heading">Media Tags</h3>
+		  <div class="content">
+		  	<!-- Start writing from here -->
+		  </div>
+		</div>
+
+		<div id="forms" class="tabcontent">
+		  <h3 class="heading">HTML Forms</h3>
+		  <div class="content">
+		  	<!-- Start writing from here -->
+		  </div>
+		</div>
+
+		<div id="shadows" class="tabcontent">
+		  <h3 class="heading">Shadows</h3>
+		  <div class="content">
+		  	<!-- Start writing from here -->
+		  </div>
+		</div>
+
+		<div id="more-selectors" class="tabcontent">
+		  <h3 class="heading">More Selectors</h3>
+		  <div class="content">
+		  	<!-- Start writing from here -->
+		  </div>
+		</div>
+
+		<div id="colors" class="tabcontent">
+		  <h3 class="heading">Colors</h3>
+		  <div class="content">
+		  	<!-- Start writing from here -->
+		  </div>
+		</div>
+
+		<div id="attribute-selectors" class="tabcontent">
+		  <h3 class="heading">Attribute Selectors</h3>
+		  <div class="content">
+		  	<!-- Start writing from here -->
+		  </div>
+		</div>
+
+		<div id="background" class="tabcontent">
+		  <h3 class="heading">Background</h3>
+		  <div class="content">
+		  	<!-- Start writing from here -->
+		  </div>
+		</div>
+
+		<div id="transformations" class="tabcontent">
+		  <h3 class="heading">Transformations</h3>
+		  <div class="content">
+		  	<!-- Start writing from here -->
+		  </div>
+		</div>
+
+		<div id="gradients" class="tabcontent">
+		  <h3 class="heading">Gradients</h3>
+		  <div class="content">
+		  	<!-- Start writing from here -->
+		  </div>
+		</div>
+
+		<div id="media-queries" class="tabcontent">
+		  <h3 class="heading">Media Queries</h3>
+		  <div class="content">
+		  	<!-- Start writing from here -->
+		  </div>
+		</div>
+	</div>
+</body>
+</html>
