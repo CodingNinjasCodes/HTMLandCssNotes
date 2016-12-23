@@ -1,15 +1,15 @@
 #Structure HTML and CSS
-1. html Getting Started
-2. Tags, attributes and elements
-3. page title
-4. paragraphs
-5. headings
-6. lists
-7. links
-8. images
-9. tables
-10. forms
-11. html vs css
+1. html Getting Started > Manish 
+2. Tags, attributes and elements > Manish 
+3. page title > Manish 
+4. paragraphs > Manish 
+5. headings > Manish 
+6. lists > Manish 
+7. links > Manish 
+8. images > Manish 
+9. tables > Manish 
+10. forms > Manish 
+11. html vs css > Manish 
 12. css getting started 
 	1. inline
 	2. external
