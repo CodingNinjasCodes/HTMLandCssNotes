@@ -1,3 +1,8 @@
+*{
+	margin: 0;
+	border: 0;
+	padding: 0;
+}
 body {font-family: "Lato", sans-serif;}
 
 #wrapper {
@@ -47,7 +52,7 @@ ul.tab li:hover a {
 .tabcontent {
 	width: 80%;
     display: none;
-    padding: 6px 12px;
+    /*padding: 6px 12px;*/
     border: 1px solid #ccc;
     border-top: none;
 }
@@ -77,7 +82,7 @@ li.active a {
 
 #default a:hover {
 	cursor: pointer;
-	color: orange;
+	color: red;
 }
 
 #hidden-heading {
@@ -86,10 +91,14 @@ li.active a {
 
 .heading {
 	font-size: 3em;
-	margin: 10px auto;
-	font-family: proxima-nova;
+	font-family: roboto;
+	background-color: #ffa500;
+	margin-top: 0;
+	color: white;
+	padding:20px 40px;
 }
 
 .content {
 	line-height: 1.3em;
+	background-color: ;
 }
