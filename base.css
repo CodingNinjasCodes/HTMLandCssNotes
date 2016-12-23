@@ -1,0 +1,95 @@
+body {font-family: "Lato", sans-serif;}
+
+#wrapper {
+	display: flex;
+	width: 100%;
+}
+
+ul.tab {
+	width: 20%;
+	display: flex;
+	flex-direction: column;
+    margin: 0;
+    padding: 0;
+    overflow: scroll;
+    border: 1px solid #ccc;
+    background-color: white;
+}
+
+/* Float the list items side by side */
+ul.tab li {
+	font-family: proxima-nova;
+	float: left;
+	border-bottom: 1px solid rgba(204, 204, 204, 0.32); 
+}
+
+/* Style the links inside the list items */
+ul.tab li a {
+    display: inline-block;
+    color: black;
+    padding: 2px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of links on hover */
+ul.tab li:hover a {
+    color: orange;
+}
+
+/* Create an active/current tablink class */
+/*ul.tab li:focus, .active {
+    background-color: #ccc;
+}*/
+
+/* Style the tab content */
+.tabcontent {
+	width: 80%;
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+.active {
+	background-color: orange!important;
+}
+
+li.active a {
+	color: white!important;
+}
+
+.visited {
+	background-color: #f1f1f1;
+}
+
+#default {
+	width: 80%;
+    display: block;
+    padding: 6px 12px;
+    text-align: center;
+}
+
+#default h3 {
+	font-size: 3em;
+}
+
+#default a:hover {
+	cursor: pointer;
+	color: orange;
+}
+
+#hidden-heading {
+	display: none;
+}
+
+.heading {
+	font-size: 3em;
+	margin: 10px auto;
+	font-family: proxima-nova;
+}
+
+.content {
+	line-height: 1.3em;
+}
