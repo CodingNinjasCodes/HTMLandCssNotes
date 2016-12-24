@@ -122,21 +122,33 @@ li.active a {
 	font-size: 1.28em;
 }
 
+.explanationText {
+	/*line-height: 1.3em;*/
+	line-height: 1.3em;
+	color: inherit;
+	font-family: inherit;
+	margin: 0 2em 1em 2em;
+	font-size: inherit;
+}
 .code {
 	font-family: Consolas,"Liberation Mono",Courier,monospace;
 	color: rgba(0,0,0,0.60);
-	margin: 2em;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	margin-left:3.5em;
+	margin-right:3.5em;
 	background-color:rgba(0,0,0,0.1); 
 }
-.explanationList {
+.explanationNote {
 	/*line-height: 1.3em;*/
 	color: rgba(0,0,0,0.74);
 	font-family: "Roboto";
-	margin-top: 0.4em;
-	margin-right:0 0.4em 5em;
-	margin-bottom:0.4em;
-	margin-left: 2em;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	margin-left:3.5em;
+	margin-right:3.5em;
 	background-color:rgba(0,0,0,0.1);
+	line-height: 1.3em;
 }
 .explanationImage {
 	margin-top: 0.4em;

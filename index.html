@@ -78,12 +78,13 @@
 		  <h3 class="heading">Introduction</h3>
 		  <div class="content">
 		  	<!-- Start writing from here -->
-		  	<p>
+		  	<div class="explanationText">
 		 		HTML is used to provide the content(words, images, audio, video, and so on) to the web pages. CSS is then used to improve the presentation of the content. All you need is a text editor to make html files. Just remember to save them with “.html” extension! To view the page open the file with a web browser. Sample HTML code looks like this:
-		  	</p>
+		  	</div>
 
 
-		  	<xmp class="code"><html>
+		  	<xmp class="code"><!DOCTYPE html>
+<html>
 <head>
     <title>Page title here</title>
 </head>
@@ -96,25 +97,57 @@
 </body>
 </html></xmp>
 		  <div class ="explanationImage">
+		    The file when opened with chrome appears as
 		  	<img src="./images/Introduction/first_web_page.png">
 		  </div>
-		  <p>
-		  	HTML is a tag based language. All the html elements are defined using them. Description of tags used in the above example:
-		  	<ul class="explanationList">
-		  		<li>The text between &lthtml&gt and &lt/html&gt describes an HTML document</li>
-		  		<li>The text between &lthead&gt and &lt/head&gt provides information about the document</li>
-		  		<li>The text between &lttitle&gt and &lt/title&gt provides a title for the document(page title appears on the tab)</li>
-		  		<li>The text between &ltbody&gt and &lt/body&gt describes the visible page content</li>
-		  		<li>The text between &lth1&gt and &lt/h1&gt describes a heading</li>
-		  	</ul>
-		  </p>	
+		  <div class="explanationText">
+		  	HTML is a tag based language. They are defined within the angle brackets. Description and definition of tags used in the above example is given in next section.
+		  </div>	
 		  </div>
 		</div>
+
 
 		<div id="tags" class="tabcontent">
 		  <h3 class="heading">Tags, Attributes and Elements</h3>
 		  <div class="content">
 		  	<!-- Start writing from here -->
+		  	<div class="explanationText">
+			  	Basic HTML just contains plain text.
+		  	</div>
+		  	<div class="card-panel orange lighten-5">Tags</div>
+		  		<div class="explanationText">
+		  			 <p>
+			  			 Meaning to the plain text of HTML applied using tags. i.e. tags define various elements of the document.
+			  			 <br>
+			  			 Most of the tags have opening and closing. The closing is just the name of the tag with character '/' in the beginning. A tag needs to have a closing tag if it includes some content.
+			  			 Eg: &lthtml&gt and &lt/html&gt. 
+			  			 <br>
+			  			 When a tag doesn't contain any content but is just meant to symbolify something then it doesn't need the closing tag.
+			  			 Eg: &ltbr&gt is used to give line break in text. It doesn't have any content but just directs the browser to show the remaining content from next line. 
+		  			 </p>
+
+		  			 Description of the tags used in the previous section is as follows:
+		  		</div>
+		  		<ul class="explanationNote">
+		  		<li>&lt!DOCTYPE html&gt tells the browser that the file being displayed contains HTML5</li>
+		  		<li> &lthtml&gt and &lt/html&gt describes an HTML document</li>
+		  		<li> &lthead&gt and &lt/head&gt provides information about the document</li>
+		  		<li> &lttitle&gt and &lt/title&gt provides a title for the document(page title appears on the tab)</li>
+		  		<li> &ltbody&gt and &lt/body&gt describes the visible page content</li>
+		  		<li> &lth1&gt and &lt/h1&gt describes a heading</li>
+		  	</ul>
+		  	<p class="explanationText">
+			  	Note:
+		  	</p>
+		  	<p class="explanationNote">
+		  		You might come across “self-closing” tags, whereby a br tag, for example, will look like “&ltbr /&gt” instead of simply “&ltbr&gt”. This is a remnant of XHTML, a form of HTML based on another markup language called XML. HTML5 is much more chilled out than XHTML and will be happy with either format. Some developers prefer one way, some prefer the other.
+		  	</p>
+
+		  	<br>
+		  	<div class="card-panel orange lighten-5">Attributes</div>
+		  	<p class="explanationText">
+		  		The tags might contain attributes which provide extra information about a tag. An attribute contains two parts. First is the name of atribute and second is its value enclossed within double inverted comas.
+		  	</p>
 		  </div>
 		</div>
 
