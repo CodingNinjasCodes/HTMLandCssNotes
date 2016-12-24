@@ -200,3 +200,8 @@ li.active a {
     margin-bottom: 0.4em;
     margin-left: 2em;
 }
+
+div.explanationImage img {
+	border: 1px solid lightgrey;
+    box-shadow: 3px 3px 8px 4px lightgrey;
+}
