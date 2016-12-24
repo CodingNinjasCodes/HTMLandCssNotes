@@ -1,19 +1,22 @@
-*{
-	margin: 0;
-	border: 0;
-	padding: 0;
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
 }
-body {font-family: "Lato", sans-serif;}
+
+body {
+    font-family: "Lato", sans-serif;
+}
 
 #wrapper {
-	display: flex;
-	width: 100%;
+    display: flex;
+    width: 100%;
 }
 
 ul.tab {
-	width: 20.5%;
-	display: flex;
-	flex-direction: column;
+    width: 20.5%;
+    display: flex;
+    flex-direction: column;
     margin: 0;
     padding: 0;
     overflow: auto;
@@ -21,29 +24,37 @@ ul.tab {
     position: fixed;
 }
 
+
 /* Float the list items side by side */
+
 ul.tab li {
-	font-family: "Roboto", sans-serif;
-	float: left;
-	border-bottom: 1px solid lightgrey;
-	/*border-bottom: 1px solid rgba(204, 204, 204, 0.32); */
+    font-family: "Roboto", sans-serif;
+    float: left;
+    border-bottom: 1px solid lightgrey;
+    /*border-bottom: 1px solid rgba(204, 204, 204, 0.32); */
 }
-ul.tab li.first{
-	border-top: 1px solid lightgrey;
+
+ul.tab li.first {
+    border-top: 1px solid lightgrey;
 }
+
+
 /*styling for the coding ninjas logo on left top*/
-ul.tab>a>img{
-	display: block;
-	margin: auto;
-	padding-top: 1.6em;
-	padding-bottom: 1.6em;
+
+ul.tab>a>img {
+    display: block;
+    margin: auto;
+    padding-top: 1.6em;
+    padding-bottom: 1.6em;
 }
 
 .ul.tab li.active {
-  background-color: rgba(0, 0, 0, 0.05);
+    background-color: rgba(0, 0, 0, 0.05);
 }
 
+
 /* Style the links inside the list items */
+
 ul.tab li a {
     display: inline-block;
     color: black;
@@ -53,43 +64,49 @@ ul.tab li a {
     font-size: 17px;
 }
 
+
 /* Change background color of links on hover */
-ul.tab li:hover{
-	background-color: rgba(0,0,0,0.1);
+
+ul.tab li:hover {
+    background-color: rgba(0, 0, 0, 0.1);
     /*color: orange;*/
 }
 
+
 /* Create an active/current tablink class */
-ul.tab li:focus, .active {
+
+ul.tab li:focus,
+.active {
     background-color: #ccc;
 }
 
+
 /* Style the tab content */
+
 .tabcontent {
-	width: 79.5%;
+    width: 79.5%;
     display: none;
     /*padding: 6px 12px;*/
-    border: 1px solid #ccc;
     border-top: none;
     padding: 24px;
     margin-left: 20%;
 }
 
 .active {
-	background-color: orange!important;
-	transition: .1s;
+    background-color: orange!important;
+    transition: .1s;
 }
 
 li.active a {
-	color: white!important;
+    color: white!important;
 }
 
 .visited {
-	background-color: rgba(255,165,0,0.1);
+    background-color: rgba(255, 165, 0, 0.1);
 }
 
 #default {
-	width: 80%;
+    width: 80%;
     display: block;
     padding: 6px 12px;
     text-align: center;
@@ -97,61 +114,60 @@ li.active a {
 }
 
 #default h3 {
-	font-size: 3em;
+    font-size: 3em;
 }
 
 #default a:hover {
-	cursor: pointer;
-	color: red;
+    cursor: pointer;
+    color: red;
 }
 
 #hidden-heading {
-	display: none;
+    display: none;
 }
 
 .heading {
-	font-size: 3em;
-	font-family: roboto, sans-serif;
-	background-color: white;
-	margin-top: 0;
-	color: black;
-	/*box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+    font-size: 3em;
+    font-family: roboto, sans-serif;
+    background-color: white;
+    margin-top: 0;
+    color: black;
+    /*box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
 	transition: box-shadow .25s;
 	border-radius: 2px;*/
 }
 
 .content {
-	line-height: 1.3em;
-	color: rgba(0,0,0,0.71);
-	font-family: "Roboto", sans-serif;
-	font-size: 1.28em;
+    line-height: 1.3em;
+    color: rgba(0, 0, 0, 0.71);
+    font-family: "Roboto", sans-serif;
+    font-size: 1.28em;
 }
 
 .code {
-	font-family: Consolas,"Liberation Mono",Courier,monospace;
-	color: rgba(0,0,0,0.60);
-	margin: 2em;
-	background-color:rgba(0,0,0,0.1);
-	border: 1px solid lightgrey;
-	padding: 8px 16px; 
-	border-radius: 5px;
+    font-family: Consolas, "Liberation Mono", Courier, monospace;
+    color: rgba(0, 0, 0, 0.60);
+    margin: 2em;
+    background-color: rgba(0, 0, 0, 0.1);
+    border: 1px solid lightgrey;
+    padding: 8px 16px;
+    border-radius: 5px;
+}
 
-}
 .explanationList {
-	/*line-height: 1.3em;*/
-	color: rgba(0,0,0,0.74);
-	font-family: "Roboto";
-	margin-top: 0.4em;
-	margin-right:0 0.4em 5em;
-	margin-bottom:0.4em;
-	margin-left: 2em;
-	background-color:rgba(0,0,0,0.1);
-	padding: 8px 16px;
-    background-color: aliceblue;
+    /*line-height: 1.3em;*/
+    color: rgba(0, 0, 0, 0.74);
+    font-family: "Roboto";
+    margin-top: 0.4em;
+    margin-right: 0 0.4em 5em;
+    margin-bottom: 0.4em;
+    margin-left: 2em;
+    padding: 8px 16px;
 }
+
 .explanationImage {
-	margin-top: 0.4em;
-	margin-right:0 0.4em 5em;
-	margin-bottom:0.4em;
-	margin-left: 2em;
+    margin-top: 0.4em;
+    margin-right: 0 0.4em 5em;
+    margin-bottom: 0.4em;
+    margin-left: 2em;
 }
