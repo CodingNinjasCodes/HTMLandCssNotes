@@ -71,7 +71,7 @@ ul.tab li:focus, .active {
 
 .active {
 	background-color: orange!important;
-
+	transition: .1s;
 }
 
 li.active a {
@@ -124,7 +124,23 @@ li.active a {
 
 .code {
 	font-family: Consolas,"Liberation Mono",Courier,monospace;
-	color: rgb(0,0,0);
+	color: rgba(0,0,0,0.60);
 	margin: 2em;
-	background-color: lightgrey; 
+	background-color:rgba(0,0,0,0.1); 
+}
+.explanationList {
+	/*line-height: 1.3em;*/
+	color: rgba(0,0,0,0.74);
+	font-family: "Roboto";
+	margin-top: 0.4em;
+	margin-right:0 0.4em 5em;
+	margin-bottom:0.4em;
+	margin-left: 2em;
+	background-color:rgba(0,0,0,0.1);
+}
+.explanationImage {
+	margin-top: 0.4em;
+	margin-right:0 0.4em 5em;
+	margin-bottom:0.4em;
+	margin-left: 2em;
 }
