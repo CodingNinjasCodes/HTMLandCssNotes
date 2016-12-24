@@ -10,16 +10,16 @@
 9. tables > Manish 
 10. forms > Manish 
 11. html vs css > Manish 
-12. css getting started 
-	1. inline
-	2. external
-	3. in page
-13. selectors, properties and values
-14. colors
-15. text
-16. margins
-17. padding
-18. borders
+12. css getting started > Kamal
+	1. inline > Kamal
+	2. external > Kamal
+	3. in page > Kamal
+13. selectors, properties and values > Kamal
+14. colors > Kamal
+15. text > Kamal
+16. margins > Kamal
+17. padding > Kamal
+18. borders > Kamal
 19. span and div
 20. text abbreviations quotations and code
 21. meta tags
