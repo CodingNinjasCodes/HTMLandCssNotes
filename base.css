@@ -67,6 +67,7 @@ ul.tab li:focus, .active {
     /*padding: 6px 12px;*/
     border: 1px solid #ccc;
     border-top: none;
+    padding: 24px;
 }
 
 .active {
@@ -105,10 +106,9 @@ li.active a {
 .heading {
 	font-size: 3em;
 	font-family: roboto, sans-serif;
-	background-color: #ffa500;
+	background-color: white;
 	margin-top: 0;
-	color: white;
-	padding:20px 40px;
+	color: black;
 	/*box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
 	transition: box-shadow .25s;
 	border-radius: 2px;*/
@@ -118,7 +118,6 @@ li.active a {
 	line-height: 1.3em;
 	color: rgba(0,0,0,0.71);
 	font-family: "Roboto", sans-serif;
-	padding: 1em 2em 1em 2em;
 	font-size: 1.28em;
 }
 
@@ -126,7 +125,11 @@ li.active a {
 	font-family: Consolas,"Liberation Mono",Courier,monospace;
 	color: rgba(0,0,0,0.60);
 	margin: 2em;
-	background-color:rgba(0,0,0,0.1); 
+	background-color:rgba(0,0,0,0.1);
+	border: 1px solid lightgrey;
+	padding: 8px 16px; 
+	border-radius: 5px;
+
 }
 .explanationList {
 	/*line-height: 1.3em;*/
@@ -137,6 +140,8 @@ li.active a {
 	margin-bottom:0.4em;
 	margin-left: 2em;
 	background-color:rgba(0,0,0,0.1);
+	padding: 8px 16px;
+    background-color: aliceblue;
 }
 .explanationImage {
 	margin-top: 0.4em;
