@@ -89,8 +89,8 @@
     <title>Page title here</title>
 </head>
 <body>
-    <p>This is sample text...</p>
-    <p>You are beginning to learn HTML.</p>
+    This is sample text...<br>
+    You are beginning to learn HTML.
     <!-- We use this syntax to write comments -->
     <!-- Page content and rest of the tags here.... -->
     <!-- This is the actual area that gets shown in the browser -->
@@ -105,19 +105,7 @@
 
 		  <div class="explanationText">
 		  	HTML is a tag based language. They are defined within the angle brackets. Description and definition of tags used in the above example is given in next section.
-		  </div>	
-
-		  <p>
-		  	HTML is a tag based language. All the html elements are defined using them. Description of tags used in the above example:
-		  	<ol class="explanationList">
-		  		<li>The text between &lthtml&gt and &lt/html&gt describes an HTML document</li>
-		  		<li>The text between &lthead&gt and &lt/head&gt provides information about the document</li>
-		  		<li>The text between &lttitle&gt and &lt/title&gt provides a title for the document(page title appears on the tab)</li>
-		  		<li>The text between &ltbody&gt and &lt/body&gt describes the visible page content</li>
-		  		<li>The text between &lth1&gt and &lt/h1&gt describes a heading</li>
-		  	</ol>
-		  </p>	
-
+		  </div>		
 		  </div>
 		</div>
 
@@ -145,11 +133,10 @@
 		  		</div>
 		  		<ul class="explanationNote">
 		  		<li>&lt!DOCTYPE html&gt tells the browser that the file being displayed contains HTML5</li>
-		  		<li> &lthtml&gt and &lt/html&gt describes an HTML document</li>
+		  		<li> &lthtml&gt and &lt/html&gt meant to contain all the html data</li>
 		  		<li> &lthead&gt and &lt/head&gt provides information about the document</li>
-		  		<li> &lttitle&gt and &lt/title&gt provides a title for the document(page title appears on the tab)</li>
-		  		<li> &ltbody&gt and &lt/body&gt describes the visible page content</li>
-		  		<li> &lth1&gt and &lt/h1&gt describes a heading</li>
+		  		<li> &lttitle&gt and &lt/title&gt provides a title for the document</li>
+		  		<li> &ltbody&gt and &lt/body&gt contains all the things visible on the web page</li>
 		  	</ul>
 		  	<p class="explanationNote">
 		  		<em>NOTE:</em> You might come across “self-closing” tags, whereby a br tag, for example, will look like “&ltbr /&gt” instead of simply “&ltbr&gt”. This is a remnant of XHTML, a form of HTML based on another markup language called XML. HTML5 is much more chilled out than XHTML and will be happy with either format. Some developers prefer one way, some prefer the other.
@@ -180,15 +167,19 @@
 		  	<p class="explanationText">
 		  		Head of a document is the place where information about the document is written. The title of the document is mentioned in the head using the &lttitle&gt tag.
 		  	</p>
-		  	<xmp class="code"><!DOCTYPE html>
+		  	<div class="code">
+		  		
+		  	<xmp><!DOCTYPE html>
 <html>
-<head>
-    <title>This is the Title</title>
-</head>
+<head></xmp>
+<span class="highlightCode">&lttitle&gtThis is the Title&lt/title&gt
+</span>
+<xmp></head>
 <body>
     <!--Syntax for the body goes here-->
 </body>
 </html></xmp>
+		  	</div>
 			<p class="explanationText">
 		    	This is rendered as:
 		    </p>
@@ -205,6 +196,34 @@
 		  <h3 class="heading">Paragraphs</h3>
 		  <div class="content">
 		  	<!-- Start writing from here -->
+		    <p class="explanationText">
+		    	Paragraphs are blocks of text separated from each other by some space. They are defined using the &ltp&gt and &lt/p&gt tags. When p tag ends, the next thing appears in next line.
+		    </p>
+		    <xmp class="code"><!DOCTYPE html>
+<html>
+<head>
+<title>p tag</title>
+</head>
+<body>
+    <p>This is line 1.</p>
+    <p>This is line 2.</p>
+    <p>This is line 3.</p>
+    <br>
+	<!-- trying to format the text without using p-tag -->
+    This is line 1.
+    This is line 2.
+    This is line 3.
+</body>
+</html></xmp>
+			<p class="explanationText">
+				This appears on a web browser like this:
+			</p>
+			<div class="explanationImage">
+				<img src="./images/page4/p_tag.png">
+			</div>
+			<p class="explanationText">
+				When formating without p-tag, new lines are appended on the current line. This happens because the browser doesn’t see to the formatting of text. You have to use appropriate tags for formatting the text. More on formatting text would be there later in this tutorial.
+			</p>
 		  </div>
 		</div>
 
