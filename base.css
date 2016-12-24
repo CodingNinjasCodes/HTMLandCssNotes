@@ -172,7 +172,7 @@ li.active a {
 	margin-right:3.5em;
 	background-color:rgba(0,0,0,0.1);
 	line-height: 1.3em;
-=======
+
     font-family: Consolas, "Liberation Mono", Courier, monospace;
     color: rgba(0, 0, 0, 0.60);
     margin: 2em;
@@ -191,7 +191,6 @@ li.active a {
     margin-bottom: 0.4em;
     margin-left: 2em;
     padding: 8px 16px;
->>>>>>> master
 }
 
 .explanationImage {
@@ -199,9 +198,4 @@ li.active a {
     margin-right: 0 0.4em 5em;
     margin-bottom: 0.4em;
     margin-left: 2em;
-}
-
-div.explanationImage img {
-	border: 1px solid lightgrey;
-    box-shadow: 3px 3px 8px 4px lightgrey;
 }
