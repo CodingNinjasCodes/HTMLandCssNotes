@@ -133,8 +133,8 @@ li.active a {
     margin-top: 0;
     color: black;
     /*box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
-	transition: box-shadow .25s;
-	border-radius: 2px;*/
+    transition: box-shadow .25s;
+    border-radius: 2px;*/
 }
 
 .content {
@@ -145,33 +145,32 @@ li.active a {
 }
 
 .explanationText {
-	/*line-height: 1.3em;*/
-	line-height: 1.3em;
-	color: inherit;
-	font-family: inherit;
-	margin: 0 2em 1em 2em;
-	font-size: inherit;
+    /*line-height: 1.3em;*/
+    line-height: 1.3em;
+    color: inherit;
+    font-family: inherit;
+    margin: 0 2em 1em 2em;
+    font-size: inherit;
 }
 .code {
-<<<<<<< HEAD
-	font-family: Consolas,"Liberation Mono",Courier,monospace;
-	color: rgba(0,0,0,0.60);
-	margin-top: 1em;
-	margin-bottom: 1em;
-	margin-left:3.5em;
-	margin-right:3.5em;
-	background-color:rgba(0,0,0,0.1); 
+    font-family: Consolas,"Liberation Mono",Courier,monospace;
+    color: rgba(0,0,0,0.60);
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left:3.5em;
+    margin-right:3.5em;
+    background-color:rgba(0,0,0,0.1); 
 }
 .explanationNote {
-	/*line-height: 1.3em;*/
-	color: rgba(0,0,0,0.74);
-	font-family: "Roboto";
-	margin-top: 1em;
-	margin-bottom: 1em;
-	margin-left:3.5em;
-	margin-right:3.5em;
-	background-color:rgba(0,0,0,0.1);
-	line-height: 1.3em;
+    /*line-height: 1.3em;*/
+    color: rgba(0,0,0,0.74);
+    font-family: "Roboto";
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left:3.5em;
+    margin-right:3.5em;
+    background-color:rgba(0,0,0,0.1);
+    line-height: 1.3em;
 
     font-family: Consolas, "Liberation Mono", Courier, monospace;
     color: rgba(0, 0, 0, 0.60);
@@ -194,8 +193,8 @@ li.active a {
 }
 
 .explanationImage {
-    margin-top: 0.4em;
-    margin-right: 0 0.4em 5em;
-    margin-bottom: 0.4em;
-    margin-left: 2em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left:3.5em;
+    margin-right:3.5em;
 }
