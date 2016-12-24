@@ -153,7 +153,7 @@ li.active a {
     font-size: inherit;
 }
 .code {
-    font-family: Consolas,"Liberation Mono",Courier,monospace;
+    font-family: Consolas, "Liberation Mono", Courier, monospace;
     color: rgba(0,0,0,0.60);
     margin-top: 1em;
     margin-bottom: 1em;
@@ -161,10 +161,18 @@ li.active a {
     margin-right:3.5em;
     background-color:rgba(0,0,0,0.1); 
 }
+.highlightCode {
+    font-family: Consolas,"Liberation Mono",Courier,monospace;
+    color: rgba(0,0,0,0.60);
+    padding:3px;
+    margin:inherit;
+    border: px solid white;
+    border-radius: 5px;
+}
 .explanationNote {
     /*line-height: 1.3em;*/
-    color: rgba(0,0,0,0.74);
-    font-family: "Roboto";
+    /*color: rgba(0,0,0,0.74);*/
+    /*font-family: "Roboto";*/
     margin-top: 1em;
     margin-bottom: 1em;
     margin-left:3.5em;
@@ -174,11 +182,9 @@ li.active a {
 
     font-family: Consolas, "Liberation Mono", Courier, monospace;
     color: rgba(0, 0, 0, 0.60);
-    margin: 2em;
     background-color: rgba(0, 0, 0, 0.1);
     border: 1px solid lightgrey;
-    padding: 8px 16px;
-    border-radius: 5px;
+    border-radius: 3px;
 }
 
 .explanationList {
