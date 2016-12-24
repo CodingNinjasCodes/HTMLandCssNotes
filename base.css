@@ -25,9 +25,12 @@ ul.tab {
 ul.tab li {
 	font-family: "Roboto", sans-serif;
 	float: left;
+	border-bottom: 1px solid lightgrey;
 	/*border-bottom: 1px solid rgba(204, 204, 204, 0.32); */
 }
-
+ul.tab li.first{
+	border-top: 1px solid lightgrey;
+}
 /*styling for the coding ninjas logo on left top*/
 ul.tab>a>img{
 	display: block;
