@@ -248,9 +248,6 @@
 	<h6>Heading level 6</h6>
 </body>
 </html></xmp>
-			<p class="explanationText">
-				It appears on a web browser like this:
-			</p>
 			<div class="explanationImage">
 				<img src="./images/page5/headings.png">
 			</div>	
@@ -260,7 +257,131 @@
 		<div id="lists" class="tabcontent">
 		  <h3 class="heading">Lists</h3>
 		  <div class="content">
-		  	<!-- Start writing from here -->
+		  	<p class="explanationText">
+		  	There are three type of lists in html. First two are ordered lists and unordered lists. They both are almost the same. Unordered lists are used when the numbering of items is not required and by default the items are followed by bullets. Whereas in ordered lists the items are displayed by a preceding numbering. The numbering style can be controlled by CSS that you will be learning soon!!
+		  	</p>
+		  	<div class="card-panel orange lighten-5 flow-text">Unordered Lists</div>
+		  	<p class="explanationText">
+		  		They are defined using the &ltul&gt tag and the items are enclosed in the &ltli&gt tags.
+		  	</p>
+		  	<xmp class="code"><!DOCTYPE html>
+<html>
+<head>
+<title>Unordered Lists</title>
+</head>
+<body>
+	<h1>Lists</h1>
+	<ul>
+	  <li>first item</li>
+	  <li>second item</li>
+	  <li>third item</li>
+	</ul>
+</body>
+</html></xmp>
+			<p class="explanationText">
+				The output is as follows:
+			</p>
+			<div class="explanationImage">
+				<img src="./images/page6/ordered_list.png">
+			</div>
+			<p class="explanationText">
+				Nesting of lists can be done which means that lists-items can contain sub-lists in them.
+			</p>
+			<xmp class="code"><!DOCTYPE html>
+<html>
+<head>
+<title>Unordered Lists</title>
+</head>
+<body>
+	<h1>Lists</h1>
+	<ul>
+  <li>first item</li>
+  <li>second item
+  <!-- Look, the closing </li> tag is not placed here! -->
+    <ul>
+      <li>second item first subitem</li>
+      <li>second item second subitem
+      <!-- Same for the second nested unordered list! -->
+        <ul>
+          <li>second item second subitem first sub-subitem</li>
+          <li>second item second subitem second sub-subitem</li>
+          <li>second item second subitem third sub-subitem</li>
+        </ul>
+      </li>
+      <!-- Closing </li> tag for the li that contains the third
+       unordered list -->
+      <li>second item third subitem</li>
+    </ul>
+  </li>               <!-- Here is the closing </li> tag -->
+  <li>third item</li>
+</ul>
+</body>
+</html></xmp>
+			<p class="explanationText">
+				The output is as follows:
+			</p>
+			<div class="explanationImage">
+				<img src="./images/page6/unordered_list_nesting.png">
+			</div>
+			<p class="explanationText">
+				There is no limitation to the depth of nested lists.
+			</p>
+
+			<br>
+			<div class="card-panel orange lighten-5 flow-text">Ordered Lists</div>
+		  	<p class="explanationText">
+		  		They are defined using the &ltol&gt tag and the items are enclosed in the &ltli&gt tags.Typically, ordered-list items are displayed with a preceding numbering. The numbering style can be of any kind like like numerals, letters or Romans numerals. The default one is numerals
+		  	</p>
+		  	<xmp class="code"><!DOCTYPE html>
+<html>
+<head>
+<title>Onordered Lists</title>
+</head>
+<body>
+	<h1>Lists</h1>
+	<ol>
+	  <li>first item</li>
+	  <li>second item</li>
+	  <li>third item</li>
+	</ol>
+</body>
+</html></xmp>
+			<p class="explanationText">
+				The output is as follows:
+			</p>
+			<div class="explanationImage">
+				<img src="./images/page6/ordered_list.png">
+			</div>
+			<p class="explanationText">
+				Using the attribute 'start' we can specify from where the numbering starts by giving its value.
+			</p>
+			<xmp class="code"><!DOCTYPE html>
+<html>
+<head>
+<title>Onordered Lists</title>
+</head>
+<body>
+	<h1>Lists</h1>
+	<ol start="7">
+	  <li>first item</li>
+	  <li>second item</li>
+	  <li>third item</li>
+	</ol>
+</body>
+</html></xmp>
+			<p class="explanationNote">
+				<em>Note:</em>Notice that value of the attribute start appeared in double inverted commas.
+			</p>
+
+			<div class="explanationImage">
+				<img src="./images/page6/ordered_list_numbering.png">
+			</div>
+			<p class="explanationText">
+				Nesting can also be done using ordered lists. Also a combination of ordered and unordered lists can be used!
+			</p>
+			<p class="explanationNote">
+				<em>NOTE:</em>List styles can be changed using CSS, which you will be learning soon.
+			</p>
 		  </div>
 		</div>
 
