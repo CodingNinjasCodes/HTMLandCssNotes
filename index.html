@@ -167,8 +167,7 @@
 		  	<p class="explanationText">
 		  		Head of a document is the place where information about the document is written. The title of the document is mentioned in the head using the &lttitle&gt tag.
 		  	</p>
-		  	<div class="code">
-		  		
+		  	<div class="code">	
 		  	<xmp><!DOCTYPE html>
 <html>
 <head></xmp>
@@ -386,9 +385,61 @@
 		</div>
 
 		<div id="links" class="tabcontent">
-		  <h3 class="heading">Links</h3>
+		  <h3 class="heading" id="linksHeading">Links</h3>
 		  <div class="content">
-		  	<!-- Start writing from here -->
+		    <p class="explanationText">
+		    	Different web pages are connected using links. They give us the ability to go to a different web page without each time entering its URL. This kind of links are  external links i.e. they help in connecting to external web pages.Links can also be internal which means that they will be linking the content within the same page. For example link to the top of the page or link to any specific content.
+		    	<br>
+		    	An anchor tag <b>a</b> is used to define a link. The destination of the link is mentioned using <b>href</b> attribute. Usage:
+		    </p>
+		    <div class="code">	
+<xmp><h2>A Great place to practice coding</h2>
+<p>
+    Take the daily challanges at
+    <a href="http://www.codingninjas.in/students/assignments">
+        Coding Ninjas
+        <!-- clickable content for the link is mentioned here -->
+        <!-- any html element can be included here like image, gif, etc. -->
+    </a>
+</p>
+</xmp>
+		  	</div>
+
+			<p class="explanationText">
+				The link appears as 
+			</p>
+
+			<div class="htmlDisplay">
+				<br>
+				<p>
+					Take the daily challanges at
+						<a href="http://www.codingninjas.in/students/assignments">Coding Ninjas</a>
+				</p>
+				<br>
+			</div>
+			<p class="explanationText">
+				In the <b>href</b> attribute web address was mentioned in the above example, however it can contain address of a local file located on the computer:
+				<div class="code">
+					href="/home/myPC/Documents/test.html"
+				</div>
+			</p>
+			<p class="explanationText">
+				Example of a link within the page:
+				<div class="code">
+					<xmp><a href="#linksHeading">Go to top of the page</a></xmp>
+				</div>
+				<p class="explanationText"> 
+					In the <b>href</b> attribute, <em>linksHeading</em> is the id of the heading of this page. <em>id</em> of an html element is an attribute and it can have any value. While refering to an id, '#' is used in the begining of its name. Clicking on the link shown below will scroll you to the heading such that it is the first line of the display.
+				</p>
+				<div class="htmlDisplay">
+					<p>						
+						<a href="#linksHeading">Go to top of the page</a>
+					</p>
+				</div>
+			</p>
+
+
+
 		  </div>
 		</div>
 
