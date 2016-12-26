@@ -489,41 +489,34 @@
 		  	<p class="explanationText">
 		  	Cascading Style Sheets(CSS) is a stylesheet language used for the presentation of a document written in a markup language like HTML,XML.
 		  	It includes adding colors,fonts,layout to our HTML page.
-		  	There are three ways of applying it <b>Inline</b>,<b>Internal</b> and <b>External</b>.
-		  	CSS code looks like this:
+		  			  	CSS code looks like this:
 		  	</p>
-		  	<p class="explanationNote">
-				 h1
-			      {
-				   font-family:Arial,sans-serif;<br>
-				}
-				<br>
-				<br>
-				/*This is a comment in CSS*/
-				<br>
-				<br>
-				h2
-				{
-				  color:blue;<br>
-				}
-		  	</p>
-		  	<p>It's HTML code is:</p>
-		  	<xmp class="code">
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<link rel="stylesheet" href="style.css">
-<title>JS Bin</title>
-</head>
-<body>
+<xmp class="code">
+h1 {
+	font-family:Arial,sans-serif;<br>
+}
+/*This is a comment in CSS*/
+h2 {
+	color:blue;
+}
+</xmp>
+		  	<p class="explanationText">It's HTML code is:</p>
+<xmp class="code">
 <h1>Welcome to Coding Ninjas!</h1>
 <h2>Where coding is a way of life..</h2>
-</body>
-</html></xmp>
-				<p>Opening in browser we get..</p>
-		  </div>
+</xmp>	
+        <p class="explanationText">Opening in browser we get..</p>
+		<div class="output-window">
+		  	<h1 style="font-family:Arial,sans-serif;">Welcome to Coding Ninjas!</h1>
+		  	<br>
+			<h2 style="color:blue;">Where coding is a way of life..</h2>
 		</div>
+		<p class="explanationText">
+		  	There are three ways of applying it <b>Inline</b>,<b>Internal</b> and <b>External</b>.
+		  	All these are discussed in the next sections.
+		</p>
+		</div>
+	</div>
 
 		<div id="css-inline" class="tabcontent">
 		  <h3 class="heading">CSS: Inline</h3>
