@@ -197,6 +197,11 @@ li.active a {
     border-radius: 3px;
 }
 
+.code:hover {
+    transform: scale(1.005);
+    box-shadow: 4px 4px 12px 6px lightgrey;
+}
+
 .explanationList {
     /*line-height: 1.3em;*/
     color: rgba(0, 0, 0, 0.74);
@@ -213,4 +218,15 @@ li.active a {
     margin-bottom: 1em;
     margin-left:3.5em;
     margin-right:3.5em;
+
 }
+
+div.explanationImage img {
+    border: 1px solid lightgrey;
+    box-shadow: 2px 2px 6px 3px lightgrey;
+}
+
+div.explanationImage img:hover {
+    box-shadow: 3px 3px 8px 4px lightgrey;
+}
+>>>>>>> master
