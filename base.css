@@ -245,8 +245,4 @@ div.explanationImage img {
 
 div.explanationImage img:hover {
     box-shadow: 3px 3px 8px 4px lightgrey;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    margin-left:3.5em;
-    margin-right:3.5em;
 }
