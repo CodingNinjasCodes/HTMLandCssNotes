@@ -159,7 +159,9 @@ li.active a {
     margin-bottom: 1em;
     margin-left:3.5em;
     margin-right:3.5em;
-    background-color:rgba(0,0,0,0.1); 
+    background-color:rgba(0,0,0,0.1);
+    border: 1px solid lightgrey;
+    border-radius: 3px;
 }
 .htmlDisplay {
     font-family: Consolas, "Liberation Mono", Courier, monospace;
@@ -168,7 +170,8 @@ li.active a {
     margin-bottom: 1em;
     margin-left:3.5em;
     margin-right:3.5em;
-    background-color:#ffffee;
+    border: 1px solid lightgrey;
+    background-color:#fffffa;
 }
 .highlightCode {
     font-family: Consolas,"Liberation Mono",Courier,monospace;
