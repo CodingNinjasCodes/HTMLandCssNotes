@@ -78,43 +78,85 @@
 		  <h3 class="heading">Introduction</h3>
 		  <div class="content">
 		  	<!-- Start writing from here -->
-		  	<p>
+		  	<div class="explanationText">
 		 		HTML is used to provide the content(words, images, audio, video, and so on) to the web pages. CSS is then used to improve the presentation of the content. All you need is a text editor to make html files. Just remember to save them with “.html” extension! To view the page open the file with a web browser. Sample HTML code looks like this:
-		  	</p>
+		  	</div>
 
 
-		  	<xmp class="code"><html>
+		  	<xmp class="code"><!DOCTYPE html>
+<html>
 <head>
     <title>Page title here</title>
 </head>
 <body>
-    <p>This is sample text...</p>
-    <p>You are beginning to learn HTML.</p>
+    This is sample text...<br>
+    You are beginning to learn HTML.
     <!-- We use this syntax to write comments -->
     <!-- Page content and rest of the tags here.... -->
     <!-- This is the actual area that gets shown in the browser -->
 </body>
 </html></xmp>
+		  <p class="explanationText">
+		    The file when opened in a web browser appears as
+		  </p>
 		  <div class ="explanationImage">
 		  	<img src="./images/Introduction/first_web_page.png">
 		  </div>
-		  <p>
-		  	HTML is a tag based language. All the html elements are defined using them. Description of tags used in the above example:
-		  	<ol class="explanationList">
-		  		<li>The text between &lthtml&gt and &lt/html&gt describes an HTML document</li>
-		  		<li>The text between &lthead&gt and &lt/head&gt provides information about the document</li>
-		  		<li>The text between &lttitle&gt and &lt/title&gt provides a title for the document(page title appears on the tab)</li>
-		  		<li>The text between &ltbody&gt and &lt/body&gt describes the visible page content</li>
-		  		<li>The text between &lth1&gt and &lt/h1&gt describes a heading</li>
-		  	</ol>
-		  </p>	
+
+		  <div class="explanationText">
+		  	HTML is a tag based language. They are defined within the angle brackets. Description and definition of tags used in the above example is given in next section.
+		  </div>		
 		  </div>
 		</div>
+
 
 		<div id="tags" class="tabcontent">
 		  <h3 class="heading">Tags, Attributes and Elements</h3>
 		  <div class="content">
 		  	<!-- Start writing from here -->
+		  	<div class="explanationText">
+			  	Basic HTML just contains plain text. All the awesome things are included using the following things:
+		  	</div>
+		  	<div class="card-panel orange lighten-5 flow-text">Tags</div>
+		  		<div class="explanationText">
+		  			 <p>
+			  			 Meaning to the plain text of HTML is applied using tags. i.e. tags define various elements of the document.
+			  			 <br>
+			  			 Most of the tags have opening and closing. The closing is just the name of the tag with character '/' in the beginning. A tag needs to have a closing tag if it includes some content. Tag with an opening and closing can have any number of tags included within itself!
+			  			 Eg: &lthtml&gt and &lt/html&gt. 
+			  			 <br>
+			  			 When a tag doesn't contain any content but is just meant to symbolify something then it doesn't need the closing tag.
+			  			 Eg: &ltbr&gt is used to give line break in text. It doesn't have any content but just directs the browser to show the remaining content from next line. 
+		  			 </p>
+
+		  			 Description of the tags used in the previous section is as follows:
+		  		</div>
+		  		<ul class="explanationNote">
+		  		<li>&lt!DOCTYPE html&gt tells the browser that the file being displayed contains HTML5</li>
+		  		<li> &lthtml&gt and &lt/html&gt meant to contain all the html data</li>
+		  		<li> &lthead&gt and &lt/head&gt provides information about the document</li>
+		  		<li> &lttitle&gt and &lt/title&gt provides a title for the document</li>
+		  		<li> &ltbody&gt and &lt/body&gt contains all the things visible on the web page</li>
+		  	</ul>
+		  	<p class="explanationNote">
+		  		<em>NOTE:</em> You might come across “self-closing” tags, whereby a br tag, for example, will look like “&ltbr /&gt” instead of simply “&ltbr&gt”. This is a remnant of XHTML, a form of HTML based on another markup language called XML. HTML5 is much more chilled out than XHTML and will be happy with either format. Some developers prefer one way, some prefer the other.
+		  	</p>
+
+		  	<br>
+		  	<div class="card-panel orange lighten-5 flow-text">Attributes</div>
+		  	<p class="explanationText">
+		  		Attributes control tag behaviour.They are present in the opening tags. They consist of two parts: First is the name of attribute and second is its value which is enclosed within double inverted commas.Example:
+		  		<br>
+		  		<div class="code">
+			  		<xmp><tag_name attribute_name="value_value">Content Enclosed</tag_name></xmp>
+		  		</div>
+		  	</p>
+
+			<div class="card-panel orange lighten-5 flow-text">Elements</div>
+		  	<div class="explanationImage"><img src="./images/page2/element_analogy.png"></div>
+		  	<p class="explanationText">
+		  		Elements are the things that actually make up the web page. Tags just define the beginning and end of the elements. Everything that a web page includes is an HTML element.
+		  	</p>
 		  </div>
 		</div>
 
@@ -122,6 +164,30 @@
 		  <h3 class="heading">Page Title</h3>
 		  <div class="content">
 		  	<!-- Start writing from here -->
+		  	<p class="explanationText">
+		  		Head of a document is the place where information about the document is written. The title of the document is mentioned in the head using the &lttitle&gt tag.
+		  	</p>
+		  	<div class="code">	
+		  	<xmp><!DOCTYPE html>
+<html>
+<head></xmp>
+<span class="highlightCode">&lttitle&gtThis is the Title&lt/title&gt
+</span>
+<xmp></head>
+<body>
+    <!--Syntax for the body goes here-->
+</body>
+</html></xmp>
+		  	</div>
+			<p class="explanationText">
+		    	This is rendered as:
+		    </p>
+		  	<div class="explanationImage">
+		  		<img src="./images/page3/title.png">
+		  	</div>
+		  	<p class="explanationText">
+		    	Notice the title of the page appears as the name of the tab!
+		    </p>
 		  </div>
 		</div>
 
@@ -129,6 +195,34 @@
 		  <h3 class="heading">Paragraphs</h3>
 		  <div class="content">
 		  	<!-- Start writing from here -->
+		    <p class="explanationText">
+		    	Paragraphs are blocks of text separated from each other by some space. They are defined using the &ltp&gt and &lt/p&gt tags. When p tag ends, the next thing appears in next line.
+		    </p>
+		    <xmp class="code"><!DOCTYPE html>
+<html>
+<head>
+<title>p tag</title>
+</head>
+<body>
+    <p>This is line 1.</p>
+    <p>This is line 2.</p>
+    <p>This is line 3.</p>
+    <br>
+	<!-- trying to format the text without using p-tag -->
+    This is line 1.
+    This is line 2.
+    This is line 3.
+</body>
+</html></xmp>
+			<p class="explanationText">
+				It appears on a web browser like this:
+			</p>
+			<div class="explanationImage">
+				<img src="./images/page4/p_tag.png">
+			</div>
+			<p class="explanationText">
+				When formating without p-tag, new lines are appended on the current line. This happens because the browser doesn’t see to the formatting of text. You have to use appropriate tags for formatting the text. More on formatting text would be there later in this tutorial.
+			</p>
 		  </div>
 		</div>
 
@@ -136,34 +230,300 @@
 		  <h3 class="heading">Headings</h3>
 		  <div class="content">
 		  	<!-- Start writing from here -->
+		  	<p class="explanationText">
+		  		There are tags in HTML to mark some content as headings. In fact, there are six different levels of headings h1, h2, h3, h4, h5 and h6. h1 is the mightiest i.e. it is the largest heading and h6 is the smallest level heading.
+		  	</p>
+		  	<xmp class="code"><!DOCTYPE html>
+<html>
+<head>
+<title>Heading Levels</title>
+</head>
+<body>
+	<h1>Heading level 1</h1>
+	<h2>Heading level 2</h2>
+	<h3>Heading level 3</h3>
+	<h4>Heading level 4</h4>
+	<h5>Heading level 5</h5>
+	<h6>Heading level 6</h6>
+</body>
+</html></xmp>
+			<div class="explanationImage">
+				<img src="./images/page5/headings.png">
+			</div>	
 		  </div>
 		</div>
 
 		<div id="lists" class="tabcontent">
 		  <h3 class="heading">Lists</h3>
 		  <div class="content">
-		  	<!-- Start writing from here -->
+		  	<p class="explanationText">
+		  	There are three type of lists in html. First two are ordered lists and unordered lists. They both are almost the same. Unordered lists are used when the numbering of items is not required and by default the items are followed by bullets. Whereas in ordered lists the items are displayed by a preceding numbering. The numbering style can be controlled by CSS that you will be learning soon!!
+		  	</p>
+		  	<div class="card-panel orange lighten-5 flow-text">Unordered Lists</div>
+		  	<p class="explanationText">
+		  		They are defined using the &ltul&gt tag and the items are enclosed in the &ltli&gt tags.
+		  	</p>
+		  	<xmp class="code"><!DOCTYPE html>
+<html>
+<head>
+<title>Unordered Lists</title>
+</head>
+<body>
+	<h1>Lists</h1>
+	<ul>
+	  <li>first item</li>
+	  <li>second item</li>
+	  <li>third item</li>
+	</ul>
+</body>
+</html></xmp>
+			<p class="explanationText">
+				The output is as follows:
+			</p>
+			<div class="explanationImage">
+				<img src="./images/page6/ordered_list.png">
+			</div>
+			<p class="explanationText">
+				Nesting of lists can be done which means that lists-items can contain sub-lists in them.
+			</p>
+			<xmp class="code"><!DOCTYPE html>
+<html>
+<head>
+<title>Unordered Lists</title>
+</head>
+<body>
+	<h1>Lists</h1>
+	<ul>
+  <li>first item</li>
+  <li>second item
+  <!-- Look, the closing </li> tag is not placed here! -->
+    <ul>
+      <li>second item first subitem</li>
+      <li>second item second subitem
+      <!-- Same for the second nested unordered list! -->
+        <ul>
+          <li>second item second subitem first sub-subitem</li>
+          <li>second item second subitem second sub-subitem</li>
+          <li>second item second subitem third sub-subitem</li>
+        </ul>
+      </li>
+      <!-- Closing </li> tag for the li that contains the third
+       unordered list -->
+      <li>second item third subitem</li>
+    </ul>
+  </li>               <!-- Here is the closing </li> tag -->
+  <li>third item</li>
+</ul>
+</body>
+</html></xmp>
+			<p class="explanationText">
+				The output is as follows:
+			</p>
+			<div class="explanationImage">
+				<img src="./images/page6/unordered_list_nesting.png">
+			</div>
+			<p class="explanationText">
+				There is no limitation to the depth of nested lists.
+			</p>
+
+			<br>
+			<div class="card-panel orange lighten-5 flow-text">Ordered Lists</div>
+		  	<p class="explanationText">
+		  		They are defined using the &ltol&gt tag and the items are enclosed in the &ltli&gt tags.Typically, ordered-list items are displayed with a preceding numbering. The numbering style can be of any kind like like numerals, letters or Romans numerals. The default one is numerals
+		  	</p>
+		  	<xmp class="code"><!DOCTYPE html>
+<html>
+<head>
+<title>Onordered Lists</title>
+</head>
+<body>
+	<h1>Lists</h1>
+	<ol>
+	  <li>first item</li>
+	  <li>second item</li>
+	  <li>third item</li>
+	</ol>
+</body>
+</html></xmp>
+			<p class="explanationText">
+				The output is as follows:
+			</p>
+			<div class="explanationImage">
+				<img src="./images/page6/ordered_list.png">
+			</div>
+			<p class="explanationText">
+				Using the attribute 'start' we can specify from where the numbering starts by giving its value.
+			</p>
+			<xmp class="code"><!DOCTYPE html>
+<html>
+<head>
+<title>Onordered Lists</title>
+</head>
+<body>
+	<h1>Lists</h1>
+	<ol start="7">
+	  <li>first item</li>
+	  <li>second item</li>
+	  <li>third item</li>
+	</ol>
+</body>
+</html></xmp>
+			<p class="explanationNote">
+				<em>Note:</em>Notice that value of the attribute start appeared in double inverted commas.
+			</p>
+
+			<div class="explanationImage">
+				<img src="./images/page6/ordered_list_numbering.png">
+			</div>
+			<p class="explanationText">
+				Nesting can also be done using ordered lists. Also a combination of ordered and unordered lists can be used!
+			</p>
+			<p class="explanationNote">
+				<em>NOTE:</em>List styles can be changed using CSS, which you will be learning soon.
+			</p>
 		  </div>
 		</div>
 
 		<div id="links" class="tabcontent">
-		  <h3 class="heading">Links</h3>
+		  <h3 class="heading" id="linksHeading">Links</h3>
 		  <div class="content">
-		  	<!-- Start writing from here -->
+		    <p class="explanationText">
+		    	Different web pages are connected using links. They give us the ability to go to a different web page without each time entering its URL. This kind of links are  external links i.e. they help in connecting to external web pages.Links can also be internal which means that they will be linking the content within the same page. For example link to the top of the page or link to any specific content.
+		    	<br>
+		    	An anchor tag <b>a</b> is used to define a link. The destination of the link is mentioned using <b>href</b> attribute. Usage:
+		    </p>
+		    <div class="code">	
+<xmp><h2>A Great place to practice coding</h2>
+<p>
+    Take the daily challanges at
+    <a href="http://www.codingninjas.in/students/assignments">
+        Coding Ninjas.
+        <!-- clickable content for the link is mentioned here -->
+        <!-- any html element can be included here like image, gif, etc. -->
+    </a>
+</p>
+</xmp>
+		  	</div>
+
+			<p class="explanationText">
+				The link appears as 
+			</p>
+
+			<div class="htmlDisplay">
+				<div style="font-size:1.25em"><b>A Great place to practice coding</b></div>
+					<p>
+						Take the daily challanges at
+						<a href="http://www.codingninjas.in/students/assignments">Coding Ninjas.</a>
+					</p>
+			</div>
+			<p class="explanationText">
+				In the <b>href</b> attribute web address was mentioned in the above example, however it can contain address of a local file located on the computer:
+				<div class="code">
+					href="/home/myPC/Documents/test.html"
+				</div>
+			</p>
+			<p class="explanationText">
+				Example of a link within the page:
+				<div class="code">
+					<xmp><a href="#linksHeading">Go to top of the page</a></xmp>
+				</div>
+				<p class="explanationText"> 
+					In the <b>href</b> attribute, <em>linksHeading</em> is the id of the heading of this page. <em>id</em> of an html element is an attribute and it can have any value. While refering to an id, '#' is used in the begining of its name. Clicking on the link shown below will scroll you to the heading such that it is the first line of the display.
+				</p>
+				<div class="htmlDisplay">
+					<p>						
+						<a href="#linksHeading">Go to top of the page</a>
+					</p>
+				</div>
+			</p>
+
+
+
 		  </div>
 		</div>
 
 		<div id="images" class="tabcontent">
 		  <h3 class="heading">Images</h3>
 		  <div class="content">
-		  	<!-- Start writing from here -->
+		  	<p class="explanationText">	
+				To add images in the html documents <b>img</b> tag is used. This tag is a self closing tag which means that it doesn’t contain the closing tag. The <b>src</b> attribute is used to mention the source of the image. The source of the image can be a local file or some it can be some url also.<br>
+				An important attribute is <b>alt</b>. It provides the alternate content for the image for the users who are unable to see the image (if they are visually impaired, for example). Also, if the image fails to load then the alternate content is shown.
+				<p class="explanationNote">
+					<em>Note: images with different extensions like .png, .jpeg can be used. Also gifs can be displayed using the <b>img</b> tag.</em>
+				</p>
+				An example:
+		  	</p>
+
+		  	<xmp class="code"><img src="images/logo.png" alt="Coding Ninjas image"></xmp>
+		  	<!-- path to the logo of Coding Ninjas -->
+			<p class="explanationText">
+				The image appears as
+				<div class="htmlDisplay">
+					<img src="images/logo.png" alt="Coding Ninjas image"></xmp>
+				</div>
+			</p>
+
+
 		  </div>
 		</div>
 
 		<div id="tables" class="tabcontent">
 		  <h3 class="heading">Tables</h3>
 		  <div class="content">
-		  	<!-- Start writing from here -->
+		  <p class="explanationText">
+			Tables are used to show the tabular data. To achieve this many tags are used. All the table-data is enclosed within the <b>table</b> tags. After that <b>tr</b> tags enclose table rows. Each row contains a number of data enteries which are enclosed by <b>td</b> tags. <b>td</b> stands for table-data and <b>tr</b> for table row. Number of table-data  elements in a row are equal to the number of columns of that table. 
+		  </p>
+		  <xmp class="code"><table>
+    <tr>
+        <td>Row 1, cell 1</td>
+        <td>Row 1, cell 2</td>
+        <td>Row 1, cell 3</td>
+    </tr>
+    <tr>
+        <td>Row 2, cell 1</td>
+        <td>Row 2, cell 2</td>
+        <td>Row 2, cell 3</td>
+    </tr>
+    <tr>
+        <td>Row 3, cell 1</td>
+        <td>Row 3, cell 2</td>
+        <td>Row 3, cell 3</td>
+    </tr>
+    <tr>
+        <td>Row 4, cell 1</td>
+        <td>Row 4, cell 2</td>
+        <td>Row 4, cell 3</td>
+    </tr>
+</table></xmp>
+
+			<p class="explanationText">The table appears as</p>
+			<div class = "htmlDisplay">
+			<table>
+			    <tr>
+			        <td>Row 1, cell 1</td>
+			        <td>Row 1, cell 2</td>
+			        <td>Row 1, cell 3</td>
+			    </tr>
+			    <tr>
+			        <td>Row 2, cell 1</td>
+			        <td>Row 2, cell 2</td>
+			        <td>Row 2, cell 3</td>
+			    </tr>
+			    <tr>
+			        <td>Row 3, cell 1</td>
+			        <td>Row 3, cell 2</td>
+			        <td>Row 3, cell 3</td>
+			    </tr>
+			    <tr>
+			        <td>Row 4, cell 1</td>
+			        <td>Row 4, cell 2</td>
+			        <td>Row 4, cell 3</td>
+			    </tr>
+			</table
+				
+			</div>
+
+
 		  </div>
 		</div>
 
