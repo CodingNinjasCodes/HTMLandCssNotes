@@ -169,7 +169,7 @@
 		  	<xmp><!DOCTYPE html>
 <html>
 <head></xmp>
-<span class="highlightCode">&lttitle&gtThis is the Title&lt/title&gt
+<span class="highlightCode">xmp&lttitle&gtThis is the Title&lt/title&gt
 </span>
 <xmp></head>
 <body>
@@ -557,13 +557,64 @@
 		  <h3 class="heading">CSS: Getting Started</h3>
 		  <div class="content">
 		  	<!-- Start writing from here -->
-		  </div>
+		  	<p class="explanationText">
+		  	Cascading Style Sheets(CSS) is a stylesheet language used for the presentation of a document written in a markup language like HTML,XML.
+		  	It includes adding colors,fonts,layout to our HTML page.
+		  			  	CSS code looks like this:
+		  	</p>
+<xmp class="code">
+h1 {
+	font-family:monospace;
+}
+/*This is a comment in CSS*/
+h2 {
+	color:blue;
+}
+</xmp>
+		  	<p class="explanationText">It's HTML code is:</p>
+<xmp class="code">
+<h1>Welcome to Coding Ninjas!</h1>
+<h2>Where coding is a way of life..</h2>
+</xmp>	
+        <p class="explanationText">gives the output..</p>
+		<div class="output-window">
+		  	<h1 style="font-family: monospace;">Welcome to Coding Ninjas!</h1>
+		  	<br>
+			<h3 style="color:blue">Where coding is a way of life..</h3>
 		</div>
+		<p class="explanationText">
+		  	There are three ways of applying it <b>Inline</b>,<b>Internal</b> and <b>External</b>.
+		  	All these are discussed in the next sections.
+		</p>
+		</div>
+	</div>
 
 		<div id="css-inline" class="tabcontent">
 		  <h3 class="heading">CSS: Inline</h3>
 		  <div class="content">
 		  	<!-- Start writing from here -->
+		  	<p class="explanationText">
+		  	Inline CSS is applied directly to our HTML code using the <b>style</b> attribute.
+		  	<br>
+		  	Here's the HTML code..
+		  	<xmp class="code">
+<p style="color:red">Inline CSS</p>
+		  	</xmp>
+		  		Output Will be..
+		  		<div class="output-window">
+		  		<p style="color:red">Inline CSS</p>
+		  		</div>
+		  		also, multiple properties can be added to an element.
+		  		<br>
+		  		HTML code is..
+		  		<xmp class="code">
+<p style="color:blue;font-size:40px">Inline CSS</p>
+		  		</xmp>
+		  		Will output the following..
+		  		<div class="output-window">
+		  		<p style="color:blue;font-size:40px">Inline CSS</p>
+		  		</div>
+		  	</p>
 		  </div>
 		</div>
 
@@ -571,6 +622,37 @@
 		  <h3 class="heading">CSS: External</h3>
 		  <div class="content">
 		  	<!-- Start writing from here -->
+		  	An External CSS can be applied using a complete different CSS file.
+		  	<br>
+		  	This CSS file must be linked to our HTML file using the link tag.
+		  	Here's the HTML code..
+		  	<xmp class="code">
+<head>
+<link rel="stylesheet" type="text/css" href="Style.css">
+</head>
+<body>
+<h1>External CSS</h1>
+<br>
+<p>This is External CSS.</p>
+</body>
+		  	</xmp>
+		  	The external CSS file must be saved with <b>.css</b> extention, e.g.<b>"Style.css"</b>.Here's how our "Style.css" will look like..
+		  	<xmp class="code">
+h3 {
+   color: navy;
+}
+
+p {
+  font-size: 30px;
+  color: green;
+}	  	</xmp>
+             Output will be...
+             <br>
+             <div class="output-window">
+             <h3 style="color:navy">External CSS</h3>
+             <br>
+             <p style="font-size:30px;color:green">This is External CSS.</p>
+             </div>
 		  </div>
 		</div>
 
@@ -578,6 +660,36 @@
 		  <h3 class="heading">CSS: In Page</h3>
 		  <div class="content">
 		  	<!-- Start writing from here -->
+		  	An internal or in-page stylesheet holds the CSS code for the webpage in the head section of the particular file.
+		  	<br>
+		  	Internal CSS can be applied using <b>style</b> tag inside the <b>head</b> tag.
+		  	<br>
+		  	Here's the HTML code..
+		  	<xmp class="code">
+<head>
+ <style>
+    h1 {color:blue;}
+    h2 {color:red;}
+    p {color:green;}
+ </style>
+</head>
+<body>
+	<h1>In-page CSS</h1>
+	<br>
+	<h2>aka</h2>
+	<br>
+	<p>INTERNAL CSS</p>
+</body>
+		  	</xmp>
+		  	Output generated will be..
+		  	<br>
+		  	<div class="output-window">
+		  	<h1 style="color: blue">In-page CSS</h1>
+		  	<br>
+	<h2 style="color:red">aka</h2>
+	<br>
+	<p style="color: green">INTERNAL CSS</p>
+          </div>
 		  </div>
 		</div>
 
@@ -585,6 +697,33 @@
 		  <h3 class="heading">Selectors, Properties, and Values</h3>
 		  <div class="content">
 		  	<!-- Start writing from here -->
+		  	A selector points to the HTML element which we want to style.e.g..
+		  	<xmp class="code">
+p{color: blue;}
+		  	</xmp>
+		  	In the above code <b>p</b> is the selector.In other words a selector is nothing but a HTML tag use to style that element.
+		  	<br>
+		  	<br>
+		  	A <b>Property</b> refers to the various CSS styles that can be applied to a selector.For e.g.
+		  	<xmp class="code">
+h3{
+  font-size: 30px;
+  color: red;
+  font-family: Monospace,sans-serif;
+}		  	</xmp>
+            font-size, color, font-family are the <b>properties</b> that are applied to the selector <b>h3</b> in the above code.  
+            <br>
+            <br>
+            A <b>value</b> is given to a property. <b>30px, red, Monospace, sans-serif</b> are the values given to the property in above code.
+            <br>
+            Properties and values are seprated by a <b>:</b> (colon).
+
+            <br>
+            <br>
+            In general..
+		  	<div class="explanationImage">
+		  		<img src="./images/CSS_selector/selector.gif">
+		  	</div>
 		  </div>
 		</div>
 
@@ -599,7 +738,26 @@
 		  <h3 class="heading">Text</h3>
 		  <div class="content">
 		  	<!-- Start writing from here -->
-		  </div>
+		 <!--- 	Various Font changing properties can be applied to change the shape and size of the text in our CSS.
+		  	<br>
+		    <br>
+		  	<h2 style="font-size: 2em;font-weight: 300;font-size: 30px;color: grey">font-family</h2>
+
+		  	    Changes the font to the specified style.Examples are Arial, sans-serif, monospace.
+		  	<br>
+		  	<xmp class="code">
+h1 { 
+  font-family:Arial,monospace,helvetica;
+}		 
+ 	     </xmp>
+ 	    <!-- This code will output..
+ 	     <div class="output-window">
+ 	     	<h1 style="font-family: Arial,monospace,helvetica">Arial,monospace,helvetica</h1>
+ 	     </div>-->
+ 	     <!--<b>Arial, monospace, helvetica</b> represents the order in which the CSS will search for the fonts in user's computer.
+ 	     <b>Note:</b> If the font is more than one word then it should be put in quotation marks like "Times New Roman".
+		  </div> -->
+
 		</div>
 
 		<div id="margin" class="tabcontent">
