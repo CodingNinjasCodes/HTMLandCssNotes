@@ -565,11 +565,11 @@
 		  	</p>
 <xmp class="code">
 h1 {
-	font-family:monospace;
+	font-family: monospace;
 }
 /*This is a comment in CSS*/
 h2 {
-	color:blue;
+	color: blue;
 }
 </xmp>
 		  	<p class="explanationText">It's HTML code is:</p>
@@ -640,12 +640,12 @@ h2 {
 		  	The external CSS file must be saved with <b>.css</b> extention, e.g.<b>"Style.css"</b>.Here's how our "Style.css" will look like..
 		  	<xmp class="code">
 h3 {
-   color: navy;
+    color: navy;
 }
 
 p {
-  font-size: 30px;
-  color: green;
+   font-size: 30px;
+   color: green;
 }	  	</xmp>
              Output will be...
              <br>
@@ -707,10 +707,10 @@ p{color: blue;}
 		  	<br>
 		  	A <b>Property</b> refers to the various CSS styles that can be applied to a selector.For e.g.
 		  	<xmp class="code">
-h3{
-  font-size: 30px;
-  color: red;
-  font-family: Monospace,sans-serif;
+h3 {
+    font-size: 30px;
+    color: red;
+    font-family: Monospace,sans-serif;
 }		  	</xmp>
             font-size, color, font-family are the <b>properties</b> that are applied to the selector <b>h3</b> in the above code.  
             <br>
@@ -742,7 +742,7 @@ h3{
 		  	Various Font changing properties can be applied to change the shape and size of the text in our CSS.
 		  	<br>
 		    <br>
-		    <div class="explaningHeading">
+		    <div class="explanationHeading">
 		    	font-family
 		    </div>
 		    <br>
@@ -752,21 +752,200 @@ h3{
 		  	<br>
 		  	<xmp class="code">
 h1 { 
-  font-family:Arial,monospace,helvetica;
+    font-family: Arial,monospace,helvetica;
 }		 
  	     </xmp>
  	     This code will output..
  	     <div class="output-window">
  	     	<h1 style="font-family: Arial,monospace,helvetica">Arial,monospace,helvetica</h1>
  	     </div>
- 	     <b>Arial, monospace, helvetica</b> represents the order in which the CSS will search for the fonts in user's computer.
+ 	     <b>Arial, monospace, helvetica</b> represents the order in which the CSS will search for the fonts in user's computer (If one is not present then it will move to other).
+ 	     <div class="explanationNote">
  	     <b>Note:</b> If the font is more than one word then it should be put in quotation marks like "Times New Roman".
-		  </div> 
+ 	     </div>  
+		  like..
 <xmp class="code">
-h1{
-	font_family:"Times New Roman", Times, serif;
+h1 {
+    font-family: "Times New Roman", Times, serif;
 }
 </xmp>
+
+
+<div class="explanationHeading">
+           font-size 
+            </div>
+           <br>
+           Changes the size of our font.Values can be applied in <b>em</b> or <b>px</b>.
+           <xmp class="code">
+p {
+   font-size: 30px;	
+}
+
+p {
+   font-size: 3.2em;
+}
+           </xmp>
+           will show..
+           <div class="output-window">
+           <p style="font-size: 30px">px</p>
+           <br>
+           <p style="font-size: 3.2em">em</p>
+           </div>
+ <div class="explanationHeading">
+		    	font-weight
+		    </div>
+		    <br>
+		    Specifies the weight of the font from lighter to bolder.Values can be  <b>bold, normal</b>, lighter(<b>100, 200, 300, 400</b>), normal(<b>500, 600, 700</b>), bolder(<b>800, 900</b>).
+		    <xmp class="code">
+p {
+   font-weight: 100;
+}
+
+p {
+   font-weight: bold;
+}
+</xmp>
+		   <br>
+		   <div class="output-window">
+		   <p style="font-weight:100">font-weight: 100;</p>
+		   <br>
+		   <p style="font-weight:bold;">font-weight: bold;</p>
+           </div>
+           <br>
+ <div class="explanationHeading">
+		    	font-style
+		    </div>
+		    <br>
+	Changes the style from normal to italics or vice-versa.
+	<xmp class="code">
+p {
+   font-style: italic;
+}	</xmp>
+
+    gives...
+    <div class="output-window">
+    <p style="font-style: italic;">Italics</p>
+    </div>
+    	<br>
+    	<div class="explanationHeading">
+    	text-decoration
+    	</div>
+    	<br>
+    	The text-decoration property specifies the decoration added to text.This property can be <b>underline</b>, <b>overline</b>, or <b>line-through</b>.
+
+    	<xmp class="code">
+h3 {
+    text-decoration: overline;
+}
+
+h3 {
+    text-decoration: line-through;
+}
+
+h3 {
+    text-decoration: underline;
+}
+    	</xmp>
+    outputs..
+    <div class="output-window">
+    <h3 style="text-decoration: overline;">overline</h3>
+    <br>
+    <h3 style="text-decoration: line-through;">line-through</h3>
+    <br>
+    <h3 style="text-decoration: underline;">underline</h3>	
+    </div>
+<br>
+        <div class="explanationHeading">
+        	text-transform
+        </div>
+        <br>
+        Changes the case of text.It may be <b>uppercase</b>, <b>lowercase</b>, <b>capitalize</b> or <b>none</b>.
+        <br>
+        <br>
+        <ul>
+        <li><b>lowercase</b> makes all of the letters in the selected text lowercase.</li>
+        <br>
+		<li><b>uppercase</b> makes all of the letters in the selected text uppercase.</li>
+		<br>
+		<li><b>capitalize</b> capitalizes the first letter of each word in the selected text.</li>
+		<br>
+		<li><b>none</b> leaves the text's case and capitalization exactly as it was entered.</li>
+		</ul>
+		<br>
+		<xmp class="code">
+h1 {
+    text-transform: lowercase;
+}
+
+h1 {
+    text-transform: uppercase;
+}
+
+h1 {
+    text-transform: capitalize;
+}
+
+h1 {
+    text-transform: none;
+}
+		</xmp>
+          outputs the following..
+          <div class="output-window">
+          <h1 style="text-transform: lowercase;">lowercase</h1>
+          <br>
+          <h1 style="text-transform: uppercase;">uppercase</h1>
+          <br>
+          <h1 style="text-transform: capitalize;">capitalizes every first letter</h1>
+          <br>
+          <h1 style="text-transform: none;">none</h1>
+          </div>
+          <br>
+
+          <div class="explanationHeading">
+          Text-Spacing 	
+          </div>
+          <br>
+          Includes following properties..
+          <br>
+          <ul>
+
+<li>The <b>letter-spacing</b> and <b>word-spacing</b> properties are for spacing between letters or words.</li><br>
+
+<li>The <b>line-height</b> property sets the height of the lines in an element, such as a paragraph, without adjusting the size of the font.</li><br>
+
+<li>The <b>text-align</b> property will align the text inside an element to <b>left</b>, <b>right</b>, <b>center</b>, or <b>justify</b>.</li><br>
+
+<li>The <b>text-indent</b> property will indent the first line of a paragraph.</li>
+</ul>
+<br>
+here's the CSS code..
+<xmp class="code">
+p {
+   letter-spacing: 0.5em;
+}
+
+p {
+   line-height: 1.5;
+}
+
+p {
+   word-spacing: 2em;
+}
+
+p {
+   text-align: center;
+}
+</xmp>
+outputs..
+      <div class="output-window">
+      <p style="letter-spacing: 0.5em">letterspacing in css</p>
+       <p style="line-height: 2.5em">line height in css</p>
+      <p style="word-spacing: 2em">word spacing in css</p>
+      <p style="text-align: center;">text alignment in css</p>
+      	
+      </div>
+
+</div>
 		</div>
 
 		<div id="margin" class="tabcontent">
