@@ -529,7 +529,55 @@
 		<div id="rowspan" class="tabcontent">
 		  <h3 class="heading">Table: Rowspan</h3>
 		  <div class="content">
-		  	<!-- Start writing from here -->
+		  	<p class="explanationText">
+			  	To manage the layout of the the tables, two attributes are used. One is <b>rowspan</b> and other is <b>colspan</b>. <b>rowspan</b> is used to mention the number of rows that a particular cell will be occupying. This is done by using the attrtibute in the <b>tb</b> tag.
+		  	</p>
+
+
+		  		<xmp class="code">
+<table border="1">
+    <tr>
+        <td>Row 1, cell 1</td>
+        <td>Row 1, cell 2</td>
+        <td>Row 1, cell 3</td>
+    </tr>
+    <tr>
+        <td rowspan="2">Row 2, cell 1, and row 2, cell 2</td>
+        <td>Row 2, cell 2</td>
+        <td>Row 2, cell 3</td>
+    </tr>
+    <tr>
+        <td>Row 3, cell 2</td>
+        <td>Row 3, cell 3</td>
+    </tr>
+</table>
+	</xmp>
+
+		  	<p class="explanationText">
+		  		The output appears as:
+		  	</p>
+
+		  	<div class="output-window">
+				<table border="2">
+                    <tr>
+                        <td>Row 1, cell 1</td>
+                        <td>Row 1, cell 2</td>
+                        <td>Row 1, cell 3</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Row 2, cell 1, and row 2, cell 2</td>
+                        <td>Row 2, cell 2</td>
+                        <td>Row 2, cell 3</td>
+                    </tr>
+                    <tr>
+                        <td>Row 3, cell 2</td>
+                        <td>Row 3, cell 3</td>
+                    </tr>
+                </table>	
+		  	</div>
+
+
+
 		  </div>
 		</div>
 
