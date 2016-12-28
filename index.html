@@ -586,7 +586,7 @@
 		  	<!-- Start writing from here -->
 		  	<p class="explanationText">
 			  	Attribute <b>colspan</b> is used to mention the number of columns that a particular cell will be occupying. This is done by using the attrtibute in the <b>td</b> tag.
-			  	Both <b>colspan</b> and <b>rowpan</b> can be used in <b>th</b> tag, which is used to enclose headings in tables.Example:
+			  	Both <b>colspan</b> and <b>rowpan</b> can be used in <b>th</b> tag (table-heading tag), which is used to enclose headings in tables.Example:
 		  	</p>
 
 
@@ -649,7 +649,47 @@
 		<div id="forms" class="tabcontent">
 		  <h3 class="heading">Forms</h3>
 		  <div class="content">
-		  	<!-- Start writing from here -->
+		  	<p class="explanationText">
+		  		HTML forms  are the main thing through which user can interact with the web site or application. Through forms, a user enters the data which is either processed by the browser itself(using Javascript) or goes to the server where it gets processed.       <br>
+				An HTML forms may contain a lot of elements like text fields (single line or multiline), select boxes, buttons, checkboxes, or radio buttons. Let us start with just a basic form without any elements:
+		  	</p>
+<xmp class="code"><form action="/address_to_handle_form" method="post">
+
+  </form>
+</xmp>
+			<p class="explanationText">
+				Since the form doesn't contain any element,currently, nothing will appear as output.
+			</p>
+			<p class="explanationNote">
+				<em>NOTE:</em>Notice the attributes <b>action</b> and <b>method</b>. We need to tell the form where it should send the data that is entered, this is done using <b>action</b> attribute. There are many methods to send data to the address mentioned. Most important ones are <em>get</em>, and <em>post</em>. Method <em>get</em> is used when privacy is not a concern and the data is small and the data entered in the form goes to the destination as a part of the address mentioned in the attribute, whereas the <em>post</em> is used to send data more securely.
+			</p>
+			<div class="explanationHeading"><b>Input</b> Tag</div>
+			<p class="explanationText">
+				It is the most important element of the forms. It can take various forms using the <b>type</b> attribute. Here are the examples:
+				<ul class="explanationNote">
+					<li>
+						&ltinput type="text"&gt or simply &ltinput&gt is a standard textbox. This can also have a value attribute, which sets the initial text in the textbox.
+					</li>
+					<li>
+						&ltinput type="password"&gt is similar to the textbox, but the characters typed in by the user will be hidden.
+					</li>
+					<li>
+						&ltinput type="checkbox"&gt is a checkbox, which can be toggled on and off by the user. This can also have a checked attribute (&ltinput type="checkbox" checked&gt - the attribute doesn’t require a value), and makes the initial state of the check box to be switched on, as it were.
+					</li>
+					<li>
+						&ltinput type="radio"&gt is similar to a checkbox, but the user can only select one radio button in a group. This can also have a checked attribute.
+					</li>
+					<li>
+						&ltinput type="submit"&gtis a button that when selected will submit the form. You can control the text that appears on the submit button with the value attribute, for example &ltinput type="submit" value="Ooo. Look. Text on a button. Wow"&gt.	
+					</li>
+				</ul>
+			</p>
+			<p class="explanationText">
+				These were the basics of forms more will be coming in HTML forms section!!
+			</p>
+
+
+			
 		  </div>
 		</div>
 
