@@ -677,7 +677,7 @@ p {
 <body>
 	<h1>In-page CSS</h1>
 	<br>
-	<h2>aka</h2>
+	<h2>OR</h2>
 	<br>
 	<p>INTERNAL CSS</p>
 </body>
@@ -687,7 +687,7 @@ p {
 		  	<div class="output-window">
 		  	<h1 style="color: blue">In-page CSS</h1>
 		  	<br>
-	<h2 style="color:red">aka</h2>
+	<h2 style="color:red">OR</h2>
 	<br>
 	<p style="color: green">INTERNAL CSS</p>
           </div>
@@ -739,10 +739,14 @@ h3{
 		  <h3 class="heading">Text</h3>
 		  <div class="content">
 		  	<!-- Start writing from here -->
-		 <!--- 	Various Font changing properties can be applied to change the shape and size of the text in our CSS.
+		  	Various Font changing properties can be applied to change the shape and size of the text in our CSS.
 		  	<br>
 		    <br>
-		  	<h2 style="font-size: 2em;font-weight: 300;font-size: 30px;color: grey">font-family</h2>
+		    <div class="explaningHeading">
+		    	font-family
+		    </div>
+		    <br>
+		  	<!--<h2 style="font-size: 2em;font-weight: 300;font-size: 30px;color: grey">font-family</h2>-->
 
 		  	    Changes the font to the specified style.Examples are Arial, sans-serif, monospace.
 		  	<br>
@@ -751,14 +755,18 @@ h1 {
   font-family:Arial,monospace,helvetica;
 }		 
  	     </xmp>
- 	    <!-- This code will output..
+ 	     This code will output..
  	     <div class="output-window">
  	     	<h1 style="font-family: Arial,monospace,helvetica">Arial,monospace,helvetica</h1>
- 	     </div>-->
- 	     <!--<b>Arial, monospace, helvetica</b> represents the order in which the CSS will search for the fonts in user's computer.
+ 	     </div>
+ 	     <b>Arial, monospace, helvetica</b> represents the order in which the CSS will search for the fonts in user's computer.
  	     <b>Note:</b> If the font is more than one word then it should be put in quotation marks like "Times New Roman".
-		  </div> -->
-
+		  </div> 
+<xmp class="code">
+h1{
+	font_family:"Times New Roman", Times, serif;
+}
+</xmp>
 		</div>
 
 		<div id="margin" class="tabcontent">
