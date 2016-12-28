@@ -585,6 +585,65 @@
 		  <h3 class="heading">Table: Colspan</h3>
 		  <div class="content">
 		  	<!-- Start writing from here -->
+		  	<p class="explanationText">
+			  	Attribute <b>colspan</b> is used to mention the number of columns that a particular cell will be occupying. This is done by using the attrtibute in the <b>tb</b> tag.
+			  	Both <b>colspan</b> and <b>rowpan</b> can be used in <b>th</b> tag, which is used to enclose headings in tables.Example:
+		  	</p>
+
+
+		  		<xmp class="code">
+<table>
+    <tr>
+        <th>Column 1 heading</th>
+        <th colspan="2">Column 2,3 heading</th>
+        <!-- <th>Column 3 heading</th> -->
+    </tr>
+    <tr>
+        <td>Row 2, cell 1</td>
+        <td colspan="2">Row 2, cell 2, also spanning Row 2, cell 3</td>
+    </tr>
+    <tr>
+        <td>Row 3, cell 1</td>
+        <td>Row 3, cell 2</td>
+        <td>Row 3, cell 3</td>
+    </tr>
+    <tr>
+        <td>Row 4, cell 1</td>
+        <td>Row 4, cell 2</td>
+        <td>Row 4, cell 3</td>
+    </tr>
+</table>
+</xmp>
+
+		  	<p class="explanationText">
+		  		The output appears as:
+		  	</p>
+
+		  	<div class="output-window">
+				<table>
+				    <tr>
+				        <th>Column 1 heading</th>
+				        <th colspan="2">Column 2,3 heading</th>
+				        <!-- <th>Column 3 heading</th> -->
+				    </tr>
+				    <tr>
+				        <td>Row 2, cell 1</td>
+				        <td colspan="2">Row 2, cell 3</td>
+				    </tr>
+				    <tr>
+				        <td>Row 3, cell 1</td>
+				        <td>Row 3, cell 2</td>
+				        <td>Row 3, cell 3</td>
+				    </tr>
+				    <tr>
+				        <td>Row 4, cell 1</td>
+				        <td>Row 4, cell 2</td>
+				        <td>Row 4, cell 3</td>
+				    </tr>
+				</table>
+
+	
+		  	</div>
 		  </div>
 		</div>
 
