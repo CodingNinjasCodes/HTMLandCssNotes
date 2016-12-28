@@ -601,17 +601,17 @@ h2 {
 		  	<xmp class="code">
 <p style="color:red">Inline CSS</p>
 		  	</xmp>
-		  		Output Will be..
+		  		<p class="explanationText">Output Will be..</p>
 		  		<div class="output-window">
 		  		<p style="color:red">Inline CSS</p>
 		  		</div>
-		  		also, multiple properties can be added to an element.
+		  		<p class="explanationText">also, multiple properties can be added to an element.</p>
 		  		<br>
-		  		HTML code is..
+		  		<p class="explanationText">HTML code is..</p>
 		  		<xmp class="code">
 <p style="color:blue;font-size:40px">Inline CSS</p>
 		  		</xmp>
-		  		Will output the following..
+		  		<p class="explanationText">Will output the following..</p>
 		  		<div class="output-window">
 		  		<p style="color:blue;font-size:40px">Inline CSS</p>
 		  		</div>
@@ -623,10 +623,10 @@ h2 {
 		  <h3 class="heading">CSS: External</h3>
 		  <div class="content">
 		  	<!-- Start writing from here -->
-		  	An External CSS can be applied using a complete different CSS file.
+		  	<p class="explanationText">An External CSS can be applied using a complete different CSS file.
 		  	<br>
 		  	This CSS file must be linked to our HTML file using the link tag.
-		  	Here's the HTML code..
+		  	Here's the HTML code..</p>
 		  	<xmp class="code">
 <head>
 <link rel="stylesheet" type="text/css" href="Style.css">
@@ -637,7 +637,7 @@ h2 {
 <p>This is External CSS.</p>
 </body>
 		  	</xmp>
-		  	The external CSS file must be saved with <b>.css</b> extention, e.g.<b>"Style.css"</b>.Here's how our "Style.css" will look like..
+		  	<p class="explanationText">The external CSS file must be saved with <b>.css</b> extention, e.g.<b>"Style.css"</b>.Here's how our "Style.css" will look like..</p>
 		  	<xmp class="code">
 h3 {
     color: navy;
@@ -647,7 +647,7 @@ p {
    font-size: 30px;
    color: green;
 }	  	</xmp>
-             Output will be...
+             <p class="explanationText">Output will be...</p>
              <br>
              <div class="output-window">
              <h3 style="color:navy">External CSS</h3>
@@ -661,11 +661,11 @@ p {
 		  <h3 class="heading">CSS: In Page</h3>
 		  <div class="content">
 		  	<!-- Start writing from here -->
-		  	An internal or in-page stylesheet holds the CSS code for the webpage in the head section of the particular file.
+		  	<p class="explanationText">An internal or in-page stylesheet holds the CSS code for the webpage in the head section of the particular file.
 		  	<br>
 		  	Internal CSS can be applied using <b>style</b> tag inside the <b>head</b> tag.
 		  	<br>
-		  	Here's the HTML code..
+		  	Here's the HTML code..</p>
 		  	<xmp class="code">
 <head>
  <style>
@@ -682,7 +682,7 @@ p {
 	<p>INTERNAL CSS</p>
 </body>
 		  	</xmp>
-		  	Output generated will be..
+		  	<p class="explanationText">Output generated will be..</p>
 		  	<br>
 		  	<div class="output-window">
 		  	<h1 style="color: blue">In-page CSS</h1>
@@ -698,21 +698,21 @@ p {
 		  <h3 class="heading">Selectors, Properties, and Values</h3>
 		  <div class="content">
 		  	<!-- Start writing from here -->
-		  	A selector points to the HTML element which we want to style.e.g..
+		  	<p class="explanationText">A selector points to the HTML element which we want to style.e.g..</p>
 		  	<xmp class="code">
 p{color: blue;}
 		  	</xmp>
-		  	In the above code <b>p</b> is the selector.In other words a selector is nothing but a HTML tag use to style that element.
+		  	<p class="explanationText">In the above code <b>p</b> is the selector.In other words a selector is nothing but a HTML tag use to style that element.
 		  	<br>
 		  	<br>
-		  	A <b>Property</b> refers to the various CSS styles that can be applied to a selector.For e.g.
+		  	A <b>Property</b> refers to the various CSS styles that can be applied to a selector.For e.g.</p>
 		  	<xmp class="code">
 h3 {
     font-size: 30px;
     color: red;
     font-family: Monospace,sans-serif;
 }		  	</xmp>
-            font-size, color, font-family are the <b>properties</b> that are applied to the selector <b>h3</b> in the above code.  
+            <p class="explanationText">font-size, color, font-family are the <b>properties</b> that are applied to the selector <b>h3</b> in the above code.  
             <br>
             <br>
             A <b>value</b> is given to a property. <b>30px, red, Monospace, sans-serif</b> are the values given to the property in above code.
@@ -721,7 +721,7 @@ h3 {
 
             <br>
             <br>
-            In general..
+            In general..</p>
 		  	<div class="explanationImage">
 		  		<img src="./images/CSS_selector/selector.gif">
 		  	</div>
@@ -732,14 +732,22 @@ h3 {
 		  <h3 class="heading">Colors</h3>
 		  <div class="content">
 		  	<!-- Start writing from here -->
-		  </div>
+		  	<p class="explanationText">The <b>color</b> property sets the foreground color of an element's text content, and its decorations.The types of colors in CSS are:</p>
+
+<ul>
+	<li><b>rgb()</b>= rgb(rgb component) </li>
+	<li><b>rgba()</b>= rgba(rgb component, alpha value)</li>
+	<li><b>hsl()</b>= (hue, percentage, percentage)</li>
+	<li><b>hsla()</b>= (hue, percentage, percentage, alpha value)</li>
+</ul>		  </div>
 		</div>
 
 		<div id="text" class="tabcontent">
 		  <h3 class="heading">Text</h3>
 		  <div class="content">
 		  	<!-- Start writing from here -->
-		  	Various Font changing properties can be applied to change the shape and size of the text in our CSS.
+		  	<p class="explanationText">
+		  	Various Font changing properties can be applied to change the shape and size of the text in our CSS.</p>
 		  	<br>
 		    <br>
 		    <div class="explanationHeading">
@@ -748,22 +756,23 @@ h3 {
 		    <br>
 		  	<!--<h2 style="font-size: 2em;font-weight: 300;font-size: 30px;color: grey">font-family</h2>-->
 
-		  	    Changes the font to the specified style.Examples are Arial, sans-serif, monospace.
+		  	    <p class="explanationText">Changes the font to the specified style.Examples are Arial, sans-serif, monospace.</p>
 		  	<br>
 		  	<xmp class="code">
 h1 { 
     font-family: Arial,monospace,helvetica;
 }		 
  	     </xmp>
- 	     This code will output..
+ 	     <p class="explanationText">This code will output..</p>
  	     <div class="output-window">
  	     	<h1 style="font-family: Arial,monospace,helvetica">Arial,monospace,helvetica</h1>
  	     </div>
- 	     <b>Arial, monospace, helvetica</b> represents the order in which the CSS will search for the fonts in user's computer (If one is not present then it will move to other).
+ 	     <p class="explanationText">
+ 	     <b>Arial, monospace, helvetica</b> represents the order in which the CSS will search for the fonts in user's computer (If one is not present then it will move to other).</p>
  	     <div class="explanationNote">
  	     <b>Note:</b> If the font is more than one word then it should be put in quotation marks like "Times New Roman".
  	     </div>  
-		  like..
+		  <p class="explanationText">like..</p>
 <xmp class="code">
 h1 {
     font-family: "Times New Roman", Times, serif;
@@ -775,7 +784,7 @@ h1 {
            font-size 
             </div>
            <br>
-           Changes the size of our font.Values can be applied in <b>em</b> or <b>px</b>.
+           <p class="explanationText">Changes the size of our font.Values can be applied in <b>em</b> or <b>px</b>.</p>
            <xmp class="code">
 p {
    font-size: 30px;	
@@ -785,7 +794,7 @@ p {
    font-size: 3.2em;
 }
            </xmp>
-           will show..
+           <p class="explanationText">will show..</p>
            <div class="output-window">
            <p style="font-size: 30px">px</p>
            <br>
@@ -794,8 +803,8 @@ p {
  <div class="explanationHeading">
 		    	font-weight
 		    </div>
-		    <br>
-		    Specifies the weight of the font from lighter to bolder.Values can be  <b>bold, normal</b>, lighter(<b>100, 200, 300, 400</b>), normal(<b>500, 600, 700</b>), bolder(<b>800, 900</b>).
+		    <br><p class="explanationText">
+		    Specifies the weight of the font from lighter to bolder.Values can be  <b>bold, normal</b>, lighter(<b>100, 200, 300, 400</b>), normal(<b>500, 600, 700</b>), bolder(<b>800, 900</b>).</p>
 		    <xmp class="code">
 p {
    font-weight: 100;
@@ -816,13 +825,13 @@ p {
 		    	font-style
 		    </div>
 		    <br>
-	Changes the style from normal to italics or vice-versa.
+	<p class="explanationText">Changes the style from normal to italics or vice-versa.</p>
 	<xmp class="code">
 p {
    font-style: italic;
 }	</xmp>
 
-    gives...
+    <p class="explanationText">gives...</p>
     <div class="output-window">
     <p style="font-style: italic;">Italics</p>
     </div>
@@ -830,9 +839,9 @@ p {
     	<div class="explanationHeading">
     	text-decoration
     	</div>
-    	<br>
+    	<br><p class="explanationText">
     	The text-decoration property specifies the decoration added to text.This property can be <b>underline</b>, <b>overline</b>, or <b>line-through</b>.
-
+</p>
     	<xmp class="code">
 h3 {
     text-decoration: overline;
@@ -846,7 +855,7 @@ h3 {
     text-decoration: underline;
 }
     	</xmp>
-    outputs..
+   <p class="explanationText"> outputs..</p>
     <div class="output-window">
     <h3 style="text-decoration: overline;">overline</h3>
     <br>
@@ -859,10 +868,12 @@ h3 {
         	text-transform
         </div>
         <br>
-        Changes the case of text.It may be <b>uppercase</b>, <b>lowercase</b>, <b>capitalize</b> or <b>none</b>.
+        <p class="explanationText">Changes the case of text.It may be <b>uppercase</b>, <b>lowercase</b>, <b>capitalize</b> or <b>none</b>.</p>
         <br>
         <br>
+        <p class="explanationText">
         <ul>
+
         <li><b>lowercase</b> makes all of the letters in the selected text lowercase.</li>
         <br>
 		<li><b>uppercase</b> makes all of the letters in the selected text uppercase.</li>
@@ -871,6 +882,7 @@ h3 {
 		<br>
 		<li><b>none</b> leaves the text's case and capitalization exactly as it was entered.</li>
 		</ul>
+		</p>
 		<br>
 		<xmp class="code">
 h1 {
@@ -889,7 +901,7 @@ h1 {
     text-transform: none;
 }
 		</xmp>
-          outputs the following..
+          <p class="explanationText">outputs the following..</p>
           <div class="output-window">
           <h1 style="text-transform: lowercase;">lowercase</h1>
           <br>
@@ -905,10 +917,10 @@ h1 {
           Text-Spacing 	
           </div>
           <br>
-          Includes following properties..
+          <p class="explanationText">Includes following properties..</p>
           <br>
           <ul>
-
+<p class="explanationText">
 <li>The <b>letter-spacing</b> and <b>word-spacing</b> properties are for spacing between letters or words.</li><br>
 
 <li>The <b>line-height</b> property sets the height of the lines in an element, such as a paragraph, without adjusting the size of the font.</li><br>
@@ -918,7 +930,7 @@ h1 {
 <li>The <b>text-indent</b> property will indent the first line of a paragraph.</li>
 </ul>
 <br>
-here's the CSS code..
+here's the CSS code..</p>
 <xmp class="code">
 p {
    letter-spacing: 0.5em;
@@ -936,7 +948,7 @@ p {
    text-align: center;
 }
 </xmp>
-outputs..
+<p class="explanationText">outputs..</p>
       <div class="output-window">
       <p style="letter-spacing: 0.5em">letterspacing in css</p>
        <p style="line-height: 2.5em">line height in css</p>
