@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Notes</title>
   <link rel="stylesheet" href="base.css">
-  <script src="https://use.fontawesome.com/ef12385584.js"></script>
+  <!-- <script src="https://use.fontawesome.com/ef12385584.js"></script> -->
   <script src="menu.js" type="text/javascript"></script>
 </head>
 <body>
@@ -1371,7 +1371,38 @@ p {
 		<div id="pseudo-classes" class="tabcontent">
 		  <h3 class="heading">Pseudo Classes</h3>
 		  <div class="content">
-		  	
+		  	<p class="explanationText">
+		  		As the name specifies they are not real CSS classes, but are used to select the CSS class in a specific state! Like when you want a class to behave differently when hover(changing the color of an element while hovering or adding a shadow it) pseudo classes are used.
+		  	</p>
+		  	<p class="explanationText">
+		  		Syntax for pseudo using pseudo-classes:
+<xmp class="code">selector:pseudo-class {
+  <!-- all the properties that you want to change for this state of the 
+  class will come here-->
+  property: value;
+}</xmp>
+		  	</p>
+		  	<p class="explanationText">
+		  		For adding a shadow to all paragraphs when hovered the pseudo class is used as follows:
+<xmp class="code">.p:hover{
+	box-shadow: 2px 4px 6px 8px lightgrey;
+}</xmp>
+				<p class="explanationText">
+					Try hovering on the paragraphs below:
+				</p>
+				<div class="output-window">
+					<div id="examplePara">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</div>
+					<br>
+					<p id="examplePara">
+						Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+					</p>
+				</div>
+				<p class="explanationText">
+					<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes#Index_of_standard_pseudo-classes" target="_blank"> Click here for more types of pseudo-classes</a>
+				</p>
+		  	</p>
 
 
 		  

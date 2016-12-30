@@ -246,3 +246,7 @@ div.explanationImage img {
 div.explanationImage img:hover {
     box-shadow: 3px 3px 8px 4px lightgrey;
 }
+
+#examplePara:hover {
+    box-shadow: 2px 4px 6px 8px lightgrey;
+}
