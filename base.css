@@ -247,6 +247,17 @@ div.explanationImage img:hover {
     box-shadow: 3px 3px 8px 4px lightgrey;
 }
 
-#examplePara:hover {
+
+
+
+  /*The CSS below is example specific */
+
+/*for pseudo class page*/
+#examplePara1:hover {
     box-shadow: 2px 4px 6px 8px lightgrey;
+}
+
+/*for pseudo elements page*/
+#examplePara2::first-letter {
+    font-size: 2em;
 }
