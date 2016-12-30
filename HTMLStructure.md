@@ -21,12 +21,9 @@
 * borders > Kamal
 * span and div
 * text abbreviations quotations and code
-* meta tags
-* tables
-* rowspan
-* colspan
-* description lists
-* sections
+* meta tags  > Manish
+* description lists > Manish
+* sections 
 * class and id selectors
 * grouping and nesting
 * pseduo classes
@@ -34,17 +31,15 @@
 * background images
 * specificity
 * display property
-* pseduo elements
-* page layouts
-* html forms detailed
-* media tags
-* borders
-* border radius
-* shadows
-* more selectors
-* colors: rgb, rgba etc.
-* attribute selectors
-* background 
-* transformations
-* gradients
-* media queries
+* pseduo elements > Manish
+* page layouts > Manish
+* html forms detailed > Manish
+* media tags > Manish
+* shadows  > Manish
+* more selectors  > Manish
+* colors: rgb, rgba etc. > kamal
+* attribute selectors  > Manish
+* background > Manish
+* transformations > Manish
+* gradients > Manish
+* media queries > Manish
