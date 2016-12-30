@@ -49,7 +49,10 @@ window.onload = function() {
 
         for(i = 0; i < listTags.length; i++){
             if(listTags[i].innerHTML == localStorage["last_visited_link"]){
-                listTags[i].className += " visited active";
+                listTags[i].className += " active visited";
+                if(i>4){
+                    listTags[i-4].scrollIntoView();
+                }
             }
         }
     }
