@@ -732,14 +732,203 @@ h3 {
 		  <h3 class="heading">Colors</h3>
 		  <div class="content">
 		  	<!-- Start writing from here -->
-		  	<p class="explanationText">The <b>color</b> property sets the foreground color of an element's text content, and its decorations.The types of colors in CSS are:</p>
+		  	<p class="explanationText">The <b>color</b> property sets the foreground color of an element's text content, and its decorations.</p>
 
-<ul>
-	<li><b>rgb()</b>= rgb(rgb component) </li>
-	<li><b>rgba()</b>= rgba(rgb component, alpha value)</li>
-	<li><b>hsl()</b>= (hue, percentage, percentage)</li>
-	<li><b>hsla()</b>= (hue, percentage, percentage, alpha value)</li>
-</ul>		  </div>
+
+          <div class="explanationHeading">
+  	Names.
+  </div>
+  <br>
+
+      <p class="explanationText">
+      	All modern browsers support the 140 different color names in CSS(just follow the link below):
+       <a href="https://developer.mozilla.org/en/docs/Web/CSS/color_value">https://developer.mozilla.org/en/docs/Web/CSS/color_value</a>
+      </p>
+      
+       <p class="explanationText">
+       You can apply any of these colors to a website or blog by using the relevant CSS code.</p>
+<ul class="explanationText">
+<li>To set an element's background color use <b>background-color</b> property.</li>
+<li>To set the text color, use <b>color</b> property.</li>
+<li>To set a border color, use <b>border-color</b> property.</li>
+</ul>
+
+   <xmp class="code">
+h1 {
+   background-color:aqua;
+   color:navy;
+}
+   </xmp>
+
+   <div class="output-window">
+  <h1 style="background-color: aqua;color: navy;">CSS COLORS.</h1>
+  </div>
+
+       <div class="explanationText">
+       	Here's a list of color values you can use with CSS.
+
+       <ul class="explanationText">
+       	<li><b>rgb()</b></li>
+       	<li><b>rgba()</b></li>
+       	<li><b>hsl()</b></li>
+       	<li><b>hsla()</b></li>
+       </ul>
+       </div>
+
+       <br>
+       <div class="explanationHeading">
+       	rgb()
+       </div>
+       <br>
+        
+        <div class="explanationText">
+        	<b>RGB</b> (which stands for <b>Red</b>, <b>Green</b>, <b>Blue</b>) is a color model in which red, green and blue light can be added together to reproduce a color.
+<br>
+The RGB value for <b>black</b> looks like this:
+
+<b>rgb(0, 0, 0)</b>.
+
+The RGB value for <b>white</b> looks like this:
+
+<b>rgb(255, 255, 255)</b>.
+<br>
+<br>
+Each of the three values can be provided as an integer or as a percentage. The integer value 255 corresponds with a percentage value of 100%. 
+        </div>
+        <xmp class="code">
+h1 {color: rgb(255,0,0);}
+ 
+h2 {color: rgb(218,112,214);}
+
+h3 {color: rgb(160,82,45);}
+
+h4 {color: rgb(0,0,255);}
+</xmp>
+<p class="explanationText">will output..</p>
+      <div class="output-window">
+<h1 style="color: rgb(255,0,0)">I am red!</h1>
+<br>
+<h2 style="color: rgb(218,112,214)">I am orchid!</h2>
+<br>
+<h3 style="color: rgb(160,82,45)">I am sienna!</h3>
+<br>
+<h4 style="color: rgb(0,0,255)">I am blue!</h4>
+
+      </div>
+     <p class="explanationText">Also <b>rgb()</b> colors can also be represented by  using <b>CSS 6 Digit Hex Colors</b>.This CSS 6-digit hex color notation allows you to specify RGB colors using hexadecimal values.</p>
+     
+<xmp class="code">
+h1 {color: #ff0000;}
+ 
+h2 {color: #da70d6;}
+
+h3 {color: #a0522d;}
+
+h4 {color: #0000ff;}
+</xmp>
+
+        <p class="explanationText">Will output same as the above.</p>
+        <p class="explanationNote"><b>Note</b>:The standard format of representing hex values is <b>#RRGGBB</b>
+         <br> 
+        <b>RR</b> represents the Red component of color.<br>
+        <b>GG</b> represents the Green component of color.<br>
+        <b>BB</b> represents the Blue component of color.	
+        </p>
+        <br>
+
+     <div class="explanationHeading">
+       	rgba()
+       </div>
+          <br>
+       <p class="explanationText">
+       	The CSS <b>rgba()</b> function is used to provide a color value with alpha transparency with the CSS. It allows you to specify an RGB color value with an alpha value to determine the color's transparency.
+       	<br>
+       	This alpha value lies from <b>0</b> to <b>1</b> from transparent to opaque.
+       </p>
+<xmp class="code">
+h3 {background-color: rgba(255, 0, 0, 0.3);}   
+
+h2 {background-color: rgba(0, 255, 0, 0.3);}   
+
+h1 {background-color: rgba(0, 0, 255, 1);}   
+</xmp>
+         <p class="explanationText">
+         	results in..
+         </p>
+
+        <div class="output-window">
+         <h3 style="background-color: rgba(255,0,0,0.3);">Red with opacity</h3><br>
+                  <h2 style="background-color: rgba(0,255,0,0.3);">green with opacity</h2><br>
+                           <h1 style="background-color: rgba(0,0,255,0.3);">blue with opacity</h1>
+         </div>
+        
+
+          <div class="explanationHeading">
+          	hsl()
+          </div>
+          <br>
+            <p class="explanationText">
+            	The CSS <b>hsl()</b> function can be used to provide a color value when using CSS. It allows you to specify a color value by specifying the hue, saturation, and light components of the color.
+            </p>
+
+            <ul class="explanationText">
+            	<li><b>Hue</b>: Any angle, from 0 to 360, taken from a typical <a href="http://css.prof.ninja/class2/colorwheel_hsl.jpg">color wheel</a>, where “0” (and “360”) is red, “120” is green and “240” is blue.</li>
+                
+                <li><b>Saturation</b> :It represents the amount of saturation in the color.For example, 100% is fully saturated (more colorful and intense), while 0 is a fully-unsaturated gray.
+
+</li>
+
+                <li><b>Lightness</b>:It represents the amount of light in the color. For lightness, 50% is the "normal" setting, while 100% is white and 0% is black.</li>
+            </ul>
+<xmp class="code">
+h4 {background-color: hsl(120, 100%, 50%);}  
+
+h3 {background-color: hsl(120, 100%, 75%);}  
+
+h2 {background-color: hsl(120, 100%, 25%);}  
+
+h1 {background-color: hsl(120, 60%, 70%);}   
+</xmp>
+
+           <p class="explanationText">gives us...</p>
+           <div class="output-window">
+           	<h4 style="background-color: hsl(120, 100%, 50%);">hsl green</h4> <br> 
+            <h3 style="background-color: hsl(120, 100%, 75%);">hsl lightgreen</h3><br>
+            <h2 style="background-color: hsl(120, 100%, 25%);">hsl dark green</h2><br>
+            <h1 style="background-color: hsl(120, 60%, 70%);">hsl pastel green</h1> 
+           </div>
+
+
+
+
+
+<div class="explanationHeading">
+          	hsla()
+          </div>
+          <br>
+            <p class="explanationText">
+            	Adding an alpha value to hsl gives us the option to add opacity to our CSS by using the <b>hsla()</b> function.
+            </p>
+<xmp class="code">
+h4 {background-color: hsla(120, 100%, 50%, 0.4);}  
+
+h3 {background-color: hsla(120, 100%, 75%, 0.4);}  
+
+h2 {background-color: hsla(120, 100%, 25%, 0.4);}  
+
+h1 {background-color: hsla(120, 60%,  70%, 0.4);}   
+</xmp>
+
+           <p class="explanationText">results in..</p>
+           <div class="output-window">
+           	<h4 style="background-color: hsla(120, 100%, 50%,0.4);">hsla green</h4> <br> 
+            <h3 style="background-color: hsla(120, 100%, 75%,0.4);">hsla lightgreen</h3><br>
+            <h2 style="background-color: hsla(120, 100%, 25%,0.4);">hsla dark green</h2><br>
+            <h1 style="background-color: hsla(120, 60%, 70%,0.4);">hsla pastel green</h1> 
+           </div>
+
+
+        </div>
 		</div>
 
 		<div id="text" class="tabcontent">
@@ -749,7 +938,6 @@ h3 {
 		  	<p class="explanationText">
 		  	Various Font changing properties can be applied to change the shape and size of the text in our CSS.</p>
 		  	<br>
-		    <br>
 		    <div class="explanationHeading">
 		    	font-family
 		    </div>
@@ -757,7 +945,7 @@ h3 {
 		  	<!--<h2 style="font-size: 2em;font-weight: 300;font-size: 30px;color: grey">font-family</h2>-->
 
 		  	    <p class="explanationText">Changes the font to the specified style.Examples are Arial, sans-serif, monospace.</p>
-		  	<br>
+		  	
 		  	<xmp class="code">
 h1 { 
     font-family: Arial,monospace,helvetica;
@@ -869,10 +1057,9 @@ h3 {
         </div>
         <br>
         <p class="explanationText">Changes the case of text.It may be <b>uppercase</b>, <b>lowercase</b>, <b>capitalize</b> or <b>none</b>.</p>
-        <br>
-        <br>
-        <p class="explanationText">
-        <ul>
+        
+        
+        <ul class="explanationText">
 
         <li><b>lowercase</b> makes all of the letters in the selected text lowercase.</li>
         <br>
@@ -882,7 +1069,7 @@ h3 {
 		<br>
 		<li><b>none</b> leaves the text's case and capitalization exactly as it was entered.</li>
 		</ul>
-		</p>
+		
 		<br>
 		<xmp class="code">
 h1 {
@@ -918,9 +1105,9 @@ h1 {
           </div>
           <br>
           <p class="explanationText">Includes following properties..</p>
-          <br>
-          <ul>
-<p class="explanationText">
+          
+            <ul class="explanationText">
+
 <li>The <b>letter-spacing</b> and <b>word-spacing</b> properties are for spacing between letters or words.</li><br>
 
 <li>The <b>line-height</b> property sets the height of the lines in an element, such as a paragraph, without adjusting the size of the font.</li><br>
@@ -930,7 +1117,7 @@ h1 {
 <li>The <b>text-indent</b> property will indent the first line of a paragraph.</li>
 </ul>
 <br>
-here's the CSS code..</p>
+<p class="explanationText">here's the CSS code..</p>
 <xmp class="code">
 p {
    letter-spacing: 0.5em;
