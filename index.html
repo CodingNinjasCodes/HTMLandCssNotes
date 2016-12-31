@@ -32,9 +32,10 @@
 		  <li onclick="openPage(event, 'selectors')"><a href="javascript:void(0)" class="tablinks">Selectors, Properties, and Values</a></li>
 		  <li onclick="openPage(event, 'colors')"><a href="javascript:void(0)" class="tablinks">Colors</a></li>
 		  <li onclick="openPage(event, 'text')"><a href="javascript:void(0)" class="tablinks">Text</a></li>
-		  <li onclick="openPage(event, 'margin')"><a href="javascript:void(0)" class="tablinks">Margin</a></li>
-		  <li onclick="openPage(event, 'padding')"><a href="javascript:void(0)" class="tablinks">Padding</a></li>
 		  <li onclick="openPage(event, 'border')"><a href="javascript:void(0)" class="tablinks">Border</a></li>
+		  
+		  <li onclick="openPage(event, 'margin-and-padding')"><a href="javascript:void(0)" class="tablinks">Margin and padding</a></li>
+		  <!--<li onclick="openPage(event, 'padding')"><a href="javascript:void(0)" class="tablinks">Padding</a></li>-->
 		  <li onclick="openPage(event, 'border-radius')"><a href="javascript:void(0)" class="tablinks">Border Radius</a></li>
 		  <li onclick="openPage(event, 'span-and-div')"><a href="javascript:void(0)" class="tablinks">Span and Div</a></li>
 		  <li onclick="openPage(event, 'text-abbr')"><a href="javascript:void(0)" class="tablinks">Text Abbreviations Quotations and Code</a></li>
@@ -1293,19 +1294,208 @@ p {
 </div>
 		</div>
 
-		<div id="margin" class="tabcontent">
-		  <h3 class="heading">Margin</h3>
+		<div id="margin-and-padding" class="tabcontent">
+		  <h3 class="heading">Margin and Padding</h3>
 		  <div class="content">
 		  	<!-- Start writing from here -->
+           <p class="explanationText">
+           Three important properties control the space that surrounds each HTML element: <b>padding</b>, <b>margin</b>, and <b>border</b>.<br>
+
+An element's <b>padding</b> controls the amount of space between the element and its <b>border</b>.
+           	An element's <b>margin</b> controls the amount of space between an element's <b>border</b> and surrounding elements.Consider the box below..</p>
+
+                <style>
+  .injected-text {
+    margin-bottom: -2px;
+    text-align: center;
+  }
+
+  .box {
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+    text-align: center;
+  }
+
+  .blue-box {
+    background-color: skyblue;
+    padding: 10px;
+    margin: 50px;
+  }
+  
+  .orange-box {
+    background-color: orange;
+    padding: 20px;
+    margin: 20px;
+  }
+
+ /* .red-box {
+    background-color: red;
+    padding: 20px;
+    margin: 20px;
+  }
+  */
+</style>
+<div class="box blue-box">
+<h5 class="injected-text">MARGIN</h5>
+  <h5 class="box orange-box">PADDING</h5>
+  <!--<h5 class="box red-box">PADDING2</h5>-->
+</div>
+
+        <ul class="explanationText">
+        <li>In the above box the space b/w the  text element PADDING and the border of the <b>orange box</b> is the <b>padding</b> of the orange box.</li>
+        <li>
+        	The space around the border of the <b>orange box</b> and inside of the border of the blue box is the <b>margin</b> of the orange box.
+        </li>
+        </ul>
+
+        <p class="explanationText">CSS code looks like..</p>
+<xmp class="code">
+.injected-text {
+    margin-bottom: -2px;
+    text-align: center;
+  }
+
+  .box {
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+    text-align: center;
+  }
+
+.orange-box {
+    background-color: orange;
+    padding: 20px;
+    margin: 20px;
+  }
+
+.blue-box {
+    background-color: skyblue;
+    padding: 10px;
+    margin: 50px;
+  }
+  
+</xmp>
+
+
+<p class="explanationText">
+<b>padding </b> can be applied individually to the <b>left</b>, <b>right</b>, <b>top</b>, and <b>bottom</b> like..
+</p>
+
+    <xmp class="code">
+.red-box {
+    background-color: red;
+    padding-top: 40px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+  }
+    </xmp>
+ <p class="explanationText">
+ 	Will output..
+ </p>   
+<div class="output-window">
+	 <p style=" 
+    background-color: red;
+    padding-top: 40px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 40px"
+  ><b>Padding</b></p>
+</div>
+
+
+<p class="explanationText">
+Also, <b>margin </b> can be applied individually to the <b>left</b>, <b>right</b>, <b>top</b>, and <b>bottom</b> like..
+</p>
+
+<xmp class="code">
+.green-box {
+    background-color: red;
+    margin-top: 40px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    margin-left: 40px;
+  }
+</xmp>
+<p class="explanationText">gives..</p>
+<div class="output-window">
+	<p style="
+    background-color: green;
+    margin-top: 40px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    margin-left: 40px;
+"><b>Margin</b></p>
+</div>
+
+
+<p class="explanationText">The values for <b>top</b>, <b>right</b>, <b>bottom</b>, and <b>left</b> can be written together like..</p>
+
+<xmp class="code">
+.green-box{
+    background-color: green;
+    margin-top: 40px 20px 20px 40px;
+}
+</xmp>
+
+<p class="explanationText">The same can be done for the red box as well..</p>
+<xmp class="code">
+.red-box{
+    background-color: red;
+    margin-top: 40px 20px 20px 40px;
+}
+</xmp>
+
+<p class="explanationText">Both the codes will output the same as above.</p>
+
+<p class="explanationNote"><b>Note</b>:The values  40px 20px 20px 40px represents the <b>clock-wise </b>order for <b>top</b>, <b>right</b>, <b>bottom</b>, and <b>left </b>respectively.</p>
+
+<p class="explanationText">We can also provide -ve values for both margin and padding.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		  </div>
 		</div>
 
-		<div id="padding" class="tabcontent">
+		<!--<div id="padding" class="tabcontent">
 		  <h3 class="heading">Padding</h3>
 		  <div class="content">
 		  	<!-- Start writing from here -->
-		  </div>
+		<!--  </div>
 		</div>
+-->
 
 		<div id="border" class="tabcontent">
 		  <h3 class="heading">Border</h3>
