@@ -1454,8 +1454,7 @@ p {
 				<br>
 				For example: 
 			</p>
-<xmp class="code">
-div {
+<xmp class="code">div {
     padding: 1px 5px 10px 20px;
 }</xmp>
 				<p class="explanationText">
@@ -1473,10 +1472,51 @@ div {
 			<p class="explanationText">
 				Suppose while using <b>padding</b> shorthand, if only one value is mentioned, then, it would be set for all sides(top, right, bottom and left), if two values are mentioned then the first one is for top and bottom and the second one is for right and left. The same thing holds while using <b>margin</b>.
 				<br>
-				<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties#Background_Properties" target="_blank">For <b>background</b> 
-				and <b>font</b> shorthands open this link</a> 
+
+			</p>
+			<div class="explanationText">
+				Usage for borders:
+			</div>
+			<p class="explanationText">
+<xmp class="code">p {
+    border: 1px red solid;
+}</xmp>			
+				<p class="explanationText">
+					<b>border-width</b>, <b>border-color</b>, and <b>border-style</b> are mentioned using the above shorthand.
+				</p>
 			</p>
 
+
+			<div class="explanationText">
+				Usage for fonts:
+			</div>
+			<p class="explanationText">
+<xmp class="code">p {
+    font: italic bold 12px/2 courier;
+}</xmp>			
+				<p class="explanationText">
+					This combines <b>font-style</b>, <b>font-weight</b>, <b>font-size</b>, <b>line-height</b>, and <b>font-family</b>.
+				</p>
+			</p>
+
+			<div class="explanationText">
+				Usage for background:
+			</div>
+			<p class="explanationText">
+<xmp class="code">p {
+    background: #000 url(images/bg.gif) no-repeat top right;
+}</xmp>			
+			</p>
+			<p class="explanationText">
+				This was the shorthand for 
+<xmp class="code">p {
+    background: #000 url(images/bg.gif) no-repeat top right;
+    background-color: #000;
+    background-image: url(images/bg.gif);
+    background-repeat: no-repeat;
+    background-position: top right;
+}</xmp>
+			</p>
 		  </div>
 		</div>
 
