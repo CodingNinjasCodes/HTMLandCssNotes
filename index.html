@@ -1511,6 +1511,7 @@ p {
 				This was the shorthand for 
 <xmp class="code">p {
     background: #000 url(images/bg.gif) no-repeat top right;
+    /*A web address can also be given in the url*/
     background-color: #000;
     background-image: url(images/bg.gif);
     background-repeat: no-repeat;
@@ -1523,7 +1524,41 @@ p {
 		<div id="background-images" class="tabcontent">
 		  <h3 class="heading">Background Images</h3>
 		  <div class="content">
-		  	<!-- Start writing from here -->
+		  	<p class="explanationText">
+		  		The CSS <b>backgroud-image</b> property is used to set the background image for an element. It can also be mentioned as the shorthand property of the background image as mentioned in the previous section. They are used in much different way then normal HTML <b>img</b> tag.
+		  		<br>
+		  		<br>
+		  		The very important task accomplished using the background-image is known as image-spriting. Suppose you want to show flags of three countries Canada, USA, and Mexico in three different places in a web page. Instead of sending these three as different images, one big image containing all the three images in its sub-parts is made and is sent to the browser. Now the places at which the flags are to be shown are made to have the same image-background. Like this:
+		  	</p>
+
+<xmp class="code">.flags-canada, .flags-mexico, .flags-usa {
+  background-image: url('../images/flags.png');
+  background-repeat: no-repeat;
+}</xmp>		
+			<p class="explanationText">
+				Now, at all three places, <b>background-position</b> is mentioned so as to include the appropraite part of the background like this:
+
+<xmp class="code">.flags-canada {
+  height: 128px;
+  background-position: -5px -5px;
+}
+
+.flags-usa {
+  height: 135px;
+  background-position: -5px -143px;
+}
+
+.flags-mexico {
+  height: 147px;
+  background-position: -5px -288px;
+}</xmp>
+			</p>
+
+			<p class="explanationText">
+				The benefit of this is that all the images are fetched using single http request which is far more better than many request fetching small small images.
+			</p>
+
+ 
 		  </div>
 		</div>
 
