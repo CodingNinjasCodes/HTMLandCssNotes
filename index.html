@@ -1446,7 +1446,37 @@ p {
 		<div id="shorthand-properties" class="tabcontent">
 		  <h3 class="heading">Shorthand Properties</h3>
 		  <div class="content">
-		  	<!-- Start writing from here -->
+		  	<p class="explanationText">
+		  		
+			  	Shorthand properties are used to mention many CSS properties simultaneously. Using shorthand properties makes the code more readable and easy to maintain.
+				<br>
+				Shorthand properties are used for define properties of an element that are related to same kind of thing. For example: property <b>padding</b> alone can be used to mention the <b>padding-top</b>, <b>padding-right</b>, <b>padding-bottom</b>, <b>padding-left</b>.
+				<br>
+				For example: 
+			</p>
+<xmp class="code">
+div {
+    padding: 1px 5px 10px 20px;
+}</xmp>
+				<p class="explanationText">
+					Is equivalent to:
+				</p>
+<xmp class="code">div {
+    padding-top: 1px;
+    padding-right: 5px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+}</xmp>
+			<p class="explanationNote">
+				<em>NOTE:</em> The value which is not specified while using shorthands is set to its initial value. This is a tricky thing, if the property was specified earlier, it would be <b>overridden</b> to the its default.
+			</p>
+			<p class="explanationText">
+				Suppose while using <b>padding</b> shorthand, if only one value is mentioned, then, it would be set for all sides(top, right, bottom and left), if two values are mentioned then the first one is for top and bottom and the second one is for right and left. The same thing holds while using <b>margin</b>.
+				<br>
+				<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties#Background_Properties" target="_blank">For <b>background</b> 
+				and <b>font</b> shorthands open this link</a> 
+			</p>
+
 		  </div>
 		</div>
 
