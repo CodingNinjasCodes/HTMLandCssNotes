@@ -1387,7 +1387,7 @@ p {
 
 
 		  </div>
-		</div>s
+		</div>
 
 		<div id="sections" class="tabcontent">
 		  <h3 class="heading">Sections</h3>
@@ -1691,8 +1691,100 @@ p {
 		<div id="media-queries" class="tabcontent">
 		  <h3 class="heading">Media Queries</h3>
 		  <div class="content">
-		  	<!-- Start writing from here -->
-		  </div>
+			<p class="explanationText">
+				Till now, we used CSS to style our HTML content, but its scope is not limited to that. CSS can also be used to write blocks of code that are targeted to specific screen sizes. Earlier, separate HTML and CSS was written for viewing the websites on mobiles, tablets, very-large screens etc. But now, using the <b>media queries</b> the screen size can be found out. CSS blocks are written for different ranges of screen sizes to change only the appearance of desired content.
+			</p>
+			<p class = "explanationText">
+				Basically, rather than finding out what device is being used, the capabilities of the device are looked at. Mainly, we will look at the following things:
+				<ul class = "explanationList">
+					<li>height and width of the device</li>
+					<li>height and width of the browser</li>
+					<li>screen resolution</li>
+					<li>orientation of the device (for mobile phones and tablets; portrait or landscape)</li>
+				</ul>  
+			</p>
+			<p class="explanationText">
+				The syntax is as follows:
+<xmp class="code"><!-- CSS media query on a link element in the HTML code-->
+<link rel="stylesheet" media="(max-width: 800px)" href="example.css" />
+
+
+<!-- CSS media query within a stylesheet -->
+<style>
+@media (max-width: 600px) {
+  .facet_sidebar {
+    display: none;
+  }
+}
+</style></xmp>
+			</p>
+			<p class="explanationText">
+				After the <b>@media</b> keyword, there are expressions which simplify to true or false and accordingly the content within the block of the <b>media query</b> will be applied to the HTML.
+				<b>media queries </b>may contain a <b>media type</b> which limits content for different kind of devices. List of main <b>media types</b>:
+				<div>
+					<dl class="explanationText">
+						<dt><b>all</b></dt>
+						<dd style="-webkit-margin-start: 40px;">Suitable for all devices.</dd>
+						
+						<dt><b>print</b></dt>
+						<dd style="-webkit-margin-start: 40px;">This media type will return true when the the content is viewed in the print mode, i.e. the preview of the content that will be printed</dd>
+
+						<dt><b>screen</b></dt>
+						<dd style="-webkit-margin-start: 40px;">Intended primarily for color computer screens.</dd>
+
+						<dt><b>speech</b></dt>
+						<dd style="-webkit-margin-start: 40px;">Intended for speech synthesizers.</dd>
+					</dl>
+				</div> 
+			</p>
+			<div class="explanationHeading">
+				Logical operators
+			</div>
+			<p class="explanationText">
+				Logical operators like <b>not</b>, <b>and</b> and <b>only</b> can be used to generate desired media query. Also parenthesis can be used to hold the queries. The and operator is used for combining multiple media features together into a single media query, requiring each chained feature to return true in order for the query to be true. The not operator is used to negate an entire media query. The only operator is used to apply a style only if the entire query matches, useful for preventing older browsers from applying selected styles. If you use the not or only operators, you must specify an explicit <b>media type</b>. 
+				<br>
+				Comma-separated lists behave like the logical operator <b>or</b> when used in media queries. When using a comma-separated list of media queries, if any of the media queries returns true, the styles or style sheets get applied. Each media query in a comma-separated list is treated as an individual query, and any operator applied to one media query does not affect the others.
+			</p>
+
+		    <p class="explanationText">
+		      when we want to target min-width: 700px and orientation: landscape:
+<xmp class="code">@media (min-width: 700px) {
+    /*similarly max-width can also be used*/
+    /*CSS code*/
+}</xmp>
+		    </p>
+
+		    <div class="explanationHeading">
+				Usage of <b>not</b> keyword
+		    </div>
+		    <p class="explanationText">
+		    	It applies to the whole query and returns true only if the whole query returns false. In comma separated query it will negate only the media query it is applied to. The not keyword cannot be used to negate an individual feature query. Only an entire media query should be mentioned. Basically,  after mentioning <b>not</b> keyword, media type must be mentioned.
+		    </p>
+		    <p class="explanationText">
+		    	For example, the not is evaluated last in the following query:
+<xmp class="code">@media not all and (max-width: 800px) { ... }</xmp>
+		    </p>
+		    <p class="explanationText">
+		    	Is evaluated as:
+<xmp class="code">@media not all and (max-width: 800px) { ... }</xmp>
+		    </p>
+		    <p class="explanationText">
+		    	In comma separated list:
+<xmp class="code">@media screen and (color),not print and (color) { ... }</xmp>
+		    </p>
+		    <p class="explanationNote">
+				<em>NOTE:</em>Here <b>not</b> will be evaluated only with the second query (i.e. the one after the comma), and notice that media type is mentioned(media type is print) otherwise the syntax would be invalid!!
+		    </p>
+		    <div class="explanationHeading">
+				Usage of <b>only</b> keyword
+		    </div>
+		    <p class="explanationText">
+		    	The only keyword prevents older browsers that do not support media queries with media features from applying the given styles:
+<xmp class="code"><link rel="stylesheet" media="only screen and (color)" href="example.css"
+ /></xmp>
+		    </p>
+
+
 		</div>
 	</div>
 </body>
