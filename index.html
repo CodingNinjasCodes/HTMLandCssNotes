@@ -32,9 +32,10 @@
 		  <li onclick="openPage(event, 'selectors')"><a href="javascript:void(0)" class="tablinks">Selectors, Properties, and Values</a></li>
 		  <li onclick="openPage(event, 'colors')"><a href="javascript:void(0)" class="tablinks">Colors</a></li>
 		  <li onclick="openPage(event, 'text')"><a href="javascript:void(0)" class="tablinks">Text</a></li>
+		  <li onclick="openPage(event, 'border')"><a href="javascript:void(0)" class="tablinks">Border</a></li>
+		  
 		  <li onclick="openPage(event, 'margin')"><a href="javascript:void(0)" class="tablinks">Margin</a></li>
 		  <li onclick="openPage(event, 'padding')"><a href="javascript:void(0)" class="tablinks">Padding</a></li>
-		  <li onclick="openPage(event, 'border')"><a href="javascript:void(0)" class="tablinks">Border</a></li>
 		  <li onclick="openPage(event, 'border-radius')"><a href="javascript:void(0)" class="tablinks">Border Radius</a></li>
 		  <li onclick="openPage(event, 'span-and-div')"><a href="javascript:void(0)" class="tablinks">Span and Div</a></li>
 		  <li onclick="openPage(event, 'text-abbr')"><a href="javascript:void(0)" class="tablinks">Text Abbreviations Quotations and Code</a></li>
@@ -1295,6 +1296,342 @@ p {
 		  <h3 class="heading">Margin</h3>
 		  <div class="content">
 		  	<!-- Start writing from here -->
+           <p class="explanationText">
+           Three important properties control the space that surrounds each HTML element: <b>padding</b>, <b>margin</b>, and <b>border</b>.<br>
+
+<!--An element's <b>padding</b> controls the amount of space between the element and its <b>border</b>.-->
+           	An element's <b>margin</b> controls the amount of space between an element's <b>border</b> and surrounding elements.Consider the box below..</p>
+
+<!--                <style>
+  .injected-text {
+    margin-bottom: -2px;
+    text-align: center;
+  }
+
+  .box {
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+    text-align: center;
+  }
+
+  .blue-box {
+    background-color: skyblue;
+    padding: 10px;
+    margin: 50px;
+  }
+  
+  .orange-box {
+    background-color: orange;
+    padding: 20px;
+    margin: 20px;
+  }
+
+ /* .red-box {
+    background-color: red;
+    padding: 20px;
+    margin: 20px;
+  }
+  */
+</style>
+<div class="box blue-box">
+<h5 class="injected-text">MARGIN</h5>
+  <h5 class="box orange-box">PADDING</h5>
+  <!--<h5 class="box red-box">PADDING2</h5>-->
+<!--</div>-->
+
+        <!--<ul class="explanationText">
+        <li>In the above box the space b/w the  text element PADDING and the border of the <b>orange box</b> is the <b>padding</b> of the orange box.</li>
+        <li>
+        	The space around the border of the <b>orange box</b> and inside of the border of the blue box is the <b>margin</b> of the orange box.
+        </li>
+        </ul>
+
+        <p class="explanationText">CSS code looks like..</p>
+<xmp class="code">
+.injected-text {
+    margin-bottom: -2px;
+    text-align: center;
+  }
+
+  .box {
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+    text-align: center;
+  }
+
+.orange-box {
+    background-color: orange;
+    padding: 20px;
+    margin: 20px;
+  }
+
+.blue-box {
+    background-color: skyblue;
+    padding: 10px;
+    margin: 50px;
+  }
+  
+</xmp>
+
+
+<p class="explanationText">
+<b>padding </b> can be applied individually to the <b>left</b>, <b>right</b>, <b>top</b>, and <b>bottom</b> like..
+</p>
+
+    <xmp class="code">
+.red-box {
+    border: 3px solid black;
+    background-color: red;
+    padding-top: 40px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+  }
+    </xmp>
+ <p class="explanationText">
+ 	Will output..
+ </p>   
+<div class="output-window">
+	 <p style="
+	 	border: 3px solid black; 
+    background-color: red;
+    padding-top: 40px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 40px"
+  ><b>Padding</b></p>
+</div>
+
+
+<p class="explanationText">
+Also, <b>margin </b> can be applied individually to the <b>left</b>, <b>right</b>, <b>top</b>, and <b>bottom</b> like..
+</p>
+
+<xmp class="code">
+.green-box {
+    border: 3px solid black;
+    background-color: red;
+    margin-top: 40px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    margin-left: 40px;
+  }
+</xmp>
+<p class="explanationText">gives..</p>
+<div class="output-window">
+	<p style="
+	border: 3px solid black;
+    background-color: green;
+    margin-top: 40px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    margin-left: 40px;
+"><b>Margin</b></p>
+</div>
+
+
+<p class="explanationText">The values for <b>top</b>, <b>right</b>, <b>bottom</b>, and <b>left</b> can be written together like..</p>
+
+<xmp class="code">
+.green-box{
+    background-color: green;
+    margin-top: 40px 20px 20px 40px;
+}
+</xmp>
+
+<p class="explanationText">The same can be done for the red box as well..</p>
+<xmp class="code">
+.red-box{
+    background-color: red;
+    margin-top: 40px 20px 20px 40px;
+}
+</xmp>
+
+<p class="explanationText">Both the codes will output the same as above.</p>
+
+<p class="explanationNote"><b>Note</b>:The values  40px 20px 20px 40px represents the <b>clock-wise </b>order for <b>top</b>, <b>right</b>, <b>bottom</b>, and <b>left </b>respectively.</p>
+
+<p class="explanationText">We can also provide <b>-ve</b> values for both margin and padding.</p>
+-->
+
+
+<!--
+                <style>
+  .injected-text {
+    margin-bottom: -2px;
+    text-align: center;
+  }
+
+  .box {
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+    text-align: center;
+  }
+
+  .blue-box {
+    background-color: skyblue;
+    padding: 10px;
+    margin: 50px;
+  }
+  
+  .orange-box {
+    background-color: orange;
+    padding: 20px;
+    margin: 20px;
+  }
+
+ /* .red-box {
+    background-color: red;
+    padding: 20px;
+    margin: 20px;
+  }
+  */
+</style>
+<div class="box blue-box">
+<h5 class="injected-text">MARGIN</h5>
+  <h5 class="box orange-box">PADDING</h5>
+  <!--<h5 class="box red-box">PADDING2</h5>-->
+<!--</div>-->
+
+<style>
+.blue-box{
+  border: 3px solid black;
+ padding: 45px;
+  background-color: skyblue;
+  margin: 35px;
+}
+
+
+.orange-box{
+  border: 3px solid black;
+  margin:5px;
+  padding:25px;
+  text-align: center;
+  background-color: orange;
+}
+
+</style>
+
+
+<div class="blue-box">
+  <div class="orange-box"><h1>h1 element</h1></div>
+  </div>
+
+<br>
+<p class="explanationText">CSS code is..</p>
+
+<xmp class="code">
+<style>
+
+.blue-box{
+  border: 3px solid black;
+ padding: 45px;
+  background-color: skyblue;
+  margin: 35px;
+}
+
+.orange-box{
+  border: 3px solid black;
+  margin:5px;
+  padding:25px;
+  text-align: center;
+  background-color: orange;
+}
+
+</style>
+</xmp>
+
+<p class="explanationText">Now, let us change the margin of the <b>orange-box</b> to <b>25px</b>..</p>
+
+<xmp class="code">
+.orange-box{
+  border: 3px solid black;
+  margin:25px;
+  padding:25px;
+  text-align: center;
+  background-color: orange;
+}
+</xmp>
+
+<div style=" border: 3px solid black;
+ padding: 45px;
+  background-color: skyblue;
+  margin: 35px">
+  <div style="  border: 3px solid black;
+  margin:25px;
+  padding:25px;
+  text-align: center;
+  background-color: orange"><h1>h1 element</h1></div>
+  </div>
+
+<p class="explanationText">Now, we can see that the distance b/w the border of <b>orange-box</b> and the border of the <b>blue-box</b> has been increased just by increasing the margin of the <b>orange-box</b> to 25px.</p>
+
+<p class="explanationText">Also, we can add <b>-ve</b> margin values to our <b>orange box</b>, which will result the following..</p>
+
+
+<div style=" border: 3px solid black;
+ padding: 45px;
+  background-color: skyblue;
+  margin: 35px">
+  <div style="  border: 3px solid black;
+  margin:-5px;
+  padding:25px;
+  text-align: center;
+  background-color: orange"><h1>h1 element</h1></div>
+  </div>
+
+<p class="explanationText">CSS code is..</p>
+
+<xmp class="code">
+.orange-box{
+  border: 3px solid black;
+  margin:-5px;
+  padding:25px;
+  text-align: center;
+  background-color: orange;
+}
+
+</xmp>
+
+<p class="explanationText">It is clear from the above that the space around the border of the <b>orange-box</b> and inside the border of the <b>blue-box</b> has been "shrunk" from the previous size just by adding a <b>-ve </b>margin value of <b>5px</b> in our <b>orange-box</b>!</p>
+
+<p class="explanationText">We can also manipulate <b>top</b>, <b>right</b>, <b>bottom</b>, <b> left</b> of our <b>
+orange-box</b> individually..</p>
+
+<xmp class="code">
+.orange-box{
+  border: 3px solid black;
+  margin:5px 15px 25px 35px;
+  padding:25px;
+  text-align: center;
+  background-color: orange;
+</xmp>
+
+<p class="explanationText">This will result in...</p>
+
+<div style=" border: 3px solid black;
+ padding: 45px;
+  background-color: skyblue;
+  margin: 35px">
+  <div style="  border: 3px solid black;
+  margin:5px 15px 25px 35px;
+  padding:25px;
+  text-align: center;
+  background-color: orange"><h1>h1 element</h1></div>
+  </div>
+
+<p class="explanationText">It's pretty clear that the margin values <b>5px 15px 25px 35px </b>changes the space around the <b>orange-box</b> by <b>5px 15px 25px 35px</b> respectively!!</p>
+
+<p class="explanationNote"><b>Note:</b>The margin values <b>5px 15px 25px 35px</b> follows a <b>clock-wise</b> order from <b>top right bottom</b> and <b>left</b> respectively.</p>
+
+
+
+
+
+
 		  </div>
 		</div>
 
@@ -1302,13 +1639,148 @@ p {
 		  <h3 class="heading">Padding</h3>
 		  <div class="content">
 		  	<!-- Start writing from here -->
-		  </div>
+		  	<p class="explanationText">An element's <b>padding</b> controls the amount of space between the element and its border.</p>
+		  	<p class="explanationText">Consider the box below..</p>
+
+              <div style="text-align: center;border: 3px solid black;background-color: cornflowerblue;margin:45px">
+              	<h1>This is the h1 element in CSSjhvvjkvgvhjjj..</h1>
+              </div>
+
+              <p class="explanationText">CSS code is..</p>
+<xmp class="code">
+.blue-box {
+     text-align: center;
+     border: 3px solid black;
+     background-color: cornflowerblue;
+     margin: 45px;	
+}
+</xmp> 
+       <p class="explanationText">As we can see, there is no space b/w the <b>h1 element</b> and the <b>border</b> of the <b>blue-box</b> and it looks a little messy!!</p>
+
+        <p class="explanationText">just by adjusting the <b>padding</b> value to <b>25px </b>we get..</p>
+
+             <div style="text-align: center;border: 3px solid black;background-color: cornflowerblue;margin:45px; padding: 25px">
+              	<h1>This is the h1 element in CSSjhvvjkvgvhjjj..</h1>
+              </div>
+<xmp class="code">
+.blue-box {
+     text-align: center;
+     border: 3px solid black;
+     background-color: cornflowerblue;
+     margin: 45px;
+     padding: 25px;	
+}
+</xmp>
+
+<p class="explanationText">As we can see that the space b/w the <b>h1 element</b> and the space inside the border of <b>blue-box</b> has been increased by adjusting the padding value to <b>25px</b>!!</p>
+           <p class="explanationText">This space has been equally distributed around the <b>h1 element</b>..</p>
+        
+
+        <p class="explanationText">We can also change the padding value of <b>top</b>, <b>right</b>, <b>bottom</b> and <b>left</b> of the <b>h1 element</b> individually...</p>       
+<xmp class="code">
+.blue-box {
+     text-align: center;
+     border: 3px solid black;
+     background-color: cornflowerblue;
+     margin: 45px;
+     padding: 5px 15px 25px 35px;	
+}
+</xmp>
+<p class="explanationText">Will generate..</p>
+
+
+             <div style="text-align: center;border: 3px solid black;background-color: cornflowerblue;margin:45px; padding: 5px 15px 25px 35px">
+              	<h1>This is the h1 element in CSSjhvvjkvgvhjjj..</h1>
+              </div>
+
+              <p class="explanationText">The padding value changes to <b>5px 15px 25px 35px</b> from the <b>top</b>, <b>right</b>, <b>bottom</b>, and <b>left</b> respectively.</p>
+             <!-- <p class="explanationNote"><b>Note:</b>There's no <b>-ve </b>padding value can be given in CSS.</p>-->
+		 </div>
 		</div>
+
 
 		<div id="border" class="tabcontent">
 		  <h3 class="heading">Border</h3>
 		  <div class="content">
 		  	<!-- Start writing from here -->
+           <p class="explanationText">   CSS borders have properties like <b>style</b>, <b>color</b> and <b>width</b>.For example, if we wanted to create a "teal" colored, 5 pixel border around an HTML element..</p>
+<xmp class="code">
+h1 {
+    border-color: teal;
+    border-width: 5px;
+    border-style: solid;
+    padding:5px;
+}
+</xmp>
+        <p class="explanationText">will output..</p>
+
+        <div class="output-window">
+        	<h1 style="border-color: teal;padding: 5px; border-width: 5px; border-style: solid">This is a border in CSS</h1>
+        </div>
+        <p class="explanationText">Also, <b>border-color</b>, <b>border-width</b>, <b>border-style</b> can be written together like.. </p>
+<xmp class="code">        
+h1 {
+    border:5px solid teal;
+}
+</xmp> 
+        <p class="explanationText">will output same as the above.</p> 
+
+		<p class="explanationText">CSS <b>border</b> can be styled in so many ways like <b>solid</b>, <b>dotted</b>, <b>dashed</b>..</p>  
+		<div class="output-window">
+<h1 style="border: 5px solid goldenrod; text-align:center; ">Solid Border</h1><br>
+<h2 style="border: 5px dotted black;text-align:center">Dotted Border</h2><br>
+<h3 style="border: 5px dashed green;text-align:center">Dashed Border</h3><br>
+</div>
+        <p class="explanationText">CSS code is..</p>
+        <xmp class="code">
+h1 {
+    border: 5px solid goldenrod;
+    text-align: center;
+}
+ 
+h2 { 
+    border: 5px dotted black;
+    text-align: center;
+ }
+
+h3 { 
+    border: 5px dashed green;
+    text-align: center;
+}
+   </xmp>
+
+        <p class="explanationText">There are more other ways of styling the borders in CSS like double, groove, ridge, inset and outset.But <b>solid</b>, <b>dotted</b>, and <b>dashed </b>are most commomly used.</p>
+
+        <p class="explanationText">Also we can apply <b>border-width</b>, <b>border-color</b>, <b>border-style</b> to the <b>top</b>, <b>bottom</b>, <b>left</b>, and <b>right</b> individually in an element like...</p>
+
+<xmp class="code">
+h1 {
+    border-bottom: 5px solid teal;
+    text-align: center;
+}
+
+h2 {
+    border-top-width:5px;
+    border-top-color:red;
+    border-top-style:dotted;
+    text-align: center;
+}
+</xmp>        
+
+        <p class="explanationText">
+        	This will look like..
+        </p>
+         
+         <div class="output-window">
+         	<h1 style=" border-bottom: 5px solid teal;
+    text-align: center;">BorderBottom</h1><br>
+         	<h1 style="border-top-style:dotted;border-top-width: 5px;border-top-color: goldenrod;
+    text-align: center;">BorderTop</h1>
+    
+         </div>
+
+
+
 		  </div>
 		</div>
 
