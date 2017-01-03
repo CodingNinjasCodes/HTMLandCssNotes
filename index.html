@@ -1496,36 +1496,22 @@ Also, <b>margin </b> can be applied individually to the <b>left</b>, <b>right</b
   <!--<h5 class="box red-box">PADDING2</h5>-->
 <!--</div>-->
 
-<style>
-.blue-box{
-  border: 3px solid black;
+<div class="output-window">
+<div style="border: 3px solid black;
  padding: 45px;
   background-color: skyblue;
-  margin: 35px;
-}
-
-
-.orange-box{
-  border: 3px solid black;
+  margin: 35px">
+  <div style="border: 3px solid black;
   margin:5px;
   padding:25px;
   text-align: center;
-  background-color: orange;
-}
-
-</style>
-
-
-<div class="blue-box">
-  <div class="orange-box"><h1>h1 element</h1></div>
+  background-color: orange"><h1>h1 element</h1></div>
   </div>
-
+</div>
 <br>
 <p class="explanationText">CSS code is..</p>
 
 <xmp class="code">
-<style>
-
 .blue-box{
   border: 3px solid black;
  padding: 45px;
@@ -1540,8 +1526,6 @@ Also, <b>margin </b> can be applied individually to the <b>left</b>, <b>right</b
   text-align: center;
   background-color: orange;
 }
-
-</style>
 </xmp>
 
 <p class="explanationText">Now, let us change the margin of the <b>orange-box</b> to <b>25px</b>..</p>
@@ -1555,7 +1539,7 @@ Also, <b>margin </b> can be applied individually to the <b>left</b>, <b>right</b
   background-color: orange;
 }
 </xmp>
-
+<div class="output-window">
 <div style=" border: 3px solid black;
  padding: 45px;
   background-color: skyblue;
@@ -1566,12 +1550,12 @@ Also, <b>margin </b> can be applied individually to the <b>left</b>, <b>right</b
   text-align: center;
   background-color: orange"><h1>h1 element</h1></div>
   </div>
-
+</div>
 <p class="explanationText">Now, we can see that the distance b/w the border of <b>orange-box</b> and the border of the <b>blue-box</b> has been increased just by increasing the margin of the <b>orange-box</b> to 25px.</p>
 
 <p class="explanationText">Also, we can add <b>-ve</b> margin values to our <b>orange box</b>, which will result the following..</p>
 
-
+<div class="output-window">
 <div style=" border: 3px solid black;
  padding: 45px;
   background-color: skyblue;
@@ -1582,7 +1566,7 @@ Also, <b>margin </b> can be applied individually to the <b>left</b>, <b>right</b
   text-align: center;
   background-color: orange"><h1>h1 element</h1></div>
   </div>
-
+</div>
 <p class="explanationText">CSS code is..</p>
 
 <xmp class="code">
@@ -1611,7 +1595,7 @@ orange-box</b> individually..</p>
 </xmp>
 
 <p class="explanationText">This will result in...</p>
-
+<div class="output-window">
 <div style=" border: 3px solid black;
  padding: 45px;
   background-color: skyblue;
@@ -1622,7 +1606,7 @@ orange-box</b> individually..</p>
   text-align: center;
   background-color: orange"><h1>h1 element</h1></div>
   </div>
-
+</div>
 <p class="explanationText">It's pretty clear that the margin values <b>5px 15px 25px 35px </b>changes the space around the <b>orange-box</b> by <b>5px 15px 25px 35px</b> respectively!!</p>
 
 <p class="explanationNote"><b>Note:</b>The margin values <b>5px 15px 25px 35px</b> follows a <b>clock-wise</b> order from <b>top right bottom</b> and <b>left</b> respectively.</p>
@@ -1641,9 +1625,10 @@ orange-box</b> individually..</p>
 		  	<!-- Start writing from here -->
 		  	<p class="explanationText">An element's <b>padding</b> controls the amount of space between the element and its border.</p>
 		  	<p class="explanationText">Consider the box below..</p>
-
+                <div class="output-window">
               <div style="text-align: center;border: 3px solid black;background-color: cornflowerblue;margin:45px">
-              	<h1>This is the h1 element in CSSjhvvjkvgvhjjj..</h1>
+              	<h1>This is the h1 element in CSSjjkhh</h1>
+              </div>
               </div>
 
               <p class="explanationText">CSS code is..</p>
@@ -1658,9 +1643,10 @@ orange-box</b> individually..</p>
        <p class="explanationText">As we can see, there is no space b/w the <b>h1 element</b> and the <b>border</b> of the <b>blue-box</b> and it looks a little messy!!</p>
 
         <p class="explanationText">just by adjusting the <b>padding</b> value to <b>25px </b>we get..</p>
-
+             <div class="output-window">
              <div style="text-align: center;border: 3px solid black;background-color: cornflowerblue;margin:45px; padding: 25px">
-              	<h1>This is the h1 element in CSSjhvvjkvgvhjjj..</h1>
+              	<h1>This is the h1 element in CSSjjkhh</h1>
+              </div>
               </div>
 <xmp class="code">
 .blue-box {
@@ -1687,12 +1673,11 @@ orange-box</b> individually..</p>
 }
 </xmp>
 <p class="explanationText">Will generate..</p>
-
-
+              <div class="output-window">
              <div style="text-align: center;border: 3px solid black;background-color: cornflowerblue;margin:45px; padding: 5px 15px 25px 35px">
-              	<h1>This is the h1 element in CSSjhvvjkvgvhjjj..</h1>
+              	<h1>This is the h1 element in CSSjjkhh</h1>
               </div>
-
+               </div>
               <p class="explanationText">The padding value changes to <b>5px 15px 25px 35px</b> from the <b>top</b>, <b>right</b>, <b>bottom</b>, and <b>left</b> respectively.</p>
              <!-- <p class="explanationNote"><b>Note:</b>There's no <b>-ve </b>padding value can be given in CSS.</p>-->
 		 </div>
@@ -1788,6 +1773,11 @@ h2 {
 		  <h3 class="heading">Border Radius</h3>
 		  <div class="content">
 		  	<!-- Start writing from here -->
+
+		  	<p class="explanationText">The <b>border-radius</b> property is used to add rounded corners to an element.</p>
+            
+
+
 		  </div>
 		</div>
 
