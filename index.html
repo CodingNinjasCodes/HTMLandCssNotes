@@ -1773,9 +1773,151 @@ h2 {
 		  <h3 class="heading">Border Radius</h3>
 		  <div class="content">
 		  	<!-- Start writing from here -->
-
+		  	<p class="explanationText">Consider the box below..</p>
+             <div class="output-window">
+        	<div style="    	
+    background: #008080;
+    padding: 20px; 
+    width: 200px;
+    height: 150px"></div>
+        </div>  	
+        <p class="explanationText">CSS code is..</p>
+<xmp class="code">
+div {
+	background: #008080;
+    padding: 20px; 
+    width: 200px;
+    height: 150px
+}
+</xmp>        
 		  	<p class="explanationText">The <b>border-radius</b> property is used to add rounded corners to an element.</p>
+		  	<p class="explanationText">look at the CSS code below..</p>
+<xmp class="code">
+div{
+    border-radius: 35px;
+    background: #008080;
+    padding: 20px; 
+    width: 200px;
+    height: 150px; 
+}
+</xmp>		
+        <p class="explanationText">This will output..</p>
+        <div class="output-window">
+        	<div style="border-radius: 35px;
+    background: #008080;
+    padding: 20px; 
+    width: 200px;
+    height: 150px"></div>
+        </div>  	
             
+        <p class="explanationText">Note the corners are slightly "curved" around the edges. Pretty cool huh!..Well that's one way to apply the <b>border-radius </b>property.</p>
+        <p class="explanationText">Also, there are <b>four-valued</b>, <b>three-valued</b>, <b>two-valued</b>, and <b>one-valued</b> border-radius properties which can be specified individually according to our need.</p>
+        
+        <p class="explanationText">Consider the following..</p>
+<xmp class="code">
+div {
+    border-radius: 25px 60px 40px 15px; 
+    background: #008080;
+    padding: 20px; 
+    width: 200px;
+    height: 150px; 
+}
+</xmp>
+<p class="explanationText">border-radius: <b>25px 60px 40px 15px</b>; is a <b>four-valued</b> CSS border-radius property which applies individually to the <b>top-left</b>, <b>top-right</b>, <b>bottom-right</b>, and <b>bottom-left</b> respectively..</p>
+<div class="output-window">
+	<div style="border-radius: 25px 60px 40px 15px; 
+    background: #008080;
+    padding: 20px; 
+    width: 200px;
+    height: 150px;"></div>
+</div>
+<br>
+<xmp class="code">
+ div { 
+     border-radius: 25px 60px 40px;
+     background: #008080;
+     padding: 20px; 
+     width: 200px;
+     height: 150px; 
+}
+</xmp>
+
+<p class="explanationText">border-radius: <b>25px 60px 40px</b>; is a <b>three-valued</b> CSS border-radius property which applies to the <b>top-left</b>(25px), <b>top-right</b>(60px), <b>bottom-left</b>(60px), and <b>bottom-right</b>(40px) respectively..</p>
+
+<div class="output-window">
+	<div style="border-radius: 25px 60px 40px; 
+    background: #008080;
+    padding: 20px; 
+    width: 200px;
+    height: 150px;"></div>
+</div>
+<br>
+<xmp class="code">
+div {
+    border-radius: 25px 60px;
+    background: #008080;
+    padding: 20px; 
+    width: 200px;
+    height: 150px; 
+}
+</xmp>
+
+<p class="explanationText">border-radius: <b>25px 60px</b>; is a <b>two-valued</b> CSS border-radius property which applies to the <b>top-left</b>(25px), <b>bottom-right</b>(25px), <b>bottom-left</b>(60px), and <b>top-right</b>(60px) respectively..</p>
+
+<div class="output-window">
+	<div style="border-radius: 25px 60px; 
+    background: #008080;
+    padding: 20px; 
+    width: 200px;
+    height: 150px;"></div>
+</div>
+
+
+        <p class="explanationNote"><b>Note</b>:These border-radius properties can also be applied another way using <b>border-top-left-radius</b>, <b>border-top-right-radius</b>, <b>border-bottom-left-radius</b>, and <b>border-bottom-right-radius</b>.</p>
+
+         
+       <p class="explanationText">Some applications of <b>border-radius</b> are given below..</p>
+
+        <div style="border: dotted;
+  border-width: 10px 4px;
+  border-radius: 10px 40px;text-align: center;background-color: beige;">border: dotted;<br>
+  border-width: 10px 4px;<br>
+  border-radius: 10px 40px;<br>
+  text-align: center;<br>background-color: beige;</div>
+<br>
+
+        <div style="border: dashed;
+  border-width: 2px 4px;
+  border-radius: 40px;text-align: center;background-color: bisque">border: dashed;<br>
+  border-width: 2px 4px;<br>
+  border-radius: 40px;<br>
+  background-color: bisque<br>text-align:center;
+        	</div>
+<br>
+        <div style="
+  border-radius: 40px 10px;background-color: cornflowerblue;text-align: center;">
+        	border-radius: 40px 10px;<br>
+        	background-color:cornflowerblue;<br>
+        	text-align: center;
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 		  </div>
