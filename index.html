@@ -1496,36 +1496,22 @@ Also, <b>margin </b> can be applied individually to the <b>left</b>, <b>right</b
   <!--<h5 class="box red-box">PADDING2</h5>-->
 <!--</div>-->
 
-<style>
-.blue-box{
-  border: 3px solid black;
+<div class="output-window">
+<div style="border: 3px solid black;
  padding: 45px;
   background-color: skyblue;
-  margin: 35px;
-}
-
-
-.orange-box{
-  border: 3px solid black;
+  margin: 35px">
+  <div style="border: 3px solid black;
   margin:5px;
   padding:25px;
   text-align: center;
-  background-color: orange;
-}
-
-</style>
-
-
-<div class="blue-box">
-  <div class="orange-box"><h1>h1 element</h1></div>
+  background-color: orange"><h1>h1 element</h1></div>
   </div>
-
+</div>
 <br>
 <p class="explanationText">CSS code is..</p>
 
 <xmp class="code">
-<style>
-
 .blue-box{
   border: 3px solid black;
  padding: 45px;
@@ -1540,8 +1526,6 @@ Also, <b>margin </b> can be applied individually to the <b>left</b>, <b>right</b
   text-align: center;
   background-color: orange;
 }
-
-</style>
 </xmp>
 
 <p class="explanationText">Now, let us change the margin of the <b>orange-box</b> to <b>25px</b>..</p>
@@ -1555,7 +1539,7 @@ Also, <b>margin </b> can be applied individually to the <b>left</b>, <b>right</b
   background-color: orange;
 }
 </xmp>
-
+<div class="output-window">
 <div style=" border: 3px solid black;
  padding: 45px;
   background-color: skyblue;
@@ -1566,12 +1550,12 @@ Also, <b>margin </b> can be applied individually to the <b>left</b>, <b>right</b
   text-align: center;
   background-color: orange"><h1>h1 element</h1></div>
   </div>
-
+</div>
 <p class="explanationText">Now, we can see that the distance b/w the border of <b>orange-box</b> and the border of the <b>blue-box</b> has been increased just by increasing the margin of the <b>orange-box</b> to 25px.</p>
 
 <p class="explanationText">Also, we can add <b>-ve</b> margin values to our <b>orange box</b>, which will result the following..</p>
 
-
+<div class="output-window">
 <div style=" border: 3px solid black;
  padding: 45px;
   background-color: skyblue;
@@ -1582,7 +1566,7 @@ Also, <b>margin </b> can be applied individually to the <b>left</b>, <b>right</b
   text-align: center;
   background-color: orange"><h1>h1 element</h1></div>
   </div>
-
+</div>
 <p class="explanationText">CSS code is..</p>
 
 <xmp class="code">
@@ -1611,7 +1595,7 @@ orange-box</b> individually..</p>
 </xmp>
 
 <p class="explanationText">This will result in...</p>
-
+<div class="output-window">
 <div style=" border: 3px solid black;
  padding: 45px;
   background-color: skyblue;
@@ -1622,7 +1606,7 @@ orange-box</b> individually..</p>
   text-align: center;
   background-color: orange"><h1>h1 element</h1></div>
   </div>
-
+</div>
 <p class="explanationText">It's pretty clear that the margin values <b>5px 15px 25px 35px </b>changes the space around the <b>orange-box</b> by <b>5px 15px 25px 35px</b> respectively!!</p>
 
 <p class="explanationNote"><b>Note:</b>The margin values <b>5px 15px 25px 35px</b> follows a <b>clock-wise</b> order from <b>top right bottom</b> and <b>left</b> respectively.</p>
@@ -1641,9 +1625,10 @@ orange-box</b> individually..</p>
 		  	<!-- Start writing from here -->
 		  	<p class="explanationText">An element's <b>padding</b> controls the amount of space between the element and its border.</p>
 		  	<p class="explanationText">Consider the box below..</p>
-
+                <div class="output-window">
               <div style="text-align: center;border: 3px solid black;background-color: cornflowerblue;margin:45px">
-              	<h1>This is the h1 element in CSSjhvvjkvgvhjjj..</h1>
+              	<h1>This is the h1 element in CSSjjkhh</h1>
+              </div>
               </div>
 
               <p class="explanationText">CSS code is..</p>
@@ -1658,9 +1643,10 @@ orange-box</b> individually..</p>
        <p class="explanationText">As we can see, there is no space b/w the <b>h1 element</b> and the <b>border</b> of the <b>blue-box</b> and it looks a little messy!!</p>
 
         <p class="explanationText">just by adjusting the <b>padding</b> value to <b>25px </b>we get..</p>
-
+             <div class="output-window">
              <div style="text-align: center;border: 3px solid black;background-color: cornflowerblue;margin:45px; padding: 25px">
-              	<h1>This is the h1 element in CSSjhvvjkvgvhjjj..</h1>
+              	<h1>This is the h1 element in CSSjjkhh</h1>
+              </div>
               </div>
 <xmp class="code">
 .blue-box {
@@ -1687,12 +1673,11 @@ orange-box</b> individually..</p>
 }
 </xmp>
 <p class="explanationText">Will generate..</p>
-
-
+              <div class="output-window">
              <div style="text-align: center;border: 3px solid black;background-color: cornflowerblue;margin:45px; padding: 5px 15px 25px 35px">
-              	<h1>This is the h1 element in CSSjhvvjkvgvhjjj..</h1>
+              	<h1>This is the h1 element in CSSjjkhh</h1>
               </div>
-
+               </div>
               <p class="explanationText">The padding value changes to <b>5px 15px 25px 35px</b> from the <b>top</b>, <b>right</b>, <b>bottom</b>, and <b>left</b> respectively.</p>
              <!-- <p class="explanationNote"><b>Note:</b>There's no <b>-ve </b>padding value can be given in CSS.</p>-->
 		 </div>
@@ -1788,6 +1773,173 @@ h2 {
 		  <h3 class="heading">Border Radius</h3>
 		  <div class="content">
 		  	<!-- Start writing from here -->
+		  	<p class="explanationText">Consider the box below..</p>
+             <div class="output-window">
+        	<div style="    	
+    background: #008080;
+    padding: 20px; 
+    width: 200px;
+    height: 150px"></div>
+        </div>  	
+        <p class="explanationText">CSS code is..</p>
+<xmp class="code">
+div {
+	background: #008080;
+    padding: 20px; 
+    width: 200px;
+    height: 150px
+}
+</xmp>        
+		  	<p class="explanationText">The <b>border-radius</b> property is used to add rounded corners to an element.</p>
+		  	<p class="explanationText">look at the CSS code below..</p>
+<xmp class="code">
+div{
+    border-radius: 35px;
+    background: #008080;
+    padding: 20px; 
+    width: 200px;
+    height: 150px; 
+}
+</xmp>		
+        <p class="explanationText">This will output..</p>
+        <div class="output-window">
+        	<div style="border-radius: 35px;
+    background: #008080;
+    padding: 20px; 
+    width: 200px;
+    height: 150px"></div>
+        </div>  	
+            
+        <p class="explanationText">Note the corners are slightly "curved" around the edges. Pretty cool huh?!..Well that's one way to apply the <b>border-radius </b>property.</p>
+        <p class="explanationText">Also, there are <b>four-valued</b>, <b>three-valued</b>, <b>two-valued</b>, and <b>one-valued</b> border-radius properties which can be specified individually according to our need.</p>
+        
+        <p class="explanationText">Consider the following..</p>
+<xmp class="code">
+div {
+    border-radius: 25px 60px 40px 15px; 
+    background: #008080;
+    padding: 20px; 
+    width: 200px;
+    height: 150px; 
+}
+</xmp>
+<p class="explanationText">border-radius: <b>25px 60px 40px 15px</b>; is a <b>four-valued</b> CSS border-radius property which applies individually to the <b>top-left</b>, <b>top-right</b>, <b>bottom-right</b>, and <b>bottom-left</b> respectively..</p>
+<div class="output-window">
+	<div style="border-radius: 25px 60px 40px 15px; 
+    background: #008080;
+    padding: 20px; 
+    width: 200px;
+    height: 150px;"></div>
+</div>
+<br>
+<xmp class="code">
+ div { 
+     border-radius: 25px 60px 40px;
+     background: #008080;
+     padding: 20px; 
+     width: 200px;
+     height: 150px; 
+}
+</xmp>
+
+<p class="explanationText">border-radius: <b>25px 60px 40px</b>; is a <b>three-valued</b> CSS border-radius property which applies to the <b>top-left</b>(25px), <b>top-right</b>(60px), <b>bottom-left</b>(60px), and <b>bottom-right</b>(40px) respectively..</p>
+
+<div class="output-window">
+	<div style="border-radius: 25px 60px 40px; 
+    background: #008080;
+    padding: 20px; 
+    width: 200px;
+    height: 150px;"></div>
+</div>
+<br>
+<xmp class="code">
+div {
+    border-radius: 25px 60px;
+    background: #008080;
+    padding: 20px; 
+    width: 200px;
+    height: 150px; 
+}
+</xmp>
+
+<p class="explanationText">border-radius: <b>25px 60px</b>; is a <b>two-valued</b> CSS border-radius property which applies to the <b>top-left</b>(25px), <b>bottom-right</b>(25px), <b>bottom-left</b>(60px), and <b>top-right</b>(60px) respectively..</p>
+
+<div class="output-window">
+	<div style="border-radius: 25px 60px; 
+    background: #008080;
+    padding: 20px; 
+    width: 200px;
+    height: 150px;"></div>
+</div>
+
+
+        <p class="explanationNote"><b>Note</b>:These border-radius properties can also be applied another way using <b>border-top-left-radius</b>, <b>border-top-right-radius</b>, <b>border-bottom-left-radius</b>, and <b>border-bottom-right-radius</b>.</p>
+
+        <p class="explanationText">You may also specify the radiuses in which the corner is rounded by. In other words, the rounding doesn't have to be perfectly circular, it can be elliptical. This is done using a slash ("/") between two values.</p>
+<xmp class="code">
+div {
+    border-radius: 10px/30px; /* horizontal radius / vertical radius */
+    background: teal;
+    width:20%;
+    height:20%;
+    padding:40px;
+}
+
+div {
+    border-radius: 30px/10px; /* horizontal radius / vertical radius */
+    background: teal;
+    width:20%;
+    height:20%;
+    padding:40px;
+}
+</xmp>
+
+
+<div style="display: flex;justify-content: space-around;" class="output-window">
+         <div style="
+  border-radius: 10px/30px; /* horizontal radius / vertical radius */
+background: teal;
+  width:20%;
+  height:20%;
+  padding:40px"></div>
+
+<div style="
+  border-radius: 30px/10px; /* horizontal radius / vertical radius */
+  background: teal;
+  width:20%;
+  height:20%;
+  padding:40px;">	
+</div>
+
+</div>
+         
+       <p class="explanationText">Some applications of <b>border-radius</b> property are given below..</p>
+<div style="display: flex;justify-content: space-around">
+        <div style="border: dotted;
+        width: 30%;
+  border-width: 10px 4px;
+  border-radius: 10px 40px;text-align: center;background-color: beige;">border: dotted;<br>
+  border-width: 10px 4px;<br>
+  border-radius: 10px 40px;<br>
+  text-align: center;<br>background-color: beige;<br>width: 30%;</div>
+
+
+        <div style="border: dashed;
+ width: 30%;
+  border-width: 2px 4px;
+  border-radius: 40px;text-align: center;background-color: bisque">border: dashed;<br>
+  border-width: 2px 4px;<br>
+  border-radius: 40px;<br>
+  background-color: bisque<br>text-align:center<br>width: 30%;;
+        	</div>
+        <div style="
+        width: 30%;
+  border-radius: 40px 10px;background-color: cornflowerblue;text-align: center;">
+        	border-radius: 40px 10px;<br>
+        	background-color:cornflowerblue;<br>
+        	text-align: center;<br>width: 30%;
+        </div>
+</div>
 		  </div>
 		</div>
 
@@ -1869,9 +2021,113 @@ h2 {
 		</div>
 
 		<div id="class-and-id-selectors" class="tabcontent">
-		  <h3 class="heading">Sections</h3>
+		  <h3 class="heading">Class and ID Selectors</h3>
 		  <div class="content">
 		  	<!-- Start writing from here -->
+
+         <p class="explanationText">We can't create our own HTML tags those are pretty standard!.But the intention behind it can be fulfilled easily just by using <b>class</b> and <b>id</b> selectors.</p>
+
+          <p class="explanationHeading">Class Selector</p><br>
+          <p class="explanationText">The class selector is used to select a group of elements belongs to a same class like..</p>
+<xmp class="code">
+<p class="red">I am red1</p>
+<p class="blue">I am blue1</p>
+<p class="red">I am red2</p>
+<p class="blue">I am blue2</p>
+
+</xmp>
+
+        <p class="explanationText">Let's suppose if we want to give a red color to the elements that falls under the <b>red</b> class and the color blue to the elements that falls under the <b>blue</b> class this can be done by using class selector..</p>
+          
+<xmp class="code">
+.red{
+	color:red;
+}
+
+.blue{
+	color:blue;
+}
+</xmp>
+         <p class="explanationText">This will generate..</p>
+         <div class="output-window">
+         	<p style="color: red">I am red1</p><br>
+         	<p style="color: blue">I am blue1</p><br>
+         	<p style="color: red">I am red2</p><br>
+         	<p style="color: blue">I am blue2</p>
+         </div>
+      
+        <p class="explanationText">The <b>.</b> is called as the <b>class</b> selector and is used to select the elements that falls under the same class.</p>
+
+
+        <p class="explanationHeading">ID Selectors</p><br>
+
+        <p class="explanationText">The class selector selects a group of elements belongs to the same class..On the other hand the <b>ID selector</b> is much more specific.It is used to select those elements having a specific id..</p>
+
+<xmp class="code">
+<p id="one">This is id one!</p>
+<p id="two">This is id two!</p>
+<p id="three">This is id three!</p>
+<p id="four">This is id four!</p>
+</xmp>
+
+
+        <p class="explanationText">If we want to change the font of the element that belongs to the id <b>one</b>, change the color of element that belongs to id <b>two</b>,change the background-color of element to green that belongs to id <b>three</b> and change the size of the element that belongs to an id of <b>four</b>..</p>
+
+<xmp class="code">
+#one {
+     font-family: monospace,Arial;	
+}
+
+#two {
+	 background-color: teal;
+}
+
+#three {
+	   color: green;
+}
+
+#four {
+	  font-size: 30px;
+}
+</xmp>             
+
+        <p class="explanationText">This will generate..</p>
+        <div class="output-window">
+        <p style="font-family: monospace,Arial;">This is id one!</p><br>
+        <p style="background-color: teal">This is id two!</p><br>
+        <p style="color: green;">This is id three!</p><br>
+        <p style="font-size: 30px;">This is id four!</p>  	
+        </div>
+
+      <p class="explanationText">Also known as the <b>id selector</b> the <b>#</b> symbol is used to select an element that belongs to a particular id.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		  </div>
 		</div>
 
@@ -1881,7 +2137,7 @@ h2 {
 		  	<!-- Start writing from here -->
 		  </div>
 		</div>
-
+        
 		<div id="pseudo-classes" class="tabcontent">
 		  <h3 class="heading">Pseudo Classes</h3>
 		  <div class="content">
