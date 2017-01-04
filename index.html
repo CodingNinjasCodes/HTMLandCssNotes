@@ -1810,7 +1810,7 @@ div{
     height: 150px"></div>
         </div>  	
             
-        <p class="explanationText">Note the corners are slightly "curved" around the edges. Pretty cool huh!..Well that's one way to apply the <b>border-radius </b>property.</p>
+        <p class="explanationText">Note the corners are slightly "curved" around the edges. Pretty cool huh?!..Well that's one way to apply the <b>border-radius </b>property.</p>
         <p class="explanationText">Also, there are <b>four-valued</b>, <b>three-valued</b>, <b>two-valued</b>, and <b>one-valued</b> border-radius properties which can be specified individually according to our need.</p>
         
         <p class="explanationText">Consider the following..</p>
@@ -1940,22 +1940,6 @@ background: teal;
         	text-align: center;<br>width: 30%;
         </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 		  </div>
 		</div>
 
@@ -2037,9 +2021,113 @@ background: teal;
 		</div>
 
 		<div id="class-and-id-selectors" class="tabcontent">
-		  <h3 class="heading">Sections</h3>
+		  <h3 class="heading">Class and ID Selectors</h3>
 		  <div class="content">
 		  	<!-- Start writing from here -->
+
+         <p class="explanationText">We can't create our own HTML tags those are pretty standard!.But the intention behind it can be fulfilled easily just by using <b>class</b> and <b>id</b> selectors.</p>
+
+          <p class="explanationHeading">Class Selector</p><br>
+          <p class="explanationText">The class selector is used to select a group of elements belongs to a same class like..</p>
+<xmp class="code">
+<p class="red">I am red1</p>
+<p class="blue">I am blue1</p>
+<p class="red">I am red2</p>
+<p class="blue">I am blue2</p>
+
+</xmp>
+
+        <p class="explanationText">Let's suppose if we want to give a red color to the elements that falls under the <b>red</b> class and the color blue to the elements that falls under the <b>blue</b> class this can be done by using class selector..</p>
+          
+<xmp class="code">
+.red{
+	color:red;
+}
+
+.blue{
+	color:blue;
+}
+</xmp>
+         <p class="explanationText">This will generate..</p>
+         <div class="output-window">
+         	<p style="color: red">I am red1</p><br>
+         	<p style="color: blue">I am blue1</p><br>
+         	<p style="color: red">I am red2</p><br>
+         	<p style="color: blue">I am blue2</p>
+         </div>
+      
+        <p class="explanationText">The <b>.</b> is called as the <b>class</b> selector and is used to select the elements that falls under the same class.</p>
+
+
+        <p class="explanationHeading">ID Selectors</p><br>
+
+        <p class="explanationText">The class selector selects a group of elements belongs to the same class..On the other hand the <b>ID selector</b> is much more specific.It is used to select those elements having a specific id..</p>
+
+<xmp class="code">
+<p id="one">This is id one!</p>
+<p id="two">This is id two!</p>
+<p id="three">This is id three!</p>
+<p id="four">This is id four!</p>
+</xmp>
+
+
+        <p class="explanationText">If we want to change the font of the element that belongs to the id <b>one</b>, change the color of element that belongs to id <b>two</b>,change the background-color of element to green that belongs to id <b>three</b> and change the size of the element that belongs to an id of <b>four</b>..</p>
+
+<xmp class="code">
+#one {
+     font-family: monospace,Arial;	
+}
+
+#two {
+	 background-color: teal;
+}
+
+#three {
+	   color: green;
+}
+
+#four {
+	  font-size: 30px;
+}
+</xmp>             
+
+        <p class="explanationText">This will generate..</p>
+        <div class="output-window">
+        <p style="font-family: monospace,Arial;">This is id one!</p><br>
+        <p style="background-color: teal">This is id two!</p><br>
+        <p style="color: green;">This is id three!</p><br>
+        <p style="font-size: 30px;">This is id four!</p>  	
+        </div>
+
+      <p class="explanationText">Also known as the <b>id selector</b> the <b>#</b> symbol is used to select an element that belongs to a particular id.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		  </div>
 		</div>
 
@@ -2049,7 +2137,7 @@ background: teal;
 		  	<!-- Start writing from here -->
 		  </div>
 		</div>
-
+        
 		<div id="pseudo-classes" class="tabcontent">
 		  <h3 class="heading">Pseudo Classes</h3>
 		  <div class="content">
