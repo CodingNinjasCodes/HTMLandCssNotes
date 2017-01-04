@@ -22,26 +22,26 @@
 * Padding > Kamal
 * Border > Kamal
 * Border Radius > Kamal
-* Span and Div > Kamal
-* Text Abbreviations Quotations and Code > Kamal
-* Meta Tags > Kamal
+* Span and Div > Manish
+* Text Abbreviations Quotations and Code >Manish
+* Meta Tags > Manish
 * Description Lists > Manish
-* Sections > Kamal
+* Sections > Manish
 * Class and ID Selectors > Kamal
-* Grouping and Nesting > Kamal
+* Grouping and Nesting > Manish
 * Pseudo Classes > Manish
 * Pseudo Elements > Manish
 * Shorthand Properties > Manish
 * Background Images > Manish
 * Specificity > Kamal
 * Display Properties > Kamal
-* Page Layouts > Kamal
+* Page Layouts > Manish
 * Media Tags > Manish
 * HTML Forms > Manish
 * Shadows > Kamal
 * More Selectors > Kamal
 * Attribute Selectors > Kamal
 * Background > Manish
-* Transformations > Manish
-* Gradients > Manish
+* Transformations > Kamal
+* Gradients > Kamal
 * Media Queries > Manish
