@@ -1875,35 +1875,71 @@ div {
 
         <p class="explanationNote"><b>Note</b>:These border-radius properties can also be applied another way using <b>border-top-left-radius</b>, <b>border-top-right-radius</b>, <b>border-bottom-left-radius</b>, and <b>border-bottom-right-radius</b>.</p>
 
-         
-       <p class="explanationText">Some applications of <b>border-radius</b> are given below..</p>
+        <p class="explanationText">You may also specify the radiuses in which the corner is rounded by. In other words, the rounding doesn't have to be perfectly circular, it can be elliptical. This is done using a slash ("/") between two values.</p>
+<xmp class="code">
+div {
+    border-radius: 10px/30px; /* horizontal radius / vertical radius */
+    background: teal;
+    width:20%;
+    height:20%;
+    padding:40px;
+}
 
+div {
+    border-radius: 30px/10px; /* horizontal radius / vertical radius */
+    background: teal;
+    width:20%;
+    height:20%;
+    padding:40px;
+}
+</xmp>
+
+
+<div style="display: flex;justify-content: space-around;" class="output-window">
+         <div style="
+  border-radius: 10px/30px; /* horizontal radius / vertical radius */
+background: teal;
+  width:20%;
+  height:20%;
+  padding:40px"></div>
+
+<div style="
+  border-radius: 30px/10px; /* horizontal radius / vertical radius */
+  background: teal;
+  width:20%;
+  height:20%;
+  padding:40px;">	
+</div>
+
+</div>
+         
+       <p class="explanationText">Some applications of <b>border-radius</b> property are given below..</p>
+<div style="display: flex;justify-content: space-around">
         <div style="border: dotted;
+        width: 30%;
   border-width: 10px 4px;
   border-radius: 10px 40px;text-align: center;background-color: beige;">border: dotted;<br>
   border-width: 10px 4px;<br>
   border-radius: 10px 40px;<br>
-  text-align: center;<br>background-color: beige;</div>
-<br>
+  text-align: center;<br>background-color: beige;<br>width: 30%;</div>
+
 
         <div style="border: dashed;
+ width: 30%;
   border-width: 2px 4px;
   border-radius: 40px;text-align: center;background-color: bisque">border: dashed;<br>
   border-width: 2px 4px;<br>
   border-radius: 40px;<br>
-  background-color: bisque<br>text-align:center;
+  background-color: bisque<br>text-align:center<br>width: 30%;;
         	</div>
-<br>
         <div style="
+        width: 30%;
   border-radius: 40px 10px;background-color: cornflowerblue;text-align: center;">
         	border-radius: 40px 10px;<br>
         	background-color:cornflowerblue;<br>
-        	text-align: center;
+        	text-align: center;<br>width: 30%;
         </div>
-
-
-
-
+</div>
 
 
 
