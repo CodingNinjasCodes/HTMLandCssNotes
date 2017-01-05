@@ -38,7 +38,6 @@
 		  <li onclick="openPage(event, 'padding')"><a href="javascript:void(0)" class="tablinks">Padding</a></li>
 		  <li onclick="openPage(event, 'border-radius')"><a href="javascript:void(0)" class="tablinks">Border Radius</a></li>
 		  <li onclick="openPage(event, 'span-and-div')"><a href="javascript:void(0)" class="tablinks">Span and Div</a></li>
-		  <li onclick="openPage(event, 'text-abbr')"><a href="javascript:void(0)" class="tablinks">Text Abbreviations Quotations and Code</a></li>
 		  <li onclick="openPage(event, 'meta-tags')"><a href="javascript:void(0)" class="tablinks">Meta Tags</a></li>
 		  <li onclick="openPage(event, 'description-lists')"><a href="javascript:void(0)" class="tablinks">Description Lists</a></li>
 		  <li onclick="openPage(event, 'sections')"><a href="javascript:void(0)" class="tablinks">Sections</a></li>
@@ -47,6 +46,7 @@
 		  <li onclick="openPage(event, 'pseudo-classes')"><a href="javascript:void(0)" class="tablinks">Pseudo Classes</a></li>
 		  <li onclick="openPage(event, 'pseudo-elements')"><a href="javascript:void(0)" class="tablinks">Pseudo Elements</a></li>
 		  <li onclick="openPage(event, 'shorthand-properties')"><a href="javascript:void(0)" class="tablinks">Shorthand Properties</a></li>
+		  <li onclick="openPage(event, 'text-abbr')"><a href="javascript:void(0)" class="tablinks">Text Abbreviations Quotations and Code</a></li>
 		  <li onclick="openPage(event, 'background-images')"><a href="javascript:void(0)" class="tablinks">Background Images</a></li>
 		  <li onclick="openPage(event, 'specificity')"><a href="javascript:void(0)" class="tablinks">Specificity</a></li>
 		  <li onclick="openPage(event, 'display-properties')"><a href="javascript:void(0)" class="tablinks">Display Properties</a></li>
@@ -1808,16 +1808,6 @@ h2 {
     an unknown printer took a galley of type and scrambled it to 
     make a type specimen book.
 </div></xmp>
-			
-
-		  	<!-- Start writing from here -->
-		  </div>
-		</div>
-
-		<div id="text-abbr" class="tabcontent">
-		  <h3 class="heading">Text Abbreviations Quotations and Code</h3>
-		  <div class="content">
-		  	<!-- Start writing from here -->
 		  </div>
 		</div>
 
@@ -2048,6 +2038,99 @@ h2 {
 }</xmp>
 			</p>
 		  </div>
+		</div>
+
+		<div id="text-abbr" class="tabcontent">
+			<h3 class="heading">Text Abbreviations Quotations and Code</h3>
+		  	<div class="content">
+			  	<div class="explanationHeading">Abbreviations</div>
+		  		<p class = "explanationText">
+				  	For defining an abbreviation, <b>abbr</b> tag is used. Expanded form of the abbreviation is given in the value of the <b>title</b> attribute. Although this is not necessary, but is a good practice.
+		  		</p>
+<xmp class="code"><p>
+    <abbr title="Javascript">JS</abbr> is the one of the most used 
+    languages in the world!!
+</p></xmp>
+				<p class="explanationText">
+					Try hovering above JS below:
+				</p>
+				<div class="output-window">
+					<abbr title="Javascript">JS</abbr> is the one of the most used languages in the world!!	
+				</div>
+
+				<div class="explanationHeading">
+					Quotations
+				</div>
+				<p class="explanationText">
+					The <b>q</b> tag is used for inline-quotations.They are used as:
+				</p>
+
+<xmp class="code"><p>
+    And the teacher said <q>instead of using 
+    double-quotes you can enclose the content 
+    within q-tag.</q>
+</p></xmp>		
+				<p class="explanationText">This appears as:</p>		
+				<div class="output-window">
+					<p>
+					    And the teacher said <q>instead of using 
+					    double-quotes you can enclose the content 
+					    within q-tag.</q>
+					</p>
+				</div>
+				<br>
+				<br>
+
+				<p class="explanationText">
+					When there is a block of data to display, <b>blockquote</b> tag is used.
+				</p>
+<xmp class="code"><blockquote>
+    <p>
+        Most programmers do programming not because they expect <br>
+        to get paid or get adulation by the public, but because <br>
+        it is fun to program.
+    </p>
+</blockquote></xmp>
+				<p class="explanationText">
+					The styling for the above HTML is: 
+				</p>
+<xmp class="code">blockquote::before {
+    display: block;
+    height: 1em;
+    content: "“";
+    margin-left: -.95em;
+    font: italic 400%/1 Cochin,Georgia,"Times New Roman", serif;
+    color: #999;
+}</xmp>
+				<p class="explanationNote">
+					<em>NOTE:</em> The pseudo element used above is <b>before</b>. It is used to select the first pseudo-element of the element on which it is applied. Then <b>content</b> property is used to include some content in it. The <b>content</b> property can always be used to add content to the selected element.
+				</p>
+				<div class="output-window">
+					<blockquote class="exampleBlockquote">
+					        Most programmers do programming not because they expect <br> to get paid or get adulation by the public, but because <br> it is fun to program.
+					</blockquote>
+				</div>
+				<div class="explanationHeading">
+					Code
+				</div>
+				<p class="explanationText">
+					For representing computer code, <b>code</b> tag is used. For variables <b>var</b> is used. Sample output is enclosed in <b>samp</b> tags. Usage for code:
+				</p>
+
+<xmp class="code"><p>Regular text. <code>This is code.</code>
+Regular text.<samp> Output-sample text.</samp></p></xmp>
+				<p class="explanationText">
+					Output is:
+				</p>
+
+				<div class="output-window">
+					<p>Regular text. <code>This is code.</code>
+					Regular text.<samp> Output-sample text.</samp></p>
+				</div>
+				<div class="explanationNote">
+					<em>NOTE:</em> For showing the code in web-pages combination of <b>pre</b> and <b>code</b> tags is used.
+				</div>
+			</div>
 		</div>
 
 		<div id="background-images" class="tabcontent">

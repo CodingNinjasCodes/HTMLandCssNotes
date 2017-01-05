@@ -261,3 +261,18 @@ div.explanationImage img:hover {
 #examplePara2::first-letter {
     font-size: 2em;
 }
+/*for Text Abbreviations Quotations and Code*/
+.blockquote {
+    display: block;
+    margin: 1em;
+    margin: 1em;
+}
+/*for Text Abbreviations Quotations and Code*/
+#exampleBlockquote::before {
+    display: block;
+    height: 1em;
+    content: "“";
+    margin-left: -.95em;
+    font: italic 400%/1 Cochin,Georgia,"Times New Roman", serif;
+    color: #999;
+}
