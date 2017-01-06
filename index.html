@@ -55,7 +55,7 @@
 		  <li onclick="openPage(event, 'forms')"><a href="javascript:void(0)" class="tablinks">HTML Forms</a></li>
 		  <li onclick="openPage(event, 'shadows')"><a href="javascript:void(0)" class="tablinks">Shadows</a></li>
 		  <li onclick="openPage(event, 'more-selectors')"><a href="javascript:void(0)" class="tablinks">More Selectors</a></li>
-		  <li onclick="openPage(event, 'colors')"><a href="javascript:void(0)" class="tablinks">Colors</a></li>
+		  <!--<li onclick="openPage(event, 'colors')"><a href="javascript:void(0)" class="tablinks">Colors</a></li>-->
 		  <li onclick="openPage(event, 'attribute-selectors')"><a href="javascript:void(0)" class="tablinks">Attribute Selectors</a></li>
 		  <li onclick="openPage(event, 'background')"><a href="javascript:void(0)" class="tablinks">Background</a></li>
 		  <li onclick="openPage(event, 'transformations')"><a href="javascript:void(0)" class="tablinks">Transformations</a></li>
@@ -943,21 +943,21 @@ Each of the three values can be provided as an integer or as a percentage. The i
         <xmp class="code">
 h1 {color: rgb(255,0,0);}
  
-h2 {color: rgb(218,112,214);}
+h2 {color: rgb(0,128,0);}
 
 h3 {color: rgb(160,82,45);}
 
-h4 {color: rgb(0,0,255);}
+h4 {color: rgb(0,255,255);}
 </xmp>
 <p class="explanationText">will output..</p>
       <div class="output-window">
 <h1 style="color: rgb(255,0,0)">I am red!</h1>
 <br>
-<h2 style="color: rgb(218,112,214)">I am orchid!</h2>
+<h2 style="color: rgb(0,128,0)">I am green!</h2>
 <br>
 <h3 style="color: rgb(160,82,45)">I am sienna!</h3>
 <br>
-<h4 style="color: rgb(0,0,255)">I am blue!</h4>
+<h4 style="color: rgb(0,255,255)">I am aqua!</h4>
 
       </div>
      <p class="explanationText">Also <b>rgb()</b> colors can also be represented by  using <b>CSS 6 Digit Hex Colors</b>.This CSS 6-digit hex color notation allows you to specify RGB colors using hexadecimal values.</p>
@@ -965,11 +965,11 @@ h4 {color: rgb(0,0,255);}
 <xmp class="code">
 h1 {color: #ff0000;}
  
-h2 {color: #da70d6;}
+h2 {color: #008000;}
 
 h3 {color: #a0522d;}
 
-h4 {color: #0000ff;}
+h4 {color: #00ffff;}
 </xmp>
 
         <p class="explanationText">Will output same as the above.</p>
@@ -2477,13 +2477,13 @@ div {
 		  </div>
 		</div>
 
-		<div id="colors" class="tabcontent">
+	<!--	<div id="colors" class="tabcontent">
 		  <h3 class="heading">Colors</h3>
 		  <div class="content">
 		  	<!-- Start writing from here -->
-		  </div>
+	<!--	  </div>
 		</div>
-
+-->
 		<div id="attribute-selectors" class="tabcontent">
 		  <h3 class="heading">Attribute Selectors</h3>
 		  <div class="content">
