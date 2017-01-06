@@ -2100,34 +2100,6 @@ background: teal;
         </div>
 
       <p class="explanationText">Also known as the <b>id selector</b> the <b>#</b> symbol is used to select an element that belongs to a particular id.</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 		  </div>
 		</div>
 
@@ -2371,6 +2343,130 @@ background: teal;
 		  <h3 class="heading">Shadows</h3>
 		  <div class="content">
 		  	<!-- Start writing from here -->
+              
+              <p class="explanationText"> CSS allows us to give shadows to our HTML elements.There are two ways by which we can give shadows to our HTML elements like..</p>
+              <ul class="explanationText">
+              <li>text-shadow</li>
+              <li>box-shadow</li>
+              </ul>
+              <p class="explanationHeading">text-shadow</p>
+               <p class="explanationText">We can add shadows to our text using the <b>text-shadow</b> property.</p>
+<xmp class="code">
+#h1 {
+   text-shadow: 3px 3px;
+   font-size: 30px;
+}
+</xmp>
+
+       <p class="explanationText">It will result in..</p>
+       <div class="output-window">
+        <h1 style="text-shadow: 3px 3px;">TEXT_SHADOW</h1>
+       </div>
+          <p class="explanationText">All this is due to the <b>text-shadow</b> property.The <b>text-shadow: 3px 3px;</b> the first <b>3px</b> value is horizontal shadow, the next <b>3px </b>is vertical shadow.</p>
+
+        <p class="explanationText">
+        	Check this out..
+        </p>
+
+<xmp class="code">
+# h1 {
+	text-shadow: 3px 3px 5px;
+}
+</xmp>        
+
+<p class="explanationText">results in..</p>
+
+<div class="output-window">
+<h1 style="text-shadow: 3px 3px 5px">TEXT_SHADOW</h1>
+</div>
+
+           <p class="explanationText">The third parameter <b>5px</b> adds a <b>blur</b> effect to the text.</p>
+
+          <p class="explanationText">We can also add a <b>color</b> value as a fourth parameter to our text.</p>
+<xmp class="code">
+#h1{
+    text-shadow: 3px 3px 5px blue;
+}
+
+#h2{
+    text-shadow: 3px 3px 5px green;	
+}
+</xmp>
+
+        <div class="output-window">
+        	<h1 style="text-shadow: 3px 3px 5px blue;">TEXT_SHADOW</h1><br>
+        	<h2 style="text-shadow: 3px 3px 5px green;">TEXT_SHADOW</h2>
+        </div>
+<br>
+
+        <div class="explanationHeading">box-shadow</div><br>
+        <p class="explanationText">Just like text we can also give a "shadow" to our box using the <b>box-shadow</b> property.</p>
+        <p class="explanationText">look at the CSS code below..</p>
+
+<xmp class="code">
+div {
+     height:100px;
+     width:100px;
+     background:peru;
+     box-shadow: 30px -16px burlywood;
+}
+</xmp>        
+<p class="explanationText">outputs..</p>
+<div class="output-window">
+	<div style="
+  height:100px;
+  width:100px;
+  background:peru;
+  box-shadow: 30px -16px burlywood;"></div>
+</div>
+
+        <p class="explanationText"><b> box-shadow: 30px -16px burlywood;</b> The first value <b>30px</b> is the horizontal shadow and the corresponding second value <b>-16px</b> is the vertical shadow and the corresponding third value gives it a color of <b>burlywood!!</b></p>
+
+        <p class="explanationNote"><b>Note:</b>-ve values are allowed in the box shadow property.</p>
+         
+<p>We can also add <b>blur-radius</b> to our box just by adding a third value <b>5px </b>to our box-shadow property...</p>
+
+<xmp class="code">
+div {
+    height:100px;
+    width:100px;
+    background:peru;
+    box-shadow: 10px 5px 5px burlywood;
+}
+</xmp>
+
+<p class="explanationText">outputs...</p>
+          <div class="output-window">
+        <div style="
+  height:100px;
+  width:100px;
+  background:peru;
+  box-shadow: 10px 5px 5px burlywood;"></div>
+</div>
+
+<p class="explanationText">This shadow can also be "spread" by using a fourth value in our box-shadow property..</p>
+
+<xmp class="code">
+div {
+    height:100px;
+    width:100px;
+    background:peru;
+    box-shadow: 10px 5px 2px 5px rgba(222,184,135,0.9);
+}
+</xmp>
+
+          <div class="output-window">
+        <div style="
+  height:100px;
+  width:100px;
+  background:peru;
+  box-shadow: 10px 5px 2px 5px rgba(222,184,135,0.9);"></div>
+</div>
+
+    <p class="explanationText">As we can see that the area of box-shadow has been increased, just by adding a fourth value of <b>5px</b> in our box-shadow property!</p>
+
+
+
 		  </div>
 		</div>
 
