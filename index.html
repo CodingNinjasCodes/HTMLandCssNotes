@@ -40,7 +40,7 @@
 		  <li onclick="openPage(event, 'span-and-div')"><a href="javascript:void(0)" class="tablinks">Span and Div</a></li>
 		  <li onclick="openPage(event, 'meta-tags')"><a href="javascript:void(0)" class="tablinks">Meta Tags</a></li>
 		  <li onclick="openPage(event, 'description-lists')"><a href="javascript:void(0)" class="tablinks">Description Lists</a></li>
-		  <li onclick="openPage(event, 'sections')"><a href="javascript:void(0)" class="tablinks">Sections</a></li>
+		  <li onclick="openPage(event, 'sections-in-a-document')"><a href="javascript:void(0)" class="tablinks">Sections in a Document</a></li>
 		  <li onclick="openPage(event, 'class-and-id-selectors')"><a href="javascript:void(0)" class="tablinks">Class and ID Selectors</a></li>
 		  <li onclick="openPage(event, 'grouping-and-nesting')"><a href="javascript:void(0)" class="tablinks">Grouping and Nesting</a></li>
 		  <li onclick="openPage(event, 'pseudo-classes')"><a href="javascript:void(0)" class="tablinks">Pseudo Classes</a></li>
@@ -1889,15 +1889,100 @@ ninjas.in/"></xmp>
 		  </div>
 		</div>
 
-		<div id="sections" class="tabcontent">
-		  <h3 class="heading">Sections</h3>
-		  <div class="content">
-		  	<!-- Start writing from here -->
-		  </div>
+		<div id="sections-in-a-document" class="tabcontent">
+		<h3 class="heading">Sections in a Document</h3>
+			<div class="content">
+				<h4 class="explanationHeading"><b>Article</b> and <b>Section</b> tags</h4>
+				<p class="explanationText">
+					Sections are made to group thematically related elements together. This is used in very different context from <b>div</b> tag which is a generic container. A <b>div</b> tag may contain any kind of data but using specific kind of holders makes the document much more meaningful and easy to handle. After opening a <b>section</b> tag, it is a good practice to have a heading tag (<b>h1</b> to <b>h6</b>). If the chunk of data inside the <b>section</b> tag makes sense when viewed indepenently i.e. it is kind of stand-alone data, then the <b>article</b> should be used inside its place. For example a product on a e-commerce website must be included in an <b>article</b> tag and the all products on the web-page must be included in a <b>section</b> tag. The <b>section</b> tag can be used inside an <b>article</b> tag and vice-versa according to the requirement. Usage example: 
+				</p>
+<xmp class="code"><section class="menu">
+    <!-- all the menu entries -->
+    <!-- may or may not contain article tags -->
+</section>
+<article>
+    <section id="intro">
+        <p>[An introduction]</p>
+    </section>
+    <section id="main_content">
+        <p>[Content]</p>
+    </section>	
+</article></xmp>
+				<h4 class="explanationHeading">Headers and Footers</h4>			
+				<p class="explanationText">
+					Since HTML is all about applying meaning to the content , <b>header</b> tag is used to enclose the introductory or navigational aids. Headers may contain headings, subheadings,, navigational controls, etc. The <b>header</b> element may exist for the whole web page or for some content within the page
+					<br>
+					The <b>footer</b> tag encloses the last element of a section or a web page. It contains information about its section such as who wrote it, links to related documents, copyright data, contact-details etc. 
+				</p>
+				<h4 class="explanationHeading">Main</h4>
+				<p class="explanationText">
+					The <b>main</b> tag is used to enclose the main part of the <b>body</b>. According to the latest recommendations of the W3C there must be only one main in a document. The content of the <b>main</b> should be unique to the document.
+				</p>
+				<h4 class="explanationHeading">Aside</h4>
+				<p class="explanationHeading">
+					The <b>aside</b> tag is used for an element to add additional information to enhance the meaning. This information is not necessarily needed for understanding the content. It is also used to include the side-nav-bar of the page.
+				</p>
+<xmp class="code"><article>
+  <p>
+    The Disney movie <em>The Little Mermaid</em> was
+    first released to theatres in 1989.
+  </p>
+  <aside>
+    <p>
+      The movie earned $87 million during its initial release.
+    </p>
+  </aside>
+  <p>
+    More info about the movie...
+  </p>
+</article></xmp>
+				<p class="explanationText">It appears as:</p>		
+				<div class="output-window">
+					<article>
+					  <p>
+					    The Disney movie <em>The Little Mermaid</em> was
+					    first released to theatres in 1989.
+					  </p>
+					  <aside>
+					    <p>
+					      The movie earned $87 million during its initial release.
+					    </p>
+					  </aside>
+					  <p>
+					    More info about the movie...
+					  </p>
+					</article>
+				</div>
+				<p class="explanationNote">
+					<em>NOTE:</em> Suppose at some point we just want the main content to be visible and the additional content to dissapear. Instead of editing the whole HTML document, we can disable the display of all such elements using CSS selectors.
+				</p>
+				<h4 class="explanationHeading">
+					Navigation
+				</h4>
+				<p class="explanationText">
+					To enclose the navigation links of the same website and beyond <b>nav</b> tag is used. Not all links of a document must be in a <b>nav</b> element, which is intended only for major block of navigation links. 
+				</p>
+<xmp class="code"><nav>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact_us">Contact-Us</a></li>
+  </ul>
+</nav></xmp>
+				<div class="output-window">
+					<nav>
+					  <ul>
+					    <li><a href="#home">Home</a></li>
+					    <li><a href="#about">About</a></li>
+					    <li><a href="#contact_us">Contact-us</a></li>
+					  </ul>
+					</nav>
+				</div>
+			</div>
 		</div>
 
 		<div id="class-and-id-selectors" class="tabcontent">
-		  <h3 class="heading">Sections</h3>
+		  <h3 class="heading">Class and Id Selectors</h3>
 		  <div class="content">
 		  	<!-- Start writing from here -->
 		  </div>
