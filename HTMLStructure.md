@@ -35,7 +35,7 @@
 * Background Images > Manish
 * Specificity > Kamal
 * Display Properties > Kamal
-* Page Layouts > Manish
+* Page Layouts > Kamal
 * Media Tags > Manish  ->covered in media queeries
 * HTML Forms > Manish
 * Shadows > Kamal
