@@ -206,6 +206,10 @@ li.active a {
     box-shadow: 4px 4px 12px 6px lightgrey;
 }
 
+dd{
+    margin-left: 40px
+}
+
 .explanationList {
     /*line-height: 1.3em;*/
     color: rgba(0, 0, 0, 0.74);

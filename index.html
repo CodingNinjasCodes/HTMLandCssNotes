@@ -1812,10 +1812,32 @@ h2 {
 		</div>
 
 		<div id="meta-tags" class="tabcontent">
-		  <h3 class="heading">Meta Tags</h3>
-		  <div class="content">
-		  	<!-- Start writing from here -->
-		  </div>
+			<h3 class="heading">Meta Tags</h3>
+			<div class="content">
+				<p class="explanationText">
+					Under the <b>meta</b> tag, information about the web page is stored. None of the content given in the meta tag appears on the web page. The data is stored as the key values pairs. The <b>meta</b> tag is a self-closing tag and the data stored in it is known as metadata. There can be any number of <b>meta</b> tags within an element. Meta elements are typically used to specify page description, keywords, author of the document, last modified, and other metadata.
+				</p>
+				<div class="explanationHeading">
+					Attributes
+				</div>
+				<dl class="explanationList">
+					<dt>
+						<b>charset</b>
+					</dt>
+					<dd>
+						This attribute is used for declaring the character encoding. It is a good practice to use <em>UTF-8</em> encoding. However, this must be taken care of that the declared character set matches the one on the page.
+					</dd>
+
+					<dt>
+						<b>http-content</b>
+					</dt>
+					<dd>
+						The value of this attribute consists of a string which contains key value pairs. The value of this attribute can be used to alter servers and user-agents behavior. The key <b>"Content-Security-Policy"</b> is used to specify the web content policies. And the <b>"refresh"</b> is used to specify the seconds after which the page is going to be refreshed. And if along with the time, a url is mentioned as '5;url=https://www.codingninjas.in/', then after 5 seconds, the user would be redirected to the mentioned URL.
+<xmp class="code"><meta http-equiv="refresh" content="5;url=https://www.coding
+ninjas.in/"></xmp>
+					</dd>
+				</dl>
+			</div>
 		</div>
 
 		<div id="description-lists" class="tabcontent">
@@ -1852,14 +1874,14 @@ h2 {
 			<div class='output-window'>
 				<dl>
 				    <dt>HTML</dt>
-				    <dd style="-webkit-margin-start: 40px;">Abbreviation for HyperText Markup Language - a language used to make web pages.</dd>
+				    <dd>Abbreviation for HyperText Markup Language - a language used to make web pages.</dd>
 
 				    <dt>CSS</dt>
-				    <dd style="-webkit-margin-start: 40px;">Abbreviation for Cascading Style Sheet.</dd>
-				    <dd style="-webkit-margin-start: 40px;">Used to beautify HTML content.</dd>
+				    <dd>Abbreviation for Cascading Style Sheet.</dd>
+				    <dd>Used to beautify HTML content.</dd>
 
 				    <dt>Javascript</dt>
-				    <dd style="-webkit-margin-start: 40px;">Used to add logics to HTML and CSS content and to control them</dd>
+				    <dd>Used to add logics to HTML and CSS content and to control them</dd>
 				</dl>
 			</div>
 
@@ -2092,7 +2114,7 @@ h2 {
     </p>
 </blockquote></xmp>
 				<p class="explanationText">
-					The styling for the above HTML is: 
+					For using <b>blockquote </b> CSS has to be written for the starting quotation marks. For e.g: 
 				</p>
 <xmp class="code">blockquote::before {
     display: block;
@@ -2304,16 +2326,16 @@ Regular text.<samp> Output-sample text.</samp></p></xmp>
 				<div>
 					<dl class="explanationText">
 						<dt><b>all</b></dt>
-						<dd style="-webkit-margin-start: 40px;">Suitable for all devices.</dd>
+						<dd>Suitable for all devices.</dd>
 						
 						<dt><b>print</b></dt>
-						<dd style="-webkit-margin-start: 40px;">This media type will return true when the the content is viewed in the print mode, i.e. the preview of the content that will be printed</dd>
+						<dd>This media type will return true when the the content is viewed in the print mode, i.e. the preview of the content that will be printed</dd>
 
 						<dt><b>screen</b></dt>
-						<dd style="-webkit-margin-start: 40px;">Intended primarily for color computer screens.</dd>
+						<dd>Intended primarily for color computer screens.</dd>
 
 						<dt><b>speech</b></dt>
-						<dd style="-webkit-margin-start: 40px;">Intended for speech synthesizers.</dd>
+						<dd>Intended for speech synthesizers.</dd>
 					</dl>
 				</div> 
 			</p>
