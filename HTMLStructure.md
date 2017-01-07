@@ -26,7 +26,7 @@
 * Text Abbreviations Quotations and Code >Manish
 * Meta Tags > Manish
 * Description Lists > Manish
-* Sections > Manish
+* Sections in a Document > Manish
 * Class and ID Selectors > Kamal
 * Grouping and Nesting > Manish
 * Pseudo Classes > Manish
@@ -36,7 +36,7 @@
 * Specificity > Kamal
 * Display Properties > Kamal
 * Page Layouts > Manish
-* Media Tags > Manish
+* Media Tags > Manish  ->covered in media queeries
 * HTML Forms > Manish
 * Shadows > Kamal
 * More Selectors > Kamal
