@@ -46,7 +46,8 @@ window.onload = function() {
         tab = document.getElementsByClassName("tab")[0];
         tab = document.getElementsByClassName("tab")[0];
         listTags = tab.getElementsByTagName("li");
-
+        // overflow is set to auto for the menu in order to get the active element in the view.
+        tab.style.overflow="auto";
         for(i = 0; i < listTags.length; i++){
             if(listTags[i].innerHTML == localStorage["last_visited_link"]){
                 listTags[i].className += " active visited";
@@ -55,5 +56,7 @@ window.onload = function() {
                 }
             }
         }
+        tab.style.overflow="hidden";
+        // tab.setAttribute("style","height:500px");
     }
 }

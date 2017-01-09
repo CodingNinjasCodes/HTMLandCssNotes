@@ -10,7 +10,8 @@
 </head>
 <body>
 	<div id="wrapper">
-		<ul class="tab">
+		<ul class="tab" id="ID" onmouseover="this.style.overflow='auto'"
+onmouseout="this.style.overflow='hidden'">
 		  <a href="http://www.codingninjas.in/"><img src="images/logo.png"></a>
 		  <li onclick="openPage(event, 'introduction')" class="first"><a href="javascript:void(0)" class="tablinks">Introduction</a></li>
 		  <li onclick="openPage(event, 'tags')"><a href="javascript:void(0)" class="tablinks">Tags, Attributes and Elements</a></li>
@@ -84,7 +85,6 @@
 		  	<xmp class="code"><!DOCTYPE html>
 <html>
 <head>
-    <title>Page title here</title>
 </head>
 <body>
     This is sample text...<br>
@@ -115,10 +115,10 @@
 		  	<div class="explanationText">
 			  	Basic HTML just contains plain text. All the awesome things are included using the following things:
 		  	</div>
-		  	<div class="card-panel orange lighten-5 flow-text">Tags</div>
+		  	<div class="explanationHeading">Tags</div>
 		  		<div class="explanationText">
 		  			 <p>
-			  			 Meaning to the plain text of HTML is applied using tags. i.e. tags define various elements of the document.
+			  			 Meaning to the plain text of HTML is applied using tags. i.e. tags define all elements of the document.
 			  			 <br>
 			  			 Most of the tags have opening and closing. The closing is just the name of the tag with character '/' in the beginning. A tag needs to have a closing tag if it includes some content. Tag with an opening and closing can have any number of tags included within itself!
 			  			 Eg: &lthtml&gt and &lt/html&gt. 
@@ -141,7 +141,7 @@
 		  	</p>
 
 		  	<br>
-		  	<div class="card-panel orange lighten-5 flow-text">Attributes</div>
+		  	<div class="explanationHeading">Attributes</div>
 		  	<p class="explanationText">
 		  		Attributes control tag behaviour.They are present in the opening tags. They consist of two parts: First is the name of attribute and second is its value which is enclosed within double inverted commas.Example:
 		  		<br>
@@ -150,7 +150,7 @@
 		  		</div>
 		  	</p>
 
-			<div class="card-panel orange lighten-5 flow-text">Elements</div>
+			<div class="explanationHeading">Elements</div>
 		  	<div class="explanationImage"><img src="./images/page2/element_analogy.png"></div>
 		  	<p class="explanationText">
 		  		Elements are the things that actually make up the web page. Tags just define the beginning and end of the elements. Everything that a web page includes is an HTML element.
@@ -257,7 +257,7 @@
 		  	<p class="explanationText">
 		  	There are three type of lists in html. First two are ordered lists and unordered lists. They both are almost the same. Unordered lists are used when the numbering of items is not required and by default the items are followed by bullets. Whereas in ordered lists the items are displayed by a preceding numbering. The numbering style can be controlled by CSS that you will be learning soon!!
 		  	</p>
-		  	<div class="card-panel orange lighten-5 flow-text">Unordered Lists</div>
+		  	<div class="explanationHeading">Unordered Lists</div>
 		  	<p class="explanationText">
 		  		They are defined using the &ltul&gt tag and the items are enclosed in the &ltli&gt tags.
 		  	</p>
@@ -325,7 +325,7 @@
 			</p>
 
 			<br>
-			<div class="card-panel orange lighten-5 flow-text">Ordered Lists</div>
+			<div class="explanationHeading">Ordered Lists</div>
 		  	<p class="explanationText">
 		  		They are defined using the &ltol&gt tag and the items are enclosed in the &ltli&gt tags.Typically, ordered-list items are displayed with a preceding numbering. The numbering style can be of any kind like like numerals, letters or Romans numerals. The default one is numerals
 		  	</p>
@@ -407,7 +407,7 @@
 				The link appears as 
 			</p>
 
-			<div class="htmlDisplay">
+			<div class="output-window">
 				<div style="font-size:1.25em"><b>A Great place to practice coding</b></div>
 					<p>
 						Take the daily challanges at
@@ -428,7 +428,7 @@
 				<p class="explanationText"> 
 					In the <b>href</b> attribute, <em>linksHeading</em> is the id of the heading of this page. <em>id</em> of an html element is an attribute and it can have any value. While refering to an id, '#' is used in the begining of its name. Clicking on the link shown below will scroll you to the heading such that it is the first line of the display.
 				</p>
-				<div class="htmlDisplay">
+				<div class="output-window">
 					<p>						
 						<a href="#linksHeading">Go to top of the page</a>
 					</p>
@@ -456,7 +456,7 @@
 		  	<!-- path to the logo of Coding Ninjas -->
 			<p class="explanationText">
 				The image appears as
-				<div class="htmlDisplay">
+				<div class="output-window">
 					<img src="images/logo.png" alt="Coding Ninjas image"></xmp>
 				</div>
 			</p>
@@ -495,7 +495,7 @@
 </table></xmp>
 
 			<p class="explanationText">The table appears as</p>
-			<div class = "htmlDisplay">
+			<div class = "output-window">
 			<table border=1>
 			    <tr>
 			        <td>Row 1, cell 1</td>
@@ -1647,8 +1647,7 @@ orange-box</b> individually..</p>
               </div>
 
               <p class="explanationText">CSS code is..</p>
-<xmp class="code">
-.blue-box {
+<xmp class="code">.blue-box {
      text-align: center;
      border: 3px solid black;
      background-color: cornflowerblue;
@@ -2458,6 +2457,7 @@ Regular text.<samp> Output-sample text.</samp></p></xmp>
     <select name="select">
         <option value="value1">Value 1</option> 
         <option value="value2" selected>Value 2</option>
+        <!-- "selected" attrubute will mark value 2 as default -->
         <option value="value3">Value 3</option>
     </select>
 </form></xmp>
