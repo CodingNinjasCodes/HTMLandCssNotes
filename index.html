@@ -1986,10 +1986,31 @@ ninjas.in/"></xmp>
 		</div>
 
 		<div id="grouping-and-nesting" class="tabcontent">
-		  <h3 class="heading">Grouping and Nesting</h3>
-		  <div class="content">
-		  	<!-- Start writing from here -->
-		  </div>
+			<h3 class="heading">Grouping and Nesting</h3>
+			<div class="content">
+				<h4 class="explanationHeading">Grouping</h4>
+				<p class = "explanationText">
+					For styling content in a web-page, CSS for every element is not written explicitly. We can set properties to a group of elements using same code.
+				</p>
+
+<xmp class="code">h2 {
+    color: red;
+}
+/*This sets the color of all h2 elements in the document to red*/
+
+.anyClassName, p, h1 {
+    font-size: 2em;
+}
+/* Using this syntax, styling multiple type of elements can be done */</xmp>
+				<h4 class="explanationHeading">Nesting</h4>
+				<p class="explanationText">
+					Maintaining the data in the appropriate tags, leads to minimum usage of <em>id</em> and <em>class</em> for selecting data in CSS code. This is done using nesting of selectors. 
+				</p>
+<xmp class="code">#newsFeed p {
+    /*Code written here will style only the paragraphs inside newsFeed*/
+}</xmp>
+
+			</div>
 		</div>
 
 		<div id="pseudo-classes" class="tabcontent">
