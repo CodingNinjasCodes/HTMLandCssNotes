@@ -34,11 +34,11 @@ ul.tab {
 
 ul.tab li {
     font-family: "Roboto", sans-serif;
+    font-size: 2em;
     float: left;
     padding-bottom: 5px;
     padding-top: 5px;
     border-bottom: 1px solid lightgrey;
-    /*border-bottom: 1px solid rgba(204, 204, 204, 0.32); */
 }
 
 ul.tab li.first {
@@ -96,7 +96,7 @@ ul.tab li:focus,
     /*padding: 6px 12px;*/
     border-top: none;
     padding-left: 1em;
-    padding-right: 1em;
+    padding-right: 0.4em;
     margin-left: 20%;
 }
 
@@ -137,10 +137,9 @@ li.active a {
 .heading {
     font-size: 3em;
     padding:0.3em 0.8em;
-    background-color: #2962ff;
+    background-color: #0091ea;
     /*background-color: rgba(255,253,208,1);*/
-    margin-top: 0;
-    margin-bottom: .5em;
+    margin: 0 0 0.5em 0;
     color: white;
     /*box-shadow: 1px 1px 1px 1px lightgrey;*/
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14);
@@ -225,6 +224,11 @@ li.active a {
     background-color: rgba(0, 0, 0, 0.1);
     border: 1px solid lightgrey;
     border-radius: 3px;
+    box-shadow: 0 2px 2px 0 lightgrey;
+    transition: box-shadow .25s;
+}
+.explanationNote:hover {
+    box-shadow: 0 2px 0 2px lightgrey;   
 }
 
 dd{
