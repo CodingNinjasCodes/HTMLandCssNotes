@@ -2308,6 +2308,147 @@ background: teal;
 		  <h3 class="heading">Specificity</h3>
 		  <div class="content">
 		  	<!-- Start writing from here -->
+<!--
+        <p class="explanationText">Consider the following code..</p>
+<xmp class="code">
+div {
+  height: 120px;
+  width: 120px;
+  background-color:red;
+}
+
+div {
+  height: 100px;
+  width: 100px;
+  background-color:blue;
+}
+</xmp>
+
+        <p class="explanationText">This will output...</p>
+        <div class="output-window">
+        <div style="height: 100px;width: 100px;background-color: blue;"></div><br>
+        </div>
+         <p class="explanationText">The above code outputs a blue box of height and width of 100px.The later one will be given the priority.</p>
+
+        <p class="explanationText">If the code in CSS becomes a little messy then there is a great chance of arising the conflict b/w them.</p>
+<xmp class="code">
+div h2 { 
+      color: red; 
+}
+
+h2 { 
+   color: blue;
+}
+</xmp>        
+       <p class="explanationText">This will output..</p>
+        <div class="output-window">
+        	<h2 style="color: red;">The quick brown fox jumps over the lazy dog!..</h2>
+        </div>
+
+        <p class="explanationText">This turns into a color of red.The <b>div h2</b> is more specific than the <b>h2</b> tag alone hence the color red!.</p>
+        <p class="explanationText">The specificity in CSS is decided on the following factors:</p>
+        <ul class="explanationText">
+        	<li>Any individual <b>HTML </b>elements will be given a specificity of <b>1</b>.</li>
+        	<li>Any <b>class </b>selector will be given a specificity of <b>10</b>.</li>
+        	<li>Any <b>id </b> selector will be given a specificity of <b>100</b>.</li>
+        </ul>
+        <p class="explanationText">for example..</p>
+<xmp class="code">
+p {
+  color:blue;
+}
+
+body #text .option p{
+  color:green;
+}
+</xmp>
+       <p class="explanationText">The above code outputs..</p>
+        <div class="output-window">
+        	<p style="color: green;">The quick brown fox jumps over the lazy dog!..</p>
+        </div>
+
+        <p class="explanationText">This outputs the color <b>green</b> instead of blue, because the specificity of <b>body #text .option p (1+100+10+1=112)</b> is more than that of <b>p </b>only!</p>
+        
+        <p class="explanationText">Consider the following..</p>
+        <ul class="explanationText">
+        <li><b>div p</b> will have a specificity of <b>1+1=2</b>(1 HTML element and 1 HTML element)</li>
+        <li>body #text .option p will have a specificity of </li>
+        <li>  </li>
+        </ul>
+-->
+
+       <p class="explanationText">Consider the code below..</p>
+
+<xmp class="code">
+h2 {
+   color: red;
+}
+
+h2 {
+   color: blue;
+}
+</xmp>
+
+        <p class="explanationText">which results in..</p>
+        <div class="output-window">
+        	<h2 style="color: blue;">The quick brown fox jumps over the lazy dog!..</h2>
+        </div>
+
+        <p class="explanationText">Although the color property is applied on the same tag <b>h2</b>, but the later one <b>color: blue;</b> property will overwrite the previous one!</p>
+
+        
+
+        <p class="explanationText">Consider the following CSS code..</p>
+<xmp class="code">
+div h2{
+	color:green;
+}
+
+ h2{
+	color:red;
+}
+</xmp>        
+        <p class="explanationText">This will output..</p>
+        <div class="output-window">
+        	<h2 style="color:green">The quick brown fox jumps over the lazy dog!..</h2>
+        </div>
+        
+        <p class="explanationText">This time the later one doesn't took the charm!.The first one will be considered because it is more <b>specific</b> than the second one.Although they were intended to be applied on the same element <b>h2</b>.</p>
+
+        <p class="explanationText">In CSS when the code becomes a little messy, then there is a greater chance of conflict between the CSS properties, to resolve this conflict the CSS <b>specificity</b> comes into play!. </p>
+
+        
+        <ul class="explanationText">
+        	<li>Any <b>HTML element</b> will have a specificity of <b>1</b>.</li>
+        	<li>Any <b>class selector</b> will have a specificity of <b>10</b>.</li>
+        	<li>Any <b>id selector</b> will have a specificity of <b>100</b>.</li>
+        </ul>
+             
+             <p class="explanationText">In the previous CSS code the specificity of <b>div p</b> (1 for HTML element+1 for HTML element =2) is more than that of <b>p </b>(1 for HTML element=1), hence the <b>div p</b> is more specific and it's property will come into play. 
+              </p>
+
+
+            <p class="explanationText">Consider the following ..</p>
+<xmp class="code">
+#one h2{
+color: blue;
+}
+
+.box #one h2{
+  color:brown;
+}
+
+h2 {
+  color: red;
+}
+</xmp>
+       <p class="explanationText">outputs..</p>
+       <div class="output-window">
+       <h2 style="color: brown;">The quick brown fox jumps over the lazy dog!..</h2>	
+       </div>
+
+      <p class="explanationText">Get it?!..The <b>.box #one h2 </b>will lead because of the specificity of <b>.box #one h2 </b>(<b>10</b> for class selector <b>.box</b> + <b>100</b> for the <b>#one</b> id selector + <b>1</b> for the <b>h2</b> element = <b>111</b>).</p>
+      
 		  </div>
 		</div>
 
