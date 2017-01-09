@@ -23,7 +23,7 @@
 		  <li onclick="openPage(event, 'tables')"><a href="javascript:void(0)" class="tablinks">Tables</a></li>
 		  <li onclick="openPage(event, 'rowspan')"><a href="javascript:void(0)" class="tablinks">Table: rowspan</a></li>
 		  <li onclick="openPage(event, 'colspan')"><a href="javascript:void(0)" class="tablinks">Table: colspan</a></li>
-		  <li onclick="openPage(event, 'forms')"><a href="javascript:void(0)" class="tablinks">Forms</a></li>
+		  <li onclick="openPage(event, 'forms-basics')"><a href="javascript:void(0)" class="tablinks">Forms Basics</a></li>
 		  <li onclick="openPage(event, 'htmlvscss')"><a href="javascript:void(0)" class="tablinks">HTML vs CSS</a></li>
 		  <li onclick="openPage(event, 'css-getting-started')"><a href="javascript:void(0)" class="tablinks">CSS: Getting Started</a></li>
 		  <li onclick="openPage(event, 'css-inline')"><a href="javascript:void(0)" class="tablinks">CSS: Inline</a></li>
@@ -52,7 +52,7 @@
 		  <li onclick="openPage(event, 'display-properties')"><a href="javascript:void(0)" class="tablinks">Display Properties</a></li>
 		  <li onclick="openPage(event, 'page-layouts')"><a href="javascript:void(0)" class="tablinks">Page Layouts</a></li>
 		  <li onclick="openPage(event, 'media-tags')"><a href="javascript:void(0)" class="tablinks">Media Tags</a></li>
-		  <li onclick="openPage(event, 'forms')"><a href="javascript:void(0)" class="tablinks">HTML Forms</a></li>
+		  <li onclick="openPage(event, 'forms-advanced')"><a href="javascript:void(0)" class="tablinks">Forms Advanced</a></li>
 		  <li onclick="openPage(event, 'shadows')"><a href="javascript:void(0)" class="tablinks">Shadows</a></li>
 		  <li onclick="openPage(event, 'more-selectors')"><a href="javascript:void(0)" class="tablinks">More Selectors</a></li>
 		  <li onclick="openPage(event, 'colors')"><a href="javascript:void(0)" class="tablinks">Colors</a></li>
@@ -469,9 +469,9 @@
 		  <h3 class="heading">Tables</h3>
 		  <div class="content">
 		  <p class="explanationText">
-			Tables are used to show the tabular data. To achieve this many tags are used. All the table-data is enclosed within the <b>table</b> tags. After that <b>tr</b> tags enclose table rows. Each row contains a number of data enteries which are enclosed by <b>td</b> tags. <b>td</b> stands for table-data and <b>tr</b> for table row. Number of table-data  elements in a row are equal to the number of columns of that table. 
+			Tables are used to show the tabular data. To achieve this many tags are used. All the table-data is enclosed within the <b>table</b> tags. After that <b>tr</b> tags enclose table rows. Each row contains a number of data enteries which are enclosed by <b>td</b> tags. <b>td</b> stands for table-data and <b>tr</b> for table row. Number of table-data  elements in a row are equal to the number of columns of that table. And the <b>border</b> attribute is used for mentioning the thickness of the borders, if the border attribute is not mentioned then there would be no border. 
 		  </p>
-		  <xmp class="code"><table>
+		  <xmp class="code"><table border=1>
     <tr>
         <td>Row 1, cell 1</td>
         <td>Row 1, cell 2</td>
@@ -496,7 +496,7 @@
 
 			<p class="explanationText">The table appears as</p>
 			<div class = "htmlDisplay">
-			<table>
+			<table border=1>
 			    <tr>
 			        <td>Row 1, cell 1</td>
 			        <td>Row 1, cell 2</td>
@@ -558,7 +558,7 @@
 		  	</p>
 
 		  	<div class="output-window">
-				<table border="2">
+				<table border="1">
                     <tr>
                         <td>Row 1, cell 1</td>
                         <td>Row 1, cell 2</td>
@@ -592,7 +592,7 @@
 
 
 		  		<xmp class="code">
-<table>
+<table border=1>
     <tr>
         <th>Column 1 heading</th>
         <th colspan="2">Column_2_and_3_heading</th>
@@ -620,7 +620,7 @@
 		  	</p>
 
 		  	<div class="output-window">
-				<table>
+				<table border="1">
 				    <tr>
 				        <th>Column 1 heading</th>
 				        <th colspan="2">Column 2,3 heading</th>
@@ -647,16 +647,16 @@
 		  </div>
 		</div>
 
-		<div id="forms" class="tabcontent">
-		  <h3 class="heading">Forms</h3>
+		<div id="forms-basics" class="tabcontent">
+		  <h3 class="heading">Forms Basics</h3>
 		  <div class="content">
 		  	<p class="explanationText">
-		  		HTML forms  are the main thing through which user can interact with the web site or application. Through forms, a user enters the data which is either processed by the browser itself(using Javascript) or goes to the server where it gets processed.       <br>
+		  		HTML Forms are one of the main points of interaction between a user and a web site or application. Through forms, a user enters the data which is either processed by the browser itself (using Javascript) or the data goes to the servers where it gets processed.       <br>
 				An HTML forms may contain a lot of elements like text fields (single line or multiline), select boxes, buttons, checkboxes, or radio buttons. Let us start with just a basic form without any elements:
 		  	</p>
 <xmp class="code"><form action="/address_to_handle_form" method="post">
 
-  </form>
+</form>
 </xmp>
 			<p class="explanationText">
 				Since the form doesn't contain any element,currently, nothing will appear as output.
@@ -686,7 +686,7 @@
 				</ul>
 			</p>
 			<p class="explanationText">
-				These were the basics of forms, more will be coming in HTML forms section!!
+				These were the basics of forms, more will be coming in forms advanced section later!!
 			</p>
 		  </div>
 		</div>
@@ -2309,11 +2309,172 @@ Regular text.<samp> Output-sample text.</samp></p></xmp>
 		  </div>
 		</div>
 
-		<div id="forms" class="tabcontent">
-		  <h3 class="heading">HTML Forms</h3>
-		  <div class="content">
-		  	<!-- Start writing from here -->
-		  </div>
+		<div id="forms-advanced" class="tabcontent">
+			<h3 class="heading">Forms Advanced</h3>
+			<div class="content">
+				<p class="explanationText">
+					Before reading this section, make sure that you have read the forms-basics section.
+				</p>
+				<p class="explanationText">
+					The name attribute is very important by the perspective of backend because when the form data is sent to the mentioned address, it is arranged as key-value pairs with its keys as the values of the name attribute and values as the input provided through the form.
+				</p>
+<xmp class="code"><form action="/address_to_handle_form" method="post">
+    Name:<input type="text" name="username">
+    <br>
+    Password:<input type="password" name="password">
+    <br>
+    <input type="submit" value="Submit">
+</form></xmp>
+				<p class="explanationText">
+					The output window would be like:
+				</p>			
+				<div class="output-window">
+					<h4>User Details Form</h4>
+					<form action="/address_to_handle_form" method="post">
+					    Name:<input type="text" name="username">
+					    <br>
+					    Password:<input type="password" name="password">
+					    <br>
+					    <input type="submit" value="Submit">
+					</form>
+				</div>
+				<h4 class="explanationHeading">Checkboxes</h3>
+				<p class="explanationText">
+					Checkboxes are used to get an array from the user. The <b>name</b>
+					attribute is used for grouping checkboxes for the same thing i.e. the checkboxes with the same value of the attribute <b>name</b> would be grouped together. The <b>value</b> attribute specifies the value of the attribute being checked. The <b>checked</b> attribute is used to indicate whether this item is selected. And <b>label</b> element represents a caption for an item in a user interface.
+				</p>
+<xmp class="code"><form action="/address_to_handle_form" method="post">
+    Programming languages you know:<br>
+    <label>
+        <input type="checkbox" name="prog_lang" value="C++" 
+        checked>C++<br>
+    </label>
+    <label>
+        <input type="checkbox" name="prog_lang" value="Java">
+        Java<br>
+    </label>
+    <label>
+        <input type="checkbox" name="prog_lang" value="Python">
+        Python<br>
+    </label>
+    <label>
+        <input type="checkbox" name="prog_lang" value="Ruby">
+        Ruby<br>
+    </label>
+    <input type="submit" value="Submit">
+</form></xmp>
+				<p class="explanationText">
+					The output window would be like:
+				</p>
+				<div class="output-window">
+					<form action="/address_to_handle_form" method="post">
+					    <!-- Usage of checkboxes -->
+					    Programming languages you know:<br>
+					    <label>
+						    <input type="checkbox" name="prog_lang" value="C++" checked="yes">C++<br>
+					    </label>
+					    <label>
+						    <input type="checkbox" name="prog_lang" value="Java">Java<br>
+					    </label>
+					    <label>
+						    <input type="checkbox" name="prog_lang" value="Python">Python<br>
+					    </label>
+					    <label>
+						    <input type="checkbox" name="prog_lang" value="Ruby">Ruby<br>
+					    </label>
+					    <input type="submit" value="Submit">
+					</form>
+				</div>
+
+
+				<h4 class="explanationHeading">Radio-buttons</h4>
+				<p class="explanationText">
+					Radio-buttons are like switches that can be turned on or off. They are used when out of many options, we want the user to select one option. To acheive this the value of the <b>name</b> attribute must be same for the options among which we want to choose the one.
+				</p>
+<xmp class="code"><form action="/address_to_handle_form" method="post">
+    Programming language you are best at:<br>
+    <label>
+    	<input type="radio" name="best_at" value="C++">C++<br>
+    </label>
+    <label>
+    	<input type="radio" name="best_at" value="Java">Java <br>
+    </label>
+    <label>
+    	<input type="radio" name="best_at" value="Python">Python <br>
+    </label>
+    <label>
+    	<input type="radio" name="best_at" value="Ruby">Ruby <br>
+    </label>
+    <input type="submit" value="Submit">
+</form></xmp>
+				<p class="explanationText">It appears as:</p>
+
+				<div class="output-window">
+					<form action="/address_to_handle_form" method="post">
+					    Programming language you are best at:<br>
+					    <label>
+					    	<input type="radio" name="best_at" value="C++">C++<br>
+					    </label>
+					    <label>
+					    	<input type="radio" name="best_at" value="Java">Java <br>
+					    </label>
+					    <label>
+					    	<input type="radio" name="best_at" value="Python">Python <br>
+					    </label>
+					    <label>
+					    	<input type="radio" name="best_at" value="Ruby">Ruby <br>
+					    </label>
+					    <input type="submit" value="Submit">
+					</form>
+				</div>
+
+				<h4 class="explanationHeading">
+					Textarea
+				</h4>
+				<p class="explanationText">
+					The <b>input</b> tag was for smaller text inputs. The tag <b>textarea</b> is used for a bigger text area whose number of rows and columns can be specified using the <em>rows</em> and <em>cols</em> attributes. Sample:
+				</p>
+<xmp class="code"><form action="/address_to_handle_form" method="post">
+    <label>Write about yourself:</label>
+    <textarea rows="10" cols="50"></textarea>
+</form></xmp>
+				<p class="explanationText">
+					Output window looks like:
+				</p>
+				<div class="output-window">
+					<form action="/address_to_handle_form" method="post">
+					    <label>Write about yourself:</label>
+					    <textarea rows="10" cols="50"></textarea>
+					    <input type="submit" name="submit">
+					</form>
+				</div>
+				<h4 class="explanationHeading">
+					Select
+				</h4>
+				<p class="explanationText">
+					The <b>select</b> tag is used along with <b>option</b> tag to display a drop-down menu.
+				</p>
+<xmp class="code"><form>
+    <select name="select">
+        <option value="value1">Value 1</option> 
+        <option value="value2" selected>Value 2</option>
+        <option value="value3">Value 3</option>
+    </select>
+</form></xmp>
+				<p class="explanationText">
+					The menu appears as:
+				</p>
+				<div class="output-window">
+					<form>
+						<select name="select">
+						  <option value="value1">Value 1</option> 
+						  <option value="value2" selected>Value 2</option>
+						  <option value="value3">Value 3</option>
+						</select>
+					</form>
+				</div>
+
+			</div>
 		</div>
 
 		<div id="shadows" class="tabcontent">
