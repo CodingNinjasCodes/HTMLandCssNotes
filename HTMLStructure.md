@@ -41,7 +41,7 @@
 * Shadows > Kamal
 * More Selectors > Kamal
 * Attribute Selectors > Kamal
-* Background > Manish
+* Background > Manish -> covered in shorthand properties and background-images
 * Transformations > Kamal
 * Gradients > Kamal
 * Media Queries > Manish
