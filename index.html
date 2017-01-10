@@ -2561,6 +2561,158 @@ div {
 		  <h3 class="heading">Attribute Selectors</h3>
 		  <div class="content">
 		  	<!-- Start writing from here -->
+            <p class="explanationText">So far we have seen selectors like tag selectors, class and id selectors.There is another kind of selectors in CSS called as the <b>Attribute Selectors</b> which selects the elements based on their attributes.</p>
+
+           <p class="explanationHeading">The [attribute] selector.</p>
+          <xmp class="code">
+<h2 title="hello">This is line one...</h2>
+<h2 lang="en">This is line two....</h2>
+<h2>This is line three....</h2>
+
+h2[lang] {  
+  color:olive;
+}
+</xmp>
+ <p class="explanationText"> will select the element that has a lang attribute.</p>
+
+           <div class="output-window">
+           <h2>This is line one...</h2><br>
+           	<h2 style="color: olive">This is line two....</h2><br>
+           	<h2>This is line three...</h2>
+           </div>
+
+        <p class="explanationHeading">The "value" selector.</p>
+<xmp class="code">
+
+<button type="one">button-one</button>
+<button type="two">button-two</button>
+<button type="three">button-three</button>
+
+button[type="three"] /*button value is reset*/
+{
+  background:aqua;
+}
+</xmp>
+                 <p class="explanationText">will select the elements that has the type equivalent to "three".</p>
+
+        <div class="output-window">
+        <button>button-one</button>	
+        <button>button-two</button>	
+        <button style="background: aqua;">button-three</button>	
+        </div>
+        <p class="explanationHeading">The ~ selector</p>
+        
+<xmp class="code">
+<input value="Welcome to the CodingNinjas!"><br>
+<input value="Welcome to a CodingNinjas!"><br>
+
+input[value~="the"] /* includes whitespace the*/
+{
+  background: peru;
+}
+</xmp>
+        <p class="explanationText">will select the element that includes "the" string token.</p>
+         <div class="output-window">
+         <input value="Welcome to the CodingNinjas!" style="background: peru;"><br>
+         <input value="Welcome to a CodingNinjas!"><br>       	
+         </div>
+
+        <p class="explanationHeading">The ^ selector</p>
+<xmp class="code">
+<a href="www.codingninjas.in">Home</a>
+<a href="http://www.codingninjas.com">facebook</a>
+<a href="www.codingninjas.inc">gmail</a>
+
+
+a[href^="http"] /* leads with http*/
+{
+  color:brown;
+}
+</xmp>
+        <p class="explanationText">this selects the element whose attribute value leads with "http".</p>
+        <div class="output-window">
+        <a href="www.codingninjas.in">www.codingninjas.in</a><br>
+        <a href="http://www.codingninjas.com" style="color: brown;">http://www.codingninjas.com</a><br>
+        <a href="www.codingninjas.inc">www.codingninjas.inc</a> 	
+        </div>
+
+        <p class="explanationHeading">The $ selector</p>
+<xmp class="code">
+<a href="www.codingninjas.in">www.codingninjas.in</a>
+<a href="http://www.codingninjas.com">http://www.codingninjas.com</a>
+<a href="www.codingninjas.inc">www.codingninjas.inc</a>
+  
+a[href$="inc"]/* ends with inc*/
+{
+  color:green;
+}
+</xmp>  
+        <p class="explanationText">will select the element whose href value ends with "inc"</p>
+        <div class="output-window">
+         <a href="www.codingninjas.in">www.codingninjas.in</a>
+         <a href="www.codingninjas.com">www.codingninjas.com</a>
+         <a href="www.codingninjas.inc" style="color: green;">www.codingninjas.inc</a>
+   </div>
+
+        <p class="explanationHeading">The ^ attribute selector</p>
+
+<xmp class="code">
+  <p title="first value">value1</p>
+  <p title="second value">value2</p>
+  <p title="third value">value3</p>
+
+
+p[title*="ond va"]/* value that has a substring "ond va"*/
+{
+  color:orange;
+}
+</xmp>  
+        <p class="explanationText">will select the element whose attribute value has a substring of "ond va".</p>
+        <div class="output-window">
+        	<p>value1</p>
+        	<p style="color:orange;">value2</p>
+        	<p>value3</p>
+        </div>
+
+        <p class="explanationHeading">The | attribute selector</p>
+<xmp class="code">
+<p lang="fr-ed">para1</p>
+<p lang="jk-mn">para2</p>
+
+
+p[lang|="fr"] /*hypen seprated fr tag*/
+{
+  color:blue;
+}
+</xmp>
+         <p class="explanationText">will select the element whose attribute value is seprated by <b>hyphen</b> and matches the specified value in the CSS code.</p>
+        <div class="output-window">
+        	<p style="color: blue;">para1</p>
+        	<p>para2</p>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		  </div>
 		</div>
 
