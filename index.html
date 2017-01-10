@@ -2582,6 +2582,217 @@ div {
 		  <h3 class="heading">Gradients</h3>
 		  <div class="content">
 		  	<!-- Start writing from here -->
+           <p class="explanationText">For creating transitions in CSS b/w two or more colors <b>gradients</b> are used.</p>           
+            <p class="explanationText">In general there are three kinds:</p>
+            <ul class="explanationText">
+            	<li>Linear Gradients</li>
+            	<li>Repeating Gradients</li>
+            	<li>Radial Gradients</li>
+            </ul>
+
+           <p class="explanationHeading">linear-gradient</p>
+           <p class="explanationText">Transition occurs from one direction to other linearly like..</p>
+
+<xmp class="code">
+#gradient {
+  height:150px;
+  width: 150px;
+  background:linear-gradient(aqua,blue);
+}
+</xmp>
+        <p class="explanationText">results in..</p>
+        <div class="output-window">
+        	<div style="
+  height:150px;
+  width: 150px;
+  background:linear-gradient(aqua,blue);">	
+        	</div>
+        </div>
+
+        <p class="explanationText">The default direction of transition is from <b>top to bottom</b>, but we can change that transition in any direction.</p>
+        <p class="explanationText">follow the CSS code below..</p>
+<xmp class="code">
+#gradient {
+  height:150px;
+  width: 150px;
+  background:linear-gradient(to left,aqua,blue);
+}
+</xmp>
+        <p class="explanationText">This will generate..</p>
+            <div class="output-window">
+        	<div style="height:150px;width: 150px;background:linear-gradient(to left,aqua,blue);">
+      	</div>
+        </div>
+
+        <p class="explanationText">Also, multiple colors can be added..</p>
+
+<xmp class="code">
+#gradient {
+  height:150px;
+  width: 150px;
+  background:linear-gradient(aqua,blue,red);
+}
+</xmp>
+        <p class="explanationText">outputs..</p>
+        <div class="output-window">
+        	<div style="
+  height:150px;
+  width: 150px;
+  background:linear-gradient(aqua,blue,red);">    		
+        	</div>
+        </div>
+
+
+       <p class="explanationText">The linear-gradient can also be directed <b>diagonally</b> by specifying vertical and horizontal starting positions..</p>
+<xmp class="code">
+#gradient1{
+  height:150px;
+  width: 150px;
+  background:-webkit-linear-gradient(left top,aqua,blue);    		
+}
+
+#gradient2{
+height:150px;
+  width: 150px;
+  background:-webkit-linear-gradient(bottom right,aqua,blue);    		
+}
+</xmp>
+
+       <p class="explanationText">Which generates..</p>
+       <div class="output-window" style="display: flex; justify-content: space-around;">
+       	  <div style="
+  height:150px;
+  width: 150px;
+  background:-webkit-linear-gradient(left top,aqua,blue);">#grad1	
+  </div>
+       
+       	  <div style="
+  height:150px;
+  width: 150px;
+  background:-webkit-linear-gradient(bottom right,aqua,blue);">#grad2	
+  </div>
+  </div>
+
+      <p class="explanationText">This linear-gradient property can also be applied at an angle..</p>
+<xmp class="code">
+#gradient1 {
+  height:150px;
+  width: 150px;
+  background:-webkit-linear-gradient(-45deg,aqua,green);
+  }
+
+#gradient2 {
+  height:150px;
+  width: 150px;
+  background:-webkit-linear-gradient(280deg,aqua,green);
+  }  
+</xmp>
+
+      <p class="explanationText">This will output..</p>
+
+<div class="output-window" style="display: flex;justify-content: space-around;">
+	<div style=" height:150px;
+  width: 150px;
+  background:-webkit-linear-gradient(-45deg,aqua,green);
+ ">#gradient1</div>
+	<div style=" height:150px;
+  width: 150px;
+  background:-webkit-linear-gradient(280deg,aqua,green);
+ ">#gradient2</div>
+</div>
+
+<!--<xmp class="code">
+#gradient {
+  height:100px;
+  width: 868px;
+background:linear-gradient(to right,violet,indigo,blue,green,yellow,orange,red);
+}
+</xmp>       
+        <p class="explanationText">This will generate VIBGYOR..</p>
+
+        <div class="output-window">
+        	<div style="height:100px;
+  width: 868px;
+background:linear-gradient(to right,violet,indigo,blue,green,yellow,orange,red);"></div>
+        </div>
+-->
+        
+        <div class="explanationNote">
+        	<b>In general:</b>      	 
+        	<p>background: linear-gradient(-90deg, red, yellow); (Standard syntax)</p><br>
+            <p>background: red; (For browsers that do not support gradients)</p><br>
+            <p>background: -webkit-linear-gradient(-90deg, red, yellow); (For Safari and Google Chrome browsers)</p><br>
+            <p>background: -o-linear-gradient(-90deg, red, yellow);(Opera)</p><br>
+            <p>background: -moz-linear-gradient(-90deg, red, yellow); (For Firefox)</p>
+        	
+        </div>
+
+
+        <p class="explanationHeading">repeating-gradient</p>
+
+           <p class="explanationText">The linear-gradient can be repeated itself using the <b>repeating-gradient</b> property.</p>
+<xmp class="code">
+#gradient {
+  height:200px;
+  width: 200px;
+  background:repeating-linear-gradient(green, aqua 10%, blue 20%);
+}
+</xmp>            
+        <p class="explanationText">Outputs..</p>
+        <div class="output-window">
+        	<div style="
+  height:150px;
+  width:867px;
+  background:repeating-linear-gradient(green, aqua 10%, blue 20%);
+">		
+</div>
+</div>
+        <p class="explanationText">The linear-gradient repeats itself again and again according to the height given!</p>
+
+        <p class="explanationText">radial-gradient</p>
+
+        <p class="explanationText">The <b>radial-gradient</b> property generates a gradient repeating from it's center.</p>
+
+<xmp class="code">
+#radial {
+   height: 200px;
+   width: 200px;
+   background: radial-gradient(blue, green, aqua);
+   }
+</xmp>
+     <p class="explanationText">outputs..</p>
+     <div class="output-window">
+     	<div style=" height: 150px;
+   width: 867px;
+   background: radial-gradient(blue, green, aqua);
+  "></div>
+     </div>
+            <p class="explanationText">We can also give shapes to our <b>radial-gradients</b> by adding an extra parameter to our CSS code.</p>
+
+<xmp class="code">
+#radial1 {
+   height: 200px;
+   width: 200px;
+   background: radial-gradient(circle,blue, green, aqua);
+   }
+
+#radial2 {
+   height: 200px;
+   width: 200px;
+   background: radial-gradient(ellipse,blue, green, aqua);
+   }   
+</xmp>
+          <p class="explanationText">results in..</p>
+        <div class="output-window" style="display: flex;justify-content: space-around;">
+           <div style="height: 250px;
+   width: 400px;
+   background: radial-gradient(circle,blue, green, aqua);
+   "></div>
+           <div style="height: 250px;
+   width: 400px;
+   background: radial-gradient(ellipse,blue, green, aqua);
+   "></div>  	
+        </div>
 		  </div>
 		</div>
 
