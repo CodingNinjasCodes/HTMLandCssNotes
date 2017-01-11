@@ -36,6 +36,78 @@ function openPage(evt, PageName) {
     }
 }
 
+function nextPage(){
+    var tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        if(tabcontent[i].style.display == "block" && i<tabcontent.length-1){
+            tabcontent[i].style.display = "none";
+            tabcontent[i+1].style.display = "block";
+            break;
+        }
+    }
+    var tab = document.getElementById("ID");
+    var listTags = tab.getElementsByTagName("li");
+    tab.style.overflow="auto";
+    for (i = 0; i < listTags.length; i++) {
+        if(listTags[i].className.indexOf("active") > -1  && i<listTags.length-1){
+            console.log("test");
+            // listTags[i].className = listTags[i].className.replace(" active", "");
+            listTags[i].className = listTags[i].className.replace(" active", "");
+            listTags[i+1].className += " active visited";
+            if(i>4){
+                listTags[i-4].scrollIntoView();
+            }
+            break;
+        }
+    }
+    tab.style.overflow="hidden";
+
+    for (i = 0; i < listTags.length; i++) {
+        if(listTags[i].className.indexOf("active")>-1){
+            localStorage.setItem("last_visited_link",listTags[i].innerHTML);
+            if(localStorage.visit_history.indexOf(listTags[i].innerHTML) == -1){
+                localStorage.visit_history = localStorage.visit_history + listTags[i].innerHTML;
+            }
+        }
+    }
+}
+
+function previousPage(){
+    var tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        if(tabcontent[i].style.display == "block" && i>0){
+            tabcontent[i].style.display = "none";
+            tabcontent[i-1].style.display = "block";
+        }
+    }
+    var tab = document.getElementById("ID");
+    var listTags = tab.getElementsByTagName("li");
+    tab.style.overflow="auto";
+    for (i = 0; i < listTags.length; i++) {
+        if(listTags[i].className.indexOf("active") > -1  && i>0){
+            // listTags[i].className = listTags[i].className.replace(" active", "");
+            listTags[i].className = listTags[i].className.replace(" active", "");
+            listTags[i-1].className += " active visited";
+            if(i>4){
+                listTags[i-4].scrollIntoView();
+            }
+            if(i<3){
+                listTags[0].scrollIntoView();
+            }
+        }
+    }
+    tab.style.overflow="hidden";
+
+    for (i = 0; i < listTags.length; i++) {
+        if(listTags[i].className.indexOf("active")>-1){
+            localStorage.setItem("last_visited_link",listTags[i].innerHTML);
+            if(localStorage.visit_history.indexOf(listTags[i].innerHTML) == -1){
+                localStorage.visit_history = localStorage.visit_history + listTags[i].innerHTML;
+            }
+        }
+    }
+}
+
 window.onload = function() {
     var viewPortHeight = document.documentElement.clientHeight;
     document.getElementsByClassName("tab")[0].style.height = (document.documentElement.clientHeight-20)+"px";

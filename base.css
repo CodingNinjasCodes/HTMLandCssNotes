@@ -15,7 +15,20 @@ body {
     overflow-x:hidden;
 }
 
-#main-menu {
+.navigationArrows{
+    height: 3em;
+    width: 3em;
+}
+
+#previous_section_arrow{
+    position: fixed;
+    bottom: 0.01em;
+    left: 17em;
+}
+#next_section_arrow{
+    position: fixed;
+    bottom: 0.01em;
+    right: 0.01em;
 }
 
 ul.tab {
