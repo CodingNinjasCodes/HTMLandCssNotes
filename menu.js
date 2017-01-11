@@ -1,7 +1,9 @@
 function openPage(evt, PageName) {
-    localStorage.setItem("last_visited",PageName)
-    // console.log(evt)
-    // localStorage.setItem("last_visited_link",evt.currentTarget)
+    localStorage.setItem("last_visited",PageName);
+    localStorage.setItem("last_visited_link",evt.currentTarget)
+    if(localStorage.visit_history == undefined){
+        localStorage.setItem("visit_history","");
+    }
     document.getElementById("default").style.display = "none";
 
     var i, tabcontent, listTags, tab;
@@ -27,6 +29,9 @@ function openPage(evt, PageName) {
     for (i = 0; i < listTags.length; i++) {
         if(listTags[i].className.indexOf("active")>-1){
             localStorage.setItem("last_visited_link",listTags[i].innerHTML);
+            if(localStorage.visit_history.indexOf(listTags[i].innerHTML) == -1){
+                localStorage.visit_history = localStorage.visit_history + listTags[i].innerHTML;
+            }
         }
     }
 }
@@ -34,8 +39,9 @@ function openPage(evt, PageName) {
 window.onload = function() {
     var viewPortHeight = document.documentElement.clientHeight;
     document.getElementsByClassName("tab")[0].style.height = (document.documentElement.clientHeight-20)+"px";
-    if(localStorage["last_visited"] !== undefined){
-        //for switching the display on for the last visited page and turing off the default page
+    // If anyone knows why the above line is required please email to manishsherawat1@gmail.com!!
+    if(localStorage.last_visited !== undefined){
+        //for switching the display on for the last visited page and turning off the default page
         document.getElementById("default").style.display = "none";
         last_page=document.getElementById(localStorage["last_visited"]);
         last_page.style.display = "block";
@@ -58,5 +64,13 @@ window.onload = function() {
         }
         tab.style.overflow="hidden";
         // tab.setAttribute("style","height:500px");
+
+
+        // For setting the previous visited links to visited status
+        for(i = 0; i < listTags.length; i++){
+            if(localStorage.visit_history.indexOf(listTags[i].innerHTML) > -1){
+                listTags[i].className += " visited";
+            }
+        }
     }
 }
