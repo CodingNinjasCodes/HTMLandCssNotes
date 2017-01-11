@@ -1916,7 +1916,7 @@ ninjas.in/"></xmp>
 					The <b>main</b> tag is used to enclose the main part of the <b>body</b>. According to the latest recommendations of the W3C there must be only one main in a document. The content of the <b>main</b> should be unique to the document.
 				</p>
 				<h4 class="explanationHeading">Aside</h4>
-				<p class="explanationHeading">
+				<p class="explanationText">
 					The <b>aside</b> tag is used for an element to add additional information to enhance the meaning. This information is not necessarily needed for understanding the content. It is also used to include the side-nav-bar of the page.
 				</p>
 <xmp class="code"><article>
@@ -2316,10 +2316,92 @@ Regular text.<samp> Output-sample text.</samp></p></xmp>
 		</div>
 
 		<div id="page-layouts" class="tabcontent">
-		  <h3 class="heading">Page Layouts</h3>
-		  <div class="content">
-		  	<!-- Start writing from here -->
-		  </div>
+			<h3 class="heading">Page Layouts</h3>
+			<div class="content">
+				<p class="explanationText">
+					Before CSS2, tables were used for making page layouts. But now there are numerous CSS properties to set the layout. 
+				</p>
+				<h4 class="explanationHeading">
+					Positioning
+				</h4>
+				<p class="explanationText">
+					<dl class="explanationText">
+						<dt><b><code>static</code></b></dt>
+						<dd>This is the default property and just positions the elements normally as they appear by default HTML. Properties like <code>top, right, bottom, bottom, left</code> can't be applied.</dd>
+						<dt><b><code>relative</code></b></dt>
+						<dd>Using this property the element position can be varied relative to its orignal position(orignal position of the element is the one without using any positioning on it). The orignal position of the element remains as if it is occupied.</dd>
+						<dt><b><code>absolute</code></b></dt>
+						<dd>The specified position of the element would be relative to its closest positioned ancestor. If there is no positioned ancestor, then the position would be relative browser's window. The element doesn't occupy its orignal space.</dd>
+						<dt><b><code>fixed</code></b></dt>
+						<dd>The specified position of the element would be relative to the browser window. The element doesn't occupy its orignal space.</dd>
+					</dl>
+				</p>
+				<h4 class="explanationHeading">Examples</h4>
+				<p class="explanationText">
+					The HTML code would be same and CSS would be changed to depict each positioning. The HTML is as follows: 
+				</p>
+<xmp class="code"><div class="box" id="one">One</div>
+<div class="box" id="two">Two</div>
+<div class="box" id="three">Three</div>
+<div class="box" id="four">Four</div></xmp>
+
+				<p class="explanationText">
+					Orignal layout CSS:
+				</p>
+<xmp class="code">.box { 
+   display: inline-block; 
+   background: orange; 
+   width: 100px; 
+   height: 100px; 
+   margin: 20px; 
+   color: white; 
+}</xmp>
+			<p class="explanationText">
+				The output is:
+			</p>
+			<div class="output-window">
+				<!-- The CSS for this is in the base.css file-->
+				<div class="pageLayoutBox" id="One">One</div>
+				<div class="pageLayoutBox" id="two">Two</div>
+				<div class="pageLayoutBox" id="three">Three</div>
+				<div class="pageLayoutBox" id="four">Four</div>
+			</div>
+			<p class="explanationText">
+				Relative positioning:
+			</p>
+<xmp class="code">#two { 
+   position: relative; 
+   top: -20px; 
+   left: 20px; 
+}</xmp>
+			<div class="output-window">
+				<!-- The CSS for this is in the base.css file-->
+				<div class="pageLayoutBox" id="One">One</div>
+				<div class="pageLayoutBox" id="specialTwoA">Two</div>
+				<div class="pageLayoutBox" id="three">Three</div>
+				<div class="pageLayoutBox" id="four">Four</div>
+			</div>
+
+			<p class="explanationText">
+				Absolute positioning:
+			</p>
+<xmp class="code">#two { 
+   position: relative; 
+   top: -20px; 
+   left: 20px; 
+}</xmp>
+			<div class="output-window" style="position: relative;">
+				<!-- The id is given to above so that absolute positioning can be used in the example -->
+				<!-- The CSS for this is in the base.css file-->
+				<div class="pageLayoutBox" id="One">One</div>
+				<div class="pageLayoutBox" id="specialTwoB">Two</div>
+				<div class="pageLayoutBox" id="three">Three</div>
+				<div class="pageLayoutBox" id="four">Four</div>
+			</div>
+
+
+
+			</div>
 		</div>
 
 		<div id="media-tags" class="tabcontent">

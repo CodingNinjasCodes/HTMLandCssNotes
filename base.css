@@ -12,6 +12,7 @@ body {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    overflow-x:hidden;
 }
 
 #main-menu {
@@ -304,4 +305,24 @@ div.explanationImage img:hover {
     margin-left: -.95em;
     font: italic 400%/1 Cochin,Georgia,"Times New Roman", serif;
     color: #999;
+}
+
+/*For Page Layouts*/
+.pageLayoutBox{
+   display: inline-block; 
+   background: #0091ea; 
+   width: 100px; 
+   height: 100px; 
+   margin: 20px; 
+   color: white; 
+}
+#specialTwoA{
+   position: relative; 
+   top: -20px; 
+   left: 20px;
+}
+#specialTwoB{
+   position: absolute; 
+   top: 35px; 
+   left: 20px; 
 }
