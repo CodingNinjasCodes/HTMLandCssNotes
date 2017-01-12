@@ -2697,29 +2697,6 @@ p[lang|="fr"] /*hypen seprated fr tag*/
         	<p style="color: navy;">para1</p>
         	<p>para2</p>
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 		  </div>
 		</div>
 
@@ -2734,6 +2711,144 @@ p[lang|="fr"] /*hypen seprated fr tag*/
 		  <h3 class="heading">Transformations</h3>
 		  <div class="content">
 		  	<!-- Start writing from here -->
+
+            <p class="explanationText">CSS transition includes following properties..</p>
+            <ul class="explanationText">
+            	<li>translate</li>
+            	<li>skew</li>
+            	<li>rotate</li>
+            	<li>scale</li>
+            	<li>matrix</li>
+            </ul>
+
+
+        <p class="explanationHeading">translate</p>
+        <p class="explanationText">The <b>translate </b>method changes the coordinates of an element according to the specified value.</p>
+<xmp class="code">#previously {
+  height:120px;
+  width:120px;
+  background:rgba(0,128,0,0.3);
+}
+
+#now {
+  height:120px;
+  width:120px;
+  background:rgba(0,128,0,0.8);
+ -webkit-transform:translate(30px,10px); /*for chrome or safari browsers*/
+ -ms-transform:translate(30px,10px);/* for IE 9 and above*/
+}
+</xmp>
+        <p class="explanationText">This will change the position of the box <b>30px</b> right and <b>10px</b> bottom.</p>
+        <div class="output-window" style="height: 150px;">
+	        	<div style="height:120px;width:120px;background:rgba(0,128,0,0.3);">previously
+	        		<div style="height:120px;width:120px;background:rgba(0,128,0,0.8);transform:translate(30px,10px);">now</div>
+	        		</div>
+        </div>
+
+
+        <p class="explanationHeading">scale</p>
+        <p class="explanationText">The <b>scale </b>property changes the size of an element.</p>
+<xmp class="code">#scale {
+  height:120px;
+  width:120px;
+  background:rgba(0,128,0,0.8);
+ -webkit-transform: scale(2,1.1); /*for chrome or safari browsers*/
+ -ms-transform: scale(2,1.1); /*for IE 9 and above*/
+}</xmp>
+            <p class="explanationText">The <b>scale (2,1.1)</b> will increase the width to twice and the height to 1.1 times.</p>
+                <div class="output-window" style="display: flex;justify-content: space-around;padding: 100px;">
+	        	<div style="height:120px;width:120px;background:rgba(0,128,0,0.3);">previously
+	        <div style="height:120px;width:120px;background:rgba(0,128,0,0.8);transform:scale(2,2.5);">now</div></div>
+	      
+        </div>
+
+ 
+        <p class="explanationHeading">rotate</p>
+        <p class="explanationText">The <b>rotate</b> method rotates an element clockwise or anticlockwise according to the specified value.</p>
+<xmp class="code">#rotate {
+  height:120px;
+  width:120px;
+  background:rgba(0,128,0,0.8);
+ -webkit-transform: rotate(30deg); /*for chrome or safari browsers*/
+ -ms-transform: rotate(30deg); /*for IE 9 and above */
+}</xmp>
+          <p class="explanationText">will rotate the element by <b>30 deg</b>.</p>
+        <div class="output-window" style="display: flex;justify-content: space-around; padding: 30px;">
+        	<div style="height:120px;width:120px;background:rgba(0,128,0,0.3);">previously
+        	<div style="height:120px;width:120px;background:rgba(0,128,0,0.8); transform: rotate(30deg);">now</div></div>
+        </div>	
+
+
+                <p class="explanationHeading">skew</p>
+                <p class="explanationText">The <b>skew </b>property skews an element along the X and Y axis respectively.</p>
+<xmp class="code">#transformed {
+  height:120px;
+  width:120px;
+  background:rgba(0,128,0,0.8);
+ -webkit-transform: skew(-20deg,-30deg); /*for chrome or safari browsers*/
+ -ms-transform: skew(-20deg,-30deg); /*for IE 9 and above*/
+}
+</xmp>
+
+                <div class="output-window" style="display: flex;justify-content: space-around;padding: 40px;">
+        	<div style="height:120px;width:120px;background:rgba(0,128,0,0.8);">original</div>
+        	<div style="height:120px;width:120px;background:rgba(0,128,0,0.8); transform: skew(-20deg,-30deg);">transformed	        	
+        </div>
+</div>
+               <p class="explanationText">also we can also apply <b>skew </b>individually to the X,Y coordinates as well..</p>
+<xmp class="code">#skewx { 
+  height:120px;
+  width:120px;
+  background:rgba(0,128,0,0.8);
+ -webkit-transform: skewX(-20deg);
+}
+
+#skewy { 
+  height:120px;
+  width:120px;
+  background:rgba(0,128,0,0.8);
+ -webkit-transform: skewY(-30deg);
+}
+</xmp>
+
+        <div class="output-window" style="display: flex; justify-content: space-around;padding: 40px;">
+        <div style="height:120px;width:120px;background:rgba(0,128,0,0.8);transform: skewX(-20deg);">SkewX</div>
+       <div style="height:120px;width:120px;background:rgba(0,128,0,0.8);transform: skewY(-30deg);">SkewY</div>
+        </div>       
+       
+       <p class="explanationHeading">matrix</p>        
+        <p class="explanationText">we can apply all the above properties together using the <b>matrix </b>method.</p>
+<xmp class="code">#matrix {
+  height:120px;
+  width:120px;
+  background: green;
+ -webkit-transform: matrix(1, -0.3, 0, 1, 0, 0);/* for safari and chrome browsers*/
+ -ms-transform: matrix(1, -0.3, 0, 1, 0, 0); /*for IE 9 and above*/
+}
+</xmp>
+
+        <p class="explanationText">The matrix method follows the order like <b>matrix (scaleX(),skewY(),skewX(),scaleY(),translateX(),translateY())</b>.</p>
+        <div class="output-window" style="display: flex; justify-content: space-around;padding: 20px;">
+        <div style="height:120px;
+  width:120px;
+  background: rgba(0,128,0,0.8);">original</div>
+        	<div style="height:120px;width:120px;background: rgba(0,128,0,0.8);-webkit-transform: matrix(1, -0.3, 0, 1, 0, 0);">#matrix	
+        	</div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		  </div>
 		</div>
 
