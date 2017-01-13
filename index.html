@@ -691,10 +691,214 @@ onmouseout="this.style.overflow='hidden'">
 
 
 		<div id="htmlvscss" class="tabcontent">
-		  <h3 class="heading">HTML vs CSS</h3>
-		  <div class="content">
-		  	<!-- Start writing from here -->
-		  </div>
+			<h3 class="heading">HTML vs CSS</h3>
+			<div class="content">
+				<div class="output-window" id="statusDivHVC" class="hiddenForHVC" style="font-size:1.5em">
+					
+				</div>
+				<div class = "output-window" id="HtmlVsCssDiv">
+					<header id="headerHVC">
+						<img src="images/logo.png" id="imageHSV" class = "hiddenForHVC">
+						<nav>
+							<ul class = "hiddenForHVC" id="navHVC">
+								<li>Home</li>
+								<li>About us</li>
+								<li>Team</li>
+								<li>Contact us</li>
+							</ul>
+						</nav>
+					</header>
+					<main class = "hiddenForHVC" id = "bodyHVC">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</main>
+					<footer id="footerHVC">
+						<header class = "hiddenForHVC" id = "footerHeaderHVC">
+							<h5>Reach us</h5>
+							<p>Plot Number 360, Kohat Enclave, Main Pitam Pura Road, Delhi 110034, Opposite Kohat Metro Station exit 3. </p>
+						</header>
+						<nav>
+							<ul class = "hiddenForHVC" id="footerNavHVC">
+								<li>Terms & Conditions</li>
+								<li>Privacy Policy</li>
+								<li>Pricing & Refund</li>
+							</ul>
+						</nav>
+					</footer>
+				</div>
+
+
+
+
+				<script type="text/javascript">
+					main_element = document.getElementById("HtmlVsCssDiv");
+					// main_element.style.display = "none";
+
+					var delay=1900;
+					var delayInc = delay;
+
+					// t = (new Date()).getTime();
+					HVC_status_div = document.getElementById("statusDivHVC");
+
+					HVC_status_div.style.background = "orange";
+					HVC_status_div.style.color = "white";
+					HVC_status_div.innerHTML = "Content would be added using HTML below";
+					HVC_image = document.getElementById("imageHSV");
+					delay+=delayInc;
+					setTimeout(function() {
+						HVC_image.style.display = "block";
+						// temp = (new Date()).getTime();
+						// console.log(temp - t);
+						HVC_status_div.style.display = "block";
+						HVC_status_div.style.background = "white";
+						HVC_status_div.style.color = "inherit";
+						HVC_status_div.innerHTML = "<em>Status:</em> Adding Data Using HTML...";
+					}, delay);
+
+
+
+					delay += delayInc;
+					HVC_nav = document.getElementById("navHVC")
+					setTimeout(function() {
+						HVC_nav.style.display = "block";
+						HVC_status_div.innerHTML = "<em>Status:</em> Adding Data Using HTML....";
+					}, delay);
+
+
+					delay += delayInc;
+					HVC_body = document.getElementById("bodyHVC")
+					setTimeout(function() {
+						HVC_body.style.display = "block";
+						HVC_status_div.innerHTML = "<em>Status:</em> Adding Data Using HTML...";
+					}, delay);
+
+					delay += delayInc;
+					HVC_footer_header = document.getElementById("footerHeaderHVC")
+					setTimeout(function() {
+						HVC_footer_header.style.display = "block";
+						HVC_status_div.innerHTML = "<em>Status:</em> Adding Data Using HTML....";
+					}, delay);
+
+					delay += delayInc;
+					HVC_footer_nav = document.getElementById("footerNavHVC")
+					setTimeout(function() {
+						// HVC_footer_Nav.style.transition = "height 0.29s 1s ease-in-out";
+						HVC_footer_nav.style.display = "block";
+						HVC_status_div.innerHTML = "<em>Status:</em> Adding Data Using HTML...";
+					}, delay);
+
+
+					delay += delayInc;
+					setTimeout(function() {
+						// HVC_footer_nav.style.transition = "height 0.29s 1s ease-in-out";
+						HVC_footer_nav.style.display = "block";
+						HVC_status_div.innerHTML = "<em>Status:</em> Adding Data Using HTML....";
+					}, delay);
+
+					setTimeout(function() {
+						HVC_status_div.innerHTML = "Now CSS would be added"
+						HVC_status_div.style.background = "orange";
+						HVC_status_div.style.color = "white";
+					}, delay);
+
+					delay += 1.5*delayInc;
+					setTimeout(function() {
+						HVC_status_div.innerHTML = "<em>Status:</em> Adding CSS...."
+						HVC_status_div.style.background = "white";
+						HVC_status_div.style.color = "inherit";
+					}, delay);
+
+
+					delay += 1.5*delayInc;
+					HVC_header = document.getElementById("headerHVC");
+					setTimeout(function() {
+						HVC_header.className += " headerHVC";
+						HVC_status_div.innerHTML = "<em>Status:</em> Adding CSS..."
+					}, delay)
+
+					delay += 1.5*delayInc;
+					setTimeout(function(){
+							HVC_status_div.innerHTML = "<em>Status:</em> Adding CSS...."
+							HVC_nav.className += " ulHVC";
+							HVC_nav.style.display = "flex";
+					},delay)
+
+
+					
+					delay += 1.5*delayInc;
+					setTimeout(function(){
+						liElements = HVC_nav.getElementsByTagName("li");
+						for(var i=0; i<liElements.length; i++){
+							liElements[i].style.padding = "0.1em 0.5em"
+						}
+					},delay)
+
+
+
+					delay += 1.5*delayInc;
+					setTimeout(function() {
+						HVC_status_div.innerHTML = "<em>Status:</em> Adding CSS..."
+						HVC_body.className += " bodyTextHVC";
+					}, delay+500);
+
+
+					HVC_footer = document.getElementById("footerHVC")
+					delay += 1.5*delayInc;
+					setTimeout(function() {
+						HVC_footer.style.background = "#757575";
+						HVC_status_div.innerHTML = "<em>Status:</em> Adding CSS...."
+						HVC_footer.style.color = "white";
+						HVC_footer.style.padding = "0.4em 1.5em";
+
+					}, delay);
+
+
+					delay += 1.5*delayInc;
+					setTimeout(function() {
+						temp = HVC_footer_header.getElementsByTagName("h5")
+						temp[0].style.fontSize = "1.3em"
+						temp[0].style.padding = "0.1em"
+						temp[0].style.fontWeight = "normal"
+						HVC_status_div.innerHTML = "<em>Status:</em> Adding CSS..."
+					}, delay);
+
+					delay += 1.5*delayInc;
+					setTimeout(function() {
+						temp = HVC_footer_header.getElementsByTagName("p")
+						temp[0].style.fontSize = "0.7em"
+						temp[0].style.padding = "0.1em"
+						temp[0].style.fontWeight = "normal"
+						HVC_status_div.innerHTML = "<em>Status:</em> Adding CSS...."
+					}, delay);
+
+					delay += 1.5*delayInc;
+					setTimeout(function() {
+						HVC_footer_nav.className += " ulHVC";
+						HVC_footer_nav.style.display = "flex";
+						HVC_footer_nav.style.flexDirection = "row-reverse";
+						HVC_footer_nav.style.paddingTop = "0.25em";
+						HVC_status_div.innerHTML = "<em>Status:</em> Adding CSS..."
+						setTimeout(function(){
+							liElements = HVC_footer_nav.getElementsByTagName("li");
+							for(var i=0; i<liElements.length; i++){
+								liElements[i].style.padding = "0.1em 0.5em"
+								liElements[i].style.fontSize = "0.6em"
+							}
+							setTimeout(function(){
+								HVC_status_div.innerHTML = "<em>Status:</em> All Done";
+							},delayInc)
+						},delayInc)
+					}, delay);
+				</script>
+
+<!-- 				<p class="explanationText">
+					As seen from the example above HTML is for providing content. The styling and positioning is done using JS,
+				</p>
+				<p class="explanationNote">
+					<em>NOTE:</em> The above thing is made using JS and its details will be covered in JS tutorial.
+				</p> -->
+
+
+			</div>
 		</div>
 
 		<div id="css-getting-started" class="tabcontent">

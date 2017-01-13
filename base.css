@@ -295,6 +295,31 @@ div.explanationImage img:hover {
 
   /*The CSS below is example specific */
 
+/*For html vs CSS page*/
+.hiddenForHVC{
+    display:none;
+}
+#HtmlVsCssDiv{
+
+}
+
+.headerHVC{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*padding: 10px;*/
+    background-color: white;
+    box-shadow: 2px 1px 1px 2px lightgrey;
+    padding: 0.5em;
+}
+.ulHVC{
+    list-style: none;
+}
+
+.bodyTextHVC{
+    padding: 1.5em 1.5em;
+}
+
 /*for pseudo class page*/
 #examplePara1:hover {
     box-shadow: 2px 4px 6px 8px lightgrey;
