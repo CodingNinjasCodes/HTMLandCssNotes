@@ -222,7 +222,7 @@ onmouseout="this.style.overflow='hidden'">
 				    This is line 1.
 				    This is line 2.
 				    This is line 3.
-			</div>1
+			</div>
 			<p class="explanationText">
 				When formating without p-tag, new lines are appended on the current line. This happens because the browser doesn’t see to the formatting of text. You have to use appropriate tags for formatting the text. More on formatting text would be there later in this tutorial.
 			</p>
@@ -747,8 +747,11 @@ onmouseout="this.style.overflow='hidden'">
 			<h3 class="heading">HTML vs CSS</h3>
 			<div class="content">
 				<div class="output-window" id="statusDivHVC" class="hiddenForHVC" style="font-size:1.5em">
-					
+					Click the button below to start the animation:
 				</div>
+				<p class="explanationText" style="display: flex; justify-content: space-around;">
+					<button id="startButtonHVC" style="padding: 0.3em 0.5em; font-size: 0.7em;">Start</button>
+				</p>
 				<div class = "output-window" id="HtmlVsCssDiv">
 					<header id="headerHVC">
 						<img src="images/logo.png" id="imageHSV" class = "hiddenForHVC">
@@ -784,164 +787,171 @@ onmouseout="this.style.overflow='hidden'">
 
 				<script type="text/javascript">
 					main_element = document.getElementById("HtmlVsCssDiv");
+					HVC_initiator_button = document.getElementById("startButtonHVC");
+					HVC_initiator_button.addEventListener('click', HVC_main_function);
 					// main_element.style.display = "none";
 
 					var delay=1900;
 					var delayInc = delay;
+					function HVC_main_function(){
+						// t = (new Date()).getTime();
+						HVC_status_div = document.getElementById("statusDivHVC");
 
-					// t = (new Date()).getTime();
-					HVC_status_div = document.getElementById("statusDivHVC");
-
-					HVC_status_div.style.background = "orange";
-					HVC_status_div.style.color = "white";
-					HVC_status_div.innerHTML = "Content would be added using HTML below";
-					HVC_image = document.getElementById("imageHSV");
-					delay+=delayInc;
-					setTimeout(function() {
-						HVC_image.style.display = "block";
-						// temp = (new Date()).getTime();
-						// console.log(temp - t);
-						HVC_status_div.style.display = "block";
-						HVC_status_div.style.background = "white";
-						HVC_status_div.style.color = "inherit";
-						HVC_status_div.innerHTML = "<em>Status:</em> Adding Data Using HTML...";
-					}, delay);
-
-
-
-					delay += delayInc;
-					HVC_nav = document.getElementById("navHVC")
-					setTimeout(function() {
-						HVC_nav.style.display = "block";
-						HVC_status_div.innerHTML = "<em>Status:</em> Adding Data Using HTML....";
-					}, delay);
-
-
-					delay += delayInc;
-					HVC_body = document.getElementById("bodyHVC")
-					setTimeout(function() {
-						HVC_body.style.display = "block";
-						HVC_status_div.innerHTML = "<em>Status:</em> Adding Data Using HTML...";
-					}, delay);
-
-					delay += delayInc;
-					HVC_footer_header = document.getElementById("footerHeaderHVC")
-					setTimeout(function() {
-						HVC_footer_header.style.display = "block";
-						HVC_status_div.innerHTML = "<em>Status:</em> Adding Data Using HTML....";
-					}, delay);
-
-					delay += delayInc;
-					HVC_footer_nav = document.getElementById("footerNavHVC")
-					setTimeout(function() {
-						// HVC_footer_Nav.style.transition = "height 0.29s 1s ease-in-out";
-						HVC_footer_nav.style.display = "block";
-						HVC_status_div.innerHTML = "<em>Status:</em> Adding Data Using HTML...";
-					}, delay);
-
-
-					delay += delayInc;
-					setTimeout(function() {
-						// HVC_footer_nav.style.transition = "height 0.29s 1s ease-in-out";
-						HVC_footer_nav.style.display = "block";
-						HVC_status_div.innerHTML = "<em>Status:</em> Adding Data Using HTML....";
-					}, delay);
-
-					setTimeout(function() {
-						HVC_status_div.innerHTML = "Now CSS would be added"
 						HVC_status_div.style.background = "orange";
 						HVC_status_div.style.color = "white";
-					}, delay);
+						HVC_status_div.innerHTML = "Content would be added using HTML below";
+						HVC_image = document.getElementById("imageHSV");
+						delay+=delayInc;
+						setTimeout(function() {
+							HVC_image.style.display = "block";
+							// temp = (new Date()).getTime();
+							// console.log(temp - t);
+							HVC_status_div.style.display = "block";
+							HVC_status_div.style.background = "white";
+							HVC_status_div.style.color = "inherit";
+							HVC_status_div.innerHTML = "<em>Status:</em> Adding Data Using HTML...";
+						}, delay);
 
-					delay += 1.5*delayInc;
-					setTimeout(function() {
-						HVC_status_div.innerHTML = "<em>Status:</em> Adding CSS...."
-						HVC_status_div.style.background = "white";
-						HVC_status_div.style.color = "inherit";
-					}, delay);
 
 
-					delay += 1.5*delayInc;
-					HVC_header = document.getElementById("headerHVC");
-					setTimeout(function() {
-						HVC_header.className += " headerHVC";
-						HVC_status_div.innerHTML = "<em>Status:</em> Adding CSS..."
-					}, delay)
+						delay += delayInc;
+						HVC_nav = document.getElementById("navHVC")
+						setTimeout(function() {
+							HVC_nav.style.display = "block";
+							HVC_status_div.innerHTML = "<em>Status:</em> Adding Data Using HTML....";
+						}, delay);
 
-					delay += 1.5*delayInc;
-					setTimeout(function(){
+
+						delay += delayInc;
+						HVC_body = document.getElementById("bodyHVC")
+						setTimeout(function() {
+							HVC_body.style.display = "block";
+							HVC_status_div.innerHTML = "<em>Status:</em> Adding Data Using HTML...";
+						}, delay);
+
+						delay += delayInc;
+						HVC_footer_header = document.getElementById("footerHeaderHVC")
+						setTimeout(function() {
+							HVC_footer_header.style.display = "block";
+							HVC_status_div.innerHTML = "<em>Status:</em> Adding Data Using HTML....";
+						}, delay);
+
+						delay += delayInc;
+						HVC_footer_nav = document.getElementById("footerNavHVC")
+						setTimeout(function() {
+							// HVC_footer_Nav.style.transition = "height 0.29s 1s ease-in-out";
+							HVC_footer_nav.style.display = "block";
+							HVC_status_div.innerHTML = "<em>Status:</em> Adding Data Using HTML...";
+						}, delay);
+
+
+						delay += delayInc;
+						setTimeout(function() {
+							// HVC_footer_nav.style.transition = "height 0.29s 1s ease-in-out";
+							HVC_footer_nav.style.display = "block";
+							HVC_status_div.innerHTML = "<em>Status:</em> Adding Data Using HTML....";
+						}, delay);
+
+						setTimeout(function() {
+							HVC_status_div.innerHTML = "Now CSS would be added"
+							HVC_status_div.style.background = "orange";
+							HVC_status_div.style.color = "white";
+						}, delay);
+
+						delay += 1.5*delayInc;
+						setTimeout(function() {
 							HVC_status_div.innerHTML = "<em>Status:</em> Adding CSS...."
-							HVC_nav.className += " ulHVC";
-							HVC_nav.style.display = "flex";
-					},delay)
+							HVC_status_div.style.background = "white";
+							HVC_status_div.style.color = "inherit";
+						}, delay);
 
 
-					
-					delay += 1.5*delayInc;
-					setTimeout(function(){
-						liElements = HVC_nav.getElementsByTagName("li");
-						for(var i=0; i<liElements.length; i++){
-							liElements[i].style.padding = "0.1em 0.5em"
-						}
-					},delay)
+						delay += 1.5*delayInc;
+						HVC_header = document.getElementById("headerHVC");
+						setTimeout(function() {
+							HVC_header.className += " headerHVC";
+							HVC_status_div.innerHTML = "<em>Status:</em> Adding CSS..."
+						}, delay)
 
-
-
-					delay += 1.5*delayInc;
-					setTimeout(function() {
-						HVC_status_div.innerHTML = "<em>Status:</em> Adding CSS..."
-						HVC_body.className += " bodyTextHVC";
-					}, delay+500);
-
-
-					HVC_footer = document.getElementById("footerHVC")
-					delay += 1.5*delayInc;
-					setTimeout(function() {
-						HVC_footer.style.background = "#757575";
-						HVC_status_div.innerHTML = "<em>Status:</em> Adding CSS...."
-						HVC_footer.style.color = "white";
-						HVC_footer.style.padding = "0.4em 1.5em";
-
-					}, delay);
-
-
-					delay += 1.5*delayInc;
-					setTimeout(function() {
-						temp = HVC_footer_header.getElementsByTagName("h5")
-						temp[0].style.fontSize = "1.3em"
-						temp[0].style.padding = "0.1em"
-						temp[0].style.fontWeight = "normal"
-						HVC_status_div.innerHTML = "<em>Status:</em> Adding CSS..."
-					}, delay);
-
-					delay += 1.5*delayInc;
-					setTimeout(function() {
-						temp = HVC_footer_header.getElementsByTagName("p")
-						temp[0].style.fontSize = "0.7em"
-						temp[0].style.padding = "0.1em"
-						temp[0].style.fontWeight = "normal"
-						HVC_status_div.innerHTML = "<em>Status:</em> Adding CSS...."
-					}, delay);
-
-					delay += 1.5*delayInc;
-					setTimeout(function() {
-						HVC_footer_nav.className += " ulHVC";
-						HVC_footer_nav.style.display = "flex";
-						HVC_footer_nav.style.flexDirection = "row-reverse";
-						HVC_footer_nav.style.paddingTop = "0.25em";
-						HVC_status_div.innerHTML = "<em>Status:</em> Adding CSS..."
+						delay += 1.5*delayInc;
 						setTimeout(function(){
-							liElements = HVC_footer_nav.getElementsByTagName("li");
+								HVC_status_div.innerHTML = "<em>Status:</em> Adding CSS...."
+								HVC_nav.className += " ulHVC";
+								HVC_nav.style.display = "flex";
+						},delay)
+
+
+						
+						delay += 1.5*delayInc;
+						setTimeout(function(){
+							liElements = HVC_nav.getElementsByTagName("li");
 							for(var i=0; i<liElements.length; i++){
 								liElements[i].style.padding = "0.1em 0.5em"
-								liElements[i].style.fontSize = "0.6em"
 							}
+						},delay)
+
+
+
+						delay += 1.5*delayInc;
+						setTimeout(function() {
+							HVC_status_div.innerHTML = "<em>Status:</em> Adding CSS..."
+							HVC_body.className += " bodyTextHVC";
+						}, delay+500);
+
+
+						HVC_footer = document.getElementById("footerHVC")
+						delay += 1.5*delayInc;
+						setTimeout(function() {
+							HVC_footer.style.background = "#757575";
+							HVC_status_div.innerHTML = "<em>Status:</em> Adding CSS...."
+							HVC_footer.style.color = "white";
+							HVC_footer.style.padding = "0.4em 1.5em";
+
+						}, delay);
+
+
+						delay += 1.5*delayInc;
+						setTimeout(function() {
+							temp = HVC_footer_header.getElementsByTagName("h5")
+							temp[0].style.fontSize = "1.3em"
+							temp[0].style.padding = "0.1em"
+							temp[0].style.fontWeight = "normal"
+							HVC_status_div.innerHTML = "<em>Status:</em> Adding CSS..."
+						}, delay);
+
+						delay += 1.5*delayInc;
+						setTimeout(function() {
+							temp = HVC_footer_header.getElementsByTagName("p")
+							temp[0].style.fontSize = "0.7em"
+							temp[0].style.padding = "0.1em"
+							temp[0].style.fontWeight = "normal"
+							HVC_status_div.innerHTML = "<em>Status:</em> Adding CSS...."
+						}, delay);
+
+						delay += 1.5*delayInc;
+						setTimeout(function() {
+							HVC_footer_nav.className += " ulHVC";
+							HVC_footer_nav.style.display = "flex";
+							HVC_footer_nav.style.flexDirection = "row-reverse";
+							HVC_footer_nav.style.paddingTop = "0.25em";
+							HVC_status_div.innerHTML = "<em>Status:</em> Adding CSS..."
 							setTimeout(function(){
-								HVC_status_div.innerHTML = "<em>Status:</em> All Done";
+								liElements = HVC_footer_nav.getElementsByTagName("li");
+								for(var i=0; i<liElements.length; i++){
+									liElements[i].style.padding = "0.1em 0.5em"
+									liElements[i].style.fontSize = "0.6em"
+								}
+								setTimeout(function(){
+									HVC_status_div.innerHTML = "<em>Status:</em> All Done";
+									document.getElementById("endNoteHVC").style.display = "block";
+								},delayInc)
 							},delayInc)
-						},delayInc)
-					}, delay);
+						}, delay);
+					}//THE function ends here
 				</script>
+				<p class="explanationNote" style="display: none;" id="endNoteHVC">
+					Refresh the page for viewing the animation.
+				</p>
 
 <!-- 				<p class="explanationText">
 					As seen from the example above HTML is for providing content. The styling and positioning is done using JS,
