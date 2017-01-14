@@ -124,7 +124,7 @@ li.active a {
 }
 
 .visited {
-    background-color: rgba(255, 165, 0, 0.12);
+    background-color: rgba(255, 165, 0, 0.08);
 }
 
 #default {
@@ -151,10 +151,10 @@ li.active a {
 .heading {
     font-size: 3em;
     padding:0.3em 0.8em;
-    background-color: #0091ea;
+    /*background-color: #0091ea;*/
     /*background-color: rgba(255,253,208,1);*/
     margin: 0 0 0.5em 0;
-    color: white;
+    color: rgba(0,0,0,0.74);
     /*box-shadow: 1px 1px 1px 1px lightgrey;*/
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14);
     transition: box-shadow .25s;
@@ -173,8 +173,9 @@ li.active a {
 }
 
 .explanationHeading {
-    background-color: #00e5ff;
-    color: white;
+    /*background-color: #00e5ff;*/
+    /*color: white;*/
+    color: rgba(0,0,0,0.64);
     font-size: 1.4em;
     font-weight: bold;
     margin-right: 2em;

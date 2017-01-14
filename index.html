@@ -96,7 +96,7 @@ onmouseout="this.style.overflow='hidden'">
 		    The file when opened in a web browser appears as
 		  </p>
 		  <div class ="explanationImage">
-		  	<img src="./images/Introduction/first_web_page.png">
+		  	<img src="./images/Introduction/first_web_page.jpeg">
 		  </div>
 
 		  <div class="explanationText">
@@ -179,7 +179,7 @@ onmouseout="this.style.overflow='hidden'">
 		    	This is rendered as:
 		    </p>
 		  	<div class="explanationImage">
-		  		<img src="./images/page3/title.png">
+		  		<img src="./images/page3/title.jpeg">
 		  	</div>
 		  	<p class="explanationText">
 		    	Notice the title of the page appears as the name of the tab!
@@ -234,7 +234,7 @@ onmouseout="this.style.overflow='hidden'">
 		  <div class="content">
 		  	<!-- Start writing from here -->
 		  	<p class="explanationText">
-		  		There are tags in HTML to mark some content as headings. In fact, there are six different levels of headings h1, h2, h3, h4, h5 and h6. h1 is the mightiest i.e. it is the largest heading and h6 is the smallest level heading.
+		  		There are tags in HTML to mark some content as headings. In fact, there are six different levels of headings <b>h1, h2, h3, h4, h5</b> and <b>h6</b>. Among them <b>h1</b> is the mightiest i.e. it is the largest heading and <b>h6</b> is the smallest level heading.
 		  	</p>
 		  	<xmp class="code"><!DOCTYPE html>
 <html>
@@ -250,6 +250,10 @@ onmouseout="this.style.overflow='hidden'">
 	<h6>Heading level 6</h6>
 </body>
 </html></xmp>
+
+			<p class="explanationText">
+				The content appears as:
+			</p>
 			<div class="output-window">
 					<h1 style="padding-bottom: 0.5em">Heading level 1</h1>
 					<h2 style="padding-bottom: 0.5em">Heading level 2</h2>
@@ -277,19 +281,24 @@ onmouseout="this.style.overflow='hidden'">
 <title>Unordered Lists</title>
 </head>
 <body>
-	<h1>Lists</h1>
+    <h1>Lists</h1>
 	<ul>
-	  <li>first item</li>
-	  <li>second item</li>
-	  <li>third item</li>
-	</ul>
+        <li>first item</li>
+        <li>second item</li>
+        <li>third item</li>
+    </ul>
 </body>
 </html></xmp>
 			<p class="explanationText">
 				The output is as follows:
 			</p>
-			<div class="explanationImage">
-				<img src="./images/page6/ordered_list.png">
+			<div class="output-window">
+					<h1 style="padding-bottom: 0.5em">Lists</h1>
+					<ul style="padding-left: 1em">
+					  <li>first item</li>
+					  <li>second item</li>
+					  <li>third item</li>
+					</ul>
 			</div>
 			<p class="explanationText">
 				Nesting of lists can be done which means that lists-items can contain sub-lists in them.
@@ -300,35 +309,57 @@ onmouseout="this.style.overflow='hidden'">
 <title>Unordered Lists</title>
 </head>
 <body>
-	<h1>Lists</h1>
-	<ul>
-  <li>first item</li>
-  <li>second item
-  <!-- Look, the closing </li> tag is not placed here! -->
+    <h1>Lists</h1>
     <ul>
-      <li>second item first subitem</li>
-      <li>second item second subitem
-      <!-- Same for the second nested unordered list! -->
-        <ul>
-          <li>second item second subitem first sub-subitem</li>
-          <li>second item second subitem second sub-subitem</li>
-          <li>second item second subitem third sub-subitem</li>
-        </ul>
-      </li>
-      <!-- Closing </li> tag for the li that contains the third
-       unordered list -->
-      <li>second item third subitem</li>
+       <li>first item</li>
+       <li>second item
+            <!-- Look, the closing </li> tag is not placed here! -->
+            <ul>
+              <li>second item first subitem</li>
+              <li>second item second subitem
+                <!-- Same for the second nested unordered list! -->
+                <ul>
+                  <li>second item second subitem first sub-subitem</li>
+                  <li>second item second subitem second sub-subitem</li>
+                  <li>second item second subitem third sub-subitem</li>
+                </ul>
+              </li>
+              <!-- Closing </li> tag for the li that contains the third
+              unordered list -->
+              <li>second item third subitem</li>
+            </ul>
+        </li><!-- Here is the closing </li> tag -->
+        <li>third item</li>
     </ul>
-  </li>               <!-- Here is the closing </li> tag -->
-  <li>third item</li>
-</ul>
 </body>
 </html></xmp>
 			<p class="explanationText">
 				The output is as follows:
 			</p>
-			<div class="explanationImage">
-				<img src="./images/page6/unordered_list_nesting.png">
+			<div class="output-window">
+			<h1 style="padding-bottom: 0.5em">Lists</h1>
+			    <ul style="padding-left: 1.4em">
+			       <li>first item</li>
+			       <li>second item
+			            <!-- Look, the closing </li> tag is not placed here! -->
+			            <ul style="padding-left: 1.4em">
+			              <li>second item first subitem</li>
+			              <li>second item second subitem
+			                <!-- Same for the second nested unordered list! -->
+			                <ul style="padding-left: 1.4em">
+			                  <li>second item second subitem first sub-subitem</li>
+			                  <li>second item second subitem second sub-subitem</li>
+			                  <li>second item second subitem third sub-subitem</li>
+			                </ul>
+			              </li>
+			              <!-- Closing </li> tag for the li that contains the third
+			              unordered list -->
+			              <li>second item third subitem</li>
+			            </ul>
+			        </li><!-- Here is the closing </li> tag -->
+			        <li>third item</li>
+			    </ul>
+
 			</div>
 			<p class="explanationText">
 				There is no limitation to the depth of nested lists.
@@ -345,19 +376,24 @@ onmouseout="this.style.overflow='hidden'">
 <title>Onordered Lists</title>
 </head>
 <body>
-	<h1>Lists</h1>
-	<ol>
-	  <li>first item</li>
-	  <li>second item</li>
-	  <li>third item</li>
-	</ol>
+    <h1>Lists</h1>
+    <ol>
+      <li>first item</li>
+      <li>second item</li>
+      <li>third item</li>
+    </ol>
 </body>
 </html></xmp>
 			<p class="explanationText">
 				The output is as follows:
 			</p>
-			<div class="explanationImage">
-				<img src="./images/page6/ordered_list.png">
+			<div class="output-window">
+				<h1 style="padding-bottom: 0.4em">Lists</h1>
+				    <ol style="padding-left: 1em;">
+				      <li>first item</li>
+				      <li>second item</li>
+				      <li>third item</li>
+				    </ol>
 			</div>
 			<p class="explanationText">
 				Using the attribute 'start' we can specify from where the numbering starts by giving its value.
@@ -368,20 +404,25 @@ onmouseout="this.style.overflow='hidden'">
 <title>Onordered Lists</title>
 </head>
 <body>
-	<h1>Lists</h1>
-	<ol start="7">
-	  <li>first item</li>
-	  <li>second item</li>
-	  <li>third item</li>
-	</ol>
+    <h1>Lists</h1>
+    <ol start="7">
+      <li>first item</li>
+      <li>second item</li>
+      <li>third item</li>
+    </ol>
 </body>
 </html></xmp>
 			<p class="explanationNote">
 				<em>Note:</em>Notice that value of the attribute start appeared in double inverted commas.
 			</p>
 
-			<div class="explanationImage">
-				<img src="./images/page6/ordered_list_numbering.png">
+			<div class="output-window">
+				<h1 style="padding-bottom: 0.4em">Lists</h1>
+			    <ol start="7" style="padding-left: 1em;">
+			      <li>first item</li>
+			      <li>second item</li>
+			      <li>third item</li>
+			    </ol> 
 			</div>
 			<p class="explanationText">
 				Nesting can also be done using ordered lists. Also a combination of ordered and unordered lists can be used!
