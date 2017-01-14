@@ -11,7 +11,7 @@
 <body>
 	<div id="wrapper">
 		<ul class="tab" id="ID" onmouseover="this.style.overflow='auto'"
-onmouseout="this.style.overflow='hidden'">
+onmouseout="this.style.overflow='hidden'" >
 		  <a onclick="openIntroductionPage()"><img src="images/logo.png"></a>
 		  <li onclick="openPage(event, 'introduction')" class="first"><a href="javascript:void(0)" class="tablinks">Introduction</a></li>
 		  <li onclick="openPage(event, 'tags')"><a href="javascript:void(0)" class="tablinks">Tags, Attributes and Elements</a></li>
@@ -703,7 +703,7 @@ onmouseout="this.style.overflow='hidden'">
 		  <div class="content">
 		  	<p class="explanationText">
 		  		HTML Forms are one of the main points of interaction between a user and a web site or application. Through forms, a user enters the data which is either processed by the browser itself (using Javascript) or the data goes to the servers where it gets processed.       <br>
-				An HTML forms may contain a lot of elements like text fields (single line or multiline), select boxes, buttons, checkboxes, or radio buttons. Let us start with just a basic form without any elements:
+				An HTML form may contain a lot of elements like text fields (single line or multiline), select boxes, buttons, checkboxes, or radio buttons. Let us start with just a basic form without any elements:
 		  	</p>
 <xmp class="code"><form action="/address_to_handle_form" method="post">
 
@@ -718,7 +718,7 @@ onmouseout="this.style.overflow='hidden'">
 			<div class="explanationHeading"><b>Input</b> Tag</div>
 			<p class="explanationText">
 				It is the most important element of the forms. It can take various forms using the <b>type</b> attribute. Here are the examples:
-				<ul class="explanationNote">
+				<ul class="explanationNote" style="padding-left: 1em;">
 					<li>
 						&ltinput type="text"&gt or simply &ltinput&gt is a standard textbox. This can also have a value attribute, which sets the initial text in the textbox.
 					</li>
@@ -751,6 +751,9 @@ onmouseout="this.style.overflow='hidden'">
 				</div>
 				<p class="explanationText" style="display: flex; justify-content: space-around;">
 					<button id="startButtonHVC" style="padding: 0.3em 0.5em; font-size: 0.7em;">Start</button>
+				</p>
+				<p class="explanationNote" style="display: none;" id="endNoteHVC">
+					Refresh the page for viewing the animation again.
 				</p>
 				<div class = "output-window" id="HtmlVsCssDiv">
 					<header id="headerHVC">
@@ -949,9 +952,6 @@ onmouseout="this.style.overflow='hidden'">
 						}, delay);
 					}//THE function ends here
 				</script>
-				<p class="explanationNote" style="display: none;" id="endNoteHVC">
-					Refresh the page for viewing the animation.
-				</p>
 
 <!-- 				<p class="explanationText">
 					As seen from the example above HTML is for providing content. The styling and positioning is done using JS,
@@ -2059,10 +2059,10 @@ h2 {
 		  <h3 class="heading">Span and Div</h3>
 		  <div class="content">
 				<p class = "explanationText">
-					HTML is used to provide all the content to the web page and helps to manage it by enclosing the content in tags. Basically, it applies meaning to the content like <b>p</b> tag for paragraph. But <b>span</b> and <b>div</b> don't apply any meaning. They are just used to enlose content and then <b>class</b> and <b>id</b> attribute values are used as CSS selectors to style the content.
+					HTML is used to provide all the content to the web page and helps to manage it by enclosing the content in tags. Basically, it applies meaning to the content like <b>p</b> tag for paragraph. But <b>span</b> and <b>div</b> don't apply any meaning. They are just used to enlose content. Then values of <b>class</b> and <b>id</b> attributes are used as CSS selectors to style the content.
 				</p>
 				<p class= "explanationText">
-					The difference between <b>div </b> and span is that <b>div </b> encloses block elements and <b>span</b> is for enclosing parts line elements. Being a block holder <b>div </b> creates line breaks in the beginning and the end, while <b>span </b> being an inline element doesn't create any line break.
+					The difference between <b>div </b> and <b>span</b> is that <b>div </b> encloses block elements and <b>span</b> is for enclosing parts line elements. Being a block holder <b>div </b> creates line breaks in the beginning and the end, while <b>span </b> being an inline element doesn't create any line break.
 				</p>
 
 <xmp class="code"><div class="textContent">
@@ -2322,7 +2322,7 @@ ninjas.in/"></xmp>
 		  <h3 class="heading">Pseudo Elements</h3>
 		  <div class="content">
 		  <p class="explanationText">
-			PSEUDO-ELEMENTS are used to address sub-parts of elements. They allow us to select specific parts of an element and set their properties. In other words they allow logical elements to be defined which do not explicitly exist in the HTML document but are a part of some other element like the first line of a paragraph, last letter .
+			Pseudo elements are used to address sub-parts of elements. They allow us to select specific parts of an element and set their properties. In other words they allow logical elements to be defined which do not explicitly exist in the HTML document but are a part of some other element like the first line of a paragraph, last letter .
 		  </p>
 		  <p class="explanationText">
 		  		Syntax for using pseudo-classes:
