@@ -167,7 +167,7 @@ onmouseout="this.style.overflow='hidden'">
 		  	<xmp><!DOCTYPE html>
 <html>
 <head></xmp>
-<span class="highlightCode">xmp&lttitle&gtThis is the Title&lt/title&gt
+<span class="highlightCode">&lttitle&gtThis is the Title&lt/title&gt
 </span>
 <xmp></head>
 <body>
@@ -213,8 +213,15 @@ onmouseout="this.style.overflow='hidden'">
 			<p class="explanationText">
 				It appears on a web browser like this:
 			</p>
-			<div class="explanationImage">
-				<img src="./images/page4/p_tag.png">
+			<div class="output-window">
+				    <p>This is line 1.</p>
+				    <p>This is line 2.</p>
+				    <p>This is line 3.</p>
+				    <br>
+					<!-- trying to format the text without using p-tag -->
+				    This is line 1.
+				    This is line 2.
+				    This is line 3.
 			</div>
 			<p class="explanationText">
 				When formating without p-tag, new lines are appended on the current line. This happens because the browser doesn’t see to the formatting of text. You have to use appropriate tags for formatting the text. More on formatting text would be there later in this tutorial.
@@ -700,7 +707,7 @@ onmouseout="this.style.overflow='hidden'">
 					<header id="headerHVC">
 						<img src="images/logo.png" id="imageHSV" class = "hiddenForHVC">
 						<nav>
-							<ul class = "hiddenForHVC" id="navHVC">
+							<ul class = "hiddenForHVC" id="navHVC" style="padding-left: 1em">
 								<li>Home</li>
 								<li>About us</li>
 								<li>Team</li>
@@ -717,7 +724,7 @@ onmouseout="this.style.overflow='hidden'">
 							<p>Plot Number 360, Kohat Enclave, Main Pitam Pura Road, Delhi 110034, Opposite Kohat Metro Station exit 3. </p>
 						</header>
 						<nav>
-							<ul class = "hiddenForHVC" id="footerNavHVC">
+							<ul class = "hiddenForHVC" id="footerNavHVC" style="padding-left: 1em">
 								<li>Terms & Conditions</li>
 								<li>Privacy Policy</li>
 								<li>Pricing & Refund</li>
