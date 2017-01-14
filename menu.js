@@ -1,3 +1,18 @@
+function openIntroductionPage(){
+    var tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    var tab = document.getElementsByClassName("tab")[0];
+    var listTags = tab.getElementsByTagName("li");
+    for (i = 0; i < listTags.length; i++) {
+        if(i==0) {
+            listTags[i].className = " visited";
+        }
+        listTags[i].className = listTags[i].className.replace(" active", "");
+    }
+    document.getElementById("default").style.display = "block";
+}
 function openPage(evt, PageName) {
     localStorage.setItem("last_visited",PageName);
     localStorage.setItem("last_visited_link",evt.currentTarget)
