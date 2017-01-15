@@ -2388,6 +2388,169 @@ h2 {
 		  <h3 class="heading">Display Properties</h3>
 		  <div class="content">
 		  	<!-- Start writing from here -->
+
+            <p class="explanationText">CSS <b>display</b> properties include the following properties</p>
+            <ul class="explanationText">
+            	<li>inline</li>
+                <li>block</li>
+                <li>inline-block</li>
+               <!-- <li>flex</li>-->
+                <li>none</li>
+            </ul>
+           <p class="explanationHeading">inline</p>
+           <p class="explanationText">The <b>display:inline </b>property displays the elements in an inline flow. An inline element doesn't starts in a new line.Some examples of inline elements are:</p>
+       
+           <ul class="explanationText">
+           	<li>span</li>
+           	<li>anchor(links)</li>
+           <li>img</li>
+           <li>em</li>
+           </ul>
+
+<xmp class="code"><style>
+li{
+   display: inline;
+}
+</style>
+
+<ul>
+   <li>one</li>
+   <li>two</li>
+   <li>three</li>
+   <li>four</li>
+</ul>
+</xmp>
+
+        <p class="explanationText">This will result in..</p>
+        <div class="output-window">
+        	<div>
+            one two three four
+        	</div>
+        </div>
+        <p class="explanationText">As we can see that the <b>li </b>element has been displayed in a line due to the <b>inline </b>property.</p>
+
+        <p class="explanationHeading">block</p>
+        <p class="explanationText">A block-level element starts on a new line and stretches out to the left and right as far as it can.Here are the few examples of block level elements.A display property with a value of "block" results in a line break between the two elements.</p>
+        <ul class="explanationText">
+        <li>form</li>
+        <li>header</li>
+        <li>footer</li>
+        <li>div</li>
+        <li>header-elements(h1 - h6)</li>
+        <li>p</li>
+        <li>section</li>
+        </ul>
+
+<xmp class="code"><style>
+div {
+height:100px;
+height:100px;
+background:teal;
+}	
+</style>
+
+<div id="one">
+</div>
+<br>
+<div id="two">
+</div>
+</xmp>
+        <p class="explanationText">This will result in..</p>
+        <div class="output-window">
+        	<div style="height:100px;height:100px;background:teal;">div 1</div><br>
+        	<div style="height:100px;height:100px;background:teal;">div 2</div>
+        </div>
+
+         <p class="explanationText">As we can see that the <b>div 2 </b>element starts from the next line, just because they are <b>block-level </b>elements!</p>
+         <p class="explanationText">But consider the following<b> inline-element </b>below.</p>
+
+<xmp class="code">
+<span>The quick brown fox</span> <span>jumps over the lazy dog!</span>
+</xmp>
+
+        <div class="output-window">
+        	<p>The quick brown fox jumps over the lazy dog!.</p>
+        </div>
+
+        <p class="explanationText">which is quite reasonable...as <b
+        >span </b>is an <b>inline-element</b>. Now just by applying <b>display:block; </b>we get..</p>
+<xmp class="code">span {
+  display: inline;
+}
+</xmp>
+        <div class="output-window">
+         <p>The quick brown fox</p> 
+         <p>jumps over the lazy dog!</p>	
+        </div>
+
+           <p class="explanationText">It is clearly seen that the <b>span </b>element starts from the next line.</p>
+
+        <p class="explanationHeading">inline-block</p>
+
+        <p class="explanationText">We can create a grid of boxes that fills the browser width and wraps nicely.This can be done using with inline-block, inline-block elements are like inline elements but they can have a width and height.</p>
+
+<xmp class="code">.box{
+  width: 200px;
+  height: 100px;
+  margin: 1em;
+  color: cornflowerblue;
+}
+</xmp>
+        <p class="explanationText">This will result in..</p>
+        <div class="output-window">
+        	<div style="height:100px;width:200px;margin:1em;background-color:cornflowerblue;"></div>
+        	<div style="height:100px;width:200px;margin:1em;background-color:cornflowerblue;"></div>
+        	<div style="height:100px;width:200px;margin:1em;background-color:cornflowerblue;"></div>
+        	<div style="height:100px;width:200px;margin:1em;background-color:cornflowerblue;"></div>
+        </div>
+
+        <p class="explanationText">now applying <b>display: inline-block; </b>we get..</p>
+        
+        <div class="output-window">
+        	<div style="height:100px;width:200px;margin:1em;background-color:cornflowerblue;display: inline-block;"></div>
+        	<div style="height:100px;width:200px;margin:1em;background-color:cornflowerblue;display: inline-block;"></div>
+        	<div style="height:100px;width:200px;margin:1em;background-color:cornflowerblue;display: inline-block;"></div>
+        	<div style="height:100px;width:200px;margin:1em;background-color:cornflowerblue;display: inline-block;"></div>
+        </div>
+
+            <p class="explanationText">The boxes adjust themselves according to the browser window itself!</p>
+        <p class="explanationHeading">none</p>
+        <p class="explanationText">The <b>display:none; </b>property hides the elements in a browser.</p>
+<xmp class="code">
+.box{
+  width: 200px;
+  height: 100px;
+  margin: 1em;
+  color: cornflowerblue;
+  display: none;
+}
+</xmp>
+
+        <p class="explanationText">Doesn't show anything at all!..</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		  </div>
 		</div>
 
@@ -2835,19 +2998,6 @@ p[lang|="fr"] /*hypen seprated fr tag*/
         	<div style="height:120px;width:120px;background: rgba(0,128,0,0.8);-webkit-transform: matrix(1, -0.3, 0, 1, 0, 0);">#matrix	
         	</div>
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 		  </div>
 		</div>
