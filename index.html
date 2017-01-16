@@ -10,8 +10,9 @@
 </head>
 <body>
 	<div id="wrapper">
-		<ul class="tab">
-		  <a href="http://www.codingninjas.in/"><img src="images/logo.png"></a>
+		<ul class="tab" id="ID" onmouseover="this.style.overflow='auto'"
+onmouseout="this.style.overflow='hidden'" >
+		  <a onclick="openIntroductionPage()"><img src="images/logo.png"></a>
 		  <li onclick="openPage(event, 'introduction')" class="first"><a href="javascript:void(0)" class="tablinks">Introduction</a></li>
 		  <li onclick="openPage(event, 'tags')"><a href="javascript:void(0)" class="tablinks">Tags, Attributes and Elements</a></li>
 		  <li onclick="openPage(event, 'page-title')"><a href="javascript:void(0)" class="tablinks">Page Title</a></li>
@@ -23,7 +24,7 @@
 		  <li onclick="openPage(event, 'tables')"><a href="javascript:void(0)" class="tablinks">Tables</a></li>
 		  <li onclick="openPage(event, 'rowspan')"><a href="javascript:void(0)" class="tablinks">Table: rowspan</a></li>
 		  <li onclick="openPage(event, 'colspan')"><a href="javascript:void(0)" class="tablinks">Table: colspan</a></li>
-		  <li onclick="openPage(event, 'forms')"><a href="javascript:void(0)" class="tablinks">Forms</a></li>
+		  <li onclick="openPage(event, 'forms-basics')"><a href="javascript:void(0)" class="tablinks">Forms Basics</a></li>
 		  <li onclick="openPage(event, 'htmlvscss')"><a href="javascript:void(0)" class="tablinks">HTML vs CSS</a></li>
 		  <li onclick="openPage(event, 'css-getting-started')"><a href="javascript:void(0)" class="tablinks">CSS: Getting Started</a></li>
 		  <li onclick="openPage(event, 'css-inline')"><a href="javascript:void(0)" class="tablinks">CSS: Inline</a></li>
@@ -38,26 +39,24 @@
 		  <li onclick="openPage(event, 'padding')"><a href="javascript:void(0)" class="tablinks">Padding</a></li>
 		  <li onclick="openPage(event, 'border-radius')"><a href="javascript:void(0)" class="tablinks">Border Radius</a></li>
 		  <li onclick="openPage(event, 'span-and-div')"><a href="javascript:void(0)" class="tablinks">Span and Div</a></li>
-		  <li onclick="openPage(event, 'text-abbr')"><a href="javascript:void(0)" class="tablinks">Text Abbreviations Quotations and Code</a></li>
 		  <li onclick="openPage(event, 'meta-tags')"><a href="javascript:void(0)" class="tablinks">Meta Tags</a></li>
 		  <li onclick="openPage(event, 'description-lists')"><a href="javascript:void(0)" class="tablinks">Description Lists</a></li>
-		  <li onclick="openPage(event, 'sections')"><a href="javascript:void(0)" class="tablinks">Sections</a></li>
+		  <li onclick="openPage(event, 'sections-in-a-document')"><a href="javascript:void(0)" class="tablinks">Sections in a Document</a></li>
 		  <li onclick="openPage(event, 'class-and-id-selectors')"><a href="javascript:void(0)" class="tablinks">Class and ID Selectors</a></li>
 		  <li onclick="openPage(event, 'grouping-and-nesting')"><a href="javascript:void(0)" class="tablinks">Grouping and Nesting</a></li>
 		  <li onclick="openPage(event, 'pseudo-classes')"><a href="javascript:void(0)" class="tablinks">Pseudo Classes</a></li>
 		  <li onclick="openPage(event, 'pseudo-elements')"><a href="javascript:void(0)" class="tablinks">Pseudo Elements</a></li>
 		  <li onclick="openPage(event, 'shorthand-properties')"><a href="javascript:void(0)" class="tablinks">Shorthand Properties</a></li>
+		  <li onclick="openPage(event, 'text-abbr')"><a href="javascript:void(0)" class="tablinks">Text Abbreviations Quotations and Code</a></li>
 		  <li onclick="openPage(event, 'background-images')"><a href="javascript:void(0)" class="tablinks">Background Images</a></li>
 		  <li onclick="openPage(event, 'specificity')"><a href="javascript:void(0)" class="tablinks">Specificity</a></li>
 		  <li onclick="openPage(event, 'display-properties')"><a href="javascript:void(0)" class="tablinks">Display Properties</a></li>
 		  <li onclick="openPage(event, 'page-layouts')"><a href="javascript:void(0)" class="tablinks">Page Layouts</a></li>
-		  <li onclick="openPage(event, 'media-tags')"><a href="javascript:void(0)" class="tablinks">Media Tags</a></li>
-		  <li onclick="openPage(event, 'forms')"><a href="javascript:void(0)" class="tablinks">HTML Forms</a></li>
+		  <li onclick="openPage(event, 'forms-advanced')"><a href="javascript:void(0)" class="tablinks">Forms Advanced</a></li>
 		  <li onclick="openPage(event, 'shadows')"><a href="javascript:void(0)" class="tablinks">Shadows</a></li>
 		  <li onclick="openPage(event, 'more-selectors')"><a href="javascript:void(0)" class="tablinks">More Selectors</a></li>
 		  <!--<li onclick="openPage(event, 'colors')"><a href="javascript:void(0)" class="tablinks">Colors</a></li>-->
 		  <li onclick="openPage(event, 'attribute-selectors')"><a href="javascript:void(0)" class="tablinks">Attribute Selectors</a></li>
-		  <li onclick="openPage(event, 'background')"><a href="javascript:void(0)" class="tablinks">Background</a></li>
 		  <li onclick="openPage(event, 'transformations')"><a href="javascript:void(0)" class="tablinks">Transformations</a></li>
 		  <li onclick="openPage(event, 'gradients')"><a href="javascript:void(0)" class="tablinks">Gradients</a></li>
 		  <li onclick="openPage(event, 'media-queries')"><a href="javascript:void(0)" class="tablinks">Media Queries</a></li>
@@ -84,7 +83,6 @@
 		  	<xmp class="code"><!DOCTYPE html>
 <html>
 <head>
-    <title>Page title here</title>
 </head>
 <body>
     This is sample text...<br>
@@ -98,7 +96,7 @@
 		    The file when opened in a web browser appears as
 		  </p>
 		  <div class ="explanationImage">
-		  	<img src="./images/Introduction/first_web_page.png">
+		  	<img src="./images/Introduction/first_web_page.jpeg">
 		  </div>
 
 		  <div class="explanationText">
@@ -115,10 +113,10 @@
 		  	<div class="explanationText">
 			  	Basic HTML just contains plain text. All the awesome things are included using the following things:
 		  	</div>
-		  	<div class="card-panel orange lighten-5 flow-text">Tags</div>
+		  	<div class="explanationHeading">Tags</div>
 		  		<div class="explanationText">
 		  			 <p>
-			  			 Meaning to the plain text of HTML is applied using tags. i.e. tags define various elements of the document.
+			  			 Meaning to the plain text of HTML is applied using tags. i.e. tags define all elements of the document.
 			  			 <br>
 			  			 Most of the tags have opening and closing. The closing is just the name of the tag with character '/' in the beginning. A tag needs to have a closing tag if it includes some content. Tag with an opening and closing can have any number of tags included within itself!
 			  			 Eg: &lthtml&gt and &lt/html&gt. 
@@ -141,7 +139,7 @@
 		  	</p>
 
 		  	<br>
-		  	<div class="card-panel orange lighten-5 flow-text">Attributes</div>
+		  	<div class="explanationHeading">Attributes</div>
 		  	<p class="explanationText">
 		  		Attributes control tag behaviour.They are present in the opening tags. They consist of two parts: First is the name of attribute and second is its value which is enclosed within double inverted commas.Example:
 		  		<br>
@@ -150,7 +148,7 @@
 		  		</div>
 		  	</p>
 
-			<div class="card-panel orange lighten-5 flow-text">Elements</div>
+			<div class="explanationHeading">Elements</div>
 		  	<div class="explanationImage"><img src="./images/page2/element_analogy.png"></div>
 		  	<p class="explanationText">
 		  		Elements are the things that actually make up the web page. Tags just define the beginning and end of the elements. Everything that a web page includes is an HTML element.
@@ -169,7 +167,7 @@
 		  	<xmp><!DOCTYPE html>
 <html>
 <head></xmp>
-<span class="highlightCode">xmp&lttitle&gtThis is the Title&lt/title&gt
+<span class="highlightCode">&lttitle&gtThis is the Title&lt/title&gt
 </span>
 <xmp></head>
 <body>
@@ -181,7 +179,7 @@
 		    	This is rendered as:
 		    </p>
 		  	<div class="explanationImage">
-		  		<img src="./images/page3/title.png">
+		  		<img src="./images/page3/title.jpeg">
 		  	</div>
 		  	<p class="explanationText">
 		    	Notice the title of the page appears as the name of the tab!
@@ -215,8 +213,15 @@
 			<p class="explanationText">
 				It appears on a web browser like this:
 			</p>
-			<div class="explanationImage">
-				<img src="./images/page4/p_tag.png">
+			<div class="output-window">
+				    <p>This is line 1.</p>
+				    <p>This is line 2.</p>
+				    <p>This is line 3.</p>
+				    <br>
+					<!-- trying to format the text without using p-tag -->
+				    This is line 1.
+				    This is line 2.
+				    This is line 3.
 			</div>
 			<p class="explanationText">
 				When formating without p-tag, new lines are appended on the current line. This happens because the browser doesn’t see to the formatting of text. You have to use appropriate tags for formatting the text. More on formatting text would be there later in this tutorial.
@@ -229,7 +234,7 @@
 		  <div class="content">
 		  	<!-- Start writing from here -->
 		  	<p class="explanationText">
-		  		There are tags in HTML to mark some content as headings. In fact, there are six different levels of headings h1, h2, h3, h4, h5 and h6. h1 is the mightiest i.e. it is the largest heading and h6 is the smallest level heading.
+		  		There are tags in HTML to mark some content as headings. In fact, there are six different levels of headings <b>h1, h2, h3, h4, h5</b> and <b>h6</b>. Among them <b>h1</b> is the mightiest i.e. it is the largest heading and <b>h6</b> is the smallest level heading.
 		  	</p>
 		  	<xmp class="code"><!DOCTYPE html>
 <html>
@@ -245,9 +250,18 @@
 	<h6>Heading level 6</h6>
 </body>
 </html></xmp>
-			<div class="explanationImage">
-				<img src="./images/page5/headings.png">
-			</div>	
+
+			<p class="explanationText">
+				The content appears as:
+			</p>
+			<div class="output-window">
+					<h1 style="padding-bottom: 0.5em">Heading level 1</h1>
+					<h2 style="padding-bottom: 0.5em">Heading level 2</h2>
+					<h3 style="padding-bottom: 0.5em">Heading level 3</h3>
+					<h4 style="padding-bottom: 0.5em">Heading level 4</h4>
+					<h5 style="padding-bottom: 0.5em">Heading level 5</h5>
+					<h6 style="padding-bottom: 0.5em">Heading level 6</h6>
+			</div>
 		  </div>
 		</div>
 
@@ -257,7 +271,7 @@
 		  	<p class="explanationText">
 		  	There are three type of lists in html. First two are ordered lists and unordered lists. They both are almost the same. Unordered lists are used when the numbering of items is not required and by default the items are followed by bullets. Whereas in ordered lists the items are displayed by a preceding numbering. The numbering style can be controlled by CSS that you will be learning soon!!
 		  	</p>
-		  	<div class="card-panel orange lighten-5 flow-text">Unordered Lists</div>
+		  	<div class="explanationHeading">Unordered Lists</div>
 		  	<p class="explanationText">
 		  		They are defined using the &ltul&gt tag and the items are enclosed in the &ltli&gt tags.
 		  	</p>
@@ -267,19 +281,24 @@
 <title>Unordered Lists</title>
 </head>
 <body>
-	<h1>Lists</h1>
+    <h1>Lists</h1>
 	<ul>
-	  <li>first item</li>
-	  <li>second item</li>
-	  <li>third item</li>
-	</ul>
+        <li>first item</li>
+        <li>second item</li>
+        <li>third item</li>
+    </ul>
 </body>
 </html></xmp>
 			<p class="explanationText">
 				The output is as follows:
 			</p>
-			<div class="explanationImage">
-				<img src="./images/page6/ordered_list.png">
+			<div class="output-window">
+					<h1 style="padding-bottom: 0.5em">Lists</h1>
+					<ul style="padding-left: 1em">
+					  <li>first item</li>
+					  <li>second item</li>
+					  <li>third item</li>
+					</ul>
 			</div>
 			<p class="explanationText">
 				Nesting of lists can be done which means that lists-items can contain sub-lists in them.
@@ -290,42 +309,64 @@
 <title>Unordered Lists</title>
 </head>
 <body>
-	<h1>Lists</h1>
-	<ul>
-  <li>first item</li>
-  <li>second item
-  <!-- Look, the closing </li> tag is not placed here! -->
+    <h1>Lists</h1>
     <ul>
-      <li>second item first subitem</li>
-      <li>second item second subitem
-      <!-- Same for the second nested unordered list! -->
-        <ul>
-          <li>second item second subitem first sub-subitem</li>
-          <li>second item second subitem second sub-subitem</li>
-          <li>second item second subitem third sub-subitem</li>
-        </ul>
-      </li>
-      <!-- Closing </li> tag for the li that contains the third
-       unordered list -->
-      <li>second item third subitem</li>
+       <li>first item</li>
+       <li>second item
+            <!-- Look, the closing </li> tag is not placed here! -->
+            <ul>
+              <li>second item first subitem</li>
+              <li>second item second subitem
+                <!-- Same for the second nested unordered list! -->
+                <ul>
+                  <li>second item second subitem first sub-subitem</li>
+                  <li>second item second subitem second sub-subitem</li>
+                  <li>second item second subitem third sub-subitem</li>
+                </ul>
+              </li>
+              <!-- Closing </li> tag for the li that contains the third
+              unordered list -->
+              <li>second item third subitem</li>
+            </ul>
+        </li><!-- Here is the closing </li> tag -->
+        <li>third item</li>
     </ul>
-  </li>               <!-- Here is the closing </li> tag -->
-  <li>third item</li>
-</ul>
 </body>
 </html></xmp>
 			<p class="explanationText">
 				The output is as follows:
 			</p>
-			<div class="explanationImage">
-				<img src="./images/page6/unordered_list_nesting.png">
+			<div class="output-window">
+			<h1 style="padding-bottom: 0.5em">Lists</h1>
+			    <ul style="padding-left: 1.4em">
+			       <li>first item</li>
+			       <li>second item
+			            <!-- Look, the closing </li> tag is not placed here! -->
+			            <ul style="padding-left: 1.4em">
+			              <li>second item first subitem</li>
+			              <li>second item second subitem
+			                <!-- Same for the second nested unordered list! -->
+			                <ul style="padding-left: 1.4em">
+			                  <li>second item second subitem first sub-subitem</li>
+			                  <li>second item second subitem second sub-subitem</li>
+			                  <li>second item second subitem third sub-subitem</li>
+			                </ul>
+			              </li>
+			              <!-- Closing </li> tag for the li that contains the third
+			              unordered list -->
+			              <li>second item third subitem</li>
+			            </ul>
+			        </li><!-- Here is the closing </li> tag -->
+			        <li>third item</li>
+			    </ul>
+
 			</div>
 			<p class="explanationText">
 				There is no limitation to the depth of nested lists.
 			</p>
 
 			<br>
-			<div class="card-panel orange lighten-5 flow-text">Ordered Lists</div>
+			<div class="explanationHeading">Ordered Lists</div>
 		  	<p class="explanationText">
 		  		They are defined using the &ltol&gt tag and the items are enclosed in the &ltli&gt tags.Typically, ordered-list items are displayed with a preceding numbering. The numbering style can be of any kind like like numerals, letters or Romans numerals. The default one is numerals
 		  	</p>
@@ -335,19 +376,24 @@
 <title>Onordered Lists</title>
 </head>
 <body>
-	<h1>Lists</h1>
-	<ol>
-	  <li>first item</li>
-	  <li>second item</li>
-	  <li>third item</li>
-	</ol>
+    <h1>Lists</h1>
+    <ol>
+      <li>first item</li>
+      <li>second item</li>
+      <li>third item</li>
+    </ol>
 </body>
 </html></xmp>
 			<p class="explanationText">
 				The output is as follows:
 			</p>
-			<div class="explanationImage">
-				<img src="./images/page6/ordered_list.png">
+			<div class="output-window">
+				<h1 style="padding-bottom: 0.4em">Lists</h1>
+				    <ol style="padding-left: 1em;">
+				      <li>first item</li>
+				      <li>second item</li>
+				      <li>third item</li>
+				    </ol>
 			</div>
 			<p class="explanationText">
 				Using the attribute 'start' we can specify from where the numbering starts by giving its value.
@@ -358,20 +404,25 @@
 <title>Onordered Lists</title>
 </head>
 <body>
-	<h1>Lists</h1>
-	<ol start="7">
-	  <li>first item</li>
-	  <li>second item</li>
-	  <li>third item</li>
-	</ol>
+    <h1>Lists</h1>
+    <ol start="7">
+      <li>first item</li>
+      <li>second item</li>
+      <li>third item</li>
+    </ol>
 </body>
 </html></xmp>
 			<p class="explanationNote">
 				<em>Note:</em>Notice that value of the attribute start appeared in double inverted commas.
 			</p>
 
-			<div class="explanationImage">
-				<img src="./images/page6/ordered_list_numbering.png">
+			<div class="output-window">
+				<h1 style="padding-bottom: 0.4em">Lists</h1>
+			    <ol start="7" style="padding-left: 1em;">
+			      <li>first item</li>
+			      <li>second item</li>
+			      <li>third item</li>
+			    </ol> 
 			</div>
 			<p class="explanationText">
 				Nesting can also be done using ordered lists. Also a combination of ordered and unordered lists can be used!
@@ -407,7 +458,7 @@
 				The link appears as 
 			</p>
 
-			<div class="htmlDisplay">
+			<div class="output-window">
 				<div style="font-size:1.25em"><b>A Great place to practice coding</b></div>
 					<p>
 						Take the daily challanges at
@@ -428,7 +479,7 @@
 				<p class="explanationText"> 
 					In the <b>href</b> attribute, <em>linksHeading</em> is the id of the heading of this page. <em>id</em> of an html element is an attribute and it can have any value. While refering to an id, '#' is used in the begining of its name. Clicking on the link shown below will scroll you to the heading such that it is the first line of the display.
 				</p>
-				<div class="htmlDisplay">
+				<div class="output-window">
 					<p>						
 						<a href="#linksHeading">Go to top of the page</a>
 					</p>
@@ -456,7 +507,7 @@
 		  	<!-- path to the logo of Coding Ninjas -->
 			<p class="explanationText">
 				The image appears as
-				<div class="htmlDisplay">
+				<div class="output-window">
 					<img src="images/logo.png" alt="Coding Ninjas image"></xmp>
 				</div>
 			</p>
@@ -469,9 +520,9 @@
 		  <h3 class="heading">Tables</h3>
 		  <div class="content">
 		  <p class="explanationText">
-			Tables are used to show the tabular data. To achieve this many tags are used. All the table-data is enclosed within the <b>table</b> tags. After that <b>tr</b> tags enclose table rows. Each row contains a number of data enteries which are enclosed by <b>td</b> tags. <b>td</b> stands for table-data and <b>tr</b> for table row. Number of table-data  elements in a row are equal to the number of columns of that table. 
+			Tables are used to show the tabular data. To achieve this many tags are used. All the table-data is enclosed within the <b>table</b> tags. After that <b>tr</b> tags enclose table rows. Each row contains a number of data enteries which are enclosed by <b>td</b> tags. <b>td</b> stands for table-data and <b>tr</b> for table row. Number of table-data  elements in a row are equal to the number of columns of that table. And the <b>border</b> attribute is used for mentioning the thickness of the borders, if the border attribute is not mentioned then there would be no border. 
 		  </p>
-		  <xmp class="code"><table>
+		  <xmp class="code"><table border=1>
     <tr>
         <td>Row 1, cell 1</td>
         <td>Row 1, cell 2</td>
@@ -495,8 +546,8 @@
 </table></xmp>
 
 			<p class="explanationText">The table appears as</p>
-			<div class = "htmlDisplay">
-			<table>
+			<div class = "output-window">
+			<table border=1>
 			    <tr>
 			        <td>Row 1, cell 1</td>
 			        <td>Row 1, cell 2</td>
@@ -558,7 +609,7 @@
 		  	</p>
 
 		  	<div class="output-window">
-				<table border="2">
+				<table border="1">
                     <tr>
                         <td>Row 1, cell 1</td>
                         <td>Row 1, cell 2</td>
@@ -592,7 +643,7 @@
 
 
 		  		<xmp class="code">
-<table>
+<table border=1>
     <tr>
         <th>Column 1 heading</th>
         <th colspan="2">Column_2_and_3_heading</th>
@@ -620,7 +671,7 @@
 		  	</p>
 
 		  	<div class="output-window">
-				<table>
+				<table border="1">
 				    <tr>
 				        <th>Column 1 heading</th>
 				        <th colspan="2">Column 2,3 heading</th>
@@ -647,16 +698,16 @@
 		  </div>
 		</div>
 
-		<div id="forms" class="tabcontent">
-		  <h3 class="heading">Forms</h3>
+		<div id="forms-basics" class="tabcontent">
+		  <h3 class="heading">Forms Basics</h3>
 		  <div class="content">
 		  	<p class="explanationText">
-		  		HTML forms  are the main thing through which user can interact with the web site or application. Through forms, a user enters the data which is either processed by the browser itself(using Javascript) or goes to the server where it gets processed.       <br>
-				An HTML forms may contain a lot of elements like text fields (single line or multiline), select boxes, buttons, checkboxes, or radio buttons. Let us start with just a basic form without any elements:
+		  		HTML Forms are one of the main points of interaction between a user and a web site or application. Through forms, a user enters the data which is either processed by the browser itself (using Javascript) or the data goes to the servers where it gets processed.       <br>
+				An HTML form may contain a lot of elements like text fields (single line or multiline), select boxes, buttons, checkboxes, or radio buttons. Let us start with just a basic form without any elements:
 		  	</p>
 <xmp class="code"><form action="/address_to_handle_form" method="post">
 
-  </form>
+</form>
 </xmp>
 			<p class="explanationText">
 				Since the form doesn't contain any element,currently, nothing will appear as output.
@@ -667,7 +718,7 @@
 			<div class="explanationHeading"><b>Input</b> Tag</div>
 			<p class="explanationText">
 				It is the most important element of the forms. It can take various forms using the <b>type</b> attribute. Here are the examples:
-				<ul class="explanationNote">
+				<ul class="explanationNote" style="padding-left: 1em;">
 					<li>
 						&ltinput type="text"&gt or simply &ltinput&gt is a standard textbox. This can also have a value attribute, which sets the initial text in the textbox.
 					</li>
@@ -686,17 +737,231 @@
 				</ul>
 			</p>
 			<p class="explanationText">
-				These were the basics of forms, more will be coming in HTML forms section!!
+				These were the basics of forms, more will be coming in forms advanced section later!!
 			</p>
 		  </div>
 		</div>
 
 
 		<div id="htmlvscss" class="tabcontent">
-		  <h3 class="heading">HTML vs CSS</h3>
-		  <div class="content">
-		  	<!-- Start writing from here -->
-		  </div>
+			<h3 class="heading">HTML vs CSS</h3>
+			<div class="content">
+				<div class="output-window" id="statusDivHVC" class="hiddenForHVC" style="font-size:1.5em">
+					Click the button below to start the animation:
+				</div>
+				<p class="explanationText" style="display: flex; justify-content: space-around;">
+					<button id="startButtonHVC" style="padding: 0.3em 0.5em; font-size: 0.7em;">Start</button>
+				</p>
+				<p class="explanationNote" style="display: none;" id="endNoteHVC">
+					Refresh the page for viewing the animation again.
+				</p>
+				<div class = "output-window" id="HtmlVsCssDiv">
+					<header id="headerHVC">
+						<img src="images/logo.png" id="imageHSV" class = "hiddenForHVC">
+						<nav>
+							<ul class = "hiddenForHVC" id="navHVC" style="padding-left: 1em">
+								<li>Home</li>
+								<li>About us</li>
+								<li>Team</li>
+								<li>Contact us</li>
+							</ul>
+						</nav>
+					</header>
+					<main class = "hiddenForHVC" id = "bodyHVC">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</main>
+					<footer id="footerHVC">
+						<header class = "hiddenForHVC" id = "footerHeaderHVC">
+							<h5>Reach us</h5>
+							<p>Plot Number 360, Kohat Enclave, Main Pitam Pura Road, Delhi 110034, Opposite Kohat Metro Station exit 3. </p>
+						</header>
+						<nav>
+							<ul class = "hiddenForHVC" id="footerNavHVC" style="padding-left: 1em">
+								<li>Terms & Conditions</li>
+								<li>Privacy Policy</li>
+								<li>Pricing & Refund</li>
+							</ul>
+						</nav>
+					</footer>
+				</div>
+
+
+
+
+				<script type="text/javascript">
+					main_element = document.getElementById("HtmlVsCssDiv");
+					HVC_initiator_button = document.getElementById("startButtonHVC");
+					HVC_initiator_button.addEventListener('click', HVC_main_function);
+					// main_element.style.display = "none";
+
+					var delay=1900;
+					var delayInc = delay;
+					function HVC_main_function(){
+						// t = (new Date()).getTime();
+						HVC_status_div = document.getElementById("statusDivHVC");
+
+						HVC_status_div.style.background = "orange";
+						HVC_status_div.style.color = "white";
+						HVC_status_div.innerHTML = "Content would be added using HTML below";
+						HVC_image = document.getElementById("imageHSV");
+						delay+=delayInc;
+						setTimeout(function() {
+							HVC_image.style.display = "block";
+							// temp = (new Date()).getTime();
+							// console.log(temp - t);
+							HVC_status_div.style.display = "block";
+							HVC_status_div.style.background = "white";
+							HVC_status_div.style.color = "inherit";
+							HVC_status_div.innerHTML = "<em>Status:</em> Adding Data Using HTML...";
+						}, delay);
+
+
+
+						delay += delayInc;
+						HVC_nav = document.getElementById("navHVC")
+						setTimeout(function() {
+							HVC_nav.style.display = "block";
+							HVC_status_div.innerHTML = "<em>Status:</em> Adding Data Using HTML....";
+						}, delay);
+
+
+						delay += delayInc;
+						HVC_body = document.getElementById("bodyHVC")
+						setTimeout(function() {
+							HVC_body.style.display = "block";
+							HVC_status_div.innerHTML = "<em>Status:</em> Adding Data Using HTML...";
+						}, delay);
+
+						delay += delayInc;
+						HVC_footer_header = document.getElementById("footerHeaderHVC")
+						setTimeout(function() {
+							HVC_footer_header.style.display = "block";
+							HVC_status_div.innerHTML = "<em>Status:</em> Adding Data Using HTML....";
+						}, delay);
+
+						delay += delayInc;
+						HVC_footer_nav = document.getElementById("footerNavHVC")
+						setTimeout(function() {
+							// HVC_footer_Nav.style.transition = "height 0.29s 1s ease-in-out";
+							HVC_footer_nav.style.display = "block";
+							HVC_status_div.innerHTML = "<em>Status:</em> Adding Data Using HTML...";
+						}, delay);
+
+
+						delay += delayInc;
+						setTimeout(function() {
+							// HVC_footer_nav.style.transition = "height 0.29s 1s ease-in-out";
+							HVC_footer_nav.style.display = "block";
+							HVC_status_div.innerHTML = "<em>Status:</em> Adding Data Using HTML....";
+						}, delay);
+
+						setTimeout(function() {
+							HVC_status_div.innerHTML = "Now CSS would be added"
+							HVC_status_div.style.background = "orange";
+							HVC_status_div.style.color = "white";
+						}, delay);
+
+						delay += 1.5*delayInc;
+						setTimeout(function() {
+							HVC_status_div.innerHTML = "<em>Status:</em> Adding CSS...."
+							HVC_status_div.style.background = "white";
+							HVC_status_div.style.color = "inherit";
+						}, delay);
+
+
+						delay += 1.5*delayInc;
+						HVC_header = document.getElementById("headerHVC");
+						setTimeout(function() {
+							HVC_header.className += " headerHVC";
+							HVC_status_div.innerHTML = "<em>Status:</em> Adding CSS..."
+						}, delay)
+
+						delay += 1.5*delayInc;
+						setTimeout(function(){
+								HVC_status_div.innerHTML = "<em>Status:</em> Adding CSS...."
+								HVC_nav.className += " ulHVC";
+								HVC_nav.style.display = "flex";
+						},delay)
+
+
+						
+						delay += 1.5*delayInc;
+						setTimeout(function(){
+							liElements = HVC_nav.getElementsByTagName("li");
+							for(var i=0; i<liElements.length; i++){
+								liElements[i].style.padding = "0.1em 0.5em"
+							}
+						},delay)
+
+
+
+						delay += 1.5*delayInc;
+						setTimeout(function() {
+							HVC_status_div.innerHTML = "<em>Status:</em> Adding CSS..."
+							HVC_body.className += " bodyTextHVC";
+						}, delay+500);
+
+
+						HVC_footer = document.getElementById("footerHVC")
+						delay += 1.5*delayInc;
+						setTimeout(function() {
+							HVC_footer.style.background = "#757575";
+							HVC_status_div.innerHTML = "<em>Status:</em> Adding CSS...."
+							HVC_footer.style.color = "white";
+							HVC_footer.style.padding = "0.4em 1.5em";
+
+						}, delay);
+
+
+						delay += 1.5*delayInc;
+						setTimeout(function() {
+							temp = HVC_footer_header.getElementsByTagName("h5")
+							temp[0].style.fontSize = "1.3em"
+							temp[0].style.padding = "0.1em"
+							temp[0].style.fontWeight = "normal"
+							HVC_status_div.innerHTML = "<em>Status:</em> Adding CSS..."
+						}, delay);
+
+						delay += 1.5*delayInc;
+						setTimeout(function() {
+							temp = HVC_footer_header.getElementsByTagName("p")
+							temp[0].style.fontSize = "0.7em"
+							temp[0].style.padding = "0.1em"
+							temp[0].style.fontWeight = "normal"
+							HVC_status_div.innerHTML = "<em>Status:</em> Adding CSS...."
+						}, delay);
+
+						delay += 1.5*delayInc;
+						setTimeout(function() {
+							HVC_footer_nav.className += " ulHVC";
+							HVC_footer_nav.style.display = "flex";
+							HVC_footer_nav.style.flexDirection = "row-reverse";
+							HVC_footer_nav.style.paddingTop = "0.25em";
+							HVC_status_div.innerHTML = "<em>Status:</em> Adding CSS..."
+							setTimeout(function(){
+								liElements = HVC_footer_nav.getElementsByTagName("li");
+								for(var i=0; i<liElements.length; i++){
+									liElements[i].style.padding = "0.1em 0.5em"
+									liElements[i].style.fontSize = "0.6em"
+								}
+								setTimeout(function(){
+									HVC_status_div.innerHTML = "<em>Status:</em> All Done";
+									document.getElementById("endNoteHVC").style.display = "block";
+								},delayInc)
+							},delayInc)
+						}, delay);
+					}//THE function ends here
+				</script>
+
+<!-- 				<p class="explanationText">
+					As seen from the example above HTML is for providing content. The styling and positioning is done using JS,
+				</p>
+				<p class="explanationNote">
+					<em>NOTE:</em> The above thing is made using JS and its details will be covered in JS tutorial.
+				</p> -->
+
+
+			</div>
 		</div>
 
 		<div id="css-getting-started" class="tabcontent">
@@ -1632,8 +1897,7 @@ orange-box</b> individually..</p>
               </div>
 
               <p class="explanationText">CSS code is..</p>
-<xmp class="code">
-.blue-box {
+<xmp class="code">.blue-box {
      text-align: center;
      border: 3px solid black;
      background-color: cornflowerblue;
@@ -1946,22 +2210,50 @@ background: teal;
 		<div id="span-and-div" class="tabcontent">
 		  <h3 class="heading">Span and Div</h3>
 		  <div class="content">
-		  	<!-- Start writing from here -->
-		  </div>
-		</div>
+				<p class = "explanationText">
+					HTML is used to provide all the content to the web page and helps to manage it by enclosing the content in tags. Basically, it applies meaning to the content like <b>p</b> tag for paragraph. But <b>span</b> and <b>div</b> don't apply any meaning. They are just used to enlose content. Then values of <b>class</b> and <b>id</b> attributes are used as CSS selectors to style the content.
+				</p>
+				<p class= "explanationText">
+					The difference between <b>div </b> and <b>span</b> is that <b>div </b> encloses block elements and <b>span</b> is for enclosing parts line elements. Being a block holder <b>div </b> creates line breaks in the beginning and the end, while <b>span </b> being an inline element doesn't create any line break.
+				</p>
 
-		<div id="text-abbr" class="tabcontent">
-		  <h3 class="heading">Text Abbreviations Quotations and Code</h3>
-		  <div class="content">
-		  	<!-- Start writing from here -->
+<xmp class="code"><div class="textContent">
+    <span class="specialText">Lorem Ipsum is simply dummy text</span> 
+    of the printing and typesetting industry. Lorem Ipsum has been 
+    the industry's standard dummy text ever since the 1500s, when 
+    an unknown printer took a galley of type and scrambled it to 
+    make a type specimen book.
+</div></xmp>
 		  </div>
 		</div>
 
 		<div id="meta-tags" class="tabcontent">
-		  <h3 class="heading">Meta Tags</h3>
-		  <div class="content">
-		  	<!-- Start writing from here -->
-		  </div>
+			<h3 class="heading">Meta Tags</h3>
+			<div class="content">
+				<p class="explanationText">
+					Under the <b>meta</b> tag, information about the web page is stored. None of the content given in the meta tag appears on the web page. The data is stored as the key values pairs. The <b>meta</b> tag is a self-closing tag and the data stored in it is known as metadata. There can be any number of <b>meta</b> tags within an element. Meta elements are typically used to specify page description, keywords, author of the document, last modified, and other metadata.
+				</p>
+				<div class="explanationHeading">
+					Attributes
+				</div>
+				<dl class="explanationList">
+					<dt>
+						<b>charset</b>
+					</dt>
+					<dd>
+						This attribute is used for declaring the character encoding. It is a good practice to use <em>UTF-8</em> encoding. However, this must be taken care of that the declared character set matches the one on the page.
+					</dd>
+
+					<dt>
+						<b>http-content</b>
+					</dt>
+					<dd>
+						The value of this attribute consists of a string which contains key value pairs. The value of this attribute can be used to alter servers and user-agents behavior. The key <b>"Content-Security-Policy"</b> is used to specify the web content policies. And the <b>"refresh"</b> is used to specify the seconds after which the page is going to be refreshed. And if along with the time, a url is mentioned as '5;url=https://www.codingninjas.in/', then after 5 seconds, the user would be redirected to the mentioned URL.
+<xmp class="code"><meta http-equiv="refresh" content="5;url=https://www.coding
+ninjas.in/"></xmp>
+					</dd>
+				</dl>
+			</div>
 		</div>
 
 		<div id="description-lists" class="tabcontent">
@@ -1998,14 +2290,14 @@ background: teal;
 			<div class='output-window'>
 				<dl>
 				    <dt>HTML</dt>
-				    <dd style="-webkit-margin-start: 40px;">Abbreviation for HyperText Markup Language - a language used to make web pages.</dd>
+				    <dd>Abbreviation for HyperText Markup Language - a language used to make web pages.</dd>
 
 				    <dt>CSS</dt>
-				    <dd style="-webkit-margin-start: 40px;">Abbreviation for Cascading Style Sheet.</dd>
-				    <dd style="-webkit-margin-start: 40px;">Used to beautify HTML content.</dd>
+				    <dd>Abbreviation for Cascading Style Sheet.</dd>
+				    <dd>Used to beautify HTML content.</dd>
 
 				    <dt>Javascript</dt>
-				    <dd style="-webkit-margin-start: 40px;">Used to add logics to HTML and CSS content and to control them</dd>
+				    <dd>Used to add logics to HTML and CSS content and to control them</dd>
 				</dl>
 			</div>
 
@@ -2013,15 +2305,101 @@ background: teal;
 		  </div>
 		</div>
 
-		<div id="sections" class="tabcontent">
-		  <h3 class="heading">Sections</h3>
-		  <div class="content">
-		  	<!-- Start writing from here -->
-		  </div>
+		<div id="sections-in-a-document" class="tabcontent">
+		<h3 class="heading">Sections in a Document</h3>
+			<div class="content">
+				<h4 class="explanationHeading"><b>Article</b> and <b>Section</b> tags</h4>
+				<p class="explanationText">
+					Sections are made to group thematically related elements together. This is used in very different context from <b>div</b> tag which is a generic container. A <b>div</b> tag may contain any kind of data but using specific kind of holders makes the document much more meaningful and easy to handle. After opening a <b>section</b> tag, it is a good practice to have a heading tag (<b>h1</b> to <b>h6</b>). If the chunk of data inside the <b>section</b> tag makes sense when viewed indepenently i.e. it is kind of stand-alone data, then the <b>article</b> should be used inside its place. For example a product on a e-commerce website must be included in an <b>article</b> tag and the all products on the web-page must be included in a <b>section</b> tag. The <b>section</b> tag can be used inside an <b>article</b> tag and vice-versa according to the requirement. Usage example: 
+				</p>
+<xmp class="code"><section class="menu">
+    <!-- all the menu entries -->
+    <!-- may or may not contain article tags -->
+</section>
+<article>
+    <section id="intro">
+        <p>[An introduction]</p>
+    </section>
+    <section id="main_content">
+        <p>[Content]</p>
+    </section>	
+</article></xmp>
+				<h4 class="explanationHeading">Headers and Footers</h4>			
+				<p class="explanationText">
+					Since HTML is all about applying meaning to the content , <b>header</b> tag is used to enclose the introductory or navigational aids. Headers may contain headings, subheadings,, navigational controls, etc. The <b>header</b> element may exist for the whole web page or for some content within the page
+					<br>
+					The <b>footer</b> tag encloses the last element of a section or a web page. It contains information about its section such as who wrote it, links to related documents, copyright data, contact-details etc. 
+				</p>
+				<h4 class="explanationHeading">Main</h4>
+				<p class="explanationText">
+					The <b>main</b> tag is used to enclose the main part of the <b>body</b>. According to the latest recommendations of the W3C there must be only one main in a document. The content of the <b>main</b> should be unique to the document.
+				</p>
+				<h4 class="explanationHeading">Aside</h4>
+				<p class="explanationText">
+					The <b>aside</b> tag is used for an element to add additional information to enhance the meaning. This information is not necessarily needed for understanding the content. It is also used to include the side-nav-bar of the page.
+				</p>
+<xmp class="code"><article>
+  <p>
+    The Disney movie <em>The Little Mermaid</em> was
+    first released to theatres in 1989.
+  </p>
+  <aside>
+    <p>
+      The movie earned $87 million during its initial release.
+    </p>
+  </aside>
+  <p>
+    More info about the movie...
+  </p>
+</article></xmp>
+				<p class="explanationText">It appears as:</p>		
+				<div class="output-window">
+					<article>
+					  <p>
+					    The Disney movie <em>The Little Mermaid</em> was
+					    first released to theatres in 1989.
+					  </p>
+					  <aside>
+					    <p>
+					      The movie earned $87 million during its initial release.
+					    </p>
+					  </aside>
+					  <p>
+					    More info about the movie...
+					  </p>
+					</article>
+				</div>
+				<p class="explanationNote">
+					<em>NOTE:</em> Suppose at some point we just want the main content to be visible and the additional content to dissapear. Instead of editing the whole HTML document, we can disable the display of all such elements using CSS selectors.
+				</p>
+				<h4 class="explanationHeading">
+					Navigation
+				</h4>
+				<p class="explanationText">
+					To enclose the navigation links of the same website and beyond <b>nav</b> tag is used. Not all links of a document must be in a <b>nav</b> element, which is intended only for major block of navigation links. 
+				</p>
+<xmp class="code"><nav>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact_us">Contact-Us</a></li>
+  </ul>
+</nav></xmp>
+				<div class="output-window">
+					<nav>
+					  <ul>
+					    <li><a href="#home">Home</a></li>
+					    <li><a href="#about">About</a></li>
+					    <li><a href="#contact_us">Contact-us</a></li>
+					  </ul>
+					</nav>
+				</div>
+			</div>
 		</div>
 
 		<div id="class-and-id-selectors" class="tabcontent">
 		  <h3 class="heading">Class and ID Selectors</h3>
+
 		  <div class="content">
 		  	<!-- Start writing from here -->
 
@@ -2104,10 +2482,31 @@ background: teal;
 		</div>
 
 		<div id="grouping-and-nesting" class="tabcontent">
-		  <h3 class="heading">Grouping and Nesting</h3>
-		  <div class="content">
-		  	<!-- Start writing from here -->
-		  </div>
+			<h3 class="heading">Grouping and Nesting</h3>
+			<div class="content">
+				<h4 class="explanationHeading">Grouping</h4>
+				<p class = "explanationText">
+					For styling content in a web-page, CSS for every element is not written explicitly. We can set properties to a group of elements using same code.
+				</p>
+
+<xmp class="code">h2 {
+    color: red;
+}
+/*This sets the color of all h2 elements in the document to red*/
+
+.anyClassName, p, h1 {
+    font-size: 2em;
+}
+/* Using this syntax, styling multiple type of elements can be done */</xmp>
+				<h4 class="explanationHeading">Nesting</h4>
+				<p class="explanationText">
+					Maintaining the data in the appropriate tags, leads to minimum usage of <em>id</em> and <em>class</em> for selecting data in CSS code. This is done using nesting of selectors. 
+				</p>
+<xmp class="code">#newsFeed p {
+    /*Code written here will style only the paragraphs inside newsFeed*/
+}</xmp>
+
+			</div>
 		</div>
         
 		<div id="pseudo-classes" class="tabcontent">
@@ -2152,7 +2551,7 @@ background: teal;
 		  <h3 class="heading">Pseudo Elements</h3>
 		  <div class="content">
 		  <p class="explanationText">
-			PSEUDO-ELEMENTS are used to address sub-parts of elements. They allow us to select specific parts of an element and set their properties. In other words they allow logical elements to be defined which do not explicitly exist in the HTML document but are a part of some other element like the first line of a paragraph, last letter .
+			Pseudo elements are used to address sub-parts of elements. They allow us to select specific parts of an element and set their properties. In other words they allow logical elements to be defined which do not explicitly exist in the HTML document but are a part of some other element like the first line of a paragraph, last letter .
 		  </p>
 		  <p class="explanationText">
 		  		Syntax for using pseudo-classes:
@@ -2216,7 +2615,7 @@ background: teal;
 				<br>
 
 			</p>
-			<div class="explanationText">
+			<div class="explanationHeading">
 				Usage for borders:
 			</div>
 			<p class="explanationText">
@@ -2229,7 +2628,7 @@ background: teal;
 			</p>
 
 
-			<div class="explanationText">
+			<div class="explanationHeading">
 				Usage for fonts:
 			</div>
 			<p class="explanationText">
@@ -2241,16 +2640,17 @@ background: teal;
 				</p>
 			</p>
 
-			<div class="explanationText">
+			<div class="explanationHeading">
 				Usage for background:
 			</div>
 			<p class="explanationText">
+				Using the <b>background</b> CSS property individual backgrounds of the elements can be set.
 <xmp class="code">p {
     background: #000 url(images/bg.gif) no-repeat top right;
 }</xmp>			
 			</p>
 			<p class="explanationText">
-				This was the shorthand for 
+				This was the shorthand for:
 <xmp class="code">p {
     background-color: #000;
     background-image: url(images/bg.gif);
@@ -2261,6 +2661,100 @@ background: teal;
 			</p>
 		  </div>
 		</div>
+
+		<div id="text-abbr" class="tabcontent">
+			<h3 class="heading">Text Abbreviations Quotations and Code</h3>
+		  	<div class="content">
+			  	<div class="explanationHeading">Abbreviations</div>
+		  		<p class = "explanationText">
+				  	For defining an abbreviation, <b>abbr</b> tag is used. Expanded form of the abbreviation is given in the value of the <b>title</b> attribute. Although this is not necessary, but is a good practice.
+		  		</p>
+<xmp class="code"><p>
+    <abbr title="Javascript">JS</abbr> is the one of the most used 
+    languages in the world!!
+</p></xmp>
+				<p class="explanationText">
+					Try hovering above JS below:
+				</p>
+				<div class="output-window">
+					<abbr title="Javascript">JS</abbr> is the one of the most used languages in the world!!	
+				</div>
+
+				<div class="explanationHeading">
+					Quotations
+				</div>
+				<p class="explanationText">
+					The <b>q</b> tag is used for inline-quotations.They are used as:
+				</p>
+
+<xmp class="code"><p>
+    And the teacher said <q>instead of using 
+    double-quotes you can enclose the content 
+    within q-tag.</q>
+</p></xmp>		
+				<p class="explanationText">This appears as:</p>		
+				<div class="output-window">
+					<p>
+					    And the teacher said <q>instead of using 
+					    double-quotes you can enclose the content 
+					    within q-tag.</q>
+					</p>
+				</div>
+				<br>
+				<br>
+
+				<p class="explanationText">
+					When there is a block of data to display, <b>blockquote</b> tag is used.
+				</p>
+<xmp class="code"><blockquote>
+    <p>
+        Most programmers do programming not because they expect <br>
+        to get paid or get adulation by the public, but because <br>
+        it is fun to program.
+    </p>
+</blockquote></xmp>
+				<p class="explanationText">
+					For using <b>blockquote </b> CSS has to be written for the starting quotation marks. For e.g: 
+				</p>
+<xmp class="code">blockquote::before {
+    display: block;
+    height: 1em;
+    content: "“";
+    margin-left: -.95em;
+    font: italic 400%/1 Cochin,Georgia,"Times New Roman", serif;
+    color: #999;
+}</xmp>
+				<p class="explanationNote">
+					<em>NOTE:</em> The pseudo element used above is <b>before</b>. It is used to select the first pseudo-element of the element on which it is applied. Then <b>content</b> property is used to include some content in it. The <b>content</b> property can always be used to add content to the selected element.
+				</p>
+				<div class="output-window">
+					<blockquote class="exampleBlockquote">
+					        Most programmers do programming not because they expect <br> to get paid or get adulation by the public, but because <br> it is fun to program.
+					</blockquote>
+				</div>
+				<div class="explanationHeading">
+					Code
+				</div>
+				<p class="explanationText">
+					For representing computer code, <b>code</b> tag is used. For variables <b>var</b> is used. Sample output is enclosed in <b>samp</b> tags. Usage for code:
+				</p>
+
+<xmp class="code"><p>Regular text. <code>This is code.</code>
+Regular text.<samp> Output-sample text.</samp></p></xmp>
+				<p class="explanationText">
+					Output is:
+				</p>
+
+				<div class="output-window">
+					<p>Regular text. <code>This is code.</code>
+					Regular text.<samp> Output-sample text.</samp></p>
+				</div>
+				<div class="explanationNote">
+					<em>NOTE:</em> For showing the code in web-pages combination of <b>pre</b> and <b>code</b> tags is used.
+				</div>
+			</div>
+		</div>
+
 
 		<div id="background-images" class="tabcontent">
 		  <h3 class="heading">Background Images</h3>
@@ -2554,24 +3048,261 @@ background:teal;
 		</div>
 
 		<div id="page-layouts" class="tabcontent">
-		  <h3 class="heading">Page Layouts</h3>
-		  <div class="content">
-		  	<!-- Start writing from here -->
-		  </div>
+			<h3 class="heading">Page Layouts</h3>
+			<div class="content">
+				<p class="explanationText">
+					Before CSS2, tables were used for making page layouts. But now there are numerous CSS properties to set the layout. 
+				</p>
+				<h4 class="explanationHeading">
+					Positioning
+				</h4>
+				<p class="explanationText">
+					<dl class="explanationText">
+						<dt><b><code>static</code></b></dt>
+						<dd>This is the default property and just positions the elements normally as they appear by default HTML. Properties like <code>top, right, bottom, bottom, left</code> can't be applied.</dd>
+						<dt><b><code>relative</code></b></dt>
+						<dd>Using this property the element position can be varied relative to its orignal position(orignal position of the element is the one without using any positioning on it). The orignal position of the element remains as if it is occupied.</dd>
+						<dt><b><code>absolute</code></b></dt>
+						<dd>The specified position of the element would be relative to its closest positioned ancestor. If there is no positioned ancestor, then the position would be relative browser's window. The element doesn't occupy its orignal space.</dd>
+						<dt><b><code>fixed</code></b></dt>
+						<dd>The specified position of the element would be relative to the browser window. The element doesn't occupy its orignal space.</dd>
+					</dl>
+				</p>
+				<h4 class="explanationHeading">Examples</h4>
+				<p class="explanationText">
+					The HTML code would be same and CSS would be changed to depict each positioning. The HTML is as follows: 
+				</p>
+<xmp class="code"><div class="box" id="one">One</div>
+<div class="box" id="two">Two</div>
+<div class="box" id="three">Three</div>
+<div class="box" id="four">Four</div></xmp>
+
+				<p class="explanationText">
+					Orignal layout CSS:
+				</p>
+<xmp class="code">.box { 
+   display: inline-block; 
+   background: orange; 
+   width: 100px; 
+   height: 100px; 
+   margin: 20px; 
+   color: white; 
+}</xmp>
+			<p class="explanationText">
+				The output is:
+			</p>
+			<div class="output-window">
+				<!-- The CSS for this is in the base.css file-->
+				<div class="pageLayoutBox" id="One">One</div>
+				<div class="pageLayoutBox" id="two">Two</div>
+				<div class="pageLayoutBox" id="three">Three</div>
+				<div class="pageLayoutBox" id="four">Four</div>
+			</div>
+			<p class="explanationText">
+				Relative positioning:
+			</p>
+<xmp class="code">#two { 
+   position: relative; 
+   top: -20px; 
+   left: 20px; 
+}</xmp>
+			<div class="output-window">
+				<!-- The CSS for this is in the base.css file-->
+				<div class="pageLayoutBox" id="One">One</div>
+				<div class="pageLayoutBox" id="specialTwoA">Two</div>
+				<div class="pageLayoutBox" id="three">Three</div>
+				<div class="pageLayoutBox" id="four">Four</div>
+			</div>
+
+			<p class="explanationText">
+				Absolute positioning:
+			</p>
+<xmp class="code">#two { 
+   position: relative; 
+   top: -20px; 
+   left: 20px; 
+}</xmp>
+			<div class="output-window" style="position: relative;">
+				<!-- The id is given to above so that absolute positioning can be used in the example -->
+				<!-- The CSS for this is in the base.css file-->
+				<div class="pageLayoutBox" id="One">One</div>
+				<div class="pageLayoutBox" id="specialTwoB">Two</div>
+				<div class="pageLayoutBox" id="three">Three</div>
+				<div class="pageLayoutBox" id="four">Four</div>
+			</div>
+
+
+
+			</div>
 		</div>
 
-		<div id="media-tags" class="tabcontent">
-		  <h3 class="heading">Media Tags</h3>
-		  <div class="content">
-		  	<!-- Start writing from here -->
-		  </div>
-		</div>
+		<div id="forms-advanced" class="tabcontent">
+			<h3 class="heading">Forms Advanced</h3>
+			<div class="content">
+				<p class="explanationText">
+					Before reading this section, make sure that you have read the forms-basics section.
+				</p>
+				<p class="explanationText">
+					The name attribute is very important by the perspective of backend because when the form data is sent to the mentioned address, it is arranged as key-value pairs with its keys as the values of the name attribute and values as the input provided through the form.
+				</p>
+<xmp class="code"><form action="/address_to_handle_form" method="post">
+    Name:<input type="text" name="username">
+    <br>
+    Password:<input type="password" name="password">
+    <br>
+    <input type="submit" value="Submit">
+</form></xmp>
+				<p class="explanationText">
+					The output window would be like:
+				</p>			
+				<div class="output-window">
+					<h4>User Details Form</h4>
+					<form action="/address_to_handle_form" method="post">
+					    Name:<input type="text" name="username">
+					    <br>
+					    Password:<input type="password" name="password">
+					    <br>
+					    <input type="submit" value="Submit">
+					</form>
+				</div>
+				<h4 class="explanationHeading">Checkboxes</h3>
+				<p class="explanationText">
+					Checkboxes are used to get an array from the user. The <b>name</b>
+					attribute is used for grouping checkboxes for the same thing i.e. the checkboxes with the same value of the attribute <b>name</b> would be grouped together. The <b>value</b> attribute specifies the value of the attribute being checked. The <b>checked</b> attribute is used to indicate whether this item is selected. And <b>label</b> element represents a caption for an item in a user interface.
+				</p>
+<xmp class="code"><form action="/address_to_handle_form" method="post">
+    Programming languages you know:<br>
+    <label>
+        <input type="checkbox" name="prog_lang" value="C++" 
+        checked>C++<br>
+    </label>
+    <label>
+        <input type="checkbox" name="prog_lang" value="Java">
+        Java<br>
+    </label>
+    <label>
+        <input type="checkbox" name="prog_lang" value="Python">
+        Python<br>
+    </label>
+    <label>
+        <input type="checkbox" name="prog_lang" value="Ruby">
+        Ruby<br>
+    </label>
+    <input type="submit" value="Submit">
+</form></xmp>
+				<p class="explanationText">
+					The output window would be like:
+				</p>
+				<div class="output-window">
+					<form action="/address_to_handle_form" method="post">
+					    <!-- Usage of checkboxes -->
+					    Programming languages you know:<br>
+					    <label>
+						    <input type="checkbox" name="prog_lang" value="C++" checked="yes">C++<br>
+					    </label>
+					    <label>
+						    <input type="checkbox" name="prog_lang" value="Java">Java<br>
+					    </label>
+					    <label>
+						    <input type="checkbox" name="prog_lang" value="Python">Python<br>
+					    </label>
+					    <label>
+						    <input type="checkbox" name="prog_lang" value="Ruby">Ruby<br>
+					    </label>
+					    <input type="submit" value="Submit">
+					</form>
+				</div>
 
-		<div id="forms" class="tabcontent">
-		  <h3 class="heading">HTML Forms</h3>
-		  <div class="content">
-		  	<!-- Start writing from here -->
-		  </div>
+
+				<h4 class="explanationHeading">Radio-buttons</h4>
+				<p class="explanationText">
+					Radio-buttons are like switches that can be turned on or off. They are used when out of many options, we want the user to select one option. To acheive this the value of the <b>name</b> attribute must be same for the options among which we want to choose the one.
+				</p>
+<xmp class="code"><form action="/address_to_handle_form" method="post">
+    Programming language you are best at:<br>
+    <label>
+    	<input type="radio" name="best_at" value="C++">C++<br>
+    </label>
+    <label>
+    	<input type="radio" name="best_at" value="Java">Java <br>
+    </label>
+    <label>
+    	<input type="radio" name="best_at" value="Python">Python <br>
+    </label>
+    <label>
+    	<input type="radio" name="best_at" value="Ruby">Ruby <br>
+    </label>
+    <input type="submit" value="Submit">
+</form></xmp>
+				<p class="explanationText">It appears as:</p>
+
+				<div class="output-window">
+					<form action="/address_to_handle_form" method="post">
+					    Programming language you are best at:<br>
+					    <label>
+					    	<input type="radio" name="best_at" value="C++">C++<br>
+					    </label>
+					    <label>
+					    	<input type="radio" name="best_at" value="Java">Java <br>
+					    </label>
+					    <label>
+					    	<input type="radio" name="best_at" value="Python">Python <br>
+					    </label>
+					    <label>
+					    	<input type="radio" name="best_at" value="Ruby">Ruby <br>
+					    </label>
+					    <input type="submit" value="Submit">
+					</form>
+				</div>
+
+				<h4 class="explanationHeading">
+					Textarea
+				</h4>
+				<p class="explanationText">
+					The <b>input</b> tag was for smaller text inputs. The tag <b>textarea</b> is used for a bigger text area whose number of rows and columns can be specified using the <em>rows</em> and <em>cols</em> attributes. Sample:
+				</p>
+<xmp class="code"><form action="/address_to_handle_form" method="post">
+    <label>Write about yourself:</label>
+    <textarea rows="10" cols="50"></textarea>
+</form></xmp>
+				<p class="explanationText">
+					Output window looks like:
+				</p>
+				<div class="output-window">
+					<form action="/address_to_handle_form" method="post">
+					    <label>Write about yourself:</label>
+					    <textarea rows="10" cols="50"></textarea>
+					    <input type="submit" name="submit">
+					</form>
+				</div>
+				<h4 class="explanationHeading">
+					Select
+				</h4>
+				<p class="explanationText">
+					The <b>select</b> tag is used along with <b>option</b> tag to display a drop-down menu.
+				</p>
+<xmp class="code"><form>
+    <select name="select">
+        <option value="value1">Value 1</option> 
+        <option value="value2" selected>Value 2</option>
+        <!-- "selected" attrubute will mark value 2 as default -->
+        <option value="value3">Value 3</option>
+    </select>
+</form></xmp>
+				<p class="explanationText">
+					The menu appears as:
+				</p>
+				<div class="output-window">
+					<form>
+						<select name="select">
+						  <option value="value1">Value 1</option> 
+						  <option value="value2" selected>Value 2</option>
+						  <option value="value3">Value 3</option>
+						</select>
+					</form>
+				</div>
+
+			</div>
 		</div>
 
 		<div id="shadows" class="tabcontent">
@@ -2859,23 +3590,6 @@ p[lang|="fr"] /*hypen seprated fr tag*/
         	<p style="color: navy;">para1</p>
         	<p>para2</p>
         </div>
-		  </div>
-		</div>
-
-		<div id="background" class="tabcontent">
-		  <h3 class="heading">Background</h3>
-		  <div class="content">
-		  <p class="explanationText">
-		  	Before reading this make sure you have read the <b>shorthand </b> section and the <b>background-image</b> sections 
-		  </p>
-
-
-
-
-
-
-
-		  	<!-- Start writing from here -->
 		  </div>
 		</div>
 
@@ -3265,16 +3979,16 @@ background:linear-gradient(to right,violet,indigo,blue,green,yellow,orange,red);
 				<div>
 					<dl class="explanationText">
 						<dt><b>all</b></dt>
-						<dd style="-webkit-margin-start: 40px;">Suitable for all devices.</dd>
+						<dd>Suitable for all devices.</dd>
 						
 						<dt><b>print</b></dt>
-						<dd style="-webkit-margin-start: 40px;">This media type will return true when the the content is viewed in the print mode, i.e. the preview of the content that will be printed</dd>
+						<dd>This media type will return true when the the content is viewed in the print mode, i.e. the preview of the content that will be printed</dd>
 
 						<dt><b>screen</b></dt>
-						<dd style="-webkit-margin-start: 40px;">Intended primarily for color computer screens.</dd>
+						<dd>Intended primarily for color computer screens.</dd>
 
 						<dt><b>speech</b></dt>
-						<dd style="-webkit-margin-start: 40px;">Intended for speech synthesizers.</dd>
+						<dd>Intended for speech synthesizers.</dd>
 					</dl>
 				</div> 
 			</p>
@@ -3325,8 +4039,10 @@ background:linear-gradient(to right,violet,indigo,blue,green,yellow,orange,red);
  /></xmp>
 		    </p>
 
-
 		</div>
 	</div>
+
+    <img src="images/arrow_left.svg" id = "previous_section_arrow" class = "navigationArrows" title="Previous section" onclick="previousPage()">
+	<img src="images/arrow_right.svg" id = "next_section_arrow" class = "navigationArrows" title="Next Section" onclick="nextPage()">
 </body>
 </html>
