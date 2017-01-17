@@ -2880,28 +2880,33 @@ background:teal;
 
         <p class="explanationText">We can create a grid of boxes that fills the browser width and wraps nicely.This can be done using with inline-block, inline-block elements are like inline elements but they can have a width and height.</p>
 
-<xmp class="code">.box{
+<xmp class="code"><style>.box{
   width: 200px;
   height: 100px;
   margin: 1em;
   color: cornflowerblue;
 }
+</style>
+<div class="box">Box-One</div>
+<div class="box">Box-Two</div>
+<div class="box">Box-Three</div>
+<div class="box">Box-Four</div>
 </xmp>
         <p class="explanationText">This will result in..</p>
         <div class="output-window">
-        	<div style="height:100px;width:200px;margin:1em;background-color:cornflowerblue;"></div>
-        	<div style="height:100px;width:200px;margin:1em;background-color:cornflowerblue;"></div>
-        	<div style="height:100px;width:200px;margin:1em;background-color:cornflowerblue;"></div>
-        	<div style="height:100px;width:200px;margin:1em;background-color:cornflowerblue;"></div>
+        	<div style="height:100px;width:200px;margin:1em;background-color:cornflowerblue;">Box-One</div>
+        	<div style="height:100px;width:200px;margin:1em;background-color:cornflowerblue;">Box-Two</div>
+        	<div style="height:100px;width:200px;margin:1em;background-color:cornflowerblue;">Box-Three</div>
+        	<div style="height:100px;width:200px;margin:1em;background-color:cornflowerblue;">Box-Four</div>
         </div>
 
         <p class="explanationText">now applying <b>display: inline-block; </b>we get..</p>
         
         <div class="output-window">
-        	<div style="height:100px;width:200px;margin:1em;background-color:cornflowerblue;display: inline-block;"></div>
-        	<div style="height:100px;width:200px;margin:1em;background-color:cornflowerblue;display: inline-block;"></div>
-        	<div style="height:100px;width:200px;margin:1em;background-color:cornflowerblue;display: inline-block;"></div>
-        	<div style="height:100px;width:200px;margin:1em;background-color:cornflowerblue;display: inline-block;"></div>
+        	<div style="height:100px;width:200px;margin:1em;background-color:cornflowerblue;display: inline-block;">Box-One</div>
+        	<div style="height:100px;width:200px;margin:1em;background-color:cornflowerblue;display: inline-block;">Box-Two</div>
+        	<div style="height:100px;width:200px;margin:1em;background-color:cornflowerblue;display: inline-block;">Box-Three</div>
+        	<div style="height:100px;width:200px;margin:1em;background-color:cornflowerblue;display: inline-block;">Box-Four</div>
         </div>
 
             <p class="explanationText">The boxes adjust themselves according to the browser window itself!</p>
