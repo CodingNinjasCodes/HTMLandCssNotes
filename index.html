@@ -1557,6 +1557,91 @@ p {
 </div>
 		</div>
 
+		<div id="border" class="tabcontent">
+		  <h3 class="heading">Border</h3>
+		  <div class="content">
+		  	<!-- Start writing from here -->
+           <p class="explanationText">   CSS borders have properties like <b>style</b>, <b>color</b> and <b>width</b>.For example, if we wanted to create a "teal" colored, 5 pixel border around an HTML element..</p>
+<xmp class="code">
+h1 {
+    border-color: teal;
+    border-width: 5px;
+    border-style: solid;
+    padding:5px;
+}
+</xmp>
+        <p class="explanationText">will output..</p>
+
+        <div class="output-window">
+        	<h1 style="border-color: teal;padding: 5px; border-width: 5px; border-style: solid">This is a border in CSS</h1>
+        </div>
+        <p class="explanationText">Also, <b>border-color</b>, <b>border-width</b>, <b>border-style</b> can be written together like.. </p>
+<xmp class="code">        
+h1 {
+    border:5px solid teal;
+}
+</xmp> 
+        <p class="explanationText">will output same as the above.</p> 
+
+		<p class="explanationText">CSS <b>border</b> can be styled in so many ways like <b>solid</b>, <b>dotted</b>, <b>dashed</b>..</p>  
+		<div class="output-window">
+<h1 style="border: 5px solid goldenrod; text-align:center; ">Solid Border</h1><br>
+<h2 style="border: 5px dotted black;text-align:center">Dotted Border</h2><br>
+<h3 style="border: 5px dashed green;text-align:center">Dashed Border</h3><br>
+</div>
+        <p class="explanationText">CSS code is..</p>
+        <xmp class="code">
+h1 {
+    border: 5px solid goldenrod;
+    text-align: center;
+}
+ 
+h2 { 
+    border: 5px dotted black;
+    text-align: center;
+ }
+
+h3 { 
+    border: 5px dashed green;
+    text-align: center;
+}
+   </xmp>
+
+        <p class="explanationText">There are more other ways of styling the borders in CSS like double, groove, ridge, inset and outset.But <b>solid</b>, <b>dotted</b>, and <b>dashed </b>are most commomly used.</p>
+
+        <p class="explanationText">Also we can apply <b>border-width</b>, <b>border-color</b>, <b>border-style</b> to the <b>top</b>, <b>bottom</b>, <b>left</b>, and <b>right</b> individually in an element like...</p>
+
+<xmp class="code">
+h1 {
+    border-bottom: 5px solid teal;
+    text-align: center;
+}
+
+h2 {
+    border-top-width:5px;
+    border-top-color:red;
+    border-top-style:dotted;
+    text-align: center;
+}
+</xmp>        
+
+        <p class="explanationText">
+        	This will look like..
+        </p>
+         
+         <div class="output-window">
+         	<h1 style=" border-bottom: 5px solid teal;
+    text-align: center;">BorderBottom</h1><br>
+         	<h1 style="border-top-style:dotted;border-top-width: 5px;border-top-color: goldenrod;
+    text-align: center;">BorderTop</h1>
+    
+         </div>
+
+
+
+		  </div>
+		</div>
+
 		<div id="margin" class="tabcontent">
 		  <h3 class="heading">Margin</h3>
 		  <div class="content">
@@ -1875,12 +1960,6 @@ orange-box</b> individually..</p>
 <p class="explanationText">It's pretty clear that the margin values <b>5px 15px 25px 35px </b>changes the space around the <b>orange-box</b> by <b>5px 15px 25px 35px</b> respectively!!</p>
 
 <p class="explanationNote"><b>Note:</b>The margin values <b>5px 15px 25px 35px</b> follows a <b>clock-wise</b> order from <b>top right bottom</b> and <b>left</b> respectively.</p>
-
-
-
-
-
-
 		  </div>
 		</div>
 
@@ -1948,90 +2027,7 @@ orange-box</b> individually..</p>
 		</div>
 
 
-		<div id="border" class="tabcontent">
-		  <h3 class="heading">Border</h3>
-		  <div class="content">
-		  	<!-- Start writing from here -->
-           <p class="explanationText">   CSS borders have properties like <b>style</b>, <b>color</b> and <b>width</b>.For example, if we wanted to create a "teal" colored, 5 pixel border around an HTML element..</p>
-<xmp class="code">
-h1 {
-    border-color: teal;
-    border-width: 5px;
-    border-style: solid;
-    padding:5px;
-}
-</xmp>
-        <p class="explanationText">will output..</p>
 
-        <div class="output-window">
-        	<h1 style="border-color: teal;padding: 5px; border-width: 5px; border-style: solid">This is a border in CSS</h1>
-        </div>
-        <p class="explanationText">Also, <b>border-color</b>, <b>border-width</b>, <b>border-style</b> can be written together like.. </p>
-<xmp class="code">        
-h1 {
-    border:5px solid teal;
-}
-</xmp> 
-        <p class="explanationText">will output same as the above.</p> 
-
-		<p class="explanationText">CSS <b>border</b> can be styled in so many ways like <b>solid</b>, <b>dotted</b>, <b>dashed</b>..</p>  
-		<div class="output-window">
-<h1 style="border: 5px solid goldenrod; text-align:center; ">Solid Border</h1><br>
-<h2 style="border: 5px dotted black;text-align:center">Dotted Border</h2><br>
-<h3 style="border: 5px dashed green;text-align:center">Dashed Border</h3><br>
-</div>
-        <p class="explanationText">CSS code is..</p>
-        <xmp class="code">
-h1 {
-    border: 5px solid goldenrod;
-    text-align: center;
-}
- 
-h2 { 
-    border: 5px dotted black;
-    text-align: center;
- }
-
-h3 { 
-    border: 5px dashed green;
-    text-align: center;
-}
-   </xmp>
-
-        <p class="explanationText">There are more other ways of styling the borders in CSS like double, groove, ridge, inset and outset.But <b>solid</b>, <b>dotted</b>, and <b>dashed </b>are most commomly used.</p>
-
-        <p class="explanationText">Also we can apply <b>border-width</b>, <b>border-color</b>, <b>border-style</b> to the <b>top</b>, <b>bottom</b>, <b>left</b>, and <b>right</b> individually in an element like...</p>
-
-<xmp class="code">
-h1 {
-    border-bottom: 5px solid teal;
-    text-align: center;
-}
-
-h2 {
-    border-top-width:5px;
-    border-top-color:red;
-    border-top-style:dotted;
-    text-align: center;
-}
-</xmp>        
-
-        <p class="explanationText">
-        	This will look like..
-        </p>
-         
-         <div class="output-window">
-         	<h1 style=" border-bottom: 5px solid teal;
-    text-align: center;">BorderBottom</h1><br>
-         	<h1 style="border-top-style:dotted;border-top-width: 5px;border-top-color: goldenrod;
-    text-align: center;">BorderTop</h1>
-    
-         </div>
-
-
-
-		  </div>
-		</div>
 
 		<div id="border-radius" class="tabcontent">
 		  <h3 class="heading">Border Radius</h3>

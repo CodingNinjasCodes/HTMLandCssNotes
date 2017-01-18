@@ -6,9 +6,6 @@ function openIntroductionPage(){
     var tab = document.getElementsByClassName("tab")[0];
     var listTags = tab.getElementsByTagName("li");
     for (i = 0; i < listTags.length; i++) {
-        if(i==0) {
-            listTags[i].className = " visited";
-        }
         listTags[i].className = listTags[i].className.replace(" active", "");
     }
     document.getElementById("default").style.display = "block";
@@ -29,9 +26,6 @@ function openPage(evt, PageName) {
     tab = document.getElementsByClassName("tab")[0];
     listTags = tab.getElementsByTagName("li");
     for (i = 0; i < listTags.length; i++) {
-        if(i==0) {
-            listTags[i].className = " visited";
-        }
         listTags[i].className = listTags[i].className.replace(" active", "");
     }
     document.getElementById(PageName).style.display = "block";
@@ -57,6 +51,7 @@ function nextPage(){
         if(tabcontent[i].style.display == "block" && i<tabcontent.length-1){
             tabcontent[i].style.display = "none";
             tabcontent[i+1].style.display = "block";
+            localStorage.setItem("last_visited",tabcontent[i+1].id);
             break;
         }
     }
@@ -93,6 +88,7 @@ function previousPage(){
         if(tabcontent[i].style.display == "block" && i>0){
             tabcontent[i].style.display = "none";
             tabcontent[i-1].style.display = "block";
+            localStorage.setItem("last_visited",tabcontent[i-1].id);
         }
     }
     var tab = document.getElementById("ID");
