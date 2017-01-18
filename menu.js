@@ -1,4 +1,21 @@
-function openIntroductionPage(){
+function rotateIcon(icon) {
+    icon.classList.toggle("change");
+    var tab = document.getElementsByClassName('tab')[0];
+    var container = document.getElementsByClassName('container')[0];
+    tab.style.transition = "all 0.5s";
+    container.style.transition = "all 0.5s";
+    if (container.classList.contains("change")) {
+        tab.style.width = "48%";
+        tab.style.boxShadow = "4px 5px 8px 2px lightgrey";
+        container.style.marginLeft = "50%";
+    } else {
+        tab.style.width = "0%";
+        tab.style.boxShadow = "none";
+        container.style.marginLeft = "1%";
+    }
+}
+
+function openIntroductionPage() {
     var tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = "none";
