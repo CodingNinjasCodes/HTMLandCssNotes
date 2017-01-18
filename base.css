@@ -198,6 +198,7 @@ li.active a {
     font-size: inherit;
 }
 .code {
+    padding: 8px;
     font-family: Consolas, "Liberation Mono", Courier, monospace;
     color: rgba(0,0,0,0.60);
     margin-top: 1em;

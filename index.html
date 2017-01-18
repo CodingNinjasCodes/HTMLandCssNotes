@@ -55,7 +55,7 @@ onmouseout="this.style.overflow='hidden'" >
 		  <li onclick="openPage(event, 'forms-advanced')"><a href="javascript:void(0)" class="tablinks">Forms Advanced</a></li>
 		  <li onclick="openPage(event, 'shadows')"><a href="javascript:void(0)" class="tablinks">Shadows</a></li>
 		  <li onclick="openPage(event, 'more-selectors')"><a href="javascript:void(0)" class="tablinks">More Selectors</a></li>
-		  <li onclick="openPage(event, 'colors')"><a href="javascript:void(0)" class="tablinks">Colors</a></li>
+		  <!--<li onclick="openPage(event, 'colors')"><a href="javascript:void(0)" class="tablinks">Colors</a></li>-->
 		  <li onclick="openPage(event, 'attribute-selectors')"><a href="javascript:void(0)" class="tablinks">Attribute Selectors</a></li>
 		  <li onclick="openPage(event, 'transformations')"><a href="javascript:void(0)" class="tablinks">Transformations</a></li>
 		  <li onclick="openPage(event, 'gradients')"><a href="javascript:void(0)" class="tablinks">Gradients</a></li>
@@ -1208,21 +1208,21 @@ Each of the three values can be provided as an integer or as a percentage. The i
         <xmp class="code">
 h1 {color: rgb(255,0,0);}
  
-h2 {color: rgb(218,112,214);}
+h2 {color: rgb(0,128,0);}
 
 h3 {color: rgb(160,82,45);}
 
-h4 {color: rgb(0,0,255);}
+h4 {color: rgb(0,255,255);}
 </xmp>
 <p class="explanationText">will output..</p>
       <div class="output-window">
 <h1 style="color: rgb(255,0,0)">I am red!</h1>
 <br>
-<h2 style="color: rgb(218,112,214)">I am orchid!</h2>
+<h2 style="color: rgb(0,128,0)">I am green!</h2>
 <br>
 <h3 style="color: rgb(160,82,45)">I am sienna!</h3>
 <br>
-<h4 style="color: rgb(0,0,255)">I am blue!</h4>
+<h4 style="color: rgb(0,255,255)">I am aqua!</h4>
 
       </div>
      <p class="explanationText">Also <b>rgb()</b> colors can also be represented by  using <b>CSS 6 Digit Hex Colors</b>.This CSS 6-digit hex color notation allows you to specify RGB colors using hexadecimal values.</p>
@@ -1230,11 +1230,11 @@ h4 {color: rgb(0,0,255);}
 <xmp class="code">
 h1 {color: #ff0000;}
  
-h2 {color: #da70d6;}
+h2 {color: #008000;}
 
 h3 {color: #a0522d;}
 
-h4 {color: #0000ff;}
+h4 {color: #00ffff;}
 </xmp>
 
         <p class="explanationText">Will output same as the above.</p>
@@ -1557,6 +1557,91 @@ p {
 </div>
 		</div>
 
+		<div id="border" class="tabcontent">
+		  <h3 class="heading">Border</h3>
+		  <div class="content">
+		  	<!-- Start writing from here -->
+           <p class="explanationText">   CSS borders have properties like <b>style</b>, <b>color</b> and <b>width</b>.For example, if we wanted to create a "teal" colored, 5 pixel border around an HTML element..</p>
+<xmp class="code">
+h1 {
+    border-color: teal;
+    border-width: 5px;
+    border-style: solid;
+    padding:5px;
+}
+</xmp>
+        <p class="explanationText">will output..</p>
+
+        <div class="output-window">
+        	<h1 style="border-color: teal;padding: 5px; border-width: 5px; border-style: solid">This is a border in CSS</h1>
+        </div>
+        <p class="explanationText">Also, <b>border-color</b>, <b>border-width</b>, <b>border-style</b> can be written together like.. </p>
+<xmp class="code">        
+h1 {
+    border:5px solid teal;
+}
+</xmp> 
+        <p class="explanationText">will output same as the above.</p> 
+
+		<p class="explanationText">CSS <b>border</b> can be styled in so many ways like <b>solid</b>, <b>dotted</b>, <b>dashed</b>..</p>  
+		<div class="output-window">
+<h1 style="border: 5px solid goldenrod; text-align:center; ">Solid Border</h1><br>
+<h2 style="border: 5px dotted black;text-align:center">Dotted Border</h2><br>
+<h3 style="border: 5px dashed green;text-align:center">Dashed Border</h3><br>
+</div>
+        <p class="explanationText">CSS code is..</p>
+        <xmp class="code">
+h1 {
+    border: 5px solid goldenrod;
+    text-align: center;
+}
+ 
+h2 { 
+    border: 5px dotted black;
+    text-align: center;
+ }
+
+h3 { 
+    border: 5px dashed green;
+    text-align: center;
+}
+   </xmp>
+
+        <p class="explanationText">There are more other ways of styling the borders in CSS like double, groove, ridge, inset and outset.But <b>solid</b>, <b>dotted</b>, and <b>dashed </b>are most commomly used.</p>
+
+        <p class="explanationText">Also we can apply <b>border-width</b>, <b>border-color</b>, <b>border-style</b> to the <b>top</b>, <b>bottom</b>, <b>left</b>, and <b>right</b> individually in an element like...</p>
+
+<xmp class="code">
+h1 {
+    border-bottom: 5px solid teal;
+    text-align: center;
+}
+
+h2 {
+    border-top-width:5px;
+    border-top-color:red;
+    border-top-style:dotted;
+    text-align: center;
+}
+</xmp>        
+
+        <p class="explanationText">
+        	This will look like..
+        </p>
+         
+         <div class="output-window">
+         	<h1 style=" border-bottom: 5px solid teal;
+    text-align: center;">BorderBottom</h1><br>
+         	<h1 style="border-top-style:dotted;border-top-width: 5px;border-top-color: goldenrod;
+    text-align: center;">BorderTop</h1>
+    
+         </div>
+
+
+
+		  </div>
+		</div>
+
 		<div id="margin" class="tabcontent">
 		  <h3 class="heading">Margin</h3>
 		  <div class="content">
@@ -1761,36 +1846,22 @@ Also, <b>margin </b> can be applied individually to the <b>left</b>, <b>right</b
   <!--<h5 class="box red-box">PADDING2</h5>-->
 <!--</div>-->
 
-<style>
-.blue-box{
-  border: 3px solid black;
+<div class="output-window">
+<div style="border: 3px solid black;
  padding: 45px;
   background-color: skyblue;
-  margin: 35px;
-}
-
-
-.orange-box{
-  border: 3px solid black;
+  margin: 35px">
+  <div style="border: 3px solid black;
   margin:5px;
   padding:25px;
   text-align: center;
-  background-color: orange;
-}
-
-</style>
-
-
-<div class="blue-box">
-  <div class="orange-box"><h1>h1 element</h1></div>
+  background-color: orange"><h1>h1 element</h1></div>
   </div>
-
+</div>
 <br>
 <p class="explanationText">CSS code is..</p>
 
 <xmp class="code">
-<style>
-
 .blue-box{
   border: 3px solid black;
  padding: 45px;
@@ -1805,8 +1876,6 @@ Also, <b>margin </b> can be applied individually to the <b>left</b>, <b>right</b
   text-align: center;
   background-color: orange;
 }
-
-</style>
 </xmp>
 
 <p class="explanationText">Now, let us change the margin of the <b>orange-box</b> to <b>25px</b>..</p>
@@ -1820,7 +1889,7 @@ Also, <b>margin </b> can be applied individually to the <b>left</b>, <b>right</b
   background-color: orange;
 }
 </xmp>
-
+<div class="output-window">
 <div style=" border: 3px solid black;
  padding: 45px;
   background-color: skyblue;
@@ -1831,12 +1900,12 @@ Also, <b>margin </b> can be applied individually to the <b>left</b>, <b>right</b
   text-align: center;
   background-color: orange"><h1>h1 element</h1></div>
   </div>
-
+</div>
 <p class="explanationText">Now, we can see that the distance b/w the border of <b>orange-box</b> and the border of the <b>blue-box</b> has been increased just by increasing the margin of the <b>orange-box</b> to 25px.</p>
 
 <p class="explanationText">Also, we can add <b>-ve</b> margin values to our <b>orange box</b>, which will result the following..</p>
 
-
+<div class="output-window">
 <div style=" border: 3px solid black;
  padding: 45px;
   background-color: skyblue;
@@ -1847,7 +1916,7 @@ Also, <b>margin </b> can be applied individually to the <b>left</b>, <b>right</b
   text-align: center;
   background-color: orange"><h1>h1 element</h1></div>
   </div>
-
+</div>
 <p class="explanationText">CSS code is..</p>
 
 <xmp class="code">
@@ -1876,7 +1945,7 @@ orange-box</b> individually..</p>
 </xmp>
 
 <p class="explanationText">This will result in...</p>
-
+<div class="output-window">
 <div style=" border: 3px solid black;
  padding: 45px;
   background-color: skyblue;
@@ -1887,16 +1956,10 @@ orange-box</b> individually..</p>
   text-align: center;
   background-color: orange"><h1>h1 element</h1></div>
   </div>
-
+</div>
 <p class="explanationText">It's pretty clear that the margin values <b>5px 15px 25px 35px </b>changes the space around the <b>orange-box</b> by <b>5px 15px 25px 35px</b> respectively!!</p>
 
 <p class="explanationNote"><b>Note:</b>The margin values <b>5px 15px 25px 35px</b> follows a <b>clock-wise</b> order from <b>top right bottom</b> and <b>left</b> respectively.</p>
-
-
-
-
-
-
 		  </div>
 		</div>
 
@@ -1906,9 +1969,10 @@ orange-box</b> individually..</p>
 		  	<!-- Start writing from here -->
 		  	<p class="explanationText">An element's <b>padding</b> controls the amount of space between the element and its border.</p>
 		  	<p class="explanationText">Consider the box below..</p>
-
+                <div class="output-window">
               <div style="text-align: center;border: 3px solid black;background-color: cornflowerblue;margin:45px">
-              	<h1>This is the h1 element in CSSjhvvjkvgvhjjj..</h1>
+              	<h1>This is the h1 element in CSSjjkhh</h1>
+              </div>
               </div>
 
               <p class="explanationText">CSS code is..</p>
@@ -1922,9 +1986,10 @@ orange-box</b> individually..</p>
        <p class="explanationText">As we can see, there is no space b/w the <b>h1 element</b> and the <b>border</b> of the <b>blue-box</b> and it looks a little messy!!</p>
 
         <p class="explanationText">just by adjusting the <b>padding</b> value to <b>25px </b>we get..</p>
-
+             <div class="output-window">
              <div style="text-align: center;border: 3px solid black;background-color: cornflowerblue;margin:45px; padding: 25px">
-              	<h1>This is the h1 element in CSSjhvvjkvgvhjjj..</h1>
+              	<h1>This is the h1 element in CSSjjkhh</h1>
+              </div>
               </div>
 <xmp class="code">
 .blue-box {
@@ -1951,107 +2016,190 @@ orange-box</b> individually..</p>
 }
 </xmp>
 <p class="explanationText">Will generate..</p>
-
-
+              <div class="output-window">
              <div style="text-align: center;border: 3px solid black;background-color: cornflowerblue;margin:45px; padding: 5px 15px 25px 35px">
-              	<h1>This is the h1 element in CSSjhvvjkvgvhjjj..</h1>
+              	<h1>This is the h1 element in CSSjjkhh</h1>
               </div>
-
+               </div>
               <p class="explanationText">The padding value changes to <b>5px 15px 25px 35px</b> from the <b>top</b>, <b>right</b>, <b>bottom</b>, and <b>left</b> respectively.</p>
              <!-- <p class="explanationNote"><b>Note:</b>There's no <b>-ve </b>padding value can be given in CSS.</p>-->
 		 </div>
 		</div>
 
 
-		<div id="border" class="tabcontent">
-		  <h3 class="heading">Border</h3>
-		  <div class="content">
-		  	<!-- Start writing from here -->
-           <p class="explanationText">   CSS borders have properties like <b>style</b>, <b>color</b> and <b>width</b>.For example, if we wanted to create a "teal" colored, 5 pixel border around an HTML element..</p>
-<xmp class="code">
-h1 {
-    border-color: teal;
-    border-width: 5px;
-    border-style: solid;
-    padding:5px;
-}
-</xmp>
-        <p class="explanationText">will output..</p>
 
-        <div class="output-window">
-        	<h1 style="border-color: teal;padding: 5px; border-width: 5px; border-style: solid">This is a border in CSS</h1>
-        </div>
-        <p class="explanationText">Also, <b>border-color</b>, <b>border-width</b>, <b>border-style</b> can be written together like.. </p>
-<xmp class="code">        
-h1 {
-    border:5px solid teal;
-}
-</xmp> 
-        <p class="explanationText">will output same as the above.</p> 
-
-		<p class="explanationText">CSS <b>border</b> can be styled in so many ways like <b>solid</b>, <b>dotted</b>, <b>dashed</b>..</p>  
-		<div class="output-window">
-<h1 style="border: 5px solid goldenrod; text-align:center; ">Solid Border</h1><br>
-<h2 style="border: 5px dotted black;text-align:center">Dotted Border</h2><br>
-<h3 style="border: 5px dashed green;text-align:center">Dashed Border</h3><br>
-</div>
-        <p class="explanationText">CSS code is..</p>
-        <xmp class="code">
-h1 {
-    border: 5px solid goldenrod;
-    text-align: center;
-}
- 
-h2 { 
-    border: 5px dotted black;
-    text-align: center;
- }
-
-h3 { 
-    border: 5px dashed green;
-    text-align: center;
-}
-   </xmp>
-
-        <p class="explanationText">There are more other ways of styling the borders in CSS like double, groove, ridge, inset and outset.But <b>solid</b>, <b>dotted</b>, and <b>dashed </b>are most commomly used.</p>
-
-        <p class="explanationText">Also we can apply <b>border-width</b>, <b>border-color</b>, <b>border-style</b> to the <b>top</b>, <b>bottom</b>, <b>left</b>, and <b>right</b> individually in an element like...</p>
-
-<xmp class="code">
-h1 {
-    border-bottom: 5px solid teal;
-    text-align: center;
-}
-
-h2 {
-    border-top-width:5px;
-    border-top-color:red;
-    border-top-style:dotted;
-    text-align: center;
-}
-</xmp>        
-
-        <p class="explanationText">
-        	This will look like..
-        </p>
-         
-         <div class="output-window">
-         	<h1 style=" border-bottom: 5px solid teal;
-    text-align: center;">BorderBottom</h1><br>
-         	<h1 style="border-top-style:dotted;border-top-width: 5px;border-top-color: goldenrod;
-    text-align: center;">BorderTop</h1>
-    
-         </div>
-
-
-
-		  </div>
-		</div>
 
 		<div id="border-radius" class="tabcontent">
 		  <h3 class="heading">Border Radius</h3>
 		  <div class="content">
 		  	<!-- Start writing from here -->
+		  	<p class="explanationText">Consider the box below..</p>
+             <div class="output-window">
+        	<div style="    	
+    background: #008080;
+    padding: 20px; 
+    width: 200px;
+    height: 150px"></div>
+        </div>  	
+        <p class="explanationText">CSS code is..</p>
+<xmp class="code">
+div {
+	background: #008080;
+    padding: 20px; 
+    width: 200px;
+    height: 150px
+}
+</xmp>        
+		  	<p class="explanationText">The <b>border-radius</b> property is used to add rounded corners to an element.</p>
+		  	<p class="explanationText">look at the CSS code below..</p>
+<xmp class="code">
+div{
+    border-radius: 35px;
+    background: #008080;
+    padding: 20px; 
+    width: 200px;
+    height: 150px; 
+}
+</xmp>		
+        <p class="explanationText">This will output..</p>
+        <div class="output-window">
+        	<div style="border-radius: 35px;
+    background: #008080;
+    padding: 20px; 
+    width: 200px;
+    height: 150px"></div>
+        </div>  	
+            
+        <p class="explanationText">Note the corners are slightly "curved" around the edges. Pretty cool huh?!..Well that's one way to apply the <b>border-radius </b>property.</p>
+        <p class="explanationText">Also, there are <b>four-valued</b>, <b>three-valued</b>, <b>two-valued</b>, and <b>one-valued</b> border-radius properties which can be specified individually according to our need.</p>
+        
+        <p class="explanationText">Consider the following..</p>
+<xmp class="code">
+div {
+    border-radius: 25px 60px 40px 15px; 
+    background: #008080;
+    padding: 20px; 
+    width: 200px;
+    height: 150px; 
+}
+</xmp>
+<p class="explanationText">border-radius: <b>25px 60px 40px 15px</b>; is a <b>four-valued</b> CSS border-radius property which applies individually to the <b>top-left</b>, <b>top-right</b>, <b>bottom-right</b>, and <b>bottom-left</b> respectively..</p>
+<div class="output-window">
+	<div style="border-radius: 25px 60px 40px 15px; 
+    background: #008080;
+    padding: 20px; 
+    width: 200px;
+    height: 150px;"></div>
+</div>
+<br>
+<xmp class="code">
+ div { 
+     border-radius: 25px 60px 40px;
+     background: #008080;
+     padding: 20px; 
+     width: 200px;
+     height: 150px; 
+}
+</xmp>
+
+<p class="explanationText">border-radius: <b>25px 60px 40px</b>; is a <b>three-valued</b> CSS border-radius property which applies to the <b>top-left</b>(25px), <b>top-right</b>(60px), <b>bottom-left</b>(60px), and <b>bottom-right</b>(40px) respectively..</p>
+
+<div class="output-window">
+	<div style="border-radius: 25px 60px 40px; 
+    background: #008080;
+    padding: 20px; 
+    width: 200px;
+    height: 150px;"></div>
+</div>
+<br>
+<xmp class="code">
+div {
+    border-radius: 25px 60px;
+    background: #008080;
+    padding: 20px; 
+    width: 200px;
+    height: 150px; 
+}
+</xmp>
+
+<p class="explanationText">border-radius: <b>25px 60px</b>; is a <b>two-valued</b> CSS border-radius property which applies to the <b>top-left</b>(25px), <b>bottom-right</b>(25px), <b>bottom-left</b>(60px), and <b>top-right</b>(60px) respectively..</p>
+
+<div class="output-window">
+	<div style="border-radius: 25px 60px; 
+    background: #008080;
+    padding: 20px; 
+    width: 200px;
+    height: 150px;"></div>
+</div>
+
+
+        <p class="explanationNote"><b>Note</b>:These border-radius properties can also be applied another way using <b>border-top-left-radius</b>, <b>border-top-right-radius</b>, <b>border-bottom-left-radius</b>, and <b>border-bottom-right-radius</b>.</p>
+
+        <p class="explanationText">You may also specify the radiuses in which the corner is rounded by. In other words, the rounding doesn't have to be perfectly circular, it can be elliptical. This is done using a slash ("/") between two values.</p>
+<xmp class="code">
+div {
+    border-radius: 10px/30px; /* horizontal radius / vertical radius */
+    background: teal;
+    width:20%;
+    height:20%;
+    padding:40px;
+}
+
+div {
+    border-radius: 30px/10px; /* horizontal radius / vertical radius */
+    background: teal;
+    width:20%;
+    height:20%;
+    padding:40px;
+}
+</xmp>
+
+
+<div style="display: flex;justify-content: space-around;" class="output-window">
+         <div style="
+  border-radius: 10px/30px; /* horizontal radius / vertical radius */
+background: teal;
+  width:20%;
+  height:20%;
+  padding:40px"></div>
+
+<div style="
+  border-radius: 30px/10px; /* horizontal radius / vertical radius */
+  background: teal;
+  width:20%;
+  height:20%;
+  padding:40px;">	
+</div>
+
+</div>
+         
+       <p class="explanationText">Some applications of <b>border-radius</b> property are given below..</p>
+<div style="display: flex;justify-content: space-around">
+        <div style="border: dotted;
+        width: 30%;
+  border-width: 10px 4px;
+  border-radius: 10px 40px;text-align: center;background-color: beige;">border: dotted;<br>
+  border-width: 10px 4px;<br>
+  border-radius: 10px 40px;<br>
+  text-align: center;<br>background-color: beige;<br>width: 30%;</div>
+
+
+        <div style="border: dashed;
+ width: 30%;
+  border-width: 2px 4px;
+  border-radius: 40px;text-align: center;background-color: bisque">border: dashed;<br>
+  border-width: 2px 4px;<br>
+  border-radius: 40px;<br>
+  background-color: bisque<br>text-align:center<br>width: 30%;;
+        	</div>
+        <div style="
+        width: 30%;
+  border-radius: 40px 10px;background-color: cornflowerblue;text-align: center;">
+        	border-radius: 40px 10px;<br>
+        	background-color:cornflowerblue;<br>
+        	text-align: center;<br>width: 30%;
+        </div>
+</div>
 		  </div>
 		</div>
 
@@ -2246,9 +2394,86 @@ ninjas.in/"></xmp>
 		</div>
 
 		<div id="class-and-id-selectors" class="tabcontent">
-		  <h3 class="heading">Class and Id Selectors</h3>
+		  <h3 class="heading">Class and ID Selectors</h3>
+
 		  <div class="content">
 		  	<!-- Start writing from here -->
+
+         <p class="explanationText">We can't create our own HTML tags those are pretty standard!.But the intention behind it can be fulfilled easily just by using <b>class</b> and <b>id</b> selectors.</p>
+
+          <p class="explanationHeading">Class Selector</p><br>
+          <p class="explanationText">The class selector is used to select a group of elements belongs to a same class like..</p>
+<xmp class="code">
+<p class="red">I am red1</p>
+<p class="blue">I am blue1</p>
+<p class="red">I am red2</p>
+<p class="blue">I am blue2</p>
+
+</xmp>
+
+        <p class="explanationText">Let's suppose if we want to give a red color to the elements that falls under the <b>red</b> class and the color blue to the elements that falls under the <b>blue</b> class this can be done by using class selector..</p>
+          
+<xmp class="code">
+.red{
+	color:red;
+}
+
+.blue{
+	color:blue;
+}
+</xmp>
+         <p class="explanationText">This will generate..</p>
+         <div class="output-window">
+         	<p style="color: red">I am red1</p><br>
+         	<p style="color: blue">I am blue1</p><br>
+         	<p style="color: red">I am red2</p><br>
+         	<p style="color: blue">I am blue2</p>
+         </div>
+      
+        <p class="explanationText">The <b>.</b> is called as the <b>class</b> selector and is used to select the elements that falls under the same class.</p>
+
+
+        <p class="explanationHeading">ID Selectors</p><br>
+
+        <p class="explanationText">The class selector selects a group of elements belongs to the same class..On the other hand the <b>ID selector</b> is much more specific.It is used to select those elements having a specific id..</p>
+
+<xmp class="code">
+<p id="one">This is id one!</p>
+<p id="two">This is id two!</p>
+<p id="three">This is id three!</p>
+<p id="four">This is id four!</p>
+</xmp>
+
+
+        <p class="explanationText">If we want to change the font of the element that belongs to the id <b>one</b>, change the color of element that belongs to id <b>two</b>,change the background-color of element to green that belongs to id <b>three</b> and change the size of the element that belongs to an id of <b>four</b>..</p>
+
+<xmp class="code">
+#one {
+     font-family: monospace,Arial;	
+}
+
+#two {
+	 background-color: teal;
+}
+
+#three {
+	   color: green;
+}
+
+#four {
+	  font-size: 30px;
+}
+</xmp>             
+
+        <p class="explanationText">This will generate..</p>
+        <div class="output-window">
+        <p style="font-family: monospace,Arial;">This is id one!</p><br>
+        <p style="background-color: teal">This is id two!</p><br>
+        <p style="color: green;">This is id three!</p><br>
+        <p style="font-size: 30px;">This is id four!</p>  	
+        </div>
+
+      <p class="explanationText">Also known as the <b>id selector</b> the <b>#</b> symbol is used to select an element that belongs to a particular id.</p>
 		  </div>
 		</div>
 
@@ -2279,7 +2504,7 @@ ninjas.in/"></xmp>
 
 			</div>
 		</div>
-
+        
 		<div id="pseudo-classes" class="tabcontent">
 		  <h3 class="heading">Pseudo Classes</h3>
 		  <div class="content">
@@ -2572,6 +2797,79 @@ Regular text.<samp> Output-sample text.</samp></p></xmp>
 		  <h3 class="heading">Specificity</h3>
 		  <div class="content">
 		  	<!-- Start writing from here -->
+
+       <p class="explanationText">Consider the code below..</p>
+
+<xmp class="code">
+h2 {
+   color: red;
+}
+
+h2 {
+   color: blue;
+}
+</xmp>
+
+        <p class="explanationText">which results in..</p>
+        <div class="output-window">
+        	<h2 style="color: blue;">The quick brown fox jumps over the lazy dog!..</h2>
+        </div>
+
+        <p class="explanationText">Although the color property is applied on the same tag <b>h2</b>, but the later one <b>color: blue;</b> property will overwrite the previous one!</p>
+
+        
+
+        <p class="explanationText">Consider the following CSS code..</p>
+<xmp class="code">
+div h2{
+	color:green;
+}
+
+ h2{
+	color:red;
+}
+</xmp>        
+        <p class="explanationText">This will output..</p>
+        <div class="output-window">
+        	<h2 style="color:green">The quick brown fox jumps over the lazy dog!..</h2>
+        </div>
+        
+        <p class="explanationText">This time the later one doesn't took the charm!.The first one will be considered because it is more <b>specific</b> than the second one.Although they were intended to be applied on the same element <b>h2</b>.</p>
+
+        <p class="explanationText">In CSS when the code becomes a little messy, then there is a greater chance of conflict between the CSS properties, to resolve this conflict the CSS <b>specificity</b> comes into play!. </p>
+
+        
+        <ul class="explanationText">
+        	<li>Any <b>HTML element</b> will have a specificity of <b>1</b>.</li>
+        	<li>Any <b>class selector</b> will have a specificity of <b>10</b>.</li>
+        	<li>Any <b>id selector</b> will have a specificity of <b>100</b>.</li>
+        </ul>
+             
+             <p class="explanationText">In the previous CSS code the specificity of <b>div p</b> (1 for HTML element+1 for HTML element =2) is more than that of <b>p </b>(1 for HTML element=1), hence the <b>div p</b> is more specific and it's property will come into play. 
+              </p>
+
+
+            <p class="explanationText">Consider the following ..</p>
+<xmp class="code">
+#one h2{
+color: blue;
+}
+
+.box #one h2{
+  color:brown;
+}
+
+h2 {
+  color: red;
+}
+</xmp>
+       <p class="explanationText">outputs..</p>
+       <div class="output-window">
+       <h2 style="color: brown;">The quick brown fox jumps over the lazy dog!..</h2>	
+       </div>
+
+      <p class="explanationText">Get it?!..The <b>.box #one h2 </b>will lead because of the specificity of <b>.box #one h2 </b>(<b>10</b> for class selector <b>.box</b> + <b>100</b> for the <b>#one</b> id selector + <b>1</b> for the <b>h2</b> element = <b>111</b>).</p>
+
 		  </div>
 		</div>
 
@@ -2579,6 +2877,169 @@ Regular text.<samp> Output-sample text.</samp></p></xmp>
 		  <h3 class="heading">Display Properties</h3>
 		  <div class="content">
 		  	<!-- Start writing from here -->
+
+            <p class="explanationText">CSS <b>display</b> properties include the following properties</p>
+            <ul class="explanationText">
+            	<li>inline</li>
+                <li>block</li>
+                <li>inline-block</li>
+               <!-- <li>flex</li>-->
+                <li>none</li>
+            </ul>
+           <p class="explanationHeading">inline</p>
+           <p class="explanationText">The <b>display:inline </b>property displays the elements in an inline flow. An inline element doesn't starts in a new line.Some examples of inline elements are:</p>
+       
+           <ul class="explanationText">
+           	<li>span</li>
+           	<li>anchor(links)</li>
+           <li>img</li>
+           <li>em</li>
+           </ul>
+
+<xmp class="code"><style>
+li{
+   display: inline;
+}
+</style>
+
+<ul>
+   <li>one</li>
+   <li>two</li>
+   <li>three</li>
+   <li>four</li>
+</ul>
+</xmp>
+
+        <p class="explanationText">This will result in..</p>
+        <div class="output-window">
+        	<div>
+            one two three four
+        	</div>
+        </div>
+        <p class="explanationText">As we can see that the <b>li </b>element has been displayed in a line due to the <b>inline </b>property.</p>
+
+        <p class="explanationHeading">block</p>
+        <p class="explanationText">A block-level element starts on a new line and stretches out to the left and right as far as it can.Here are the few examples of block level elements.A display property with a value of "block" results in a line break between the two elements.</p>
+        <ul class="explanationText">
+        <li>form</li>
+        <li>header</li>
+        <li>footer</li>
+        <li>div</li>
+        <li>header-elements(h1 - h6)</li>
+        <li>p</li>
+        <li>section</li>
+        </ul>
+
+<xmp class="code"><style>
+div {
+height:100px;
+height:100px;
+background:teal;
+}	
+</style>
+
+<div id="one">
+</div>
+<br>
+<div id="two">
+</div>
+</xmp>
+        <p class="explanationText">This will result in..</p>
+        <div class="output-window">
+        	<div style="height:100px;height:100px;background:teal;">div 1</div><br>
+        	<div style="height:100px;height:100px;background:teal;">div 2</div>
+        </div>
+
+         <p class="explanationText">As we can see that the <b>div 2 </b>element starts from the next line, just because they are <b>block-level </b>elements!</p>
+         <p class="explanationText">But consider the following<b> inline-element </b>below.</p>
+
+<xmp class="code">
+<span>The quick brown fox</span> <span>jumps over the lazy dog!</span>
+</xmp>
+
+        <div class="output-window">
+        	<p>The quick brown fox jumps over the lazy dog!.</p>
+        </div>
+
+        <p class="explanationText">which is quite reasonable...as <b
+        >span </b>is an <b>inline-element</b>. Now just by applying <b>display:block; </b>we get..</p>
+<xmp class="code">span {
+  display: inline;
+}
+</xmp>
+        <div class="output-window">
+         <p>The quick brown fox</p> 
+         <p>jumps over the lazy dog!</p>	
+        </div>
+
+           <p class="explanationText">It is clearly seen that the <b>span </b>element starts from the next line.</p>
+
+        <p class="explanationHeading">inline-block</p>
+
+        <p class="explanationText">We can create a grid of boxes that fills the browser width and wraps nicely.This can be done using with inline-block, inline-block elements are like inline elements but they can have a width and height.</p>
+
+<xmp class="code">.box{
+  width: 200px;
+  height: 100px;
+  margin: 1em;
+  color: cornflowerblue;
+}
+</xmp>
+        <p class="explanationText">This will result in..</p>
+        <div class="output-window">
+        	<div style="height:100px;width:200px;margin:1em;background-color:cornflowerblue;"></div>
+        	<div style="height:100px;width:200px;margin:1em;background-color:cornflowerblue;"></div>
+        	<div style="height:100px;width:200px;margin:1em;background-color:cornflowerblue;"></div>
+        	<div style="height:100px;width:200px;margin:1em;background-color:cornflowerblue;"></div>
+        </div>
+
+        <p class="explanationText">now applying <b>display: inline-block; </b>we get..</p>
+        
+        <div class="output-window">
+        	<div style="height:100px;width:200px;margin:1em;background-color:cornflowerblue;display: inline-block;"></div>
+        	<div style="height:100px;width:200px;margin:1em;background-color:cornflowerblue;display: inline-block;"></div>
+        	<div style="height:100px;width:200px;margin:1em;background-color:cornflowerblue;display: inline-block;"></div>
+        	<div style="height:100px;width:200px;margin:1em;background-color:cornflowerblue;display: inline-block;"></div>
+        </div>
+
+            <p class="explanationText">The boxes adjust themselves according to the browser window itself!</p>
+        <p class="explanationHeading">none</p>
+        <p class="explanationText">The <b>display:none; </b>property hides the elements in a browser.</p>
+<xmp class="code">
+.box{
+  width: 200px;
+  height: 100px;
+  margin: 1em;
+  color: cornflowerblue;
+  display: none;
+}
+</xmp>
+
+        <p class="explanationText">Doesn't show anything at all!..</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		  </div>
 		</div>
 
@@ -2844,6 +3305,130 @@ Regular text.<samp> Output-sample text.</samp></p></xmp>
 		  <h3 class="heading">Shadows</h3>
 		  <div class="content">
 		  	<!-- Start writing from here -->
+              
+              <p class="explanationText"> CSS allows us to give shadows to our HTML elements.There are two ways by which we can give shadows to our HTML elements like..</p>
+              <ul class="explanationText">
+              <li>text-shadow</li>
+              <li>box-shadow</li>
+              </ul>
+              <p class="explanationHeading">text-shadow</p>
+               <p class="explanationText">We can add shadows to our text using the <b>text-shadow</b> property.</p>
+<xmp class="code">
+#h1 {
+   text-shadow: 3px 3px;
+   font-size: 30px;
+}
+</xmp>
+
+       <p class="explanationText">It will result in..</p>
+       <div class="output-window">
+        <h1 style="text-shadow: 3px 3px;">TEXT_SHADOW</h1>
+       </div>
+          <p class="explanationText">All this is due to the <b>text-shadow</b> property.The <b>text-shadow: 3px 3px;</b> the first <b>3px</b> value is horizontal shadow, the next <b>3px </b>is vertical shadow.</p>
+
+        <p class="explanationText">
+        	Check this out..
+        </p>
+
+<xmp class="code">
+# h1 {
+	text-shadow: 3px 3px 5px;
+}
+</xmp>        
+
+<p class="explanationText">results in..</p>
+
+<div class="output-window">
+<h1 style="text-shadow: 3px 3px 5px">TEXT_SHADOW</h1>
+</div>
+
+           <p class="explanationText">The third parameter <b>5px</b> adds a <b>blur</b> effect to the text.</p>
+
+          <p class="explanationText">We can also add a <b>color</b> value as a fourth parameter to our text.</p>
+<xmp class="code">
+#h1{
+    text-shadow: 3px 3px 5px blue;
+}
+
+#h2{
+    text-shadow: 3px 3px 5px green;	
+}
+</xmp>
+
+        <div class="output-window">
+        	<h1 style="text-shadow: 3px 3px 5px blue;">TEXT_SHADOW</h1><br>
+        	<h2 style="text-shadow: 3px 3px 5px green;">TEXT_SHADOW</h2>
+        </div>
+<br>
+
+        <div class="explanationHeading">box-shadow</div><br>
+        <p class="explanationText">Just like text we can also give a "shadow" to our box using the <b>box-shadow</b> property.</p>
+        <p class="explanationText">look at the CSS code below..</p>
+
+<xmp class="code">
+div {
+     height:100px;
+     width:100px;
+     background:peru;
+     box-shadow: 30px -16px burlywood;
+}
+</xmp>        
+<p class="explanationText">outputs..</p>
+<div class="output-window">
+	<div style="
+  height:100px;
+  width:100px;
+  background:peru;
+  box-shadow: 30px -16px burlywood;"></div>
+</div>
+
+        <p class="explanationText"><b> box-shadow: 30px -16px burlywood;</b> The first value <b>30px</b> is the horizontal shadow and the corresponding second value <b>-16px</b> is the vertical shadow and the corresponding third value gives it a color of <b>burlywood!!</b></p>
+
+        <p class="explanationNote"><b>Note:</b>-ve values are allowed in the box shadow property.</p>
+         
+<p>We can also add <b>blur-radius</b> to our box just by adding a third value <b>5px </b>to our box-shadow property...</p>
+
+<xmp class="code">
+div {
+    height:100px;
+    width:100px;
+    background:peru;
+    box-shadow: 10px 5px 5px burlywood;
+}
+</xmp>
+
+<p class="explanationText">outputs...</p>
+          <div class="output-window">
+        <div style="
+  height:100px;
+  width:100px;
+  background:peru;
+  box-shadow: 10px 5px 5px burlywood;"></div>
+</div>
+
+<p class="explanationText">This shadow can also be "spread" by using a fourth value in our box-shadow property..</p>
+
+<xmp class="code">
+div {
+    height:100px;
+    width:100px;
+    background:peru;
+    box-shadow: 10px 5px 2px 5px rgba(222,184,135,0.9);
+}
+</xmp>
+
+          <div class="output-window">
+        <div style="
+  height:100px;
+  width:100px;
+  background:peru;
+  box-shadow: 10px 5px 2px 5px rgba(222,184,135,0.9);"></div>
+</div>
+
+    <p class="explanationText">As we can see that the area of box-shadow has been increased, just by adding a fourth value of <b>5px</b> in our box-shadow property!</p>
+
+
+
 		  </div>
 		</div>
 
@@ -2854,17 +3439,153 @@ Regular text.<samp> Output-sample text.</samp></p></xmp>
 		  </div>
 		</div>
 
-		<div id="colors" class="tabcontent">
+	<!--	<div id="colors" class="tabcontent">
 		  <h3 class="heading">Colors</h3>
 		  <div class="content">
 		  	<!-- Start writing from here -->
-		  </div>
+	<!--	  </div>
 		</div>
-
+-->
 		<div id="attribute-selectors" class="tabcontent">
 		  <h3 class="heading">Attribute Selectors</h3>
 		  <div class="content">
 		  	<!-- Start writing from here -->
+            <p class="explanationText">So far we have seen selectors like tag selectors, class and id selectors.There is another kind of selectors in CSS called as the <b>Attribute Selectors</b> which selects the elements based on their attributes.</p>
+
+           <p class="explanationHeading">The <b>[attribute]</b> selector.</p>
+<xmp class="code">
+<style>
+ h2[lang] {  
+  color:olive;
+}
+</style>
+
+<h2 title="hello">This is line one...</h2><br>
+<h2 lang="en">This is line two....</h2><br>
+<h2>This is line three....</h2>
+</xmp>
+ <p class="explanationText"> will select the element that has a lang attribute.</p>
+
+           <div class="output-window">
+           <h2>This is line one...</h2><br>
+           	<h2 style="color: olive">This is line two....</h2><br>
+           	<h2>This is line three...</h2>
+           </div>
+
+        <p class="explanationHeading">The <b>"value"</b> selector.</p>
+<xmp class="code">
+<style>
+button[type="three"] {
+  background:aqua;  /*button value is reset*/
+}
+</style>
+
+<button type="one">button-one</button>
+<button type="two">button-two</button>
+<button type="three">button-three</button>
+
+</xmp>
+                 <p class="explanationText">will select the elements that has the type equivalent to "three".</p>
+
+        <div class="output-window">
+        <button style="height: 35px;width: 100px;">button-one</button>	
+        <button style="height: 35px;width: 100px;">button-two</button>	
+        <button style="background: aqua;height: 35px;width: 100px;">button-three</button>	
+        </div>
+        <p class="explanationHeading">The <b>~</b> attribute selector</p>
+        
+<xmp class="code">
+<style>
+input[value~="the"] /* includes whitespace the*/
+{
+  background: peru;
+}
+</style>
+
+<input value="From newb to the ninja!"><br>
+<input value="From newb to a ninja!"><br>
+
+</xmp>
+        <p class="explanationText">will select the element that includes "the" string token.</p>
+         <div class="output-window">
+         <input value="From newb to the ninja!" style="background:peru;font-size: 25px;"><br><br>
+         <input value="From newb to a ninja!" style="font-size: 25px;">     	
+         </div>
+
+        <p class="explanationHeading">The <b>^</b> attribute selector</p>
+<xmp class="code">
+<style>
+a[href^="http"] /* leads with http*/
+{
+  color:green;
+}
+</style>
+
+<a href="www.codingninjas.in">www.codingninjas.in</a>
+<a href="http://www.codingninjas.com">http://www.codingninjas.com</a>
+<a href="www.codingninjas.inc">www.codingninjas.inc</a>
+</xmp>
+        <p class="explanationText">this selects the element whose attribute value leads with "http".</p>
+        <div class="output-window">
+        <a href="www.codingninjas.in">www.codingninjas.in</a><br>
+        <a href="http://www.codingninjas.com" style="color: green;">http://www.codingninjas.com</a><br>
+        <a href="www.codingninjas.inc">www.codingninjas.inc</a> 	
+        </div>
+
+        <p class="explanationHeading">The <b>$</b> attribute selector</p>
+<xmp class="code">
+<style>
+a[href$="inc"]/* ends with inc*/
+{
+  color:green;
+}
+</style>
+</xmp>  
+        <p class="explanationText">will select the element whose href value ends with "inc"</p>
+        <div class="output-window">
+         <a href="www.codingninjas.in">www.codingninjas.in</a>
+         <a href="www.codingninjas.com">www.codingninjas.com</a>
+         <a href="www.codingninjas.inc" style="color: green;">www.codingninjas.inc</a>
+   </div>
+
+        <p class="explanationHeading">The <b>^</b> attribute selector</p>
+
+<xmp class="code">
+<style>
+  p[title*="ond"]/* value that has a substring "ond" in it*/
+{
+  color:orange;
+}
+</style>
+
+  <p title="first value">value1</p>
+  <p title="second value">value2</p>
+  <p title="third value">value3</p>
+</xmp>  
+        <p class="explanationText">will select the element whose attribute value has a substring of "ond" in it.</p>
+        <div class="output-window">
+        	<p>value1</p>
+        	<p style="color:orange;">value2</p>
+        	<p>value3</p>
+        </div>
+
+        <p class="explanationHeading">The <b>|</b> attribute selector</p>
+<xmp class="code">
+<style>
+p[lang|="fr"] /*hypen seprated fr tag*/
+{
+  color:navy;
+}
+</style>
+
+<p lang="fr-ed">para1</p>
+<p lang="jk-mn">para2</p>
+</xmp>
+         <p class="explanationText">will select the element whose attribute value is seprated by <b>hyphen</b> and matches the specified value in the CSS code.</p>
+        <div class="output-window">
+        	<p style="color: navy;">para1</p>
+        	<p>para2</p>
+        </div>
 		  </div>
 		</div>
 
@@ -2872,6 +3593,131 @@ Regular text.<samp> Output-sample text.</samp></p></xmp>
 		  <h3 class="heading">Transformations</h3>
 		  <div class="content">
 		  	<!-- Start writing from here -->
+
+            <p class="explanationText">CSS transition includes following properties..</p>
+            <ul class="explanationText">
+            	<li>translate</li>
+            	<li>skew</li>
+            	<li>rotate</li>
+            	<li>scale</li>
+            	<li>matrix</li>
+            </ul>
+
+
+        <p class="explanationHeading">translate</p>
+        <p class="explanationText">The <b>translate </b>method changes the coordinates of an element according to the specified value.</p>
+<xmp class="code">#previously {
+  height:120px;
+  width:120px;
+  background:rgba(0,128,0,0.3);
+}
+
+#now {
+  height:120px;
+  width:120px;
+  background:rgba(0,128,0,0.8);
+ -webkit-transform:translate(30px,10px); /*for chrome or safari browsers*/
+ -ms-transform:translate(30px,10px);/* for IE 9 and above*/
+}
+</xmp>
+        <p class="explanationText">This will change the position of the box <b>30px</b> right and <b>10px</b> bottom.</p>
+        <div class="output-window" style="height: 150px;">
+	        	<div style="height:120px;width:120px;background:rgba(0,128,0,0.3);">previously
+	        		<div style="height:120px;width:120px;background:rgba(0,128,0,0.8);transform:translate(30px,10px);">now</div>
+	        		</div>
+        </div>
+
+
+        <p class="explanationHeading">scale</p>
+        <p class="explanationText">The <b>scale </b>property changes the size of an element.</p>
+<xmp class="code">#scale {
+  height:120px;
+  width:120px;
+  background:rgba(0,128,0,0.8);
+ -webkit-transform: scale(2,1.1); /*for chrome or safari browsers*/
+ -ms-transform: scale(2,1.1); /*for IE 9 and above*/
+}</xmp>
+            <p class="explanationText">The <b>scale (2,1.1)</b> will increase the width to twice and the height to 1.1 times.</p>
+                <div class="output-window" style="display: flex;justify-content: space-around;padding: 100px;">
+	        	<div style="height:120px;width:120px;background:rgba(0,128,0,0.3);">previously
+	        <div style="height:120px;width:120px;background:rgba(0,128,0,0.8);transform:scale(2,2.5);">now</div></div>
+	      
+        </div>
+
+ 
+        <p class="explanationHeading">rotate</p>
+        <p class="explanationText">The <b>rotate</b> method rotates an element clockwise or anticlockwise according to the specified value.</p>
+<xmp class="code">#rotate {
+  height:120px;
+  width:120px;
+  background:rgba(0,128,0,0.8);
+ -webkit-transform: rotate(30deg); /*for chrome or safari browsers*/
+ -ms-transform: rotate(30deg); /*for IE 9 and above */
+}</xmp>
+          <p class="explanationText">will rotate the element by <b>30 deg</b>.</p>
+        <div class="output-window" style="display: flex;justify-content: space-around; padding: 30px;">
+        	<div style="height:120px;width:120px;background:rgba(0,128,0,0.3);">previously
+        	<div style="height:120px;width:120px;background:rgba(0,128,0,0.8); transform: rotate(30deg);">now</div></div>
+        </div>	
+
+
+                <p class="explanationHeading">skew</p>
+                <p class="explanationText">The <b>skew </b>property skews an element along the X and Y axis respectively.</p>
+<xmp class="code">#transformed {
+  height:120px;
+  width:120px;
+  background:rgba(0,128,0,0.8);
+ -webkit-transform: skew(-20deg,-30deg); /*for chrome or safari browsers*/
+ -ms-transform: skew(-20deg,-30deg); /*for IE 9 and above*/
+}
+</xmp>
+
+                <div class="output-window" style="display: flex;justify-content: space-around;padding: 40px;">
+        	<div style="height:120px;width:120px;background:rgba(0,128,0,0.8);">original</div>
+        	<div style="height:120px;width:120px;background:rgba(0,128,0,0.8); transform: skew(-20deg,-30deg);">transformed	        	
+        </div>
+</div>
+               <p class="explanationText">also we can also apply <b>skew </b>individually to the X,Y coordinates as well..</p>
+<xmp class="code">#skewx { 
+  height:120px;
+  width:120px;
+  background:rgba(0,128,0,0.8);
+ -webkit-transform: skewX(-20deg);
+}
+
+#skewy { 
+  height:120px;
+  width:120px;
+  background:rgba(0,128,0,0.8);
+ -webkit-transform: skewY(-30deg);
+}
+</xmp>
+
+        <div class="output-window" style="display: flex; justify-content: space-around;padding: 40px;">
+        <div style="height:120px;width:120px;background:rgba(0,128,0,0.8);transform: skewX(-20deg);">SkewX</div>
+       <div style="height:120px;width:120px;background:rgba(0,128,0,0.8);transform: skewY(-30deg);">SkewY</div>
+        </div>       
+       
+       <p class="explanationHeading">matrix</p>        
+        <p class="explanationText">we can apply all the above properties together using the <b>matrix </b>method.</p>
+<xmp class="code">#matrix {
+  height:120px;
+  width:120px;
+  background: green;
+ -webkit-transform: matrix(1, -0.3, 0, 1, 0, 0);/* for safari and chrome browsers*/
+ -ms-transform: matrix(1, -0.3, 0, 1, 0, 0); /*for IE 9 and above*/
+}
+</xmp>
+
+        <p class="explanationText">The matrix method follows the order like <b>matrix (scaleX(),skewY(),skewX(),scaleY(),translateX(),translateY())</b>.</p>
+        <div class="output-window" style="display: flex; justify-content: space-around;padding: 20px;">
+        <div style="height:120px;
+  width:120px;
+  background: rgba(0,128,0,0.8);">original</div>
+        	<div style="height:120px;width:120px;background: rgba(0,128,0,0.8);-webkit-transform: matrix(1, -0.3, 0, 1, 0, 0);">#matrix	
+        	</div>
+        </div>
+
 		  </div>
 		</div>
 
@@ -2879,6 +3725,217 @@ Regular text.<samp> Output-sample text.</samp></p></xmp>
 		  <h3 class="heading">Gradients</h3>
 		  <div class="content">
 		  	<!-- Start writing from here -->
+           <p class="explanationText">For creating transitions in CSS b/w two or more colors <b>gradients</b> are used.</p>           
+            <p class="explanationText">In general there are three kinds:</p>
+            <ul class="explanationText">
+            	<li>Linear Gradients</li>
+            	<li>Repeating Gradients</li>
+            	<li>Radial Gradients</li>
+            </ul>
+
+           <p class="explanationHeading">linear-gradient</p>
+           <p class="explanationText">Transition occurs from one direction to other linearly like..</p>
+
+<xmp class="code">
+#gradient {
+  height:150px;
+  width: 150px;
+  background:linear-gradient(aqua,blue);
+}
+</xmp>
+        <p class="explanationText">results in..</p>
+        <div class="output-window">
+        	<div style="
+  height:150px;
+  width: 150px;
+  background:linear-gradient(aqua,blue);">	
+        	</div>
+        </div>
+
+        <p class="explanationText">The default direction of transition is from <b>top to bottom</b>, but we can change that transition in any direction.</p>
+        <p class="explanationText">follow the CSS code below..</p>
+<xmp class="code">
+#gradient {
+  height:150px;
+  width: 150px;
+  background:linear-gradient(to left,aqua,blue);
+}
+</xmp>
+        <p class="explanationText">This will generate..</p>
+            <div class="output-window">
+        	<div style="height:150px;width: 150px;background:linear-gradient(to left,aqua,blue);">
+      	</div>
+        </div>
+
+        <p class="explanationText">Also, multiple colors can be added..</p>
+
+<xmp class="code">
+#gradient {
+  height:150px;
+  width: 150px;
+  background:linear-gradient(aqua,blue,red);
+}
+</xmp>
+        <p class="explanationText">outputs..</p>
+        <div class="output-window">
+        	<div style="
+  height:150px;
+  width: 150px;
+  background:linear-gradient(aqua,blue,red);">    		
+        	</div>
+        </div>
+
+
+       <p class="explanationText">The linear-gradient can also be directed <b>diagonally</b> by specifying vertical and horizontal starting positions..</p>
+<xmp class="code">
+#gradient1{
+  height:150px;
+  width: 150px;
+  background:-webkit-linear-gradient(left top,aqua,blue);    		
+}
+
+#gradient2{
+height:150px;
+  width: 150px;
+  background:-webkit-linear-gradient(bottom right,aqua,blue);    		
+}
+</xmp>
+
+       <p class="explanationText">Which generates..</p>
+       <div class="output-window" style="display: flex; justify-content: space-around;">
+       	  <div style="
+  height:150px;
+  width: 150px;
+  background:-webkit-linear-gradient(left top,aqua,blue);">#grad1	
+  </div>
+       
+       	  <div style="
+  height:150px;
+  width: 150px;
+  background:-webkit-linear-gradient(bottom right,aqua,blue);">#grad2	
+  </div>
+  </div>
+
+      <p class="explanationText">This linear-gradient property can also be applied at an angle..</p>
+<xmp class="code">
+#gradient1 {
+  height:150px;
+  width: 150px;
+  background:-webkit-linear-gradient(-45deg,aqua,green);
+  }
+
+#gradient2 {
+  height:150px;
+  width: 150px;
+  background:-webkit-linear-gradient(280deg,aqua,green);
+  }  
+</xmp>
+
+      <p class="explanationText">This will output..</p>
+
+<div class="output-window" style="display: flex;justify-content: space-around;">
+	<div style=" height:150px;
+  width: 150px;
+  background:-webkit-linear-gradient(-45deg,aqua,green);
+ ">#gradient1</div>
+	<div style=" height:150px;
+  width: 150px;
+  background:-webkit-linear-gradient(280deg,aqua,green);
+ ">#gradient2</div>
+</div>
+
+<!--<xmp class="code">
+#gradient {
+  height:100px;
+  width: 868px;
+background:linear-gradient(to right,violet,indigo,blue,green,yellow,orange,red);
+}
+</xmp>       
+        <p class="explanationText">This will generate VIBGYOR..</p>
+
+        <div class="output-window">
+        	<div style="height:100px;
+  width: 868px;
+background:linear-gradient(to right,violet,indigo,blue,green,yellow,orange,red);"></div>
+        </div>
+-->
+        
+        <div class="explanationNote">
+        	<b>In general:</b>      	 
+        	<p>background: linear-gradient(-90deg, red, yellow); (Standard syntax)</p><br>
+            <p>background: red; (For browsers that do not support gradients)</p><br>
+            <p>background: -webkit-linear-gradient(-90deg, red, yellow); (For Safari and Google Chrome browsers)</p><br>
+            <p>background: -o-linear-gradient(-90deg, red, yellow);(Opera)</p><br>
+            <p>background: -moz-linear-gradient(-90deg, red, yellow); (For Firefox)</p>
+        	
+        </div>
+
+
+        <p class="explanationHeading">repeating-gradient</p>
+
+           <p class="explanationText">The linear-gradient can be repeated itself using the <b>repeating-gradient</b> property.</p>
+<xmp class="code">
+#gradient {
+  height:200px;
+  width: 200px;
+  background:repeating-linear-gradient(green, aqua 10%, blue 20%);
+}
+</xmp>            
+        <p class="explanationText">Outputs..</p>
+        <div class="output-window">
+        	<div style="
+  height:150px;
+  width:867px;
+  background:repeating-linear-gradient(green, aqua 10%, blue 20%);
+">		
+</div>
+</div>
+        <p class="explanationText">The linear-gradient repeats itself again and again according to the height given!</p>
+
+        <p class="explanationText">radial-gradient</p>
+
+        <p class="explanationText">The <b>radial-gradient</b> property generates a gradient repeating from it's center.</p>
+
+<xmp class="code">
+#radial {
+   height: 200px;
+   width: 200px;
+   background: radial-gradient(blue, green, aqua);
+   }
+</xmp>
+     <p class="explanationText">outputs..</p>
+     <div class="output-window">
+     	<div style=" height: 150px;
+   width: 867px;
+   background: radial-gradient(blue, green, aqua);
+  "></div>
+     </div>
+            <p class="explanationText">We can also give shapes to our <b>radial-gradients</b> by adding an extra parameter to our CSS code.</p>
+
+<xmp class="code">
+#radial1 {
+   height: 200px;
+   width: 200px;
+   background: radial-gradient(circle,blue, green, aqua);
+   }
+
+#radial2 {
+   height: 200px;
+   width: 200px;
+   background: radial-gradient(ellipse,blue, green, aqua);
+   }   
+</xmp>
+          <p class="explanationText">results in..</p>
+        <div class="output-window" style="display: flex;justify-content: space-around;">
+           <div style="height: 250px;
+   width: 400px;
+   background: radial-gradient(circle,blue, green, aqua);
+   "></div>
+           <div style="height: 250px;
+   width: 400px;
+   background: radial-gradient(ellipse,blue, green, aqua);
+   "></div>  	
+        </div>
 		  </div>
 		</div>
 
