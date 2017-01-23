@@ -47,7 +47,7 @@ ul.tab {
 /* Float the list items side by side */
 
 ul.tab li {
-    font-family: "Roboto", sans-serif;
+    font-family: "Open Sans","Roboto", sans-serif;
     font-size: 2em;
     float: left;
     padding-bottom: 5px;
