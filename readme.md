@@ -8,10 +8,10 @@
 - Open **index.html** for adding any additional informational or in order to contribute.
 
 - To add a new tab apart from the given tabs, add the following..
-  - <li onclick="openPage(event, 'tab_name')"><a href="javascript:void(0)" class="tablinks">tab-Name</a></li>
+  ..* <li onclick="openPage(event, 'tab_name')"><a href="javascript:void(0)" class="tablinks">tab-Name</a></li>
   - add this line on the top of the index.html inside the <ul> tag after all the <li> tags inside the closing </ul> tag.
 
- - After that add a new **<div>** element and give it an id of same as the 'tabname' as mentioned above in the li tag and also give it a class name of "tabcontent".
+ ..* After that add a new **<div>** element and give it an id of same as the 'tabname' as mentioned above in the li tag and also give it a class name of "tabcontent".
 
  - Inside this <div> element add a new <h3> tag and give it a class of "heading".
 
