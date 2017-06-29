@@ -2679,30 +2679,31 @@ ninjas.in/">
           CSS Flexbox
         </h3>
         <div class="content">
-            <p class="explanationText">Flexbox model provides for an efficient way to layout, align,
+            <p class="explanationText" style="display: inline;">Flexbox model provides for an efficient way to layout, align,
               and distribute space among elements within your document — even when the viewport and
-              the size of your elements is dynamic or unknown.</p>
+              the size of your elements is dynamic or unknown.<br>
+              <a href="http://flexboxfroggy.com/" style="display: inline; text-decoration: none;" >Flexbox Froggy</a> is a wonderful game which will give you a breif idea of how flex box works. I will recommend you to play this game first and then read this column.</p>
               <p class="explanationHeading">How do I start using Flexbox model?</p>
               <p class="explanationText">To start using the Flexbox model, all you need to do is first define a flex-container (parent element):</p>
               <xmp class="code">
-                <ul> <!--parent element-->
-                  <li></li> <!--first child element-->
-                  <li></li> <!--second child element-->
-                  <li></li> <!--third child element-->
-                </ul>
-                <style>
-                <!--Make parent element a flex container-->
-                ul {
-                  display: flex; <!--or inline-flex-->
-                }
-                <!--Styling li elements -->
-                li {
-                  width: 100px;
-                  height: 100px;
-                  background-color: #8cacea;
-                  margin: 8px;
-                }
-              </style>
+<ul> <!--parent element-->
+  <li></li> <!--first child element-->
+  <li></li> <!--second child element-->
+  <li></li> <!--third child element-->
+</ul>
+<style>
+  <!--Make parent element a flex container-->
+  ul {
+    display: flex; <!--or inline-flex-->
+    }
+  <!--Styling li elements -->
+  li {
+      width: 100px;
+      height: 100px;
+      background-color: #8cacea;
+      margin: 8px;
+      }
+</style>
               </xmp>
               <p class="explanationText">This is the output.</p>
               <img src="images/css_flexbox/output1.png" alt="" class="explanationImage">
@@ -2716,10 +2717,10 @@ ninjas.in/">
               <h4 class="explanationHeading">1. Flex-direction: </h4><p class="explanationText"></p>
               <p class="explanationText">The Flex-direction property controls the direction in which the flex-items are laid along the <i>main axis</i>.</p>
               <xmp class="code">
-            /*where ul represents a flex container*/
-    ul {
-      flex-direction: row || column || row-reverse || column-reverse;
-    }
+/*where ul represents a flex container*/
+ul {
+  flex-direction: row || column || row-reverse || column-reverse;
+}
               </xmp>
               <p class="explanationText">In layman’s terms, the flex-direction property let's you decide how the flex items are laid out. Either
                 horizontally, vertically or reversed in both directions.<br><br>
@@ -2739,10 +2740,10 @@ ninjas.in/">
               <h3 class="explanationHeading">2. Flex-Wrap</h3>
               <p class="explanationText">The flex-wrap property can take any of the three values.</p>
               <xmp class="code">
-                //where ul represents a flex container
-      ul {
-        flex-wrap: wrap || nowrap || wrap-reverse;
-        }
+//where ul represents a flex container
+ul {
+   flex-wrap: wrap || nowrap || wrap-reverse;
+}
               </xmp>
               <p class="explanationText">In the first example try adding more li elements and you may come across this: </p>
               <img src="images/css_flexbox/wrap1.png" alt="" class="explanationImage">
@@ -2750,9 +2751,9 @@ ninjas.in/">
                 container will keep on accommodating more flex items on a single line.<br>
                 This is because the flex-wrap property defaults to nowrap. This causes the flex container to NOT wrap. <br>This problem can be solved using the <i>wrap</i> value</p>
               <xmp class="code">
-          ul {
-            flex-wrap: wrap;
-          }
+ul {
+    flex-wrap: wrap;
+}
               </xmp>
               <p class="explanationText">“Wrap” is a fancy word to say, “when the available space within the flex-container
                  can no longer house the flex-items in their default widths, break unto multiple lines.
@@ -2766,7 +2767,7 @@ ninjas.in/">
               <p class="explanationHeading">3. Flex-Flow</p>
               <p class="explanationText">The flex-flow is a shorthand property which takes flex-direction and Flex-wrap values.</p>
               <xmp class="code">
-                ul {
+ul {
     flex-flow: row wrap; /*direction "row" and yes, please wrap the items.*/
 }
               </xmp>
@@ -2774,9 +2775,8 @@ ninjas.in/">
               <p class="explanationHeading">4. Justify-content</p>
               <p class="explanationText">This is the most important property of flex model. Literally makes life easy. <br>It take the folowing <b>5</b> values.</p>
               <xmp class="code">
-                ul {
-    justify-content: flex-start || flex-end || center || space-between
-                      || space-around
+ul {
+    justify-content: flex-start || flex-end || center || space-between || space-around
 }
               </xmp>
               <p class="explanationText">With justify-content property, the flex items are aligned along the main axis. Consider the first example with only 3
@@ -2797,11 +2797,10 @@ ninjas.in/">
               <p class="explanationText">It defines how flex-items are
                 laid out on the cross axis. This is the difference between the align-items property and justify-content.</p>
                 <xmp class="code">
-                  /*ul represents any flex container*/
-    ul {
-        align-items: flex-start || flex-end || center || stretch ||
-                      baseline
-    }
+/*ul represents any flex container*/
+ul {
+    align-items: flex-start || flex-end || center || stretch || baseline
+  }
                 </xmp>
               <h4>(i) Stretch</h4>
               <img class="explanationImage" src="images/css_flexbox/align1.png" alt="">
@@ -2849,9 +2848,9 @@ ninjas.in/">
               <img src="images/css_flexbox/order1.png" alt="" class="explanationImage">
               <p class="explanationText">The Flex items are displayed just as specified in the HTML source order. <br><br>Now suppose you want to change the order without affecting the HTML source.</p>
               <xmp class="code">
-                /*select first li element within the ul */
-              li:nth-child(1) {
-                  order: 1; /*give it a value higher than 0*/
+/*select first li element within the ul */
+li:nth-child(1) {
+              order: 1; /*give it a value higher than 0*/
               }
               </xmp>
               <p class="explanationText">Since Item 2, 3, 4 have default 0 order, 1 has the highest order. <br>If two elements have same Order they are positioned according to source.</p>
@@ -2866,13 +2865,13 @@ ninjas.in/">
                 flex-grow: 0 default
               </p>
               <xmp class="code">
-                <ul>
-                      <li>I am a simple list</li>
-                  </ul>
+<ul>
+    <li>I am a simple list</li>
+</ul>
 
-                  ul {
-                      display: flex;
-                  }
+ul {
+    display: flex;
+}
               </xmp>
               <img src="images/css_flexbox/flexgrow1.png" alt="" class="explanationImage">
               <p class="explanationText">Now if flex-grow is set to 1 flex-items occupy all the available space.</p>
@@ -2883,18 +2882,18 @@ ninjas.in/">
               <p class="explanationText">Flex-basis can take on any values you'd use on the normal width property. That is, percentages, ems, rems, pixels etc</p>
 
               <xmp class="code">
-              <ul>
-                  <li>I am a simple list</li>
-              </ul>
+<ul>
+    <li>I am a simple list</li>
+</ul>
 
 
-              ul {
-                  display: flex
-              }
+ul {
+    display: flex
+}
 
-              li {
-                  padding: 4px; /*some breathing space*/
-              }
+li {
+    padding: 4px; /*some breathing space*/
+}
               </xmp>
               <p class="explanationText">
                 By default, the initial width of the flex item is influenced by the default value, flex-basis: auto.
@@ -2905,9 +2904,9 @@ ninjas.in/">
               <img src="images/css_flexbox/basis2.png" alt="" class="explanationImage">
               <p class="explanationText">But if: </p>
               <xmp class="code">
-                li {
-                  flex-basis: 150px;
-                }
+li {
+  flex-basis: 150px;
+}
               </xmp>
               <img src="images/css_flexbox/basis3.png" alt="" class="explanationImage">
               <p class="explanationHeading">4. The Flex Shorthand</p>
@@ -2921,38 +2920,38 @@ ninjas.in/">
               <br>If you set only the flex-grow and flex-shrinkvalues, flex-basis would default to zero. <br>
               This is called an absolute flex. And when you set only the flex-basis, you get a relative flex.
             </p>
-            <p class="explanationNote">/*this is an absolute flex item*/
-              li {
-                flex: 1 1; /*flex-basis defaults to 0*/
-              }
+            <p class="explanationNote">/*this is an absolute flex item*/<br>
+              li {<br>
+                flex: 1 1; /*flex-basis defaults to 0*/<br>
+              }<br>
 
-              /*this is a relative flex item*/
-              li {
-                flex-basis: 200px; /*only flex-basis is set*/
-              }
+              /*this is a relative flex item*/<br>
+              li {<br>
+                flex-basis: 200px; /*only flex-basis is set*/<br>
+              }<br>
             </p>
             <p class="explanationHeading">4. Flex: "positive number"</p>
             <p class="explanationText">"flex: 2 1 0" is the same as writing "flex:2" 2 represents any positive number.</p>
             <xmp class="code">
-              <ul>
-                  <li>I am One</li>
-                  <li>I am Two</li>
-              </ul>
+  <ul>
+      <li>I am One</li>
+      <li>I am Two</li>
+  </ul>
 
-              ul {
-                  display: flex;
-              }
+  ul {
+      display: flex;
+    }
 
-              /*first flex-item*/
-              li:nth-child(1) {
-                  flex: 2 1 0; /*same as just writing flex: 2*/
-              }
+  /*first flex-item*/
+  li:nth-child(1) {
+     flex: 2 1 0; /*same as just writing flex: 2*/
+    }
 
-              /*second flex-item*/
-              li:nth-child(2){
-                  flex: 1 1 0;
-                  background-color: #8cacea;
-              }
+  /*second flex-item*/
+  li:nth-child(2){
+    flex: 1 1 0;
+    background-color: #8cacea;
+    }
             </xmp>
             <p class="explanationText">Here you have two flex-items. One has aflex-grow property of 1 and the other 2, what then happens? <br>
                 You have the grow switches turned on for both items. However, the magnitude of growth differs. 1 and 2.
@@ -2966,7 +2965,7 @@ ninjas.in/">
             <p class="explanationHeading">5. Align-Self</p>
             <p class="explanationText">Allows You to change the position of a single Item.</p>
              <xmp class="code">
-               /*target first list item*/
+/*target first list item*/
 li:first-of-type {
     align-self: auto || flex-start || flex-end || center || baseline || stretch
 }
