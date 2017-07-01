@@ -15,7 +15,7 @@
 
  - Inside this <div> element add a new <h3> tag and give it a class of "heading".
 
- - Inside that <h1> element give the name of the main-heading which you want to give.
+ - Inside that <h3> element give the name of the main-heading which you want to give.
 
  - After that add a new <div> element and give it a class of "content".
 

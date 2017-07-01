@@ -2879,6 +2879,326 @@ h2 {
 
 		  </div>
 		</div>
+		<!-- CSS Flexbox start-->
+
+      <div id="css-flexbox" class="tabcontent">
+        <h3 class="heading">
+          CSS Flexbox
+        </h3>
+        <div class="content">
+            <p class="explanationText" style="display: inline;">Flexbox model provides for an efficient way to layout, align,
+              and distribute space among elements within your document — even when the viewport and
+              the size of your elements is dynamic or unknown.<br>
+              <a href="http://flexboxfroggy.com/" style="display: inline; text-decoration: none;" >Flexbox Froggy</a> is a wonderful game which will give you a breif idea of how flex box works. I will recommend you to play this game first and then read this column.</p>
+              <p class="explanationHeading">How do I start using Flexbox model?</p>
+              <p class="explanationText">To start using the Flexbox model, all you need to do is first define a flex-container (parent element):</p>
+              <xmp class="code">
+<ul> <!--parent element-->
+  <li></li> <!--first child element-->
+  <li></li> <!--second child element-->
+  <li></li> <!--third child element-->
+</ul>
+<style>
+  <!--Make parent element a flex container-->
+  ul {
+    display: flex; <!--or inline-flex-->
+    }
+  <!--Styling li elements -->
+  li {
+      width: 100px;
+      height: 100px;
+      background-color: #8cacea;
+      margin: 8px;
+      }
+</style>
+              </xmp>
+              <p class="explanationText">This is the output.</p>
+              <img src="images/css_flexbox/output1.png" alt="" class="explanationImage">
+              <p class="explanationText">Whereas you might have hoped for this: </p>
+              <img src="images/css_flexbox/output2.png" alt="" class="explanationImage">
+              <p class="explanationText">The Flexbox model kicks in as soon as you introduce <i>"flexbox display"</i> in the parent element.</p>
+              <p class="explanationNote">As soon as you set the display property to flex, the unordered list automatically becomes the fle
+                x container and the child elements (in this case, the list elements li) become <u>flex items</u>.</p>
+              <p class="explanationHeading">The Flex Container Properties</p>
+              <p class="explanationNote">Flex-direction || Flex-wrap || Flex-flow || Justify-content || Align-items || Align-content</p>
+              <h4 class="explanationHeading">1. Flex-direction: </h4><p class="explanationText"></p>
+              <p class="explanationText">The Flex-direction property controls the direction in which the flex-items are laid along the <i>main axis</i>.</p>
+              <xmp class="code">
+/*where ul represents a flex container*/
+ul {
+  flex-direction: row || column || row-reverse || column-reverse;
+}
+              </xmp>
+              <p class="explanationText">In layman’s terms, the flex-direction property let's you decide how the flex items are laid out. Either
+                horizontally, vertically or reversed in both directions.<br><br>
+                Technically, “horizontal” and “vertical” isn't what the directions are called in the "flex world".
+                These are described as main-axis and cross axis. The defaults are shown below.<br>
+                In layman’s terms again, the main-axis’ default direction feels like “horizontal.” From left to right.
+                The cross-axis feels like “vertical.”
+                From top to bottom.
+              </p>
+              <img src="images/css_flexbox/axis.jpeg" alt="" class="explanationImage">
+              <p class="explanationNote">These are the default axes. They can be changed.</p>
+              <p class="explanationText">By default, the flex-direction property is set to row and it aligns the flex-item(s) along the main axis.
+                 This explains what happened with the unordered list at the start of this article.<br>The flex items were then laid across the main-axis, stacking horizontally from left to right.</p>
+              <img src="images/css_flexbox/output1.png" alt="" class="explanationImage">
+              <p class="explanationText">If the flex-direction property is changed to column, the flex-items will be aligned along the cross axis.</p>
+              <img src="images/css_flexbox/axis-column.png" alt="" class="explanationImage">
+              <h3 class="explanationHeading">2. Flex-Wrap</h3>
+              <p class="explanationText">The flex-wrap property can take any of the three values.</p>
+              <xmp class="code">
+//where ul represents a flex container
+ul {
+   flex-wrap: wrap || nowrap || wrap-reverse;
+}
+              </xmp>
+              <p class="explanationText">In the first example try adding more li elements and you may come across this: </p>
+              <img src="images/css_flexbox/wrap1.png" alt="" class="explanationImage">
+              <p class="explanationText">This is the default behavior of every flex container. A flex
+                container will keep on accommodating more flex items on a single line.<br>
+                This is because the flex-wrap property defaults to nowrap. This causes the flex container to NOT wrap. <br>This problem can be solved using the <i>wrap</i> value</p>
+              <xmp class="code">
+ul {
+    flex-wrap: wrap;
+}
+              </xmp>
+              <p class="explanationText">“Wrap” is a fancy word to say, “when the available space within the flex-container
+                 can no longer house the flex-items in their default widths, break unto multiple lines.
+              </p>
+              <img src="images/css_flexbox/wrap2.png" alt="" class="explanationImage">
+              <p class="explanationText">
+                There’s one more value, wrap-reverse.<br>
+                It lets the flex items break unto multiple lines, but in the reverse direction.
+              </p>
+              <img src="images/css_flexbox/wrap3.png" alt="" class="explanationImage">
+              <p class="explanationHeading">3. Flex-Flow</p>
+              <p class="explanationText">The flex-flow is a shorthand property which takes flex-direction and Flex-wrap values.</p>
+              <xmp class="code">
+ul {
+    flex-flow: row wrap; /*direction "row" and yes, please wrap the items.*/
+}
+              </xmp>
+              <img src="images/css_flexbox/flexFlow.jpeg" alt="" class="explanationImage">
+              <p class="explanationHeading">4. Justify-content</p>
+              <p class="explanationText">This is the most important property of flex model. Literally makes life easy. <br>It take the folowing <b>5</b> values.</p>
+              <xmp class="code">
+ul {
+    justify-content: flex-start || flex-end || center || space-between || space-around
+}
+              </xmp>
+              <p class="explanationText">With justify-content property, the flex items are aligned along the main axis. Consider the first example with only 3
+                li child elements.</p>
+                <h4>(i) Flex-start</h4>
+                <img src="images/css_flexbox/flexDir2.png" alt="" class="explanationImage">
+                <h4>(i) Flex-end</h4>
+                <img src="images/css_flexbox/flexDir3.png" alt="" class="explanationImage">
+                <h4>(i) Center</h4>
+                <img src="images/css_flexbox/flexDir4.png" alt="" class="explanationImage">
+                <h4>(i) Space-between</h4>
+                <img src="images/css_flexbox/flexDir5.png" alt="" class="explanationImage">
+                <img src="images/css_flexbox/flexDir8.jpeg" alt="" class="explanationImage">
+                <h4>(i) Space-Around</h4>
+                <img src="images/css_flexbox/flexDir6.jpeg" alt="" class="explanationImage">
+                <img src="images/css_flexbox/flexDir7.jpeg" alt="" class="explanationImage">
+              <p class="explanationHeading">5. Align Items</p>
+              <p class="explanationText">It defines how flex-items are
+                laid out on the cross axis. This is the difference between the align-items property and justify-content.</p>
+                <xmp class="code">
+/*ul represents any flex container*/
+ul {
+    align-items: flex-start || flex-end || center || stretch || baseline
+  }
+                </xmp>
+              <h4>(i) Stretch</h4>
+              <img class="explanationImage" src="images/css_flexbox/align1.png" alt="">
+              <h4>(i) Flex-Start</h4>
+              <img class="explanationImage" src="images/css_flexbox/align2.png" alt="">
+              <h4>(i) Flex-End</h4>
+              <img class="explanationImage" src="images/css_flexbox/align3.png" alt="">
+              <h4>(i) Center</h4>
+              <img class="explanationImage" src="images/css_flexbox/align4.png" alt="">
+              <h4>(i) Baseline</h4>
+              <img class="explanationImage" src="images/css_flexbox/align5.png" alt="">
+              <p class="explanationNote">This is A "<i>Baseline:</i>"
+                <img src="images/css_flexbox/align5.png" alt="">
+              </p>
+
+              <p class="explanationHeading">6. Align Content</p>
+              <p class="explanationText">While using the <u><i>wrap</i></u> property what we
+                got was a multiline flex container. <br> The property is used on multi-line flex-containers.
+                <br><br>
+                Just like align-items, the default value is also stretch. <br>
+              </p>
+              <h4>(i) Stretch</h4>
+              <img class="explanationImage" src="images/css_flexbox/content1.png" alt="">
+              <h4>(i) Flex-Start</h4>
+              <img class="explanationImage" src="images/css_flexbox/content2.png" alt="">
+              <h4>(i) Flex-End</h4>
+              <img class="explanationImage" src="images/css_flexbox/content3.png" alt="">
+              <h4>(i) Center</h4>
+              <img class="explanationImage" src="images/css_flexbox/content4.png" alt="">
+
+              <p class="explanationHeading">The Flex Item Properties</p>
+              <p class="explanationNote">Order || Flex-grow || Flex-shrink || Flex-basis</p>
+              <p class="explanationHeading">1. Order</p>
+              <p class="explanationText">Used to reorderflex items within a container. <br>This is done without affecting the HTML source.</p>
+              <p class="explanationNote">Default value is 0. May take positive or negative values.</p>
+              <p class="explanationText"><br><br><b>Example: </b></p>
+              <xmp class="code">
+                <ul>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                </ul>
+              </xmp>
+              <img src="images/css_flexbox/order1.png" alt="" class="explanationImage">
+              <p class="explanationText">The Flex items are displayed just as specified in the HTML source order. <br><br>Now suppose you want to change the order without affecting the HTML source.</p>
+              <xmp class="code">
+/*select first li element within the ul */
+li:nth-child(1) {
+              order: 1; /*give it a value higher than 0*/
+              }
+              </xmp>
+              <p class="explanationText">Since Item 2, 3, 4 have default 0 order, 1 has the highest order. <br>If two elements have same Order they are positioned according to source.</p>
+
+              <p class="explanationHeading">2. Flex Grow-Shrink</p>
+              <p class="explanationText">
+                The flex-grow and flex-shrink properties control how much a flex-item should “grow” (extend) if there are extra spaces, or “shrink” if there are no extra spaces.
+                <br>They may take up any values ranging from 0 to any positive number.
+              </p>
+              <p class="explanationNote">
+                flex-shrink: 1 default<br>
+                flex-grow: 0 default
+              </p>
+              <xmp class="code">
+<ul>
+    <li>I am a simple list</li>
+</ul>
+
+ul {
+    display: flex;
+}
+              </xmp>
+              <img src="images/css_flexbox/flexgrow1.png" alt="" class="explanationImage">
+              <p class="explanationText">Now if flex-grow is set to 1 flex-items occupy all the available space.</p>
+              <img src="images/css_flexbox/flexgrow2.png" alt="" class="explanationImage">
+              <p class="explanationHeading">2. Flex Basis</p>
+              <p class="explanationText">The flex-basis property specifies the initial size of a flex-item. Before the flex-grow or flex-shrink properties adjust it's size to fit the container or not.</p>
+              <p class="explanationNote">default: auto</p>
+              <p class="explanationText">Flex-basis can take on any values you'd use on the normal width property. That is, percentages, ems, rems, pixels etc</p>
+
+              <xmp class="code">
+<ul>
+    <li>I am a simple list</li>
+</ul>
+
+
+ul {
+    display: flex
+}
+
+li {
+    padding: 4px; /*some breathing space*/
+}
+              </xmp>
+              <p class="explanationText">
+                By default, the initial width of the flex item is influenced by the default value, flex-basis: auto.
+                <br>The width of the flex-item is computed "automatically" based on the content size (and obviously, plus whatever padding you set too).
+              </p>
+              <img src="images/css_flexbox/basis1.png" alt="" class="explanationImage">
+              <p class="explanationText">Now if you increase the content.</p>
+              <img src="images/css_flexbox/basis2.png" alt="" class="explanationImage">
+              <p class="explanationText">But if: </p>
+              <xmp class="code">
+li {
+  flex-basis: 150px;
+}
+              </xmp>
+              <img src="images/css_flexbox/basis3.png" alt="" class="explanationImage">
+              <p class="explanationHeading">4. The Flex Shorthand</p>
+            <p class="explanationText">The flex shorthand allows you set the flex-grow, flex-shrink and flex-basis properties all at once.</p>
+            <xmp class="code">
+              li {
+                flex: 0 1 auto;
+              }
+            </xmp>
+            <p class="explanationText">The code above is equal to setting the three properties: flex-grow: 0; flex-shrink: 1; flex-basis: auto
+              <br>If you set only the flex-grow and flex-shrinkvalues, flex-basis would default to zero. <br>
+              This is called an absolute flex. And when you set only the flex-basis, you get a relative flex.
+            </p>
+            <p class="explanationNote">/*this is an absolute flex item*/<br>
+              li {<br>
+                flex: 1 1; /*flex-basis defaults to 0*/<br>
+              }<br>
+
+              /*this is a relative flex item*/<br>
+              li {<br>
+                flex-basis: 200px; /*only flex-basis is set*/<br>
+              }<br>
+            </p>
+            <p class="explanationHeading">4. Flex: "positive number"</p>
+            <p class="explanationText">"flex: 2 1 0" is the same as writing "flex:2" 2 represents any positive number.</p>
+            <xmp class="code">
+  <ul>
+      <li>I am One</li>
+      <li>I am Two</li>
+  </ul>
+
+  ul {
+      display: flex;
+    }
+
+  /*first flex-item*/
+  li:nth-child(1) {
+     flex: 2 1 0; /*same as just writing flex: 2*/
+    }
+
+  /*second flex-item*/
+  li:nth-child(2){
+    flex: 1 1 0;
+    background-color: #8cacea;
+    }
+            </xmp>
+            <p class="explanationText">Here you have two flex-items. One has aflex-grow property of 1 and the other 2, what then happens? <br>
+                You have the grow switches turned on for both items. However, the magnitude of growth differs. 1 and 2.
+                They both expand to fill up the available space, but in some proportion.  <br>
+                Here’s how it works. <br>
+                The latter takes up 2/3 of the available space while the former takes 1/3.
+                You know how I arrived at that? <br>
+                Basic mathematics ratio. individual / total
+            </p>
+            <img src="images/css_flexbox/flex.png" alt="" class="explanationImage">
+            <p class="explanationHeading">5. Align-Self</p>
+            <p class="explanationText">Allows You to change the position of a single Item.</p>
+             <xmp class="code">
+/*target first list item*/
+li:first-of-type {
+    align-self: auto || flex-start || flex-end || center || baseline || stretch
+}
+             </xmp>
+            <h4>(i) Flex-end</h4>
+            <img src="images/css_flexbox/flex1.png" alt="" class="explanationImage">
+            <h4>(i) Center</h4>
+            <img src="images/css_flexbox/flex2.png" alt="" class="explanationImage">
+            <h4>(i) Stretch</h4>
+            <img src="images/css_flexbox/flex3.png" alt="" class="explanationImage">
+            <h4>(i) Baseline</h4>
+            <img src="images/css_flexbox/flex4.png" alt="" class="explanationImage">
+            <h4>(i) auto</h4>
+            <img src="images/css_flexbox/flex5.png" alt="" class="explanationImage">
+            <p class="explanationText">auto sets the value of the targeted flex item to the parent’s align-items value or stretch if the element has no parent.
+            <br>In the case below, the flex-container has an align-items value of flex-start</p>
+            <br>
+            <br>
+            <br>
+            <h3>Source (Must Read):</h3> <a href="https://medium.freecodecamp.org/understanding-flexbox-everything-you-need-to-know-b4013d4dc9af">Understanding Flexbox</a>
+            <br><br>
+            <h4>Also See: </h4> <a href="http://flexboxfroggy.com/">Flexbox Froggy</a><br><a href="https://philipwalton.github.io/solved-by-flexbox/">Problems Solved by Flex Model</a>
+        </div>
+      </div>
+      <!-- CSS Flexbox end -->
+
 
 		<div id="display-properties" class="tabcontent">
 		  <h3 class="heading">Display Properties</h3>
